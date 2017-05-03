@@ -1,0 +1,168 @@
+/* Intro page */
+.intro-container {
+  background-color: $theme-light-blue;
+  height: 100%;
+  width: 100%;
+}
+
+.logo-container {
+  background-color: $white;
+  padding: ($base-padding * 3) ($base-padding * 2.5) ($base-padding * 2.4);
+
+  p {
+    color: $back-with-opacity;
+    font-size: $base-font-size * 1.5;
+    margin-bottom: 0;
+    margin-top: $base-margin;
+  }
+}
+
+.intro-text {
+  padding: ($base-padding * 2.5) ($base-padding * 2.8) 0;
+}
+
+.intro-text-line {
+  display: table;
+  margin-bottom: $base-margin * 1.5;
+
+  > div {
+    display: table-cell;
+  }
+}
+
+.button-icon {
+  background: url(/app/assets/images/ui/btnstrip.png) repeat-x scroll 0 0 transparent;
+  color: #5C6670;
+  height: 40px;
+  font-size: $base-font-size;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 40px;
+}
+
+.button-icon-blank {
+  height: 40px;
+  font-size: $base-font-size * 1.2;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 40px;
+}
+
+.button-text {
+  font-size: 0.875em;
+  font-weight: 700;
+  padding-left: $base-padding * 1.5;
+  vertical-align: middle;
+}
+
+.start-btn-container {
+  background-color: $theme-dark-blue;
+  padding: ($base-padding * 0.8) 0 ($base-padding * 0.8) $base-padding;
+}
+
+.start-button {
+  background-color: $button-bg;
+  font-size: $base-font-size * 1.56;
+  margin-left: $base-margin;
+  padding: $base-padding * 0.8 $base-padding * 2;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.start-button:hover {
+  background-color: $button-bg-hover
+}
+
+.playAudioParent {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 88888;
+}
+
+.playBlinkBlack {
+  background-color: $white;
+  height: 100%;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.playBlink {
+  background: url('/app/assets/images/template/play_blink_static.png') no-repeat scroll 0 0 transparent;
+  height: 100px;
+  margin: -50px auto 0;
+  position: relative;
+  top: 50%;
+  width: 112px;
+  z-index: 500;
+}
+
+.button-autoPlay {
+  background: url('/app/assets/images/template/play_blink.gif') no-repeat scroll 0 0 transparent;
+  display: block;
+  height: 42px;
+  margin: 0 auto;
+  position: relative;
+  top: 29px;
+  width: 32px;
+  z-index: 900000;
+  margin-top: 25%;
+}
+
+@media (max-width: 420px) {
+  .start-btn-container {
+    font-size: 0.937em;
+    position: relative;
+    width: 90%;
+  }
+
+  .intro-text {
+    padding: $base-padding * 1.5 $base-padding 0;
+  }
+
+  .start-button {
+    font-size: 0.937em;
+    position: absolute;
+    right: 10px;
+    top: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dis_img1 {
+    bottom: 50px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-text {
+    font-size: 1.125em;
+    font-weight: normal;
+  }
+
+  .logo-container p {
+    font-size: $base-font-size * 2;
+  }
+
+  .dis_img1 {
+  	background: url('/app/assets/images/template/instruction.jpg') no-repeat scroll 0 0 transparent;
+  	position: absolute;
+  	right: -315px;
+  	bottom: 120px;
+  	display: block;
+  	width: 770px;
+  	height: 424px;
+  }
+
+  .system-check {
+    height: 93px;
+  }
+}
