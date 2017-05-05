@@ -22,12 +22,13 @@ export default class Shell extends React.Component {
   render() {
     return (
       <div>
-        <Header title="Header 123"/>
+        <Header ref="header"/>
         {this.state.currentPage && <PageLoader currentPage={this.state.currentPage}/>}
         <Footer
           currentPageNumber={this.state.currentPage}
           onLoadNext={this.loadNext.bind(this)}
           onLoadPrev={this.loadPrev.bind(this)}
+          totalPages={3}
         />
       </div>
     )
