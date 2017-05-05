@@ -166,3 +166,105 @@
     height: 93px;
   }
 }
+
+.static-page1 {
+    h1
+{
+	font-size : 1.875em;
+	font-weight : normal;
+	line-height : 0.5;
+}
+
+.header
+{
+	background-color: #ddd;
+	height: 100px;
+	margin: auto;
+	width: 1024px;
+}
+
+.content
+{	
+	background-color: #000;
+	height: 562px;
+	margin: auto;
+	width: 1024px;
+}
+
+
+.content .welcome_text
+{
+	margin: 20% auto auto auto;
+	text-align: center;
+	width: 40%;
+}
+
+.black
+{
+	color: #000;
+}
+
+.white
+{
+	color: #fff;
+}
+
+.footer
+{
+	background-color: #ddd;
+	margin: auto;
+	height: 100px;
+	width: 1024px;
+}
+
+.flex-container
+{
+	display: -webkit-flex;
+}
+
+.left-side
+{
+	border-right: 1px solid #ccc;
+	text-align: right;
+	text-transform: uppercase;
+	padding-right: 10px;
+	width: 50%;
+}
+
+.right-side
+{
+	border-left: 1px solid #ccc;
+	text-align: left;
+	text-transform: uppercase;
+	padding-left: 10px;
+	width: 50%;
+}
+
+.bg
+{
+	background-image: url("/app/assets/images/template/bg1.jpg");
+	height:100%;
+}
+
+.instruction_text
+{	
+	color:#fff;
+	font-weight:bold;
+}
+
+.btn
+{
+	text-align: right;
+	width: 82%;
+}
+
+.btn .btn_text
+{
+	color: #5e9e44;
+	font-weight: bold;
+	position: relative;
+	left: -100px;
+	top: 5px;
+}
+
+}
