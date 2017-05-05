@@ -1,0 +1,163 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'react/addons' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData react/addons
+8 silly fetchOtherPackageData react/addons
+9 silly cache add args [ 'react/addons', null ]
+10 verbose cache add spec react/addons
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'react/addons',
+11 silly cache add   scope: null,
+11 silly cache add   escapedName: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'react/addons',
+11 silly cache add   spec: 'github:react/addons',
+11 silly cache add   type: 'hosted',
+11 silly cache add   hosted:
+11 silly cache add    { type: 'github',
+11 silly cache add      ssh: 'git@github.com:react/addons.git',
+11 silly cache add      sshUrl: 'git+ssh://git@github.com/react/addons.git',
+11 silly cache add      httpsUrl: 'git+https://github.com/react/addons.git',
+11 silly cache add      gitUrl: 'git://github.com/react/addons.git',
+11 silly cache add      shortcut: 'github:react/addons',
+11 silly cache add      directUrl: 'https://raw.githubusercontent.com/react/addons/master/package.json' } }
+12 verbose addRemoteGit caching react/addons
+13 verbose addRemoteGit react/addons is a repository hosted by github
+14 silly tryGitProto attempting to clone git://github.com/react/addons.git
+15 silly tryClone cloning react/addons via git://github.com/react/addons.git
+16 verbose tryClone git-github-com-react-addons-git-07849c89 not in flight; caching
+17 verbose correctMkdir C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+18 info git [ 'config', '--get', 'remote.origin.url' ]
+19 warn addRemoteGit Error: Command failed: git -c core.longpaths=true config --get remote.origin.url
+19 warn addRemoteGit
+19 warn addRemoteGit     at ChildProcess.exithandler (child_process.js:206:12)
+19 warn addRemoteGit     at emitTwo (events.js:106:13)
+19 warn addRemoteGit     at ChildProcess.emit (events.js:191:7)
+19 warn addRemoteGit     at maybeClose (internal/child_process.js:877:16)
+19 warn addRemoteGit     at Socket.<anonymous> (internal/child_process.js:334:11)
+19 warn addRemoteGit     at emitOne (events.js:96:13)
+19 warn addRemoteGit     at Socket.emit (events.js:188:7)
+19 warn addRemoteGit     at Pipe._handle.close [as _onclose] (net.js:498:12)
+19 warn addRemoteGit  react/addons resetting remote C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-07849c89 because of error: { Error: Command failed: git -c core.longpaths=true config --get remote.origin.url
+19 warn addRemoteGit
+19 warn addRemoteGit     at ChildProcess.exithandler (child_process.js:206:12)
+19 warn addRemoteGit     at emitTwo (events.js:106:13)
+19 warn addRemoteGit     at ChildProcess.emit (events.js:191:7)
+19 warn addRemoteGit     at maybeClose (internal/child_process.js:877:16)
+19 warn addRemoteGit     at Socket.<anonymous> (internal/child_process.js:334:11)
+19 warn addRemoteGit     at emitOne (events.js:96:13)
+19 warn addRemoteGit     at Socket.emit (events.js:188:7)
+19 warn addRemoteGit     at Pipe._handle.close [as _onclose] (net.js:498:12)
+19 warn addRemoteGit   killed: false,
+19 warn addRemoteGit   code: 1,
+19 warn addRemoteGit   signal: null,
+19 warn addRemoteGit   cmd: 'git -c core.longpaths=true config --get remote.origin.url' }
+20 info resetRemote resetting C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-07849c89 for react/addons
+21 silly gentlyRm C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-07849c89 is being purged
+22 verbose gentlyRm don't care about contents; nuking C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-07849c89
+23 silly vacuum-fs purging C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-07849c89
+24 silly vacuum-fs quitting because other entries in C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes
+25 info git [ 'clone',
+25 info git   '--template=C:\\Users\\Bharat\\AppData\\Roaming\\npm-cache\\_git-remotes\\_templates',
+25 info git   '--mirror',
+25 info git   'git://github.com/react/addons.git',
+25 info git   'C:\\Users\\Bharat\\AppData\\Roaming\\npm-cache\\_git-remotes\\git-github-com-react-addons-git-07849c89' ]
+26 error git clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-07849c89: Cloning into bare repository 'C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-07849c89'...
+26 error git clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-07849c89: fatal: remote error:
+26 error git clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-07849c89:   Repository not found.
+27 silly tryHTTPS attempting to clone git+https://github.com/react/addons.git
+28 silly tryClone cloning react/addons via git+https://github.com/react/addons.git
+29 verbose tryClone git-https-github-com-react-addons-git-7848bff3 not in flight; caching
+30 verbose correctMkdir C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+31 info git [ 'config', '--get', 'remote.origin.url' ]
+32 silly validateExistingRemote react/addons remote.origin.url: https://github.com/react/addons.git
+33 verbose validateExistingRemote react/addons is updating existing cached remote C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-react-addons-git-7848bff3
+34 info git [ 'fetch', '-a', 'origin' ]
+35 error git fetch -a origin (https://github.com/react/addons.git) Logon failed, use ctrl+c to cancel basic credential prompt.
+35 error git fetch -a origin (https://github.com/react/addons.git) remote: Invalid username or password.
+35 error git fetch -a origin (https://github.com/react/addons.git) fatal: Authentication failed for 'https://github.com/react/addons.git/'
+36 silly trySSH attempting to clone git@github.com:react/addons.git
+37 silly tryClone cloning react/addons via git@github.com:react/addons.git
+38 verbose tryClone git-github-com-react-addons-git-5e7d7133 not in flight; caching
+39 verbose correctMkdir C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+40 info git [ 'clone',
+40 info git   '--template=C:\\Users\\Bharat\\AppData\\Roaming\\npm-cache\\_git-remotes\\_templates',
+40 info git   '--mirror',
+40 info git   'git@github.com:react/addons.git',
+40 info git   'C:\\Users\\Bharat\\AppData\\Roaming\\npm-cache\\_git-remotes\\git-github-com-react-addons-git-5e7d7133' ]
+41 error git clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133: Cloning into bare repository 'C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133'...
+41 error git clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133: Host key verification failed.
+41 error git clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133: fatal: Could not read from remote repository.
+41 error git clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133:
+41 error git clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133: Please make sure you have the correct access rights
+41 error git clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133: and the repository exists.
+42 silly fetchPackageMetaData Error: Command failed: git -c core.longpaths=true clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133
+42 silly fetchPackageMetaData Cloning into bare repository 'C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133'...
+42 silly fetchPackageMetaData Host key verification failed.
+42 silly fetchPackageMetaData fatal: Could not read from remote repository.
+42 silly fetchPackageMetaData
+42 silly fetchPackageMetaData Please make sure you have the correct access rights
+42 silly fetchPackageMetaData and the repository exists.
+42 silly fetchPackageMetaData
+42 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:206:12)
+42 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+42 silly fetchPackageMetaData     at ChildProcess.emit (events.js:191:7)
+42 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:877:16)
+42 silly fetchPackageMetaData     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+42 silly fetchPackageMetaData  error for react/addons { Error: Command failed: git -c core.longpaths=true clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133
+42 silly fetchPackageMetaData Cloning into bare repository 'C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133'...
+42 silly fetchPackageMetaData Host key verification failed.
+42 silly fetchPackageMetaData fatal: Could not read from remote repository.
+42 silly fetchPackageMetaData
+42 silly fetchPackageMetaData Please make sure you have the correct access rights
+42 silly fetchPackageMetaData and the repository exists.
+42 silly fetchPackageMetaData
+42 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:206:12)
+42 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+42 silly fetchPackageMetaData     at ChildProcess.emit (events.js:191:7)
+42 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:877:16)
+42 silly fetchPackageMetaData     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+42 silly fetchPackageMetaData   killed: false,
+42 silly fetchPackageMetaData   code: 128,
+42 silly fetchPackageMetaData   signal: null,
+42 silly fetchPackageMetaData   cmd: 'git -c core.longpaths=true clone --template=C:\\Users\\Bharat\\AppData\\Roaming\\npm-cache\\_git-remotes\\_templates --mirror git@github.com:react/addons.git C:\\Users\\Bharat\\AppData\\Roaming\\npm-cache\\_git-remotes\\git-github-com-react-addons-git-5e7d7133' }
+43 silly rollbackFailedOptional Starting
+44 silly rollbackFailedOptional Finishing
+45 silly runTopLevelLifecycles Finishing
+46 silly install printInstalled
+47 verbose stack Error: Command failed: git -c core.longpaths=true clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133
+47 verbose stack Cloning into bare repository 'C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133'...
+47 verbose stack Host key verification failed.
+47 verbose stack fatal: Could not read from remote repository.
+47 verbose stack
+47 verbose stack Please make sure you have the correct access rights
+47 verbose stack and the repository exists.
+47 verbose stack
+47 verbose stack     at ChildProcess.exithandler (child_process.js:206:12)
+47 verbose stack     at emitTwo (events.js:106:13)
+47 verbose stack     at ChildProcess.emit (events.js:191:7)
+47 verbose stack     at maybeClose (internal/child_process.js:877:16)
+47 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+48 verbose cwd D:\projects\ultron
+49 error Windows_NT 6.3.9600
+50 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "react/addons"
+51 error node v6.10.0
+52 error npm  v3.10.10
+53 error code 128
+54 error Command failed: git -c core.longpaths=true clone --template=C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react/addons.git C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133
+54 error Cloning into bare repository 'C:\Users\Bharat\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-addons-git-5e7d7133'...
+54 error Host key verification failed.
+54 error fatal: Could not read from remote repository.
+54 error
+54 error Please make sure you have the correct access rights
+54 error and the repository exists.
+55 error If you need help, you may report this error at:
+55 error     <https://github.com/npm/npm/issues>
+56 verbose exit [ 1, true ]

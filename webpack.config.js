@@ -35,5 +35,10 @@ module.exports = {
       }
     ]
  },
+externals: {
+'react/lib/ExecutionEnvironment': true,
+'react/addons': true,
+'react/lib/ReactContext': 'window'
+  },
  plugins: [injectConfig]
 }
