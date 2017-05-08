@@ -13,6 +13,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-mediaswitch": "^0.2.1",
+    "react-responsive": "^1.2.10",
     "react-router-dom": "next",
     "react-sidebar": "^2.3.2",
     "sass-loader": "^6.0.3",
