@@ -9,11 +9,11 @@ export default class Header extends React.Component {
     return (
       <div className="header">
         <div className="course-logo">
-          <img src="/app/assets/images/ui/course-logo.png" />
+          <img src="/app/assets/images/template/logo.jpg" />
         </div>
         <div className="title-holder clearfix">
           <div id="courseTitle" className="course-title title">
-            <p>Medical Device Industry Overview</p>
+            <p>SEC  Compliance Readiness</p>
           </div>
         </div>
         <div className="course-progress">

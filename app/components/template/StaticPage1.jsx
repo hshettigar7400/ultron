@@ -9,57 +9,35 @@ export default class StaticPage1 extends React.Component {
   render() {
     return (
       <div className="static-page1">
-        <MediaQuery query='(min-device-width: 1224px)'>    
-        <div className="content">
+        <MediaQuery query='(min-device-width: 1224px)'>
+          <div className="content">
             <div className="bg">
-            <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
-
-
-            <div className="title welcome_text">
-            <h1 className="white">Welcome to the course,</h1>
-            <h1 className="black">SEC Compliance Readiness</h1>
-
-
-
-            <div className="flex-container white">
-            <div className="left-side ">Standards <br/>Rules <br/>Regulations</div>
-            <div className="right-side ">Strategy <br/>Governance <br/>Security</div>
+              <div className="intro white">
+                <div className="flex-container">
+                  <div className="left-side">
+                    <div className="intro_heading">
+                      <h1>Introduction to SEC </h1>
+                    </div>
+                    <div className="intro_para">
+                      <p>As an investment adviser, you need to be aware of all the rules and laws pertaining to the United States securities regulation. </p>
+                      <span>Securities and Exchange Commission (Sec):</span>
+                    </div>
+                    <div className="intro_list">
+                      <ul>
+                        <li>Makes the rules</li>
+                        <li>Enforces policy</li>
+                        <li>Oversees the markets</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="right-side">
+                    <img src="/app/assets/images/template/image1.jpg" /></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            </div>
-            <br/>
-            <div className="btn white">
-            <span className="instruction_text">Click Start to begin </span> &nbsp; &nbsp;<img src="/app/assets/images/template/Start_btn.jpg" /> <span className="btn_text">Start</span>
-            </div>
-
-            </div>
-        </div>
-            </MediaQuery>
-            <MediaQuery query='(orientation: portrait)'>
-                <div className="content">
-            <div className="bg">
-            <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
-
-
-            <div className="title welcome_text">
-            <h1 className="white">Welcome to the course,</h1>
-            <h1 className="black">SEC Compliance Readiness</h1>
-
-
-
-            <div className="flex-container white">
-            <div className="left-side ">Standards <br/>Rules <br/>Regulations</div>
-            <div className="right-side ">Strategy <br/>Governance <br/>Security</div>
-            </div>
-            </div>
-            <br/>
-            <div className="btn white">
-            <span className="instruction_text">Click Start to begin </span> &nbsp; &nbsp;<img src="/app/assets/images/template/Start_btn.jpg" /> <span className="btn_text">Start</span>
-            </div>
-
-            </div>
-        </div>
-            </MediaQuery>
+        </MediaQuery>
       </div>
-    )
-  }
-}
+        )
+      }
+    }

@@ -7,7 +7,8 @@ export default class Shell extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: 1
+      currentPage: 1,
+      menuOpen: false
     };
   }
 
@@ -19,17 +20,43 @@ export default class Shell extends React.Component {
     this.setState({currentPage: this.state.currentPage - 1})
   }
 
+  toggleMenu() {
+    this.setState({menuOpen: !this.state.menuOpen})
+  }
+
+  loadHeader() {
+    return (
+      <Header ref="header"/>
+    )
+  }
+
+  pageLoader() {
+    return (
+      <PageLoader
+      currentPage={this.state.currentPage}
+      menuOpen={this.state.menuOpen}
+      />
+    )
+  }
+
+  loadFooter() {
+    return (
+      <Footer
+        currentPageNumber={this.state.currentPage}
+        onLoadNext={this.loadNext.bind(this)}
+        onLoadPrev={this.loadPrev.bind(this)}
+        onMenuClick={this.toggleMenu.bind(this)}
+        totalPages={3}
+      />
+    )
+  }
+
   render() {
     return (
       <div>
-        <Header ref="header"/>
-        {this.state.currentPage && <PageLoader currentPage={this.state.currentPage}/>}
-        <Footer
-          currentPageNumber={this.state.currentPage}
-          onLoadNext={this.loadNext.bind(this)}
-          onLoadPrev={this.loadPrev.bind(this)}
-          totalPages={3}
-        />
+        {this.loadHeader()}
+        {this.state.currentPage && this.pageLoader()}
+        {this.loadFooter()}
       </div>
     )
   }
