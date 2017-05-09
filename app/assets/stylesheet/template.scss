@@ -5,30 +5,28 @@
   width: 100%;
 }
 
-.intro-container {
-  .content
-  {
-    background-color: #000;
-    height: 100%;
-    margin: auto;
-    width: 100%;
-  }
+.content
+{
+  background-color: #000;
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
 
+.black {
+  color: $black;
+}
+
+.white {
+  color: $white;
+}
+
+.intro-container {
   .content .welcome_text
   {
     margin: 20% auto auto auto;
     text-align: center;
     width: 50%;
-  }
-
-  .black
-  {
-    color: #000;
-  }
-
-  .white
-  {
-    color: #fff;
   }
 
   .flex-container
@@ -95,40 +93,6 @@
 }
 
 .static-page1 {
-  .content
-  {
-    background-color: #000;
-    height: 100%;
-    margin: auto;
-    width: 1005;
-  }
-
-  .content .welcome_text
-  {
-    margin: auto;
-    width: 40%;
-    text-align: center;
-    margin-top: 20%;
-  }
-
-  .black
-  {
-    color: #000;
-  }
-
-  .white
-  {
-    color: #fff;
-  }
-
-  .footer
-  {
-    background-color: #ddd;
-    margin: auto;
-    height: 100px;
-    width: 1024px;
-  }
-
   .flex-container
   {
     background-color:#5e9e44;
@@ -188,28 +152,6 @@
 }
 
 .static-page2 {
-
-  .content {
-    background-color: #000;
-    height: 100%;
-    margin: auto;
-    width: 100%;
-  }
-
-  .content .welcome_text {
-    margin: 20% auto auto auto;
-    text-align: center;
-    width: 40%;
-  }
-
-  .black {
-    color: #000;
-  }
-
-  .white {
-    color: #fff;
-  }
-
   .flex-container {
     display: -webkit-flex;
     width: 100%;
@@ -279,29 +221,6 @@
 }
 
 .static-page3 {
-
-  .content {
-    background-color: #000;
-    margin: auto;
-    height: 100%;
-    width: 100%;
-  }
-
-  .content .welcome_text {
-    margin: auto;
-    width: 40%;
-    text-align: center;
-    margin-top: 20%;
-  }
-
-  .black {
-    color: #000;
-  }
-
-  .white {
-    color: #fff;
-  }
-
   .flex-container {
     display: -webkit-flex;
     background-color: #5e9e44;
@@ -351,48 +270,12 @@
 }
 
 .static-page4 {
-  .content
-  {
-  	margin: auto;
-  	width: 100%;
-  	height: 100%;
-  	background-color: #000;
-
-  }
-
-
-  .content .welcome_text
-  {
-  	margin: auto;
-  	width: 40%;
-  	text-align: center;
-  	margin-top: 20%;
-  }
-
-  .black
-  {
-  	color: #000;
-  }
-
-  .white
-  {
-  	color: #fff;
-  }
-
-  .footer
-  {
-  	margin: auto;
-  	background-color: #ddd;
-  	width: 1024px;
-  	height: 100px;
-  }
-
   .flex-container
   {
   	display: -webkit-flex;
   	background-color:#5e9e44;
   	margin-top: 22%;
-      height: 335px;
+    height: 335px;
   	opacity:0.8;
 
   }
@@ -463,5 +346,98 @@
   	width: 70%;
   	margin-top: 5%;
 
+  }
+}
+
+.interactivity1 {
+  .flex-container
+  {
+  	display: -webkit-flex;
+      width: 100%;
+  }
+
+  .left-side
+  {
+  	width: 100%;
+  }
+
+  .right-side
+  {
+    bottom: 60px;
+    right: 10px;
+  	position: absolute;
+  }
+
+  .bg
+  {
+  	background-image: url("/app/assets/images/template/bg5.jpg");
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .instruction_text
+  {
+  	color:#fff;
+  	font-weight:bold;
+  	margin:10px;
+  }
+
+  .intro
+  {
+  	background-color: #72A65C;
+  	float:left;
+  	height: 562px;
+  	opacity: 0.9;
+  	width: 50%;
+  }
+
+  .intro_heading
+  {
+  	margin-left: 5%;
+      margin-top: 10%;
+  	width: 70%;
+  }
+
+  .intro_para
+  {
+  	margin-left: 5%;
+      margin-top: 40px;
+      width: 80%;
+  }
+
+  .btn_div
+  {
+  	float:left;
+  	margin: 8% auto auto 3%;
+  	width:100%;
+  }
+  .buttons
+  {
+    display: flex;
+  	margin-top:10px;
+  }
+  button
+  {
+  	color:#5e9e44;
+    cursor: pointer;
+  	font-size:1em;
+  	font-weight: bold;
+  	height: 55px;
+  	margin-left:10px;
+    width: 200px;
+  }
+
+  .popup-container {
+    background: white;
+    color: #333;
+    padding: 10px;
+    width: 465px;
+    height: 250px;
+  }
+
+  .close-btn {
+    float: right;
+    cursor: pointer;
   }
 }
