@@ -5,198 +5,20 @@
   width: 100%;
 }
 
-.logo-container {
-  background-color: $white;
-  padding: ($base-padding * 3) ($base-padding * 2.5) ($base-padding * 2.4);
-
-  p {
-    color: $back-with-opacity;
-    font-size: $base-font-size * 1.5;
-    margin-bottom: 0;
-    margin-top: $base-margin;
-  }
-}
-
-.intro-text {
-  padding: ($base-padding * 2.5) ($base-padding * 2.8) 0;
-}
-
-.intro-text-line {
-  display: table;
-  margin-bottom: $base-margin * 1.5;
-
-  > div {
-    display: table-cell;
-  }
-}
-
-.button-icon {
-  background: url(/app/assets/images/ui/btnstrip.png) repeat-x scroll 0 0 transparent;
-  color: #5C6670;
-  height: 40px;
-  font-size: $base-font-size;
-  margin: 0;
-  text-align: center;
-  vertical-align: middle;
-  width: 40px;
-}
-
-.button-icon-blank {
-  height: 40px;
-  font-size: $base-font-size * 1.2;
-  margin: 0;
-  text-align: center;
-  vertical-align: middle;
-  width: 40px;
-}
-
-.button-text {
-  font-size: 0.875em;
-  font-weight: 700;
-  padding-left: $base-padding * 1.5;
-  vertical-align: middle;
-}
-
-.start-btn-container {
-  background-color: $theme-dark-blue;
-  padding: ($base-padding * 0.8) 0 ($base-padding * 0.8) $base-padding;
-}
-
-.start-button {
-  background-color: $button-bg;
-  font-size: $base-font-size * 1.56;
-  margin-left: $base-margin;
-  padding: $base-padding * 0.8 $base-padding * 2;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-.start-button:hover {
-  background-color: $button-bg-hover
-}
-
-.playAudioParent {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 88888;
-}
-
-.playBlinkBlack {
-  background-color: $white;
-  height: 100%;
-  left: 0;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 5;
-}
-
-.playBlink {
-  background: url('/app/assets/images/template/play_blink_static.png') no-repeat scroll 0 0 transparent;
-  height: 100px;
-  margin: -50px auto 0;
-  position: relative;
-  top: 50%;
-  width: 112px;
-  z-index: 500;
-}
-
-.button-autoPlay {
-  background: url('/app/assets/images/template/play_blink.gif') no-repeat scroll 0 0 transparent;
-  display: block;
-  height: 42px;
-  margin: 0 auto;
-  position: relative;
-  top: 29px;
-  width: 32px;
-  z-index: 900000;
-  margin-top: 25%;
-}
-
-@media (max-width: 420px) {
-  .start-btn-container {
-    font-size: 0.937em;
-    position: relative;
-    width: 90%;
-  }
-
-  .intro-text {
-    padding: $base-padding * 1.5 $base-padding 0;
-  }
-
-  .start-button {
-    font-size: 0.937em;
-    position: absolute;
-    right: 10px;
-    top: 45px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dis_img1 {
-    bottom: 50px !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .button-text {
-    font-size: 1.125em;
-    font-weight: normal;
-  }
-
-  .logo-container p {
-    font-size: $base-font-size * 2;
-  }
-
-  .dis_img1 {
-    background: url('/app/assets/images/template/instruction.jpg') no-repeat scroll 0 0 transparent;
-    position: absolute;
-    right: -315px;
-    bottom: 0;
-    display: block;
-    width: 770px;
-    height: 424px;
-  }
-
-  .system-check {
-    height: 93px;
-  }
-}
-
-.static-page1 {
-  h1
-  {
-    font-size : 1.875em;
-    font-weight : normal;
-    line-height : 0.5;
-  }
-
-  .header
-  {
-    background-color: #ddd;
-    height: 100px;
-    margin: auto;
-    width: 100%;
-  }
-
+.intro-container {
   .content
   {
     background-color: #000;
-    height: 562px;
+    height: 100%;
     margin: auto;
-    width: 1005;
+    width: 100%;
   }
-
 
   .content .welcome_text
   {
     margin: 20% auto auto auto;
     text-align: center;
-    width: 40%;
+    width: 50%;
   }
 
   .black
@@ -207,14 +29,6 @@
   .white
   {
     color: #fff;
-  }
-
-  .footer
-  {
-    background-color: #ddd;
-    margin: auto;
-    height: 100px;
-    width: 1024px;
   }
 
   .flex-container
@@ -250,59 +64,51 @@
   {
     color:#fff;
     font-weight:bold;
+    position: relative;
+    top: 10px;
   }
 
   .btn
   {
+    cursor: pointer;
     text-align: right;
-    width: 82%;
+    width: 80%;
   }
 
   .btn .btn_text
   {
     color: #5e9e44;
-    font-weight: bold;
+    font-size: 1.25em;
+    left: -15px;
     position: relative;
-    left: -100px;
-    top: 5px;
+    top: 10px;
+  }
+
+  .start-button {
+    background-image: url("/app/assets/images/template/start-btn.jpg");
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    width: 112px;
   }
 }
 
-.static-page2 {
-  h1, h2, h3, h4
-  {
-  	font-weight : normal;
-  	line-height : 0.5;
-  }
-
-  h1
-  {
-  	font-size : 1.875em;
-
-  }
-
-  .header
-  {
-  	background-color: #ddd;
-  	height: 100px;
-  	margin: auto;
-  	width: 100%;
-  }
-
+.static-page1 {
   .content
   {
   	background-color: #000;
-  	height: 562px;
+  	height: 100%;
   	margin: auto;
-  	width: 100%;
+  	width: 1005;
   }
-
 
   .content .welcome_text
   {
-  	margin: 20% auto auto auto;
-  	text-align: center;
+  	margin: auto;
   	width: 40%;
+  	text-align: center;
+  	margin-top: 20%;
   }
 
   .black
@@ -318,83 +124,65 @@
   .footer
   {
   	background-color: #ddd;
-  	height: 100px;
   	margin: auto;
+  	height: 100px;
   	width: 1024px;
   }
 
   .flex-container
   {
+  	background-color:#5e9e44;
+  	border-top: 4px solid #05A251;
   	display: -webkit-flex;
-  	width: 100%;
+  	height: 270px;
+  	margin-top: 28%;
+      opacity:0.8;
+
   }
   .left-side
   {
-  	width: 100%;
+  	width: 65%;
   }
 
   .right-side
   {
+      margin: auto;
   	width: 30%;
-  	margin: auto;
   }
 
   .bg
   {
-  	background-image: url("/app/assets/images/template/bg_2.jpg");
+  	background-image: url("/app/assets/images/template/bg2.jpg");
+  	background-position: 20px;
   	height:100%;
   }
 
   .instruction_text
   {
-  	font-weight:bold;
   	color:#fff;
-  	margin:10px;
+  	font-weight:bold;
   }
 
   .intro
   {
-  	background-color: #72A65C;
-  	float:right;
-  	height: 562px;
-  	width: 50%;
-  	opacity: 0.9;
+  	border-top: 2px solid #ccc;
+  	width: 100%;
   }
 
   .intro_heading
   {
-  	margin-left: 3%;
-  	margin-top: 25%;
+  	margin-left: 30px;
+  	margin-top: 40px;
   }
 
   .intro_para
   {
-  	margin-left: 20px;
-  	margin-top: 40px;
-  	width: 80%;
+  	margin-left: 30px;
+      width: 80%;
   }
 
   .intro_list
   {
-  	width: 70%;
-  }
-
-  .btn
-  {
-  	background-color:#50a82d;
-  	width:100%;
-  	float:left;
-  	margin-top:8%;
-  }
-
-  button
-  {
-  	background-color:#f9f9f9;
-  	color:#5e9e44;
-  	font-size:1em;
-  	font-weight: bold;
-  	height: 55px;
-  	margin-left:20px;
-  	width: 200px;
+  	margin-left:25px;
   }
 }

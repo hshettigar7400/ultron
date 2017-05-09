@@ -11297,7 +11297,7 @@ var Header = function (_React$Component) {
         _react2.default.createElement(
           "div",
           { className: "course-logo" },
-          _react2.default.createElement("img", { src: "/app/assets/images/ui/course-logo.png" })
+          _react2.default.createElement("img", { src: "/app/assets/images/template/logo.jpg" })
         ),
         _react2.default.createElement(
           "div",
@@ -11308,7 +11308,7 @@ var Header = function (_React$Component) {
             _react2.default.createElement(
               "p",
               null,
-              "Medical Device Industry Overview"
+              "SEC  Compliance Readiness"
             )
           )
         ),
@@ -11622,6 +11622,10 @@ var _Shell = __webpack_require__(100);
 
 var _Shell2 = _interopRequireDefault(_Shell);
 
+var _reactResponsive = __webpack_require__(204);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11679,157 +11683,150 @@ var Intro = function (_React$Component) {
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'logo-container' },
-            _react2.default.createElement('img', { src: '../app/assets/images/ui/intro-logo.png' }),
-            _react2.default.createElement(
-              'p',
-              { className: 'title' },
-              'Course instructions'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'intro-text' },
+            _reactResponsive2.default,
+            { query: '(min-device-width: 1224px)' },
             _react2.default.createElement(
               'div',
-              { className: 'intro-text-line' },
+              { className: 'content' },
               _react2.default.createElement(
                 'div',
-                { className: 'button-icon' },
+                { className: 'bg' },
                 _react2.default.createElement(
-                  'span',
-                  { className: 'icon-btn' },
-                  '\uE606'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'button-text ' },
-                'Adjust your audio settings.'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'intro-text-line' },
-              _react2.default.createElement(
-                'div',
-                { className: 'button-icon' },
+                  'div',
+                  { className: 'logo' },
+                  ' ',
+                  _react2.default.createElement('img', { src: '/app/assets/images/template/logo.jpg' })
+                ),
                 _react2.default.createElement(
-                  'span',
-                  { className: 'icon-btn' },
-                  '\uE629'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'button-text' },
-                'Hide or display the Transcript at any time.'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'intro-text-line' },
-              _react2.default.createElement(
-                'div',
-                { className: 'button-icon' },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'icon-btn' },
-                  '\uE616'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'button-text' },
-                'Hide or display the Topics at any time.'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'intro-text-line' },
-              _react2.default.createElement(
-                'div',
-                { className: 'button-icon-blank' },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'icon-btn' },
-                  '\uE62F'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'button-text' },
-                'Print the course PDF from the Print section'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'intro-text-line' },
-              _react2.default.createElement(
-                'div',
-                { className: 'button-icon-blank' },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'icon-btn' },
-                  '\uE801'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'button-text' },
-                'Email: ',
-                _react2.default.createElement(
-                  'a',
-                  { href: 'mailTo:ACSHSMVocollectTrainingRequests@honeywell.com', className: 'fontStyle', role: 'button' },
+                  'div',
+                  { className: 'title welcome_text' },
                   _react2.default.createElement(
-                    'u',
-                    null,
-                    'Training'
+                    'h1',
+                    { className: 'white' },
+                    'Welcome to the course,'
+                  ),
+                  _react2.default.createElement(
+                    'h1',
+                    { className: 'black' },
+                    'SEC Compliance Readiness'
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'flex-container white' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'left-side ' },
+                      'Standards ',
+                      _react2.default.createElement('br', null),
+                      'Rules ',
+                      _react2.default.createElement('br', null),
+                      'Regulations'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'right-side ' },
+                      'Strategy ',
+                      _react2.default.createElement('br', null),
+                      'Governance ',
+                      _react2.default.createElement('br', null),
+                      'Security'
+                    )
+                  )
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'btn white' },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'instruction_text' },
+                    'Click Start to begin '
+                  ),
+                  _react2.default.createElement(
+                    'a',
+                    { href: '#', className: 'start-button', role: 'button', onClick: this.startCourse.bind(this) },
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'btn_text' },
+                      'Start'
+                    )
                   )
                 )
               )
-            ),
+            )
+          ),
+          _react2.default.createElement(
+            _reactResponsive2.default,
+            { query: '(orientation: portrait)' },
             _react2.default.createElement(
               'div',
-              { className: 'intro-text-line' },
+              { className: 'content' },
               _react2.default.createElement(
                 'div',
-                { className: 'button-icon-blank' },
+                { className: 'bg' },
                 _react2.default.createElement(
-                  'span',
-                  { className: 'icon-btn' },
-                  '\uE802'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'button-text' },
-                'Course duration: 10 minutes'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'intro-text-line' },
-              _react2.default.createElement(
-                'div',
-                { className: 'start-btn-container' },
-                'Select ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'fontBold' },
-                  'Start'
+                  'div',
+                  { className: 'logo' },
+                  ' ',
+                  _react2.default.createElement('img', { src: '/app/assets/images/template/logo.jpg' })
                 ),
-                ' to proceed with the course.',
                 _react2.default.createElement(
-                  'a',
-                  { href: '#', className: 'start-button', role: 'button', onClick: this.startCourse.bind(this) },
-                  'Start'
+                  'div',
+                  { className: 'title welcome_text' },
+                  _react2.default.createElement(
+                    'h1',
+                    { className: 'white' },
+                    'Welcome to the course,'
+                  ),
+                  _react2.default.createElement(
+                    'h1',
+                    { className: 'black' },
+                    'SEC Compliance Readiness'
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'flex-container white' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'left-side ' },
+                      'Standards ',
+                      _react2.default.createElement('br', null),
+                      'Rules ',
+                      _react2.default.createElement('br', null),
+                      'Regulations'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'right-side ' },
+                      'Strategy ',
+                      _react2.default.createElement('br', null),
+                      'Governance ',
+                      _react2.default.createElement('br', null),
+                      'Security'
+                    )
+                  )
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'btn white' },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'instruction_text' },
+                    'Click Start to begin '
+                  ),
+                  _react2.default.createElement(
+                    'a',
+                    { href: '#', className: 'start-button', role: 'button', onClick: this.startCourse.bind(this) },
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'btn_text' },
+                      'Start'
+                    )
+                  )
                 )
               )
-            ),
-            _react2.default.createElement('div', { className: 'system-check' }),
-            _react2.default.createElement('div', { className: 'dis_img1' })
+            )
           )
         );
       }
@@ -11896,134 +11893,65 @@ var StaticPage1 = function (_React$Component) {
               { className: 'bg' },
               _react2.default.createElement(
                 'div',
-                { className: 'logo' },
-                ' ',
-                _react2.default.createElement('img', { src: '/app/assets/images/template/logo.jpg' })
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'title welcome_text' },
-                _react2.default.createElement(
-                  'h1',
-                  { className: 'white' },
-                  'Welcome to the course,'
-                ),
-                _react2.default.createElement(
-                  'h1',
-                  { className: 'black' },
-                  'SEC Compliance Readiness'
-                ),
+                { className: 'intro white' },
                 _react2.default.createElement(
                   'div',
-                  { className: 'flex-container white' },
+                  { className: 'flex-container' },
                   _react2.default.createElement(
                     'div',
-                    { className: 'left-side ' },
-                    'Standards ',
-                    _react2.default.createElement('br', null),
-                    'Rules ',
-                    _react2.default.createElement('br', null),
-                    'Regulations'
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'intro_heading' },
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        'Introduction to SEC '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'intro_para' },
+                      _react2.default.createElement(
+                        'p',
+                        null,
+                        'As an investment adviser, you need to be aware of all the rules and laws pertaining to the United States securities regulation. '
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        'Securities and Exchange Commission (Sec):'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'intro_list' },
+                      _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          'Makes the rules'
+                        ),
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          'Enforces policy'
+                        ),
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          'Oversees the markets'
+                        )
+                      )
+                    )
                   ),
                   _react2.default.createElement(
                     'div',
-                    { className: 'right-side ' },
-                    'Strategy ',
-                    _react2.default.createElement('br', null),
-                    'Governance ',
-                    _react2.default.createElement('br', null),
-                    'Security'
+                    { className: 'right-side' },
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/image1.jpg' })
                   )
-                )
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'btn white' },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'instruction_text' },
-                  'Click Start to begin '
-                ),
-                ' \xA0 \xA0',
-                _react2.default.createElement('img', { src: '/app/assets/images/template/Start_btn.jpg' }),
-                ' ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'btn_text' },
-                  'Start'
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          _reactResponsive2.default,
-          { query: '(orientation: portrait)' },
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'div',
-              { className: 'bg' },
-              _react2.default.createElement(
-                'div',
-                { className: 'logo' },
-                ' ',
-                _react2.default.createElement('img', { src: '/app/assets/images/template/logo.jpg' })
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'title welcome_text' },
-                _react2.default.createElement(
-                  'h1',
-                  { className: 'white' },
-                  'Welcome to the course,'
-                ),
-                _react2.default.createElement(
-                  'h1',
-                  { className: 'black' },
-                  'SEC Compliance Readiness'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'flex-container white' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'left-side ' },
-                    'Standards ',
-                    _react2.default.createElement('br', null),
-                    'Rules ',
-                    _react2.default.createElement('br', null),
-                    'Regulations'
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'right-side ' },
-                    'Strategy ',
-                    _react2.default.createElement('br', null),
-                    'Governance ',
-                    _react2.default.createElement('br', null),
-                    'Security'
-                  )
-                )
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'btn white' },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'instruction_text' },
-                  'Click Start to begin '
-                ),
-                ' \xA0 \xA0',
-                _react2.default.createElement('img', { src: '/app/assets/images/template/Start_btn.jpg' }),
-                ' ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'btn_text' },
-                  'Start'
                 )
               )
             )
@@ -14207,7 +14135,7 @@ exports = module.exports = __webpack_require__(111)(undefined);
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n@font-face {\n  font-family: 'Lato';\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot\");\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/lato-regular-webfont.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/lato-regular-webfont.woff\") format(\"woff\"), url(\"/app/assets/fonts/lato-regular-webfont.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/lato-regular-webfont.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'Lato-Light';\n  src: url(\"/app/assets/fonts/Lato-Light.eot\");\n  src: url(\"/app/assets/fonts/Lato-Light.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/Lato-Light.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/Lato-Light.woff\") format(\"woff\"), url(\"/app/assets/fonts/Lato-Light.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/Lato-Light.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'icomoon';\n  src: url(\"/app/assets/fonts/icomoon.eot?c92yby\");\n  src: url(\"/app/assets/fonts/icomoon.eot?#iefixc92yby\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/icomoon.woff?c92yby\") format(\"woff\"), url(\"/app/assets/fonts/icomoon.ttf?c92yby\") format(\"truetype\"), url(\"/app/assets/fonts/icomoon.svg?c92yby#icomoon\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  font-family: 'icomoon';\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  letter-spacing: 0;\n  -webkit-font-feature-settings: \"liga\";\n  -moz-font-feature-settings: \"liga=1\";\n  -moz-font-feature-settings: \"liga\";\n  -ms-font-feature-settings: \"liga\" 1;\n  font-feature-settings: \"liga\";\n  -webkit-font-variant-ligatures: discretionary-ligatures;\n  font-variant-ligatures: discretionary-ligatures;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  background-color: #FFFFFF;\n  color: #FFFFFF;\n  font-family: \"Arial\";\n  font-size: 1em;\n  font-weight: 300;\n  margin: 0 auto;\n  overflow: hidden; }\n\nhtml, body {\n  width: 100%;\n  height: 100%; }\n\n.shell-conatiner {\n  height: 100%;\n  width: 100%; }\n\n.player > div {\n  overflow: auto; }\n\na {\n  color: #FFFFFF; }\n\n.fontBold {\n  font-weight: 700; }\n\n.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.page-loader {\n  background-color: #00f;\n  display: table;\n  height: 100%;\n  overflow: auto;\n  position: relative;\n  width: 100%; }\n\n.footer {\n  background-color: #707c89;\n  bottom: 0px;\n  height: 46px;\n  position: absolute;\n  width: 100%;\n  z-index: 99; }\n\n.button-container {\n  display: flex;\n  float: right; }\n\n.button-box a {\n  background-color: #C1C6C9;\n  border: 1px solid #C1C6C9;\n  border-left: none;\n  color: #5C6670;\n  cursor: pointer;\n  display: block;\n  height: 44px;\n  line-height: 42px;\n  text-align: center;\n  text-decoration: none;\n  width: 40px; }\n\n.button-box a.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.footer .button-box a, .footer .nav-comp-container .page-counter, .footer .button-box a.disabled, .footer .button-box a.selected {\n  background: #ffffff;\n  /* Old browsers */\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2VkZWJlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGViZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(51%, #edebec), color-stop(100%, #edebec));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edebec',GradientType=0 );\n  /* IE6-8 */ }\n\n.footer .button-box a:hover {\n  color: #fff !important;\n  background: #ee3124;\n  /* Old browsers */\n  border-top: 1px solid #ee3124;\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU3JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZTMxMjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee3124), color-stop(44%, #ee3124), color-stop(50%, #ee3124), color-stop(57%, #ee3124), color-stop(100%, #ee3124));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee3124', endColorstr='#ee3124',GradientType=0 );\n  /* IE6-8 */ }\n\n.nav-comp-container {\n  background-color: #C1C6C9;\n  border-bottom: 1px solid #C1C6C9;\n  color: #5C6670;\n  display: inline-block;\n  font-size: 1em;\n  height: 44px;\n  line-height: 44px;\n  padding: 1px 1px 0 0;\n  vertical-align: top; }\n\n.nav-comp-container .page-counter {\n  padding: 0 10px; }\n\n.icon-transcript::before {\n  content: \"\\E629\"; }\n\n.icon-audio:before {\n  content: \"\\E606\"; }\n\n.icon-playPause:before {\n  content: \"\\E619\"; }\n\n.selected .icon-transcript:before {\n  content: \"\\E628\"; }\n\n.selected .icon-audio:before {\n  content: \"\\E605\"; }\n\n.selected .icon-playPause:before {\n  content: \"\\E61B\"; }\n\n.header {\n  background-color: #E9ECED;\n  max-height: 61px;\n  position: relative;\n  width: 100%;\n  z-index: 100; }\n\n.course-logo {\n  float: left; }\n\n.title-holder {\n  color: #5C6670;\n  display: table;\n  font-size: 1em;\n  font-weight: 700;\n  height: 100%; }\n\n.title-holder > div {\n  margin-top: 25px;\n  padding: 0 10px;\n  vertical-align: middle; }\n\n.course-progress {\n  background: #c5cdcf;\n  height: 4px;\n  position: relative;\n  top: 2px;\n  width: 100%; }\n\n.course-progress span {\n  background: #ee3124;\n  color: #000000;\n  display: block;\n  height: 4px;\n  text-align: center;\n  width: 0%; }\n\n/* Intro page */\n.intro-container {\n  background-color: #0A4166;\n  height: 100%;\n  width: 100%; }\n\n.logo-container {\n  background-color: #FFFFFF;\n  padding: 30px 25px 24px; }\n  .logo-container p {\n    color: rgba(0, 0, 0, 0.65);\n    font-size: 1.5em;\n    margin-bottom: 0;\n    margin-top: 10px; }\n\n.intro-text {\n  padding: 25px 28px 0; }\n\n.intro-text-line {\n  display: table;\n  margin-bottom: 15px; }\n  .intro-text-line > div {\n    display: table-cell; }\n\n.button-icon {\n  background: url(/app/assets/images/ui/btnstrip.png) repeat-x scroll 0 0 transparent;\n  color: #5C6670;\n  height: 40px;\n  font-size: 1em;\n  margin: 0;\n  text-align: center;\n  vertical-align: middle;\n  width: 40px; }\n\n.button-icon-blank {\n  height: 40px;\n  font-size: 1.2em;\n  margin: 0;\n  text-align: center;\n  vertical-align: middle;\n  width: 40px; }\n\n.button-text {\n  font-size: 0.875em;\n  font-weight: 700;\n  padding-left: 15px;\n  vertical-align: middle; }\n\n.start-btn-container {\n  background-color: #083451;\n  padding: 8px 0 8px 10px; }\n\n.start-button {\n  background-color: #1792E5;\n  font-size: 1.56em;\n  margin-left: 10px;\n  padding: 8px 20px;\n  text-decoration: none;\n  vertical-align: middle; }\n\n.start-button:hover {\n  background-color: #ee3124; }\n\n.playAudioParent {\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n  z-index: 88888; }\n\n.playBlinkBlack {\n  background-color: #FFFFFF;\n  height: 100%;\n  left: 0;\n  opacity: 0.6;\n  position: absolute;\n  top: 0;\n  width: 100%;\n  z-index: 5; }\n\n.playBlink {\n  background: url(\"/app/assets/images/template/play_blink_static.png\") no-repeat scroll 0 0 transparent;\n  height: 100px;\n  margin: -50px auto 0;\n  position: relative;\n  top: 50%;\n  width: 112px;\n  z-index: 500; }\n\n.button-autoPlay {\n  background: url(\"/app/assets/images/template/play_blink.gif\") no-repeat scroll 0 0 transparent;\n  display: block;\n  height: 42px;\n  margin: 0 auto;\n  position: relative;\n  top: 29px;\n  width: 32px;\n  z-index: 900000;\n  margin-top: 25%; }\n\n@media (max-width: 420px) {\n  .start-btn-container {\n    font-size: 0.937em;\n    position: relative;\n    width: 90%; }\n  .intro-text {\n    padding: 15px 10px 0; }\n  .start-button {\n    font-size: 0.937em;\n    position: absolute;\n    right: 10px;\n    top: 45px; } }\n\n@media (max-width: 768px) {\n  .dis_img1 {\n    bottom: 50px !important; } }\n\n@media (min-width: 768px) {\n  .button-text {\n    font-size: 1.125em;\n    font-weight: normal; }\n  .logo-container p {\n    font-size: 2em; }\n  .dis_img1 {\n    background: url(\"/app/assets/images/template/instruction.jpg\") no-repeat scroll 0 0 transparent;\n    position: absolute;\n    right: -315px;\n    bottom: 0;\n    display: block;\n    width: 770px;\n    height: 424px; }\n  .system-check {\n    height: 93px; } }\n\n.static-page1 h1 {\n  font-size: 1.875em;\n  font-weight: normal;\n  line-height: 0.5; }\n\n.static-page1 .header {\n  background-color: #ddd;\n  height: 100px;\n  margin: auto;\n  width: 100%; }\n\n.static-page1 .content {\n  background-color: #000;\n  height: 562px;\n  margin: auto;\n  width: 1005; }\n\n.static-page1 .content .welcome_text {\n  margin: 20% auto auto auto;\n  text-align: center;\n  width: 40%; }\n\n.static-page1 .black {\n  color: #000; }\n\n.static-page1 .white {\n  color: #fff; }\n\n.static-page1 .footer {\n  background-color: #ddd;\n  margin: auto;\n  height: 100px;\n  width: 1024px; }\n\n.static-page1 .flex-container {\n  display: -webkit-flex; }\n\n.static-page1 .left-side {\n  border-right: 1px solid #ccc;\n  text-align: right;\n  text-transform: uppercase;\n  padding-right: 10px;\n  width: 50%; }\n\n.static-page1 .right-side {\n  border-left: 1px solid #ccc;\n  text-align: left;\n  text-transform: uppercase;\n  padding-left: 10px;\n  width: 50%; }\n\n.static-page1 .bg {\n  background-image: url(\"/app/assets/images/template/bg1.jpg\");\n  height: 100%; }\n\n.static-page1 .instruction_text {\n  color: #fff;\n  font-weight: bold; }\n\n.static-page1 .btn {\n  text-align: right;\n  width: 82%; }\n\n.static-page1 .btn .btn_text {\n  color: #5e9e44;\n  font-weight: bold;\n  position: relative;\n  left: -100px;\n  top: 5px; }\n\n.static-page2 h1, .static-page2 h2, .static-page2 h3, .static-page2 h4 {\n  font-weight: normal;\n  line-height: 0.5; }\n\n.static-page2 h1 {\n  font-size: 1.875em; }\n\n.static-page2 .header {\n  background-color: #ddd;\n  height: 100px;\n  margin: auto;\n  width: 100%; }\n\n.static-page2 .content {\n  background-color: #000;\n  height: 562px;\n  margin: auto;\n  width: 100%; }\n\n.static-page2 .content .welcome_text {\n  margin: 20% auto auto auto;\n  text-align: center;\n  width: 40%; }\n\n.static-page2 .black {\n  color: #000; }\n\n.static-page2 .white {\n  color: #fff; }\n\n.static-page2 .footer {\n  background-color: #ddd;\n  height: 100px;\n  margin: auto;\n  width: 1024px; }\n\n.static-page2 .flex-container {\n  display: -webkit-flex;\n  width: 100%; }\n\n.static-page2 .left-side {\n  width: 100%; }\n\n.static-page2 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.static-page2 .bg {\n  background-image: url(\"/app/assets/images/template/bg_2.jpg\");\n  height: 100%; }\n\n.static-page2 .instruction_text {\n  font-weight: bold;\n  color: #fff;\n  margin: 10px; }\n\n.static-page2 .intro {\n  background-color: #72A65C;\n  float: right;\n  height: 562px;\n  width: 50%;\n  opacity: 0.9; }\n\n.static-page2 .intro_heading {\n  margin-left: 3%;\n  margin-top: 25%; }\n\n.static-page2 .intro_para {\n  margin-left: 20px;\n  margin-top: 40px;\n  width: 80%; }\n\n.static-page2 .intro_list {\n  width: 70%; }\n\n.static-page2 .btn {\n  background-color: #50a82d;\n  width: 100%;\n  float: left;\n  margin-top: 8%; }\n\n.static-page2 button {\n  background-color: #f9f9f9;\n  color: #5e9e44;\n  font-size: 1em;\n  font-weight: bold;\n  height: 55px;\n  margin-left: 20px;\n  width: 200px; }\n\n.menu-content-container {\n  overflow-y: hidden !important; }\n\n.menu-overlay-style {\n  position: absolute !important; }\n\n.menu-style {\n  width: 350px; }\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n@font-face {\n  font-family: 'Lato';\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot\");\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/lato-regular-webfont.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/lato-regular-webfont.woff\") format(\"woff\"), url(\"/app/assets/fonts/lato-regular-webfont.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/lato-regular-webfont.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'Lato-Light';\n  src: url(\"/app/assets/fonts/Lato-Light.eot\");\n  src: url(\"/app/assets/fonts/Lato-Light.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/Lato-Light.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/Lato-Light.woff\") format(\"woff\"), url(\"/app/assets/fonts/Lato-Light.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/Lato-Light.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'icomoon';\n  src: url(\"/app/assets/fonts/icomoon.eot?c92yby\");\n  src: url(\"/app/assets/fonts/icomoon.eot?#iefixc92yby\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/icomoon.woff?c92yby\") format(\"woff\"), url(\"/app/assets/fonts/icomoon.ttf?c92yby\") format(\"truetype\"), url(\"/app/assets/fonts/icomoon.svg?c92yby#icomoon\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  font-family: 'icomoon';\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  letter-spacing: 0;\n  -webkit-font-feature-settings: \"liga\";\n  -moz-font-feature-settings: \"liga=1\";\n  -moz-font-feature-settings: \"liga\";\n  -ms-font-feature-settings: \"liga\" 1;\n  font-feature-settings: \"liga\";\n  -webkit-font-variant-ligatures: discretionary-ligatures;\n  font-variant-ligatures: discretionary-ligatures;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  background-color: #FFFFFF;\n  color: #FFFFFF;\n  font-family: \"Arial\";\n  font-size: 1em;\n  font-weight: 300;\n  margin: 0 auto;\n  overflow: hidden; }\n\nhtml, body {\n  width: 100%;\n  height: 100%; }\n\n.shell-conatiner {\n  height: 100%;\n  width: 100%; }\n\n.player > div {\n  overflow: auto; }\n\na {\n  color: #FFFFFF; }\n\n.fontBold {\n  font-weight: 700; }\n\n.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.page-loader {\n  background-color: #00f;\n  display: table;\n  height: 100%;\n  overflow: auto;\n  position: relative;\n  width: 100%; }\n\n.player {\n  height: 100%; }\n\n.footer {\n  background-color: #707c89;\n  bottom: 0px;\n  height: 46px;\n  position: absolute;\n  width: 100%;\n  z-index: 99; }\n\n.button-container {\n  display: flex;\n  float: right; }\n\n.button-box a {\n  background-color: #C1C6C9;\n  border: 1px solid #C1C6C9;\n  border-left: none;\n  color: #5C6670;\n  cursor: pointer;\n  display: block;\n  height: 44px;\n  line-height: 42px;\n  text-align: center;\n  text-decoration: none;\n  width: 40px; }\n\n.button-box a.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.footer .button-box a, .footer .nav-comp-container .page-counter, .footer .button-box a.disabled, .footer .button-box a.selected {\n  background: #ffffff;\n  /* Old browsers */\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2VkZWJlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGViZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(51%, #edebec), color-stop(100%, #edebec));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edebec',GradientType=0 );\n  /* IE6-8 */ }\n\n.footer .button-box a:hover {\n  color: #fff !important;\n  background: #ee3124;\n  /* Old browsers */\n  border-top: 1px solid #ee3124;\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU3JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZTMxMjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee3124), color-stop(44%, #ee3124), color-stop(50%, #ee3124), color-stop(57%, #ee3124), color-stop(100%, #ee3124));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee3124', endColorstr='#ee3124',GradientType=0 );\n  /* IE6-8 */ }\n\n.nav-comp-container {\n  background-color: #C1C6C9;\n  border-bottom: 1px solid #C1C6C9;\n  color: #5C6670;\n  display: inline-block;\n  font-size: 1em;\n  height: 44px;\n  line-height: 44px;\n  padding: 1px 1px 0 0;\n  vertical-align: top; }\n\n.nav-comp-container .page-counter {\n  padding: 0 10px; }\n\n.icon-transcript::before {\n  content: \"\\E629\"; }\n\n.icon-audio:before {\n  content: \"\\E606\"; }\n\n.icon-playPause:before {\n  content: \"\\E619\"; }\n\n.selected .icon-transcript:before {\n  content: \"\\E628\"; }\n\n.selected .icon-audio:before {\n  content: \"\\E605\"; }\n\n.selected .icon-playPause:before {\n  content: \"\\E61B\"; }\n\n.header {\n  background-color: #E9ECED;\n  display: inline-block;\n  max-height: 61px;\n  position: relative;\n  width: 100%;\n  z-index: 100; }\n\n.course-logo {\n  float: left; }\n\n.title-holder {\n  color: #5C6670;\n  display: table;\n  font-size: 1em;\n  font-weight: 700;\n  height: 100%; }\n\n.title-holder > div {\n  margin-top: 25px;\n  padding: 0 10px;\n  vertical-align: middle; }\n\n.course-progress {\n  background: #c5cdcf;\n  height: 4px;\n  position: relative;\n  top: 2px;\n  width: 100%; }\n\n.course-progress span {\n  background: #ee3124;\n  color: #000000;\n  display: block;\n  height: 4px;\n  text-align: center;\n  width: 0%; }\n\n/* Intro page */\n.intro-container {\n  background-color: #0A4166;\n  height: 100%;\n  width: 100%; }\n\n.intro-container .content {\n  background-color: #000;\n  height: 100%;\n  margin: auto;\n  width: 100%; }\n\n.intro-container .content .welcome_text {\n  margin: 20% auto auto auto;\n  text-align: center;\n  width: 50%; }\n\n.intro-container .black {\n  color: #000; }\n\n.intro-container .white {\n  color: #fff; }\n\n.intro-container .flex-container {\n  display: -webkit-flex; }\n\n.intro-container .left-side {\n  border-right: 1px solid #ccc;\n  text-align: right;\n  text-transform: uppercase;\n  padding-right: 10px;\n  width: 50%; }\n\n.intro-container .right-side {\n  border-left: 1px solid #ccc;\n  text-align: left;\n  text-transform: uppercase;\n  padding-left: 10px;\n  width: 50%; }\n\n.intro-container .bg {\n  background-image: url(\"/app/assets/images/template/bg1.jpg\");\n  height: 100%; }\n\n.intro-container .instruction_text {\n  color: #fff;\n  font-weight: bold;\n  position: relative;\n  top: 10px; }\n\n.intro-container .btn {\n  cursor: pointer;\n  text-align: right;\n  width: 80%; }\n\n.intro-container .btn .btn_text {\n  color: #5e9e44;\n  font-size: 1.25em;\n  left: -15px;\n  position: relative;\n  top: 10px; }\n\n.intro-container .start-button {\n  background-image: url(\"/app/assets/images/template/start-btn.jpg\");\n  background-repeat: no-repeat;\n  display: inline-block;\n  height: 45px;\n  text-align: center;\n  width: 112px; }\n\n.static-page1 .content {\n  background-color: #000;\n  height: 100%;\n  margin: auto;\n  width: 1005; }\n\n.static-page1 .content .welcome_text {\n  margin: auto;\n  width: 40%;\n  text-align: center;\n  margin-top: 20%; }\n\n.static-page1 .black {\n  color: #000; }\n\n.static-page1 .white {\n  color: #fff; }\n\n.static-page1 .footer {\n  background-color: #ddd;\n  margin: auto;\n  height: 100px;\n  width: 1024px; }\n\n.static-page1 .flex-container {\n  background-color: #5e9e44;\n  border-top: 4px solid #05A251;\n  display: -webkit-flex;\n  height: 270px;\n  margin-top: 28%;\n  opacity: 0.8; }\n\n.static-page1 .left-side {\n  width: 65%; }\n\n.static-page1 .right-side {\n  margin: auto;\n  width: 30%; }\n\n.static-page1 .bg {\n  background-image: url(\"/app/assets/images/template/bg2.jpg\");\n  background-position: 20px;\n  height: 100%; }\n\n.static-page1 .instruction_text {\n  color: #fff;\n  font-weight: bold; }\n\n.static-page1 .intro {\n  border-top: 2px solid #ccc;\n  width: 100%; }\n\n.static-page1 .intro_heading {\n  margin-left: 30px;\n  margin-top: 40px; }\n\n.static-page1 .intro_para {\n  margin-left: 30px;\n  width: 80%; }\n\n.static-page1 .intro_list {\n  margin-left: 25px; }\n\n.menu-content-container {\n  overflow-y: hidden !important; }\n\n.menu-overlay-style {\n  position: absolute !important; }\n\n.menu-style {\n  width: 350px; }\n", ""]);
 
 // exports
 
