@@ -7,13 +7,18 @@ export default class PageLoader extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarOpen: false
+      menuOpen: props.menuOpen
     }
   }
 
   componentDidMount() {
     window.addEventListener("resize", this.updateDimensions.bind(this));
     this.updateDimensions();
+    this.getMenuList();
+  }
+
+  getMenuList() {
+
   }
 
   componentWillUnmount() {
@@ -27,33 +32,52 @@ export default class PageLoader extends React.Component {
     }
   }
 
-  onSetSidebarOpen(open) {
-    this.setState({sidebarOpen: open});
+  closeMenu() {
+    this.setState({closeMenu: false})
+  }
+
+  loadMenuItem() {
+    return (
+      <b>Sidebar content</b>
+    )
+  }
+
+  loadSideBar() {
+    return (
+      <SideBar
+         sidebar={this.loadMenuItem()}
+         contentClassName="menu-content-container"
+         open={this.props.menuOpen}
+         onSetOpen={this.closeMenu.bind(this)}
+         overlayClassName="menu-overlay-style"
+         pullRight={true}
+         rootClassName="menu-custom-style"
+         sidebarClassName="menu-style">
+         <b>{}</b>
+      </SideBar>
+    )
+  }
+
+  loadRouter() {
+    const route = routes[this.props.currentPage-1];
+    return (
+      <Router>
+        {
+          <Route
+            key={this.props.currentPage}
+            path={this.path}
+            component={route.comp}
+            />
+        }
+      </Router>
+    )
   }
 
   render() {
-    const route = routes[this.props.currentPage-1];
     return (
       <div className="page-loader" ref="pageLoader">
-        <SideBar sidebar={<b>Sidebar content</b>}
-           open={this.state.sidebarOpen}
-           onSetOpen={this.onSetSidebarOpen}
-           overlayClassName="menu-overlay-style"
-           pullRight={true}
-           rootClassName="menu-custom-style"
-           sidebarClassName="menu-style">
-           <b>{}</b>
-        </SideBar>
-
-        <Router>
-            {
-              <Route
-                key={this.props.currentPage}
-                path={this.path}
-                component={route.comp}
-                />
-            }
-        </Router>
+        {this.loadSideBar()}
+        {this.loadRouter()}
       </div>
     )
   }

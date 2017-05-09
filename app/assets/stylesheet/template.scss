@@ -153,13 +153,13 @@
   }
 
   .dis_img1 {
-  	background: url('/app/assets/images/template/instruction.jpg') no-repeat scroll 0 0 transparent;
-  	position: absolute;
-  	right: -315px;
-  	bottom: 0;
-  	display: block;
-  	width: 770px;
-  	height: 424px;
+    background: url('/app/assets/images/template/instruction.jpg') no-repeat scroll 0 0 transparent;
+    position: absolute;
+    right: -315px;
+    bottom: 0;
+    display: block;
+    width: 770px;
+    height: 424px;
   }
 
   .system-check {
@@ -168,103 +168,233 @@
 }
 
 .static-page1 {
-    h1
-{
-	font-size : 1.875em;
-	font-weight : normal;
-	line-height : 0.5;
+  h1
+  {
+    font-size : 1.875em;
+    font-weight : normal;
+    line-height : 0.5;
+  }
+
+  .header
+  {
+    background-color: #ddd;
+    height: 100px;
+    margin: auto;
+    width: 100%;
+  }
+
+  .content
+  {
+    background-color: #000;
+    height: 562px;
+    margin: auto;
+    width: 1005;
+  }
+
+
+  .content .welcome_text
+  {
+    margin: 20% auto auto auto;
+    text-align: center;
+    width: 40%;
+  }
+
+  .black
+  {
+    color: #000;
+  }
+
+  .white
+  {
+    color: #fff;
+  }
+
+  .footer
+  {
+    background-color: #ddd;
+    margin: auto;
+    height: 100px;
+    width: 1024px;
+  }
+
+  .flex-container
+  {
+    display: -webkit-flex;
+  }
+
+  .left-side
+  {
+    border-right: 1px solid #ccc;
+    text-align: right;
+    text-transform: uppercase;
+    padding-right: 10px;
+    width: 50%;
+  }
+
+  .right-side
+  {
+    border-left: 1px solid #ccc;
+    text-align: left;
+    text-transform: uppercase;
+    padding-left: 10px;
+    width: 50%;
+  }
+
+  .bg
+  {
+    background-image: url("/app/assets/images/template/bg1.jpg");
+    height:100%;
+  }
+
+  .instruction_text
+  {
+    color:#fff;
+    font-weight:bold;
+  }
+
+  .btn
+  {
+    text-align: right;
+    width: 82%;
+  }
+
+  .btn .btn_text
+  {
+    color: #5e9e44;
+    font-weight: bold;
+    position: relative;
+    left: -100px;
+    top: 5px;
+  }
 }
 
-.header
-{
-	background-color: #ddd;
-	height: 100px;
-	margin: auto;
-	width: 1024px;
-}
+.static-page2 {
+  h1, h2, h3, h4
+  {
+  	font-weight : normal;
+  	line-height : 0.5;
+  }
 
-.content
-{	
-	background-color: #000;
-	height: 562px;
-	margin: auto;
-	width: 1024px;
-}
+  h1
+  {
+  	font-size : 1.875em;
+
+  }
+
+  .header
+  {
+  	background-color: #ddd;
+  	height: 100px;
+  	margin: auto;
+  	width: 100%;
+  }
+
+  .content
+  {
+  	background-color: #000;
+  	height: 562px;
+  	margin: auto;
+  	width: 100%;
+  }
 
 
-.content .welcome_text
-{
-	margin: 20% auto auto auto;
-	text-align: center;
-	width: 40%;
-}
+  .content .welcome_text
+  {
+  	margin: 20% auto auto auto;
+  	text-align: center;
+  	width: 40%;
+  }
 
-.black
-{
-	color: #000;
-}
+  .black
+  {
+  	color: #000;
+  }
 
-.white
-{
-	color: #fff;
-}
+  .white
+  {
+  	color: #fff;
+  }
 
-.footer
-{
-	background-color: #ddd;
-	margin: auto;
-	height: 100px;
-	width: 1024px;
-}
+  .footer
+  {
+  	background-color: #ddd;
+  	height: 100px;
+  	margin: auto;
+  	width: 1024px;
+  }
 
-.flex-container
-{
-	display: -webkit-flex;
-}
+  .flex-container
+  {
+  	display: -webkit-flex;
+  	width: 100%;
+  }
+  .left-side
+  {
+  	width: 100%;
+  }
 
-.left-side
-{
-	border-right: 1px solid #ccc;
-	text-align: right;
-	text-transform: uppercase;
-	padding-right: 10px;
-	width: 50%;
-}
+  .right-side
+  {
+  	width: 30%;
+  	margin: auto;
+  }
 
-.right-side
-{
-	border-left: 1px solid #ccc;
-	text-align: left;
-	text-transform: uppercase;
-	padding-left: 10px;
-	width: 50%;
-}
+  .bg
+  {
+  	background-image: url("/app/assets/images/template/bg_2.jpg");
+  	height:100%;
+  }
 
-.bg
-{
-	background-image: url("/app/assets/images/template/bg1.jpg");
-	height:100%;
-}
+  .instruction_text
+  {
+  	font-weight:bold;
+  	color:#fff;
+  	margin:10px;
+  }
 
-.instruction_text
-{	
-	color:#fff;
-	font-weight:bold;
-}
+  .intro
+  {
+  	background-color: #72A65C;
+  	float:right;
+  	height: 562px;
+  	width: 50%;
+  	opacity: 0.9;
+  }
 
-.btn
-{
-	text-align: right;
-	width: 82%;
-}
+  .intro_heading
+  {
+  	margin-left: 3%;
+  	margin-top: 25%;
+  }
 
-.btn .btn_text
-{
-	color: #5e9e44;
-	font-weight: bold;
-	position: relative;
-	left: -100px;
-	top: 5px;
-}
+  .intro_para
+  {
+  	margin-left: 20px;
+  	margin-top: 40px;
+  	width: 80%;
+  }
 
+  .intro_list
+  {
+  	width: 70%;
+  }
+
+  .btn
+  {
+  	background-color:#50a82d;
+  	width:100%;
+  	float:left;
+  	margin-top:8%;
+  }
+
+  button
+  {
+  	background-color:#f9f9f9;
+  	color:#5e9e44;
+  	font-size:1em;
+  	font-weight: bold;
+  	height: 55px;
+  	margin-left:20px;
+  	width: 200px;
+  }
 }
