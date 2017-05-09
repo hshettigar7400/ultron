@@ -46,7 +46,7 @@ export default class Shell extends React.Component {
         onLoadNext={this.loadNext.bind(this)}
         onLoadPrev={this.loadPrev.bind(this)}
         onMenuClick={this.toggleMenu.bind(this)}
-        totalPages={3}
+        totalPages={13}
       />
     )
   }

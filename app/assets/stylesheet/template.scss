@@ -5,30 +5,28 @@
   width: 100%;
 }
 
-.intro-container {
-  .content
-  {
-    background-color: #000;
-    height: 100%;
-    margin: auto;
-    width: 100%;
-  }
+.content
+{
+  background-color: #000;
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
 
+.black {
+  color: $black;
+}
+
+.white {
+  color: $white;
+}
+
+.intro-container {
   .content .welcome_text
   {
     margin: 20% auto auto auto;
     text-align: center;
     width: 50%;
-  }
-
-  .black
-  {
-    color: #000;
-  }
-
-  .white
-  {
-    color: #fff;
   }
 
   .flex-container
@@ -56,7 +54,7 @@
 
   .bg
   {
-    background-image: url("/app/assets/images/template/bg1.jpg");
+    background-image: url("/app/assets/images/template/intro.jpg");
     height:100%;
   }
 
@@ -95,94 +93,351 @@
 }
 
 .static-page1 {
-  .content
-  {
-  	background-color: #000;
-  	height: 100%;
-  	margin: auto;
-  	width: 1005;
-  }
-
-  .content .welcome_text
-  {
-  	margin: auto;
-  	width: 40%;
-  	text-align: center;
-  	margin-top: 20%;
-  }
-
-  .black
-  {
-  	color: #000;
-  }
-
-  .white
-  {
-  	color: #fff;
-  }
-
-  .footer
-  {
-  	background-color: #ddd;
-  	margin: auto;
-  	height: 100px;
-  	width: 1024px;
-  }
-
   .flex-container
   {
-  	background-color:#5e9e44;
-  	border-top: 4px solid #05A251;
-  	display: -webkit-flex;
-  	height: 270px;
-  	margin-top: 28%;
-      opacity:0.8;
+    background-color:#5e9e44;
+    border-top: 4px solid #05A251;
+    display: -webkit-flex;
+    height: 270px;
+    margin-top: 28%;
+    opacity:0.8;
 
   }
   .left-side
   {
-  	width: 65%;
+    width: 65%;
   }
 
   .right-side
   {
-      margin: auto;
-  	width: 30%;
+    margin: auto;
+    width: 30%;
   }
 
   .bg
   {
-  	background-image: url("/app/assets/images/template/bg2.jpg");
-  	background-position: 20px;
+    background-image: url("/app/assets/images/template/bg1.jpg");
+    background-position: 20px;
+    height:100%;
+  }
+
+  .instruction_text
+  {
+    color:#fff;
+    font-weight:bold;
+  }
+
+  .intro
+  {
+    border-top: 2px solid #ccc;
+    width: 100%;
+  }
+
+  .intro_heading
+  {
+    margin-left: 30px;
+    margin-top: 40px;
+  }
+
+  .intro_para
+  {
+    margin-left: 30px;
+    width: 80%;
+  }
+
+  .intro_list
+  {
+    margin-left:25px;
+  }
+}
+
+.static-page2 {
+  .flex-container {
+    display: -webkit-flex;
+    width: 100%;
+  }
+
+  .left-side {
+    width: 100%;
+  }
+
+  .right-side {
+    margin: auto;
+    width: 30%;
+  }
+
+  .bg {
+    background-image: url("/app/assets/images/template/bg2.jpg");
+    display: inline-block;
+    height:100%;
+    width: 100%;
+  }
+
+  .instruction_text {
+    font-weight:bold;
+    color:#fff;
+    margin:10px;
+  }
+
+  .intro {
+    background-color: #72A65C;
+    float:right;
+    height: 562px;
+    width: 50%;
+    opacity: 0.9;
+  }
+
+  .intro_heading {
+    margin-left: 3%;
+    margin-top: 25%;
+  }
+
+  .intro_para {
+    margin-left: 20px;
+    margin-top: 40px;
+    width: 80%;
+  }
+
+  .intro_list {
+    width: 70%;
+  }
+
+  .btn {
+    background-color:#50a82d;
+    width:100%;
+    float:left;
+    margin-top:8%;
+  }
+
+  button {
+    background-color:#f9f9f9;
+    color:#5e9e44;
+    font-size:1em;
+    font-weight: bold;
+    height: 55px;
+    margin-left:20px;
+    width: 200px;
+  }
+}
+
+.static-page3 {
+  .flex-container {
+    display: -webkit-flex;
+    background-color: #5e9e44;
+    margin-top: 30%;
+    height: 240px;
+    opacity: 0.8;
+  }
+
+  .left-side {
+    width: 65%;
+  }
+
+  .right-side {
+    width: 30%;
+    margin: auto;
+  }
+
+  .bg {
+    background-image: url("/app/assets/images/template/bg3.jpg");
+    height:100%;
+  }
+
+  .instruction_text {
+    font-weight:bold;
+    color:#fff;
+  }
+
+  .intro {
+    width: 100%;
+    border-top: 2px solid #ccc;
+  }
+
+  .intro_heading {
+    margin-left: 30px;
+    margin-top: 40px;
+  }
+
+  .intro_para {
+    margin-left: 82px;
+    width: 688px;
+    margin-top: 24px;
+  }
+
+  .intro_list {
+    margin-left:25px;
+  }
+}
+
+.static-page4 {
+  .flex-container
+  {
+  	display: -webkit-flex;
+  	background-color:#5e9e44;
+  	margin-top: 22%;
+    height: 335px;
+  	opacity:0.8;
+
+  }
+  .left-side
+  {
+  	width: 100%;
+
+
+  }
+
+  .right-side
+  {
+  	width: 30%;
+      margin: auto;
+
+  	}
+
+  .bg
+  {
+
+  	background-image: url("/app/assets/images/template/bg4.jpg");
   	height:100%;
+  	background-position: 20px;
+
+  }
+
+  .instruction_text
+  {
+  	font-weight:bold;
+  	color:#fff;
+
+  }
+
+  .intro
+  {
+
+
+  	width: 100%;
+  	border-top: 2px solid #ccc;
+
+  }
+
+  .intro_heading
+  {
+  	width:100%;
+  	margin-top: 55px;
+  	text-align:center;
+  }
+
+  .box1, .box2, .box3, .box4
+  {
+  	width:25%;
+  }
+
+  .container
+  {
+  	display: -webkit-flex;
+  	text-align: center;
+  	width:70%;
+  	margin: auto;
+  	margin-top: 5%;
+  }
+
+  .img_caption
+  {
+  	margin: auto;
+  	text-align: center;
+  	width: 70%;
+  	margin-top: 5%;
+
+  }
+}
+
+.interactivity1 {
+  .flex-container
+  {
+  	display: -webkit-flex;
+      width: 100%;
+  }
+
+  .left-side
+  {
+  	width: 100%;
+  }
+
+  .right-side
+  {
+    bottom: 60px;
+    right: 10px;
+  	position: absolute;
+  }
+
+  .bg
+  {
+  	background-image: url("/app/assets/images/template/bg5.jpg");
+    display: inline-block;
+    height: 100%;
+    width: 100%;
   }
 
   .instruction_text
   {
   	color:#fff;
   	font-weight:bold;
+  	margin:10px;
   }
 
   .intro
   {
-  	border-top: 2px solid #ccc;
-  	width: 100%;
+  	background-color: #72A65C;
+  	float:left;
+  	height: 562px;
+  	opacity: 0.9;
+  	width: 50%;
   }
 
   .intro_heading
   {
-  	margin-left: 30px;
-  	margin-top: 40px;
+  	margin-left: 5%;
+      margin-top: 10%;
+  	width: 70%;
   }
 
   .intro_para
   {
-  	margin-left: 30px;
+  	margin-left: 5%;
+      margin-top: 40px;
       width: 80%;
   }
 
-  .intro_list
+  .btn_div
   {
-  	margin-left:25px;
+  	float:left;
+  	margin: 8% auto auto 3%;
+  	width:100%;
+  }
+  .buttons
+  {
+    display: flex;
+  	margin-top:10px;
+  }
+  button
+  {
+  	color:#5e9e44;
+    cursor: pointer;
+  	font-size:1em;
+  	font-weight: bold;
+  	height: 55px;
+  	margin-left:10px;
+    width: 200px;
+  }
+
+  .popup-container {
+    background: white;
+    color: #333;
+    padding: 10px;
+    width: 465px;
+    height: 250px;
+  }
+
+  .close-btn {
+    float: right;
+    cursor: pointer;
   }
 }
