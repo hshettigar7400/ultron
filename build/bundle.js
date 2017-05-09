@@ -11546,7 +11546,7 @@ var Shell = function (_React$Component) {
         onLoadNext: this.loadNext.bind(this),
         onLoadPrev: this.loadPrev.bind(this),
         onMenuClick: this.toggleMenu.bind(this),
-        totalPages: 3
+        totalPages: 13
       });
     }
   }, {
@@ -11577,7 +11577,7 @@ exports.default = Shell;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StaticPage3 = exports.StaticPage2 = exports.StaticPage1 = undefined;
+exports.StaticPage4 = exports.StaticPage3 = exports.StaticPage2 = exports.StaticPage1 = undefined;
 
 var _react = __webpack_require__(4);
 
@@ -11595,11 +11595,16 @@ var _StaticPage5 = __webpack_require__(105);
 
 var _StaticPage6 = _interopRequireDefault(_StaticPage5);
 
+var _StaticPage7 = __webpack_require__(246);
+
+var _StaticPage8 = _interopRequireDefault(_StaticPage7);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.StaticPage1 = _StaticPage2.default;
 exports.StaticPage2 = _StaticPage4.default;
 exports.StaticPage3 = _StaticPage6.default;
+exports.StaticPage4 = _StaticPage8.default;
 
 /***/ }),
 /* 102 */
@@ -12134,15 +12139,48 @@ var StaticPage3 = function (_React$Component) {
   }
 
   _createClass(StaticPage3, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        null,
+        "div",
+        { className: "static-page3" },
         _react2.default.createElement(
-          'h1',
-          null,
-          'Page 3'
+          "div",
+          { className: "content" },
+          _react2.default.createElement(
+            "div",
+            { className: "bg" },
+            _react2.default.createElement(
+              "div",
+              { className: "intro white" },
+              _react2.default.createElement(
+                "div",
+                { className: "flex-container" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "left-side" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "intro_heading" },
+                    _react2.default.createElement(
+                      "h1",
+                      null,
+                      "Our Goal"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "intro_para" },
+                    _react2.default.createElement(
+                      "span",
+                      null,
+                      "Our goal is to help you be better prepared by knowing what to expect, which will make a positive impression with the SEC, and keep you focused on your work."
+                    )
+                  )
+                )
+              )
+            )
+          )
         )
       );
     }
@@ -12169,6 +12207,8 @@ var routes = [{ path: '/page1',
   comp: _Templates.StaticPage2
 }, { path: '/page3',
   comp: _Templates.StaticPage3
+}, { path: '/page4',
+  comp: _Templates.StaticPage4
 }];
 
 module.exports = {
@@ -14135,7 +14175,7 @@ exports = module.exports = __webpack_require__(111)(undefined);
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n@font-face {\n  font-family: 'Lato';\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot\");\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/lato-regular-webfont.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/lato-regular-webfont.woff\") format(\"woff\"), url(\"/app/assets/fonts/lato-regular-webfont.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/lato-regular-webfont.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'Lato-Light';\n  src: url(\"/app/assets/fonts/Lato-Light.eot\");\n  src: url(\"/app/assets/fonts/Lato-Light.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/Lato-Light.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/Lato-Light.woff\") format(\"woff\"), url(\"/app/assets/fonts/Lato-Light.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/Lato-Light.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'icomoon';\n  src: url(\"/app/assets/fonts/icomoon.eot?c92yby\");\n  src: url(\"/app/assets/fonts/icomoon.eot?#iefixc92yby\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/icomoon.woff?c92yby\") format(\"woff\"), url(\"/app/assets/fonts/icomoon.ttf?c92yby\") format(\"truetype\"), url(\"/app/assets/fonts/icomoon.svg?c92yby#icomoon\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  font-family: 'icomoon';\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  letter-spacing: 0;\n  -webkit-font-feature-settings: \"liga\";\n  -moz-font-feature-settings: \"liga=1\";\n  -moz-font-feature-settings: \"liga\";\n  -ms-font-feature-settings: \"liga\" 1;\n  font-feature-settings: \"liga\";\n  -webkit-font-variant-ligatures: discretionary-ligatures;\n  font-variant-ligatures: discretionary-ligatures;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  background-color: #FFFFFF;\n  color: #FFFFFF;\n  font-family: \"Arial\";\n  font-size: 1em;\n  font-weight: 300;\n  margin: 0 auto;\n  overflow: hidden; }\n\nhtml, body {\n  width: 100%;\n  height: 100%; }\n\n.shell-conatiner {\n  height: 100%;\n  width: 100%; }\n\n.player > div {\n  overflow: auto; }\n\na {\n  color: #FFFFFF; }\n\n.fontBold {\n  font-weight: 700; }\n\n.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.page-loader {\n  background-color: #00f;\n  display: table;\n  height: 100%;\n  overflow: auto;\n  position: relative;\n  width: 100%; }\n\n.player {\n  height: 100%; }\n\n.footer {\n  background-color: #707c89;\n  bottom: 0px;\n  height: 46px;\n  position: absolute;\n  width: 100%;\n  z-index: 99; }\n\n.button-container {\n  display: flex;\n  float: right; }\n\n.button-box a {\n  background-color: #C1C6C9;\n  border: 1px solid #C1C6C9;\n  border-left: none;\n  color: #5C6670;\n  cursor: pointer;\n  display: block;\n  height: 44px;\n  line-height: 42px;\n  text-align: center;\n  text-decoration: none;\n  width: 40px; }\n\n.button-box a.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.footer .button-box a, .footer .nav-comp-container .page-counter, .footer .button-box a.disabled, .footer .button-box a.selected {\n  background: #ffffff;\n  /* Old browsers */\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2VkZWJlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGViZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(51%, #edebec), color-stop(100%, #edebec));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edebec',GradientType=0 );\n  /* IE6-8 */ }\n\n.footer .button-box a:hover {\n  color: #fff !important;\n  background: #ee3124;\n  /* Old browsers */\n  border-top: 1px solid #ee3124;\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU3JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZTMxMjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee3124), color-stop(44%, #ee3124), color-stop(50%, #ee3124), color-stop(57%, #ee3124), color-stop(100%, #ee3124));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee3124', endColorstr='#ee3124',GradientType=0 );\n  /* IE6-8 */ }\n\n.nav-comp-container {\n  background-color: #C1C6C9;\n  border-bottom: 1px solid #C1C6C9;\n  color: #5C6670;\n  display: inline-block;\n  font-size: 1em;\n  height: 44px;\n  line-height: 44px;\n  padding: 1px 1px 0 0;\n  vertical-align: top; }\n\n.nav-comp-container .page-counter {\n  padding: 0 10px; }\n\n.icon-transcript::before {\n  content: \"\\E629\"; }\n\n.icon-audio:before {\n  content: \"\\E606\"; }\n\n.icon-playPause:before {\n  content: \"\\E619\"; }\n\n.selected .icon-transcript:before {\n  content: \"\\E628\"; }\n\n.selected .icon-audio:before {\n  content: \"\\E605\"; }\n\n.selected .icon-playPause:before {\n  content: \"\\E61B\"; }\n\n.header {\n  background-color: #E9ECED;\n  display: inline-block;\n  max-height: 61px;\n  position: relative;\n  width: 100%;\n  z-index: 100; }\n\n.course-logo {\n  float: left; }\n\n.title-holder {\n  color: #5C6670;\n  display: table;\n  font-size: 1em;\n  font-weight: 700;\n  height: 100%; }\n\n.title-holder > div {\n  margin-top: 25px;\n  padding: 0 10px;\n  vertical-align: middle; }\n\n.course-progress {\n  background: #c5cdcf;\n  height: 4px;\n  position: relative;\n  top: 2px;\n  width: 100%; }\n\n.course-progress span {\n  background: #ee3124;\n  color: #000000;\n  display: block;\n  height: 4px;\n  text-align: center;\n  width: 0%; }\n\n/* Intro page */\n.intro-container {\n  background-color: #0A4166;\n  height: 100%;\n  width: 100%; }\n\n.intro-container .content {\n  background-color: #000;\n  height: 100%;\n  margin: auto;\n  width: 100%; }\n\n.intro-container .content .welcome_text {\n  margin: 20% auto auto auto;\n  text-align: center;\n  width: 50%; }\n\n.intro-container .black {\n  color: #000; }\n\n.intro-container .white {\n  color: #fff; }\n\n.intro-container .flex-container {\n  display: -webkit-flex; }\n\n.intro-container .left-side {\n  border-right: 1px solid #ccc;\n  text-align: right;\n  text-transform: uppercase;\n  padding-right: 10px;\n  width: 50%; }\n\n.intro-container .right-side {\n  border-left: 1px solid #ccc;\n  text-align: left;\n  text-transform: uppercase;\n  padding-left: 10px;\n  width: 50%; }\n\n.intro-container .bg {\n  background-image: url(\"/app/assets/images/template/bg1.jpg\");\n  height: 100%; }\n\n.intro-container .instruction_text {\n  color: #fff;\n  font-weight: bold;\n  position: relative;\n  top: 10px; }\n\n.intro-container .btn {\n  cursor: pointer;\n  text-align: right;\n  width: 80%; }\n\n.intro-container .btn .btn_text {\n  color: #5e9e44;\n  font-size: 1.25em;\n  left: -15px;\n  position: relative;\n  top: 10px; }\n\n.intro-container .start-button {\n  background-image: url(\"/app/assets/images/template/start-btn.jpg\");\n  background-repeat: no-repeat;\n  display: inline-block;\n  height: 45px;\n  text-align: center;\n  width: 112px; }\n\n.static-page1 .content {\n  background-color: #000;\n  height: 100%;\n  margin: auto;\n  width: 1005; }\n\n.static-page1 .content .welcome_text {\n  margin: auto;\n  width: 40%;\n  text-align: center;\n  margin-top: 20%; }\n\n.static-page1 .black {\n  color: #000; }\n\n.static-page1 .white {\n  color: #fff; }\n\n.static-page1 .footer {\n  background-color: #ddd;\n  margin: auto;\n  height: 100px;\n  width: 1024px; }\n\n.static-page1 .flex-container {\n  background-color: #5e9e44;\n  border-top: 4px solid #05A251;\n  display: -webkit-flex;\n  height: 270px;\n  margin-top: 28%;\n  opacity: 0.8; }\n\n.static-page1 .left-side {\n  width: 65%; }\n\n.static-page1 .right-side {\n  margin: auto;\n  width: 30%; }\n\n.static-page1 .bg {\n  background-image: url(\"/app/assets/images/template/bg2.jpg\");\n  background-position: 20px;\n  height: 100%; }\n\n.static-page1 .instruction_text {\n  color: #fff;\n  font-weight: bold; }\n\n.static-page1 .intro {\n  border-top: 2px solid #ccc;\n  width: 100%; }\n\n.static-page1 .intro_heading {\n  margin-left: 30px;\n  margin-top: 40px; }\n\n.static-page1 .intro_para {\n  margin-left: 30px;\n  width: 80%; }\n\n.static-page1 .intro_list {\n  margin-left: 25px; }\n\n.menu-content-container {\n  overflow-y: hidden !important; }\n\n.menu-overlay-style {\n  position: absolute !important; }\n\n.menu-style {\n  width: 350px; }\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n@font-face {\n  font-family: 'Lato';\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot\");\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/lato-regular-webfont.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/lato-regular-webfont.woff\") format(\"woff\"), url(\"/app/assets/fonts/lato-regular-webfont.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/lato-regular-webfont.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'Lato-Light';\n  src: url(\"/app/assets/fonts/Lato-Light.eot\");\n  src: url(\"/app/assets/fonts/Lato-Light.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/Lato-Light.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/Lato-Light.woff\") format(\"woff\"), url(\"/app/assets/fonts/Lato-Light.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/Lato-Light.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'icomoon';\n  src: url(\"/app/assets/fonts/icomoon.eot?c92yby\");\n  src: url(\"/app/assets/fonts/icomoon.eot?#iefixc92yby\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/icomoon.woff?c92yby\") format(\"woff\"), url(\"/app/assets/fonts/icomoon.ttf?c92yby\") format(\"truetype\"), url(\"/app/assets/fonts/icomoon.svg?c92yby#icomoon\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  font-family: 'icomoon';\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  letter-spacing: 0;\n  -webkit-font-feature-settings: \"liga\";\n  -moz-font-feature-settings: \"liga=1\";\n  -moz-font-feature-settings: \"liga\";\n  -ms-font-feature-settings: \"liga\" 1;\n  font-feature-settings: \"liga\";\n  -webkit-font-variant-ligatures: discretionary-ligatures;\n  font-variant-ligatures: discretionary-ligatures;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  background-color: #FFFFFF;\n  color: #FFFFFF;\n  font-family: \"Arial\";\n  font-size: 1em;\n  font-weight: 300;\n  margin: 0 auto;\n  overflow: hidden; }\n\nhtml, body {\n  width: 100%;\n  height: 100%; }\n\n.shell-conatiner {\n  height: 100%;\n  width: 100%; }\n\n.player > div {\n  overflow: auto; }\n\na {\n  color: #FFFFFF; }\n\n.fontBold {\n  font-weight: 700; }\n\n.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.page-loader {\n  background-color: #00f;\n  display: table;\n  height: 100%;\n  overflow: auto;\n  position: relative;\n  width: 100%; }\n\n.player {\n  height: 100%; }\n\n.footer {\n  background-color: #707c89;\n  bottom: 0px;\n  height: 46px;\n  position: absolute;\n  width: 100%;\n  z-index: 99; }\n\n.button-container {\n  display: flex;\n  float: right; }\n\n.button-box a {\n  background-color: #C1C6C9;\n  border: 1px solid #C1C6C9;\n  border-left: none;\n  color: #5C6670;\n  cursor: pointer;\n  display: block;\n  height: 44px;\n  line-height: 42px;\n  text-align: center;\n  text-decoration: none;\n  width: 40px; }\n\n.button-box a.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.footer .button-box a, .footer .nav-comp-container .page-counter, .footer .button-box a.disabled, .footer .button-box a.selected {\n  background: #ffffff;\n  /* Old browsers */\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2VkZWJlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGViZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(51%, #edebec), color-stop(100%, #edebec));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edebec',GradientType=0 );\n  /* IE6-8 */ }\n\n.footer .button-box a:hover {\n  color: #fff !important;\n  background: #ee3124;\n  /* Old browsers */\n  border-top: 1px solid #ee3124;\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU3JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZTMxMjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee3124), color-stop(44%, #ee3124), color-stop(50%, #ee3124), color-stop(57%, #ee3124), color-stop(100%, #ee3124));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee3124', endColorstr='#ee3124',GradientType=0 );\n  /* IE6-8 */ }\n\n.nav-comp-container {\n  background-color: #C1C6C9;\n  border-bottom: 1px solid #C1C6C9;\n  color: #5C6670;\n  display: inline-block;\n  font-size: 1em;\n  height: 44px;\n  line-height: 44px;\n  padding: 1px 1px 0 0;\n  vertical-align: top; }\n\n.nav-comp-container .page-counter {\n  padding: 0 10px; }\n\n.icon-transcript::before {\n  content: \"\\E629\"; }\n\n.icon-audio:before {\n  content: \"\\E606\"; }\n\n.icon-playPause:before {\n  content: \"\\E619\"; }\n\n.selected .icon-transcript:before {\n  content: \"\\E628\"; }\n\n.selected .icon-audio:before {\n  content: \"\\E605\"; }\n\n.selected .icon-playPause:before {\n  content: \"\\E61B\"; }\n\n.header {\n  background-color: #E9ECED;\n  display: inline-block;\n  max-height: 61px;\n  position: relative;\n  width: 100%;\n  z-index: 100; }\n\n.course-logo {\n  float: left; }\n\n.title-holder {\n  color: #5C6670;\n  display: table;\n  font-size: 1em;\n  font-weight: 700;\n  height: 100%; }\n\n.title-holder > div {\n  margin-top: 25px;\n  padding: 0 10px;\n  vertical-align: middle; }\n\n.course-progress {\n  background: #c5cdcf;\n  height: 4px;\n  position: relative;\n  top: 2px;\n  width: 100%; }\n\n.course-progress span {\n  background: #ee3124;\n  color: #000000;\n  display: block;\n  height: 4px;\n  text-align: center;\n  width: 0%; }\n\n/* Intro page */\n.intro-container {\n  background-color: #0A4166;\n  height: 100%;\n  width: 100%; }\n\n.intro-container .content {\n  background-color: #000;\n  height: 100%;\n  margin: auto;\n  width: 100%; }\n\n.intro-container .content .welcome_text {\n  margin: 20% auto auto auto;\n  text-align: center;\n  width: 50%; }\n\n.intro-container .black {\n  color: #000; }\n\n.intro-container .white {\n  color: #fff; }\n\n.intro-container .flex-container {\n  display: -webkit-flex; }\n\n.intro-container .left-side {\n  border-right: 1px solid #ccc;\n  text-align: right;\n  text-transform: uppercase;\n  padding-right: 10px;\n  width: 50%; }\n\n.intro-container .right-side {\n  border-left: 1px solid #ccc;\n  text-align: left;\n  text-transform: uppercase;\n  padding-left: 10px;\n  width: 50%; }\n\n.intro-container .bg {\n  background-image: url(\"/app/assets/images/template/intro.jpg\");\n  height: 100%; }\n\n.intro-container .instruction_text {\n  color: #fff;\n  font-weight: bold;\n  position: relative;\n  top: 10px; }\n\n.intro-container .btn {\n  cursor: pointer;\n  text-align: right;\n  width: 80%; }\n\n.intro-container .btn .btn_text {\n  color: #5e9e44;\n  font-size: 1.25em;\n  left: -15px;\n  position: relative;\n  top: 10px; }\n\n.intro-container .start-button {\n  background-image: url(\"/app/assets/images/template/start-btn.jpg\");\n  background-repeat: no-repeat;\n  display: inline-block;\n  height: 45px;\n  text-align: center;\n  width: 112px; }\n\n.static-page1 .content {\n  background-color: #000;\n  height: 100%;\n  margin: auto;\n  width: 1005; }\n\n.static-page1 .content .welcome_text {\n  margin: auto;\n  width: 40%;\n  text-align: center;\n  margin-top: 20%; }\n\n.static-page1 .black {\n  color: #000; }\n\n.static-page1 .white {\n  color: #fff; }\n\n.static-page1 .footer {\n  background-color: #ddd;\n  margin: auto;\n  height: 100px;\n  width: 1024px; }\n\n.static-page1 .flex-container {\n  background-color: #5e9e44;\n  border-top: 4px solid #05A251;\n  display: -webkit-flex;\n  height: 270px;\n  margin-top: 28%;\n  opacity: 0.8; }\n\n.static-page1 .left-side {\n  width: 65%; }\n\n.static-page1 .right-side {\n  margin: auto;\n  width: 30%; }\n\n.static-page1 .bg {\n  background-image: url(\"/app/assets/images/template/bg1.jpg\");\n  background-position: 20px;\n  height: 100%; }\n\n.static-page1 .instruction_text {\n  color: #fff;\n  font-weight: bold; }\n\n.static-page1 .intro {\n  border-top: 2px solid #ccc;\n  width: 100%; }\n\n.static-page1 .intro_heading {\n  margin-left: 30px;\n  margin-top: 40px; }\n\n.static-page1 .intro_para {\n  margin-left: 30px;\n  width: 80%; }\n\n.static-page1 .intro_list {\n  margin-left: 25px; }\n\n.static-page2 .content {\n  background-color: #000;\n  height: 100%;\n  margin: auto;\n  width: 100%; }\n\n.static-page2 .content .welcome_text {\n  margin: 20% auto auto auto;\n  text-align: center;\n  width: 40%; }\n\n.static-page2 .black {\n  color: #000; }\n\n.static-page2 .white {\n  color: #fff; }\n\n.static-page2 .flex-container {\n  display: -webkit-flex;\n  width: 100%; }\n\n.static-page2 .left-side {\n  width: 100%; }\n\n.static-page2 .right-side {\n  margin: auto;\n  width: 30%; }\n\n.static-page2 .bg {\n  background-image: url(\"/app/assets/images/template/bg2.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.static-page2 .instruction_text {\n  font-weight: bold;\n  color: #fff;\n  margin: 10px; }\n\n.static-page2 .intro {\n  background-color: #72A65C;\n  float: right;\n  height: 562px;\n  width: 50%;\n  opacity: 0.9; }\n\n.static-page2 .intro_heading {\n  margin-left: 3%;\n  margin-top: 25%; }\n\n.static-page2 .intro_para {\n  margin-left: 20px;\n  margin-top: 40px;\n  width: 80%; }\n\n.static-page2 .intro_list {\n  width: 70%; }\n\n.static-page2 .btn {\n  background-color: #50a82d;\n  width: 100%;\n  float: left;\n  margin-top: 8%; }\n\n.static-page2 button {\n  background-color: #f9f9f9;\n  color: #5e9e44;\n  font-size: 1em;\n  font-weight: bold;\n  height: 55px;\n  margin-left: 20px;\n  width: 200px; }\n\n.static-page3 .content {\n  background-color: #000;\n  margin: auto;\n  height: 100%;\n  width: 100%; }\n\n.static-page3 .content .welcome_text {\n  margin: auto;\n  width: 40%;\n  text-align: center;\n  margin-top: 20%; }\n\n.static-page3 .black {\n  color: #000; }\n\n.static-page3 .white {\n  color: #fff; }\n\n.static-page3 .flex-container {\n  display: -webkit-flex;\n  background-color: #5e9e44;\n  margin-top: 30%;\n  height: 240px;\n  opacity: 0.8; }\n\n.static-page3 .left-side {\n  width: 65%; }\n\n.static-page3 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.static-page3 .bg {\n  background-image: url(\"/app/assets/images/template/bg3.jpg\");\n  height: 100%; }\n\n.static-page3 .instruction_text {\n  font-weight: bold;\n  color: #fff; }\n\n.static-page3 .intro {\n  width: 100%;\n  border-top: 2px solid #ccc; }\n\n.static-page3 .intro_heading {\n  margin-left: 30px;\n  margin-top: 40px; }\n\n.static-page3 .intro_para {\n  margin-left: 82px;\n  width: 688px;\n  margin-top: 24px; }\n\n.static-page3 .intro_list {\n  margin-left: 25px; }\n\n.static-page4 .content {\n  margin: auto;\n  width: 100%;\n  height: 100%;\n  background-color: #000; }\n\n.static-page4 .content .welcome_text {\n  margin: auto;\n  width: 40%;\n  text-align: center;\n  margin-top: 20%; }\n\n.static-page4 .black {\n  color: #000; }\n\n.static-page4 .white {\n  color: #fff; }\n\n.static-page4 .footer {\n  margin: auto;\n  background-color: #ddd;\n  width: 1024px;\n  height: 100px; }\n\n.static-page4 .flex-container {\n  display: -webkit-flex;\n  background-color: #5e9e44;\n  margin-top: 22%;\n  height: 335px;\n  opacity: 0.8; }\n\n.static-page4 .left-side {\n  width: 100%; }\n\n.static-page4 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.static-page4 .bg {\n  background-image: url(\"/app/assets/images/template/bg4.jpg\");\n  height: 100%;\n  background-position: 20px; }\n\n.static-page4 .instruction_text {\n  font-weight: bold;\n  color: #fff; }\n\n.static-page4 .intro {\n  width: 100%;\n  border-top: 2px solid #ccc; }\n\n.static-page4 .intro_heading {\n  width: 100%;\n  margin-top: 55px;\n  text-align: center; }\n\n.static-page4 .box1, .static-page4 .box2, .static-page4 .box3, .static-page4 .box4 {\n  width: 25%; }\n\n.static-page4 .container {\n  display: -webkit-flex;\n  text-align: center;\n  width: 70%;\n  margin: auto;\n  margin-top: 5%; }\n\n.static-page4 .img_caption {\n  margin: auto;\n  text-align: center;\n  width: 70%;\n  margin-top: 5%; }\n\n.menu-content-container {\n  overflow-y: hidden !important; }\n\n.menu-overlay-style {\n  position: absolute !important; }\n\n.menu-style {\n  width: 350px; }\n", ""]);
 
 // exports
 
@@ -31222,6 +31262,128 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+/* 246 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var StaticPage3 = function (_React$Component) {
+  _inherits(StaticPage3, _React$Component);
+
+  function StaticPage3(props) {
+    _classCallCheck(this, StaticPage3);
+
+    return _possibleConstructorReturn(this, (StaticPage3.__proto__ || Object.getPrototypeOf(StaticPage3)).call(this, props));
+  }
+
+  _createClass(StaticPage3, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "static-page4" },
+        _react2.default.createElement(
+          "div",
+          { className: "content" },
+          _react2.default.createElement(
+            "div",
+            { className: "bg" },
+            _react2.default.createElement(
+              "div",
+              { className: "intro white" },
+              _react2.default.createElement(
+                "div",
+                { className: "flex-container" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "left-side" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "intro_heading" },
+                    _react2.default.createElement(
+                      "h1",
+                      null,
+                      " The National Examination Program \"NEP\" "
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "container" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "box1" },
+                      _react2.default.createElement("img", { src: "/app/assets/images/template/icon_1.png" }),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "img_caption" },
+                        "Risk Based Approach"
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "box2" },
+                      _react2.default.createElement("img", { src: "/app/assets/images/template/icon_2.png" }),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "img_caption" },
+                        "Emphasis on Team work"
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "box3" },
+                      _react2.default.createElement("img", { src: "/app/assets/images/template/icon_3.png" }),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "img_caption" },
+                        "Enhance training of examiners"
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "box4" },
+                      _react2.default.createElement("img", { src: "/app/assets/images/template/icon_4.png" }),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "img_caption" },
+                        "Hire senior industry professionals"
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return StaticPage3;
+}(_react2.default.Component);
+
+exports.default = StaticPage3;
 
 /***/ })
 /******/ ]);
