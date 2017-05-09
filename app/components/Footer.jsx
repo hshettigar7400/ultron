@@ -56,7 +56,8 @@ export default class Footer extends React.Component {
           </div>
           <div className="button-box">
             <a aria-disabled="false" aria-label="back" aria-pressed="false"
-              className={(this.props.currentPageNumber !== 1)? "tabindex" : "tabindex disabled"} href="#" role="button" >
+              className={(this.props.currentPageNumber !== 1)? "tabindex" : "tabindex disabled"} href="#"
+              onClick={this.props.onLoadPrev.bind(null, this)} role="button" >
               <span className="icon-back"></span>
             </a>
           </div>

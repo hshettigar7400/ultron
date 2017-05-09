@@ -1,5 +1,6 @@
 import React from 'react';
 import Shell from '../Shell';
+import MediaQuery from 'react-responsive';
 
 export default class Intro extends React.Component {
   constructor(props) {
@@ -38,46 +39,51 @@ export default class Intro extends React.Component {
               </div>
             </div>
           }
-          <div className="logo-container">
-            <img src="../app/assets/images/ui/intro-logo.png" />
-            <p className="title">Course instructions</p>
-          </div>
-          <div className="intro-text">
-            <div className="intro-text-line">
-              <div className="button-icon"><span className="icon-btn"></span></div>
-              <div className="button-text ">Adjust your audio settings.</div>
-            </div>
-            <div className="intro-text-line">
-              <div className="button-icon"><span className="icon-btn"></span></div>
-              <div className="button-text">Hide or display the Transcript at any time.</div>
-            </div>
-            <div className="intro-text-line">
-              <div className="button-icon"><span className="icon-btn"></span></div>
-              <div className="button-text">Hide or display the Topics at any time.</div>
-            </div>
-            <div className="intro-text-line">
-              <div className="button-icon-blank"><span className="icon-btn"></span></div>
-              <div className="button-text">Print the course PDF from the Print section</div>
-            </div>
-            <div className="intro-text-line">
-              <div className="button-icon-blank"><span className="icon-btn"></span></div>
-              <div className="button-text">Email: <a href="mailTo:ACSHSMVocollectTrainingRequests@honeywell.com" className="fontStyle" role="button"><u>Training</u></a></div>
-            </div>
-            <div className="intro-text-line">
-              <div className="button-icon-blank"><span className="icon-btn"></span></div>
-              <div className="button-text">Course duration: 10 minutes</div>
-            </div>
-            <div className="intro-text-line">
-              <div className="start-btn-container">
-                Select <span className="fontBold">Start</span> to proceed with the course.
-                <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
-                  Start
-                </a>
+          <MediaQuery query='(min-device-width: 1224px)'>
+            <div className="content">
+              <div className="bg">
+                <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
+                <div className="title welcome_text">
+                  <h1 className="white">Welcome to the course,</h1>
+                  <h1 className="black">SEC Compliance Readiness</h1>
+                  <div className="flex-container white">
+                    <div className="left-side ">Standards <br/>Rules <br/>Regulations</div>
+                    <div className="right-side ">Strategy <br/>Governance <br/>Security</div>
+                  </div>
+                </div>
+                <br/>
+                <div className="btn white">
+                  <span className="instruction_text">Click Start to begin </span>
+                  <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
+                    <span className="btn_text">Start</span>
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="system-check"></div>
-            <div className="dis_img1"></div>
-          </div>
+          </MediaQuery>
+          <MediaQuery query='(orientation: portrait)'>
+            <div className="content">
+              <div className="bg">
+                <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
+
+                <div className="title welcome_text">
+                  <h1 className="white">Welcome to the course,</h1>
+                  <h1 className="black">SEC Compliance Readiness</h1>
+                  <div className="flex-container white">
+                    <div className="left-side ">Standards <br/>Rules <br/>Regulations</div>
+                    <div className="right-side ">Strategy <br/>Governance <br/>Security</div>
+                  </div>
+                </div>
+                <br/>
+                <div className="btn white">
+                  <span className="instruction_text">Click Start to begin </span>
+                  <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
+                    <span className="btn_text">Start</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </MediaQuery>
         </div>
       )
     }
