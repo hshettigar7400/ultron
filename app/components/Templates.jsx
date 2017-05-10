@@ -6,6 +6,7 @@ import StaticPage4 from './template/StaticPage4';
 import Interactivity1 from './template/Interactivity1';
 import Interactivity2 from './template/Interactivity2';
 import DragDrop1 from './template/DragDrop1';
+import StaticPage5 from './template/StaticPage5';
 
 export {
   StaticPage1,
@@ -14,5 +15,6 @@ export {
   StaticPage4,
   Interactivity1,
   Interactivity2,
-  DragDrop1
+  DragDrop1,
+  StaticPage5
 }

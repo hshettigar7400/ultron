@@ -638,3 +638,84 @@
   	width: 25%;
   }
 }
+.static-page5{
+    h1
+    {
+        font-size : 1.875em;
+        font-weight : normal;
+
+    }
+
+    .header
+    {
+        background-color: #ddd;
+        height: 100px;
+        margin: auto;
+        width: 1024px;
+
+    }
+
+    .content
+    {
+        background-color: #000;
+        height: 562px;
+        margin: auto;
+        width: 1024px;
+
+    }
+
+
+    .black
+    {
+        color: #000;
+    }
+
+    .white
+    {
+        color: #fff;
+    }
+
+    .footer
+    {
+        background-color: #ddd;
+        margin: auto;
+        height: 100px;
+        width: 1024px;
+    }
+
+
+
+    .bg
+    {
+        background-image: url("/app/assets/images/template/bg8.jpg");
+        height:100%;
+
+    }
+
+    .instruction_text
+    {
+        color:#fff;
+        font-weight:bold;
+
+    }
+    .container
+    {
+        background-color: #3A821F;
+        float: left;
+        height: 350px;
+        margin-top: 10%;
+        opacity: 0.9;
+        width: 60%;
+    }
+
+    .summary
+    {
+        margin-left: 10%;
+    }
+
+    .lineHeight
+    {
+        line-height: 38px;
+    }
+
+}

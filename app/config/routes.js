@@ -6,7 +6,8 @@ import {
   StaticPage4,
   Interactivity1,
   Interactivity2,
-  DragDrop1
+  DragDrop1,
+  StaticPage5
 } from '../components/Templates.jsx';
 
 const routes = [
@@ -29,8 +30,11 @@ const routes = [
   { path: '/page6',
     comp: Interactivity2
   },
-  { path: '/page6',
+  { path: '/page7',
     comp: DragDrop1
+  },
+  { path: '/page8',
+    comp: StaticPage5
   }
 ];
 
