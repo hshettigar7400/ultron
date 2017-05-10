@@ -11116,32 +11116,6 @@ var Footer = function (_React$Component) {
             { className: "button-box" },
             _react2.default.createElement(
               "a",
-              { "aria-disabled": "false", "aria-label": "resources", "aria-pressed": "false", href: "#", role: "button" },
-              _react2.default.createElement(
-                "span",
-                { className: "icon-resources" },
-                "\uE621"
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "button-box" },
-            _react2.default.createElement(
-              "a",
-              { "aria-disabled": "false", "aria-label": "glossary", "aria-pressed": "false", href: "#", role: "button" },
-              _react2.default.createElement(
-                "span",
-                { className: "icon-glossary" },
-                "\uE610"
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "button-box" },
-            _react2.default.createElement(
-              "a",
               { "aria-disabled": "false", "aria-label": "help", "aria-pressed": "false", href: "#", role: "button" },
               _react2.default.createElement(
                 "span",
@@ -11483,9 +11457,17 @@ var _Footer = __webpack_require__(97);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
+var _TopNav = __webpack_require__(250);
+
+var _TopNav2 = _interopRequireDefault(_TopNav);
+
 var _PageLoader = __webpack_require__(99);
 
 var _PageLoader2 = _interopRequireDefault(_PageLoader);
+
+var _reactResponsive = __webpack_require__(204);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11526,9 +11508,39 @@ var Shell = function (_React$Component) {
       this.setState({ menuOpen: !this.state.menuOpen });
     }
   }, {
+    key: 'showTovNav',
+    value: function showTovNav() {
+      return _react2.default.createElement(_TopNav2.default, {
+        currentPageNumber: this.state.currentPage,
+        onLoadNext: this.loadNext.bind(this),
+        onLoadPrev: this.loadPrev.bind(this),
+        onMenuClick: this.toggleMenu.bind(this),
+        totalPages: 13
+      });
+    }
+  }, {
     key: 'loadHeader',
     value: function loadHeader() {
-      return _react2.default.createElement(_Header2.default, { ref: 'header' });
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(max-width: 680px)' },
+          _react2.default.createElement(_TopNav2.default, {
+            currentPageNumber: this.state.currentPage,
+            onLoadNext: this.loadNext.bind(this),
+            onLoadPrev: this.loadPrev.bind(this),
+            onMenuClick: this.toggleMenu.bind(this),
+            totalPages: 13
+          })
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-width: 680px)' },
+          _react2.default.createElement(_Header2.default, { ref: 'header' })
+        )
+      );
     }
   }, {
     key: 'pageLoader',
@@ -11557,7 +11569,11 @@ var Shell = function (_React$Component) {
         null,
         this.loadHeader(),
         this.state.currentPage && this.pageLoader(),
-        this.loadFooter()
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-width: 680px)' },
+          this.loadFooter()
+        )
       );
     }
   }]);
@@ -11577,7 +11593,7 @@ exports.default = Shell;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Interactivity1 = exports.StaticPage4 = exports.StaticPage3 = exports.StaticPage2 = exports.StaticPage1 = undefined;
+exports.DragDrop1 = exports.Interactivity2 = exports.Interactivity1 = exports.StaticPage4 = exports.StaticPage3 = exports.StaticPage2 = exports.StaticPage1 = undefined;
 
 var _react = __webpack_require__(4);
 
@@ -11603,6 +11619,14 @@ var _Interactivity = __webpack_require__(247);
 
 var _Interactivity2 = _interopRequireDefault(_Interactivity);
 
+var _Interactivity3 = __webpack_require__(248);
+
+var _Interactivity4 = _interopRequireDefault(_Interactivity3);
+
+var _DragDrop = __webpack_require__(249);
+
+var _DragDrop2 = _interopRequireDefault(_DragDrop);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.StaticPage1 = _StaticPage2.default;
@@ -11610,6 +11634,8 @@ exports.StaticPage2 = _StaticPage4.default;
 exports.StaticPage3 = _StaticPage6.default;
 exports.StaticPage4 = _StaticPage8.default;
 exports.Interactivity1 = _Interactivity2.default;
+exports.Interactivity2 = _Interactivity4.default;
+exports.DragDrop1 = _DragDrop2.default;
 
 /***/ }),
 /* 102 */
@@ -12216,6 +12242,10 @@ var routes = [{ path: '/page1',
   comp: _Templates.StaticPage4
 }, { path: '/page5',
   comp: _Templates.Interactivity1
+}, { path: '/page6',
+  comp: _Templates.Interactivity2
+}, { path: '/page6',
+  comp: _Templates.DragDrop1
 }];
 
 module.exports = {
@@ -14182,7 +14212,7 @@ exports = module.exports = __webpack_require__(111)(undefined);
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n@font-face {\n  font-family: 'Lato';\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot\");\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/lato-regular-webfont.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/lato-regular-webfont.woff\") format(\"woff\"), url(\"/app/assets/fonts/lato-regular-webfont.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/lato-regular-webfont.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'Lato-Light';\n  src: url(\"/app/assets/fonts/Lato-Light.eot\");\n  src: url(\"/app/assets/fonts/Lato-Light.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/Lato-Light.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/Lato-Light.woff\") format(\"woff\"), url(\"/app/assets/fonts/Lato-Light.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/Lato-Light.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'icomoon';\n  src: url(\"/app/assets/fonts/icomoon.eot?c92yby\");\n  src: url(\"/app/assets/fonts/icomoon.eot?#iefixc92yby\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/icomoon.woff?c92yby\") format(\"woff\"), url(\"/app/assets/fonts/icomoon.ttf?c92yby\") format(\"truetype\"), url(\"/app/assets/fonts/icomoon.svg?c92yby#icomoon\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  font-family: 'icomoon';\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  letter-spacing: 0;\n  -webkit-font-feature-settings: \"liga\";\n  -moz-font-feature-settings: \"liga=1\";\n  -moz-font-feature-settings: \"liga\";\n  -ms-font-feature-settings: \"liga\" 1;\n  font-feature-settings: \"liga\";\n  -webkit-font-variant-ligatures: discretionary-ligatures;\n  font-variant-ligatures: discretionary-ligatures;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  background-color: #FFFFFF;\n  color: #FFFFFF;\n  font-family: \"Arial\";\n  font-size: 1em;\n  font-weight: 300;\n  margin: 0 auto;\n  overflow: hidden; }\n\nhtml, body {\n  width: 100%;\n  height: 100%; }\n\n.shell-conatiner {\n  height: 100%;\n  width: 100%; }\n\n.player > div {\n  overflow: auto; }\n\na {\n  color: #FFFFFF; }\n\n.fontBold {\n  font-weight: 700; }\n\n.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.page-loader {\n  background-color: #00f;\n  display: table;\n  height: 100%;\n  overflow: auto;\n  position: relative;\n  width: 100%; }\n\n.player {\n  height: 100%; }\n\n.footer {\n  background-color: #707c89;\n  bottom: 0px;\n  height: 46px;\n  position: absolute;\n  width: 100%;\n  z-index: 99; }\n\n.button-container {\n  display: flex;\n  float: right; }\n\n.button-box a {\n  background-color: #C1C6C9;\n  border: 1px solid #C1C6C9;\n  border-left: none;\n  color: #5C6670;\n  cursor: pointer;\n  display: block;\n  height: 44px;\n  line-height: 42px;\n  text-align: center;\n  text-decoration: none;\n  width: 40px; }\n\n.button-box a.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.footer .button-box a, .footer .nav-comp-container .page-counter, .footer .button-box a.disabled, .footer .button-box a.selected {\n  background: #ffffff;\n  /* Old browsers */\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2VkZWJlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGViZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(51%, #edebec), color-stop(100%, #edebec));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edebec',GradientType=0 );\n  /* IE6-8 */ }\n\n.footer .button-box a:hover {\n  color: #fff !important;\n  background: #ee3124;\n  /* Old browsers */\n  border-top: 1px solid #ee3124;\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU3JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZTMxMjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee3124), color-stop(44%, #ee3124), color-stop(50%, #ee3124), color-stop(57%, #ee3124), color-stop(100%, #ee3124));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ee3124 0%, #ee3124 44%, #ee3124 50%, #ee3124 57%, #ee3124 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee3124', endColorstr='#ee3124',GradientType=0 );\n  /* IE6-8 */ }\n\n.nav-comp-container {\n  background-color: #C1C6C9;\n  border-bottom: 1px solid #C1C6C9;\n  color: #5C6670;\n  display: inline-block;\n  font-size: 1em;\n  height: 44px;\n  line-height: 44px;\n  padding: 1px 1px 0 0;\n  vertical-align: top; }\n\n.nav-comp-container .page-counter {\n  padding: 0 10px; }\n\n.icon-transcript::before {\n  content: \"\\E629\"; }\n\n.icon-audio:before {\n  content: \"\\E606\"; }\n\n.icon-playPause:before {\n  content: \"\\E619\"; }\n\n.selected .icon-transcript:before {\n  content: \"\\E628\"; }\n\n.selected .icon-audio:before {\n  content: \"\\E605\"; }\n\n.selected .icon-playPause:before {\n  content: \"\\E61B\"; }\n\n.header {\n  background-color: #E9ECED;\n  display: inline-block;\n  max-height: 61px;\n  position: relative;\n  width: 100%;\n  z-index: 100; }\n\n.course-logo {\n  float: left; }\n\n.title-holder {\n  color: #5C6670;\n  display: table;\n  font-size: 1em;\n  font-weight: 700;\n  height: 100%; }\n\n.title-holder > div {\n  margin-top: 25px;\n  padding: 0 10px;\n  vertical-align: middle; }\n\n.course-progress {\n  background: #c5cdcf;\n  height: 4px;\n  position: relative;\n  top: 2px;\n  width: 100%; }\n\n.course-progress span {\n  background: #ee3124;\n  color: #000000;\n  display: block;\n  height: 4px;\n  text-align: center;\n  width: 0%; }\n\n/* Intro page */\n.intro-container {\n  background-color: #0A4166;\n  height: 100%;\n  width: 100%; }\n\n.content {\n  background-color: #000;\n  height: 100%;\n  margin: auto;\n  width: 100%; }\n\n.black {\n  color: #000000; }\n\n.white {\n  color: #FFFFFF; }\n\n.intro-container .content .welcome_text {\n  margin: 20% auto auto auto;\n  text-align: center;\n  width: 50%; }\n\n.intro-container .flex-container {\n  display: -webkit-flex; }\n\n.intro-container .left-side {\n  border-right: 1px solid #ccc;\n  text-align: right;\n  text-transform: uppercase;\n  padding-right: 10px;\n  width: 50%; }\n\n.intro-container .right-side {\n  border-left: 1px solid #ccc;\n  text-align: left;\n  text-transform: uppercase;\n  padding-left: 10px;\n  width: 50%; }\n\n.intro-container .bg {\n  background-image: url(\"/app/assets/images/template/intro.jpg\");\n  height: 100%; }\n\n.intro-container .instruction_text {\n  color: #fff;\n  font-weight: bold;\n  position: relative;\n  top: 10px; }\n\n.intro-container .btn {\n  cursor: pointer;\n  text-align: right;\n  width: 80%; }\n\n.intro-container .btn .btn_text {\n  color: #5e9e44;\n  font-size: 1.25em;\n  left: -15px;\n  position: relative;\n  top: 10px; }\n\n.intro-container .start-button {\n  background-image: url(\"/app/assets/images/template/start-btn.jpg\");\n  background-repeat: no-repeat;\n  display: inline-block;\n  height: 45px;\n  text-align: center;\n  width: 112px; }\n\n.static-page1 .flex-container {\n  background-color: #5e9e44;\n  border-top: 4px solid #05A251;\n  display: -webkit-flex;\n  height: 270px;\n  margin-top: 28%;\n  opacity: 0.8; }\n\n.static-page1 .left-side {\n  width: 65%; }\n\n.static-page1 .right-side {\n  margin: auto;\n  width: 30%; }\n\n.static-page1 .bg {\n  background-image: url(\"/app/assets/images/template/bg1.jpg\");\n  background-position: 20px;\n  height: 100%; }\n\n.static-page1 .instruction_text {\n  color: #fff;\n  font-weight: bold; }\n\n.static-page1 .intro {\n  border-top: 2px solid #ccc;\n  width: 100%; }\n\n.static-page1 .intro_heading {\n  margin-left: 30px;\n  margin-top: 40px; }\n\n.static-page1 .intro_para {\n  margin-left: 30px;\n  width: 80%; }\n\n.static-page1 .intro_list {\n  margin-left: 25px; }\n\n.static-page2 .flex-container {\n  display: -webkit-flex;\n  width: 100%; }\n\n.static-page2 .left-side {\n  width: 100%; }\n\n.static-page2 .right-side {\n  margin: auto;\n  width: 30%; }\n\n.static-page2 .bg {\n  background-image: url(\"/app/assets/images/template/bg2.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.static-page2 .instruction_text {\n  font-weight: bold;\n  color: #fff;\n  margin: 10px; }\n\n.static-page2 .intro {\n  background-color: #72A65C;\n  float: right;\n  height: 562px;\n  width: 50%;\n  opacity: 0.9; }\n\n.static-page2 .intro_heading {\n  margin-left: 3%;\n  margin-top: 25%; }\n\n.static-page2 .intro_para {\n  margin-left: 20px;\n  margin-top: 40px;\n  width: 80%; }\n\n.static-page2 .intro_list {\n  width: 70%; }\n\n.static-page2 .btn {\n  background-color: #50a82d;\n  width: 100%;\n  float: left;\n  margin-top: 8%; }\n\n.static-page2 button {\n  background-color: #f9f9f9;\n  color: #5e9e44;\n  font-size: 1em;\n  font-weight: bold;\n  height: 55px;\n  margin-left: 20px;\n  width: 200px; }\n\n.static-page3 .flex-container {\n  display: -webkit-flex;\n  background-color: #5e9e44;\n  margin-top: 30%;\n  height: 240px;\n  opacity: 0.8; }\n\n.static-page3 .left-side {\n  width: 65%; }\n\n.static-page3 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.static-page3 .bg {\n  background-image: url(\"/app/assets/images/template/bg3.jpg\");\n  height: 100%; }\n\n.static-page3 .instruction_text {\n  font-weight: bold;\n  color: #fff; }\n\n.static-page3 .intro {\n  width: 100%;\n  border-top: 2px solid #ccc; }\n\n.static-page3 .intro_heading {\n  margin-left: 30px;\n  margin-top: 40px; }\n\n.static-page3 .intro_para {\n  margin-left: 82px;\n  width: 688px;\n  margin-top: 24px; }\n\n.static-page3 .intro_list {\n  margin-left: 25px; }\n\n.static-page4 .flex-container {\n  display: -webkit-flex;\n  background-color: #5e9e44;\n  margin-top: 22%;\n  height: 335px;\n  opacity: 0.8; }\n\n.static-page4 .left-side {\n  width: 100%; }\n\n.static-page4 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.static-page4 .bg {\n  background-image: url(\"/app/assets/images/template/bg4.jpg\");\n  height: 100%;\n  background-position: 20px; }\n\n.static-page4 .instruction_text {\n  font-weight: bold;\n  color: #fff; }\n\n.static-page4 .intro {\n  width: 100%;\n  border-top: 2px solid #ccc; }\n\n.static-page4 .intro_heading {\n  width: 100%;\n  margin-top: 55px;\n  text-align: center; }\n\n.static-page4 .box1, .static-page4 .box2, .static-page4 .box3, .static-page4 .box4 {\n  width: 25%; }\n\n.static-page4 .container {\n  display: -webkit-flex;\n  text-align: center;\n  width: 70%;\n  margin: auto;\n  margin-top: 5%; }\n\n.static-page4 .img_caption {\n  margin: auto;\n  text-align: center;\n  width: 70%;\n  margin-top: 5%; }\n\n.interactivity1 .flex-container {\n  display: -webkit-flex;\n  width: 100%; }\n\n.interactivity1 .left-side {\n  width: 100%; }\n\n.interactivity1 .right-side {\n  bottom: 60px;\n  right: 10px;\n  position: absolute; }\n\n.interactivity1 .bg {\n  background-image: url(\"/app/assets/images/template/bg5.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.interactivity1 .instruction_text {\n  color: #fff;\n  font-weight: bold;\n  margin: 10px; }\n\n.interactivity1 .intro {\n  background-color: #72A65C;\n  float: left;\n  height: 562px;\n  opacity: 0.9;\n  width: 50%; }\n\n.interactivity1 .intro_heading {\n  margin-left: 5%;\n  margin-top: 10%;\n  width: 70%; }\n\n.interactivity1 .intro_para {\n  margin-left: 5%;\n  margin-top: 40px;\n  width: 80%; }\n\n.interactivity1 .btn_div {\n  float: left;\n  margin: 8% auto auto 3%;\n  width: 100%; }\n\n.interactivity1 .buttons {\n  display: flex;\n  margin-top: 10px; }\n\n.interactivity1 button {\n  color: #5e9e44;\n  cursor: pointer;\n  font-size: 1em;\n  font-weight: bold;\n  height: 55px;\n  margin-left: 10px;\n  width: 200px; }\n\n.interactivity1 .popup-container {\n  background: white;\n  color: #333;\n  padding: 10px;\n  width: 465px;\n  height: 250px; }\n\n.interactivity1 .close-btn {\n  float: right;\n  cursor: pointer; }\n\n.menu-content-container {\n  overflow-y: hidden !important; }\n\n.menu-overlay-style {\n  position: absolute !important; }\n\n.menu-style {\n  width: 350px; }\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n@font-face {\n  font-family: 'Lato';\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot\");\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/lato-regular-webfont.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/lato-regular-webfont.woff\") format(\"woff\"), url(\"/app/assets/fonts/lato-regular-webfont.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/lato-regular-webfont.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'Lato-Light';\n  src: url(\"/app/assets/fonts/Lato-Light.eot\");\n  src: url(\"/app/assets/fonts/Lato-Light.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/Lato-Light.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/Lato-Light.woff\") format(\"woff\"), url(\"/app/assets/fonts/Lato-Light.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/Lato-Light.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'icomoon';\n  src: url(\"/app/assets/fonts/icomoon.eot?c92yby\");\n  src: url(\"/app/assets/fonts/icomoon.eot?#iefixc92yby\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/icomoon.woff?c92yby\") format(\"woff\"), url(\"/app/assets/fonts/icomoon.ttf?c92yby\") format(\"truetype\"), url(\"/app/assets/fonts/icomoon.svg?c92yby#icomoon\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  color: #5e9f45;\n  font-family: 'icomoon';\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  letter-spacing: 0;\n  -webkit-font-feature-settings: \"liga\";\n  -moz-font-feature-settings: \"liga=1\";\n  -moz-font-feature-settings: \"liga\";\n  -ms-font-feature-settings: \"liga\" 1;\n  font-feature-settings: \"liga\";\n  -webkit-font-variant-ligatures: discretionary-ligatures;\n  font-variant-ligatures: discretionary-ligatures;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  background-color: #FFFFFF;\n  color: #FFFFFF;\n  font-family: \"Arial\";\n  font-size: 1em;\n  font-weight: 300;\n  margin: 0 auto;\n  overflow: hidden; }\n\nhtml, body {\n  width: 100%;\n  height: 100%; }\n\n.shell-conatiner {\n  height: 100%;\n  width: 100%; }\n\n.player > div {\n  overflow: auto; }\n\na {\n  color: #FFFFFF; }\n\n.fontBold {\n  font-weight: 700; }\n\n.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.page-loader {\n  background-color: #ededed;\n  display: table;\n  height: 100%;\n  overflow: auto;\n  position: relative;\n  width: 100%; }\n\n.player {\n  height: 100%; }\n\n.footer {\n  background-color: #ededed;\n  bottom: 0px;\n  height: 46px;\n  position: absolute;\n  width: 100%;\n  z-index: 99; }\n\n.button-container {\n  display: flex;\n  float: right; }\n\n.button-box a {\n  background-color: #C1C6C9;\n  border: 1px solid #C1C6C9;\n  border-bottom: none;\n  border-left: none;\n  color: #5C6670;\n  cursor: pointer;\n  display: block;\n  height: 44px;\n  line-height: 42px;\n  text-align: center;\n  text-decoration: none;\n  width: 40px; }\n\n.button-box a.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.footer .button-box a, .footer .nav-comp-container .page-counter, .footer .button-box a.disabled, .footer .button-box a.selected {\n  background: #ffffff;\n  /* Old browsers */\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2VkZWJlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGViZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(51%, #edebec), color-stop(100%, #edebec));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edebec',GradientType=0 );\n  /* IE6-8 */ }\n\n.footer .button-box a:hover {\n  color: #fff !important;\n  background: #e9eced;\n  /* Old browsers */\n  border-top: 1px solid #e9eced;\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU3JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZTMxMjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9eced), color-stop(44%, #e9eced), color-stop(50%, #e9eced), color-stop(57%, #e9eced), color-stop(100%, #e9eced));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$button-bg-hover, endColorstr=$button-bg-hover,GradientType=0 );\n  /* IE6-8 */ }\n\n.nav-comp-container {\n  background-color: #C1C6C9;\n  color: #5e9f45;\n  display: inline-block;\n  font-size: 1em;\n  height: 44px;\n  line-height: 44px;\n  padding: 1px 1px 0 0;\n  vertical-align: top; }\n\n.nav-comp-container .page-counter {\n  padding: 0 10px; }\n\n.icon-transcript::before {\n  content: \"\\E629\"; }\n\n.icon-audio:before {\n  content: \"\\E606\"; }\n\n.icon-playPause:before {\n  content: \"\\E619\"; }\n\n.selected .icon-transcript:before {\n  content: \"\\E628\"; }\n\n.selected .icon-audio:before {\n  content: \"\\E605\"; }\n\n.selected .icon-playPause:before {\n  content: \"\\E61B\"; }\n\n.header {\n  background-color: #ededed;\n  display: inline-block;\n  max-height: 61px;\n  position: relative;\n  width: 100%;\n  z-index: 100; }\n\n.course-logo {\n  float: left; }\n\n.title-holder {\n  color: #5C6670;\n  display: table;\n  font-size: 1em;\n  font-weight: 700;\n  height: 100%; }\n\n.title-holder > div {\n  margin-top: 25px;\n  padding: 0 10px;\n  vertical-align: middle; }\n\n.course-progress {\n  background: #c5cdcf;\n  height: 4px;\n  position: relative;\n  top: 2px;\n  width: 100%; }\n\n.course-progress span {\n  background: #ee3124;\n  color: #000000;\n  display: block;\n  height: 4px;\n  text-align: center;\n  width: 0%; }\n\n/* Intro page */\n.intro-container {\n  background-color: #0A4166;\n  height: 100%;\n  width: 100%; }\n\n.content {\n  background-color: #000;\n  height: 100%;\n  margin: auto;\n  overflow-x: hidden;\n  width: 100%; }\n\n.black {\n  color: #000000; }\n\n.white {\n  color: #FFFFFF; }\n\n.close-btn {\n  color: #5e9f45;\n  float: right;\n  font-weight: 700;\n  cursor: pointer; }\n\n.buttons button.selected {\n  background-color: #5e9f45;\n  color: #FFFFFF; }\n\n.intro-container .content .welcome_text {\n  margin: 20% auto auto auto;\n  text-align: center;\n  width: 50%; }\n\n.intro-container .flex-container {\n  display: -webkit-flex; }\n\n.intro-container .left-side {\n  border-right: 1px solid #ccc;\n  text-align: right;\n  text-transform: uppercase;\n  padding-right: 10px;\n  width: 50%; }\n\n.intro-container .right-side {\n  border-left: 1px solid #ccc;\n  text-align: left;\n  text-transform: uppercase;\n  padding-left: 10px;\n  width: 50%; }\n\n.intro-container .bg {\n  background-image: url(\"/app/assets/images/template/intro.jpg\");\n  height: 100%; }\n\n.intro-container .instruction_text {\n  color: #fff;\n  font-weight: bold;\n  position: relative;\n  top: 10px; }\n\n.intro-container .btn {\n  cursor: pointer;\n  text-align: right;\n  width: 80%; }\n\n.intro-container .btn .btn_text {\n  color: #5e9e44;\n  font-size: 1.25em;\n  left: -15px;\n  position: relative;\n  top: 10px; }\n\n.intro-container .start-button {\n  background-image: url(\"/app/assets/images/template/start-btn.jpg\");\n  background-repeat: no-repeat;\n  display: inline-block;\n  height: 45px;\n  text-align: center;\n  width: 112px; }\n\n.static-page1 .flex-container {\n  background-color: #5e9e44;\n  border-top: 4px solid #05A251;\n  display: -webkit-flex;\n  height: 270px;\n  margin-top: 28%;\n  opacity: 0.8; }\n\n.static-page1 .left-side {\n  width: 65%; }\n\n.static-page1 .right-side {\n  margin: auto;\n  width: 30%; }\n\n.static-page1 .bg {\n  background-image: url(\"/app/assets/images/template/bg1.jpg\");\n  background-position: 20px;\n  height: 100%; }\n\n.static-page1 .instruction_text {\n  color: #fff;\n  font-weight: bold; }\n\n.static-page1 .intro {\n  border-top: 2px solid #ccc;\n  width: 100%; }\n\n.static-page1 .intro_heading {\n  margin-left: 30px;\n  margin-top: 40px; }\n\n.static-page1 .intro_para {\n  margin-left: 30px;\n  width: 80%; }\n\n.static-page1 .intro_list {\n  margin-left: 25px; }\n\n.static-page2 .flex-container {\n  display: -webkit-flex;\n  width: 100%; }\n\n.static-page2 .left-side {\n  width: 100%; }\n\n.static-page2 .right-side {\n  margin: auto;\n  width: 30%; }\n\n.static-page2 .bg {\n  background-image: url(\"/app/assets/images/template/bg2.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.static-page2 .instruction_text {\n  font-weight: bold;\n  color: #fff;\n  margin: 10px; }\n\n.static-page2 .intro {\n  background-color: #72A65C;\n  float: right;\n  height: 562px;\n  width: 50%;\n  opacity: 0.9; }\n\n.static-page2 .intro_heading {\n  margin-left: 3%;\n  margin-top: 25%; }\n\n.static-page2 .intro_para {\n  margin-left: 20px;\n  margin-top: 40px;\n  width: 80%; }\n\n.static-page2 .intro_list {\n  width: 70%; }\n\n.static-page2 .btn {\n  background-color: #50a82d;\n  width: 100%;\n  float: left;\n  margin-top: 8%; }\n\n.static-page2 button {\n  background-color: #f9f9f9;\n  color: #5e9e44;\n  font-size: 1em;\n  font-weight: bold;\n  height: 55px;\n  margin-left: 20px;\n  width: 200px; }\n\n.static-page3 .flex-container {\n  display: -webkit-flex;\n  background-color: #5e9e44;\n  margin-top: 30%;\n  height: 240px;\n  opacity: 0.8; }\n\n.static-page3 .left-side {\n  width: 65%; }\n\n.static-page3 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.static-page3 .bg {\n  background-image: url(\"/app/assets/images/template/bg3.jpg\");\n  height: 100%; }\n\n.static-page3 .instruction_text {\n  font-weight: bold;\n  color: #fff; }\n\n.static-page3 .intro {\n  width: 100%;\n  border-top: 2px solid #ccc; }\n\n.static-page3 .intro_heading {\n  margin-left: 30px;\n  margin-top: 40px; }\n\n.static-page3 .intro_para {\n  margin-left: 82px;\n  width: 688px;\n  margin-top: 24px; }\n\n.static-page3 .intro_list {\n  margin-left: 25px; }\n\n.static-page4 .flex-container {\n  display: -webkit-flex;\n  background-color: #5e9e44;\n  margin-top: 22%;\n  height: 335px;\n  opacity: 0.8; }\n\n.static-page4 .left-side {\n  width: 100%; }\n\n.static-page4 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.static-page4 .bg {\n  background-image: url(\"/app/assets/images/template/bg4.jpg\");\n  height: 100%;\n  background-position: 20px; }\n\n.static-page4 .instruction_text {\n  font-weight: bold;\n  color: #fff; }\n\n.static-page4 .intro {\n  width: 100%;\n  border-top: 2px solid #ccc; }\n\n.static-page4 .intro_heading {\n  width: 100%;\n  margin-top: 55px;\n  text-align: center; }\n\n.static-page4 .box1, .static-page4 .box2, .static-page4 .box3, .static-page4 .box4 {\n  width: 25%; }\n\n.static-page4 .container {\n  display: -webkit-flex;\n  text-align: center;\n  width: 70%;\n  margin: auto;\n  margin-top: 5%; }\n\n.static-page4 .img_caption {\n  margin: auto;\n  text-align: center;\n  width: 70%;\n  margin-top: 5%; }\n\n.interactivity1 .flex-container {\n  display: -webkit-flex;\n  width: 100%; }\n\n.interactivity1 .left-side {\n  width: 100%; }\n\n.interactivity1 .right-side {\n  bottom: 60px;\n  right: 10px;\n  position: absolute; }\n\n.interactivity1 .bg {\n  background-image: url(\"/app/assets/images/template/bg5.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.interactivity1 .instruction_text {\n  color: #fff;\n  font-weight: bold;\n  margin: 10px; }\n\n.interactivity1 .intro {\n  background-color: #72A65C;\n  float: left;\n  height: 562px;\n  opacity: 0.9;\n  width: 50%; }\n\n.interactivity1 .intro_heading {\n  margin-left: 5%;\n  margin-top: 10%;\n  width: 70%; }\n\n.interactivity1 .intro_para {\n  margin-left: 5%;\n  margin-top: 40px;\n  width: 80%; }\n\n.interactivity1 .btn_div {\n  float: left;\n  margin: 8% auto auto 3%;\n  width: 100%; }\n\n.interactivity1 .buttons {\n  display: flex;\n  margin-top: 10px; }\n\n.interactivity1 button {\n  color: #5e9e44;\n  cursor: pointer;\n  font-size: 1em;\n  font-weight: bold;\n  height: 55px;\n  margin-left: 10px;\n  width: 200px; }\n\n.interactivity1 .popup-container {\n  background: white;\n  color: #333;\n  padding: 10px;\n  width: 465px;\n  height: 250px; }\n\n.interactivity2 .flex-container {\n  background-color: #72A65C;\n  display: -webkit-flex;\n  height: 170px;\n  width: 100%; }\n\n.interactivity2 .left-side {\n  width: 100%; }\n\n.interactivity2 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.interactivity2 .bg {\n  background-image: url(\"/app/assets/images/template/bg6.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.interactivity2 .instruction_text {\n  font-weight: bold;\n  color: #fff;\n  margin: 10px; }\n\n.interactivity2 .intro {\n  float: left;\n  height: 450px;\n  width: 100%;\n  margin-top: 95px;\n  opacity: 0.9; }\n\n.interactivity2 .intro_heading {\n  margin-left: 66px; }\n\n.interactivity2 .intro_para {\n  margin-left: 69px; }\n\n.interactivity2 .btn_div {\n  width: 100%;\n  float: left;\n  margin-top: 13px;\n  margin-left: 54px; }\n\n.interactivity2 .container {\n  background-color: #335727;\n  height: 67px;\n  opacity: 0.9; }\n\n.interactivity2 .buttons {\n  margin-top: 72px;\n  margin-left: 60px; }\n\n.interactivity2 button {\n  cursor: pointer;\n  height: 67px;\n  width: 255px;\n  font-size: 1em;\n  color: #5e9e44;\n  font-weight: bold; }\n\n.interactivity2 .tab-container {\n  background-color: #FFFFFF;\n  color: #333;\n  height: 190px;\n  padding: 10px; }\n\n.dragdrop1 .bg {\n  background-image: url(\"/app/assets/images/template/bg9.jpg\");\n  background-position-y: -100px;\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.dragdrop1 .instruction_text {\n  color: #fff;\n  font-weight: bold; }\n\n.dragdrop1 .container {\n  background-color: #3A821F;\n  float: left;\n  height: 100%;\n  margin-top: 10%;\n  opacity: 0.9;\n  width: 100%; }\n\n.dragdrop1 .flex_container {\n  display: -webkit-flex; }\n\n.dragdrop1 .summary {\n  margin-left: 5%; }\n\n.dragdrop1 .drag_drop {\n  background-color: #3A821F;\n  float: left;\n  height: 180px;\n  width: 100%; }\n\n.dragdrop1 button {\n  color: #5e9e44;\n  font-size: 1em;\n  font-weight: bold;\n  height: 60px;\n  width: 100%; }\n\n.dragdrop1 .activity {\n  margin-top: 1%; }\n\n.dragdrop1 table {\n  background-color: #3A821F;\n  width: 90%;\n  margin: auto; }\n\n.dragdrop1 tr {\n  border-bottom: 1px solid #fff; }\n\n.dragdrop1 td {\n  padding: 10px; }\n\n.dragdrop1 .quiz {\n  width: 34%; }\n\n.dragdrop1 .drop_box {\n  background-color: #97BC89;\n  height: 60px; }\n\n.dragdrop1 .drop {\n  margin: 5px;\n  width: 25%; }\n\n.dragdrop1 .drag {\n  height: 60px;\n  margin: 5px;\n  width: 25%; }\n\n.menu-content-container {\n  overflow-y: hidden !important; }\n\n.menu-overlay-style {\n  position: absolute !important; }\n\n.menu-style {\n  width: 350px; }\n", ""]);
 
 // exports
 
@@ -31417,13 +31447,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Interactivity = function (_React$Component) {
-  _inherits(Interactivity, _React$Component);
+var Interactivity1 = function (_React$Component) {
+  _inherits(Interactivity1, _React$Component);
 
-  function Interactivity(props) {
-    _classCallCheck(this, Interactivity);
+  function Interactivity1(props) {
+    _classCallCheck(this, Interactivity1);
 
-    var _this = _possibleConstructorReturn(this, (Interactivity.__proto__ || Object.getPrototypeOf(Interactivity)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Interactivity1.__proto__ || Object.getPrototypeOf(Interactivity1)).call(this, props));
 
     _this.state = {
       isPopupOpen: false,
@@ -31432,7 +31462,7 @@ var Interactivity = function (_React$Component) {
     return _this;
   }
 
-  _createClass(Interactivity, [{
+  _createClass(Interactivity1, [{
     key: "getPopupContent",
     value: function getPopupContent() {
       var currentPopup = this.state.currentPopup;
@@ -31613,10 +31643,543 @@ var Interactivity = function (_React$Component) {
     }
   }]);
 
-  return Interactivity;
+  return Interactivity1;
 }(_react2.default.Component);
 
-exports.default = Interactivity;
+exports.default = Interactivity1;
+
+/***/ }),
+/* 248 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Interactivity2 = function (_React$Component) {
+  _inherits(Interactivity2, _React$Component);
+
+  function Interactivity2(props) {
+    _classCallCheck(this, Interactivity2);
+
+    var _this = _possibleConstructorReturn(this, (Interactivity2.__proto__ || Object.getPrototypeOf(Interactivity2)).call(this, props));
+
+    _this.state = {
+      isTabOpen: false,
+      currentTab: 0
+    };
+    return _this;
+  }
+
+  _createClass(Interactivity2, [{
+    key: "getPopupContent",
+    value: function getPopupContent() {
+      var currentTab = this.state.currentTab;
+      switch (parseInt(currentTab)) {
+        case 1:
+          return _react2.default.createElement(
+            "div",
+            null,
+            "Tab1"
+          );
+          break;
+        case 2:
+          return _react2.default.createElement(
+            "div",
+            null,
+            "Tab2"
+          );
+          break;
+        case 3:
+          return _react2.default.createElement(
+            "div",
+            null,
+            "Tab3"
+          );
+          break;
+      }
+    }
+  }, {
+    key: "displayTab",
+    value: function displayTab() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        this.state.isTabOpen && _react2.default.createElement(
+          "div",
+          { className: "tab-container" },
+          _react2.default.createElement(
+            "span",
+            { className: "close-btn icon-close", onClick: this.closeTab.bind(this) },
+            "\uE60A"
+          ),
+          this.getPopupContent()
+        )
+      );
+    }
+  }, {
+    key: "openTabContainer",
+    value: function openTabContainer(currentTab) {
+      this.setState({ isTabOpen: true, currentTab: currentTab });
+    }
+  }, {
+    key: "closeTab",
+    value: function closeTab() {
+      this.setState({ isTabOpen: false });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "interactivity2" },
+        _react2.default.createElement(
+          "div",
+          { className: "content" },
+          _react2.default.createElement(
+            "div",
+            { className: "bg" },
+            _react2.default.createElement(
+              "div",
+              { className: "intro white" },
+              _react2.default.createElement(
+                "div",
+                { className: "flex-container" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "left-side" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "intro_heading" },
+                    _react2.default.createElement(
+                      "h1",
+                      null,
+                      "Kinds of Examinations"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "intro_para" },
+                    _react2.default.createElement(
+                      "span",
+                      null,
+                      "Who they apply to"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "btn_div" },
+                    _react2.default.createElement(
+                      "span",
+                      { className: "instruction_text" },
+                      _react2.default.createElement("img", { src: "/app/assets/images/template/hand_icon.png" }),
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        "Click each tab to know more."
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "container" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "buttons" },
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        _react2.default.createElement(
+                          "button",
+                          { id: "btn_01", onClick: this.openTabContainer.bind(this, 1),
+                            className: this.state.currentTab === 1 ? "selected" : "" },
+                          "Traditional Examination"
+                        )
+                      ),
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        _react2.default.createElement(
+                          "button",
+                          { id: "btn_02", onClick: this.openTabContainer.bind(this, 2),
+                            className: this.state.currentTab === 2 ? "selected" : "" },
+                          "Dual registrant exams"
+                        )
+                      ),
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        _react2.default.createElement(
+                          "button",
+                          { id: "btn_03", onClick: this.openTabContainer.bind(this, 3),
+                            className: this.state.currentTab === 3 ? "selected" : "" },
+                          "Presence Exam"
+                        )
+                      )
+                    ),
+                    this.displayTab()
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Interactivity2;
+}(_react2.default.Component);
+
+exports.default = Interactivity2;
+
+/***/ }),
+/* 249 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DragDrop1 = function (_React$Component) {
+  _inherits(DragDrop1, _React$Component);
+
+  function DragDrop1(props) {
+    _classCallCheck(this, DragDrop1);
+
+    return _possibleConstructorReturn(this, (DragDrop1.__proto__ || Object.getPrototypeOf(DragDrop1)).call(this, props));
+  }
+
+  _createClass(DragDrop1, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "dragdrop1" },
+        _react2.default.createElement(
+          "div",
+          { className: "content" },
+          _react2.default.createElement(
+            "div",
+            { className: "bg" },
+            _react2.default.createElement(
+              "div",
+              { className: "container" },
+              _react2.default.createElement(
+                "div",
+                { className: "summary" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "summary_heading" },
+                  _react2.default.createElement(
+                    "h1",
+                    { className: "white" },
+                    "Activity"
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "summary_list white" },
+                    _react2.default.createElement(
+                      "span",
+                      null,
+                      " Can you match the type of examination to its respective description."
+                    ),
+                    _react2.default.createElement("br", null),
+                    _react2.default.createElement("br", null),
+                    _react2.default.createElement(
+                      "span",
+                      { className: "instruction_text" },
+                      _react2.default.createElement("img", { src: "/app/assets/images/template/hand_icon.png" }),
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        "Drag the exam type to its respective description and click Submit."
+                      )
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "drag_drop white" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "activity" },
+                  _react2.default.createElement(
+                    "table",
+                    null,
+                    _react2.default.createElement(
+                      "tbody",
+                      null,
+                      _react2.default.createElement(
+                        "tr",
+                        null,
+                        _react2.default.createElement(
+                          "td",
+                          { className: "quiz" },
+                          _react2.default.createElement(
+                            "div",
+                            { className: "quiz_box" },
+                            "Are almost never announced in advance to reduce the chances of documents being destroyed."
+                          )
+                        ),
+                        _react2.default.createElement(
+                          "td",
+                          { className: "drop" },
+                          _react2.default.createElement("div", { className: "drop_box" })
+                        ),
+                        _react2.default.createElement(
+                          "td",
+                          { className: "drag" },
+                          _react2.default.createElement(
+                            "div",
+                            { className: "drag_box" },
+                            _react2.default.createElement(
+                              "button",
+                              { id: "btn_01" },
+                              "Sweep Exams"
+                            )
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        "tr",
+                        null,
+                        _react2.default.createElement(
+                          "td",
+                          { className: "quiz" },
+                          _react2.default.createElement(
+                            "div",
+                            { className: "quiz_box" },
+                            "Are held as SEC would like more information to determine whether additional guidance or regulation is required. "
+                          )
+                        ),
+                        _react2.default.createElement(
+                          "td",
+                          { className: "drop" },
+                          _react2.default.createElement("div", { className: "drop_box" })
+                        ),
+                        _react2.default.createElement(
+                          "td",
+                          { className: "drag" },
+                          _react2.default.createElement(
+                            "div",
+                            { className: "drag_box" },
+                            _react2.default.createElement(
+                              "button",
+                              { id: "btn_01" },
+                              "Cause Exams"
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return DragDrop1;
+}(_react2.default.Component);
+
+exports.default = DragDrop1;
+
+/***/ }),
+/* 250 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TopNav = function (_React$Component) {
+  _inherits(TopNav, _React$Component);
+
+  function TopNav(props) {
+    _classCallCheck(this, TopNav);
+
+    var uagent = navigator.userAgent.toLowerCase();
+
+    var _this = _possibleConstructorReturn(this, (TopNav.__proto__ || Object.getPrototypeOf(TopNav)).call(this, props));
+
+    _this.state = {
+      isiPad: uagent.search("mobile") > -1
+    };
+    return _this;
+  }
+
+  _createClass(TopNav, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "header-nav" },
+        _react2.default.createElement(
+          "div",
+          { className: "button-container" },
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "menu", "aria-pressed": "false", href: "#", onClick: this.props.onMenuClick, role: "button" },
+              _react2.default.createElement(
+                "span",
+                { className: "icon-tools" },
+                "\uE627"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "playPause", "aria-pressed": "false", href: "#", role: "button" },
+              _react2.default.createElement("span", { className: "icon-playPause" })
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "back", "aria-pressed": "false",
+                className: this.props.currentPageNumber !== 1 ? "tabindex" : "tabindex disabled", href: "#",
+                onClick: this.props.onLoadPrev.bind(null, this), role: "button" },
+              _react2.default.createElement(
+                "span",
+                { className: "icon-back" },
+                "\uE607"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "nav-comp-container" },
+            _react2.default.createElement(
+              "div",
+              { className: "page-counter clearfix" },
+              _react2.default.createElement(
+                "span",
+                { className: "page-number" },
+                this.props.currentPageNumber
+              ),
+              _react2.default.createElement(
+                "span",
+                { className: "page-separator" },
+                "|"
+              ),
+              _react2.default.createElement(
+                "span",
+                { className: "total-pages" },
+                this.props.totalPages
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "next", "aria-pressed": "false",
+                className: this.props.currentPageNumber !== this.props.totalPages ? "tabindex" : "tabindex disabled", href: "#",
+                onClick: this.props.onLoadNext.bind(null, this), role: "button"
+              },
+              _react2.default.createElement(
+                "span",
+                { className: "icon-next" },
+                "\uE617"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "transcript", "aria-pressed": "false", href: "#", role: "button" },
+              _react2.default.createElement("span", { className: "icon-transcript" })
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "menu", "aria-pressed": "false", href: "#", onClick: this.props.onMenuClick, role: "button" },
+              _react2.default.createElement(
+                "span",
+                { className: "icon-menu" },
+                "\uE616"
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return TopNav;
+}(_react2.default.Component);
+
+exports.default = TopNav;
 
 /***/ })
 /******/ ]);
