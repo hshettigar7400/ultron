@@ -39,7 +39,7 @@ export default class Intro extends React.Component {
               </div>
             </div>
           }
-          <MediaQuery query='(min-device-width: 1224px)'>
+          <MediaQuery query='(min-device-width: 1010px)'>
             <div className="content">
               <div className="bg">
                 <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
@@ -61,13 +61,13 @@ export default class Intro extends React.Component {
               </div>
             </div>
           </MediaQuery>
-          <MediaQuery query='(orientation: portrait)'>
+          <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
             <div className="content">
               <div className="bg">
                 <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
 
                 <div className="title welcome_text">
-                  <h1 className="white">Welcome to the course,</h1>
+                  <h1 className="white">portrait,</h1>
                   <h1 className="black">SEC Compliance Readiness</h1>
                   <div className="flex-container white">
                     <div className="left-side ">Standards <br/>Rules <br/>Regulations</div>

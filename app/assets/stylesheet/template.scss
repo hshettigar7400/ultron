@@ -35,6 +35,12 @@
 }
 
 .intro-container {
+  h1
+    {
+        font-size : 1.875em;
+        font-weight : normal;
+
+    }
   .content .welcome_text
   {
     margin: 20% auto auto auto;
@@ -106,13 +112,19 @@
 }
 
 .static-page1 {
+  h1
+    {
+        font-size : 1.875em;
+        font-weight : normal;
+
+    }
   .flex-container
   {
     background-color:#5e9e44;
     border-top: 4px solid #05A251;
     display: -webkit-flex;
     height: 270px;
-    margin-top: 28%;
+    margin-top: 26%;
     opacity:0.8;
 
   }
@@ -165,6 +177,12 @@
 }
 
 .static-page2 {
+  h1
+    {
+        font-size : 1.875em;
+        font-weight : normal;
+
+    }
   .flex-container {
     display: -webkit-flex;
     width: 100%;
@@ -234,6 +252,12 @@
 }
 
 .static-page3 {
+  h1
+    {
+        font-size : 1.875em;
+        font-weight : normal;
+
+    }
   .flex-container {
     display: -webkit-flex;
     background-color: #5e9e44;
@@ -283,6 +307,12 @@
 }
 
 .static-page4 {
+    h1
+    {
+        font-size : 1.875em;
+        font-weight : normal;
+
+    }
   .flex-container
   {
   	display: -webkit-flex;
@@ -363,6 +393,12 @@
 }
 
 .interactivity1 {
+    h1
+    {
+        font-size : 1.875em;
+        font-weight : normal;
+
+    }
   .flex-container
   {
   	display: -webkit-flex;
@@ -384,6 +420,7 @@
   .bg
   {
   	background-image: url("/app/assets/images/template/bg5.jpg");
+    background-position-y: -50px;
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -451,6 +488,13 @@
 }
 
 .interactivity2 {
+    h1
+    {
+        font-size : 1.875em;
+        font-weight : normal;
+
+    }
+
   .flex-container
   {
   	background-color: #72A65C;
@@ -473,6 +517,7 @@
   .bg
   {
   	background-image: url("/app/assets/images/template/bg6.jpg");
+    background-position-y: -70px;
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -542,6 +587,12 @@
 }
 
 .dragdrop1 {
+  h1
+    {
+        font-size : 1.875em;
+        font-weight : normal;
+
+    }
 
   .bg
   {
@@ -688,6 +739,7 @@
     .bg
     {
         background-image: url("/app/assets/images/template/bg8.jpg");
+        background-position-y: -54px;
         height:100%;
 
     }
