@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import TopNav from './TopNav';
 import PageLoader from './PageLoader';
+import MediaQuery from 'react-responsive';
 
 export default class Shell extends React.Component {
   constructor(props) {
@@ -24,9 +26,34 @@ export default class Shell extends React.Component {
     this.setState({menuOpen: !this.state.menuOpen})
   }
 
+  showTovNav() {
+    return (
+      <TopNav
+        currentPageNumber={this.state.currentPage}
+        onLoadNext={this.loadNext.bind(this)}
+        onLoadPrev={this.loadPrev.bind(this)}
+        onMenuClick={this.toggleMenu.bind(this)}
+        totalPages={13}
+      />
+    )
+  }
+
   loadHeader() {
     return (
-      <Header ref="header"/>
+        <div>
+          <MediaQuery query='(max-width: 680px)'>
+            <TopNav
+              currentPageNumber={this.state.currentPage}
+              onLoadNext={this.loadNext.bind(this)}
+              onLoadPrev={this.loadPrev.bind(this)}
+              onMenuClick={this.toggleMenu.bind(this)}
+              totalPages={13}
+            />
+          </MediaQuery>
+          <MediaQuery query='(min-width: 680px)'>
+            <Header ref="header"/>
+          </MediaQuery>
+        </div>
     )
   }
 
@@ -41,13 +68,13 @@ export default class Shell extends React.Component {
 
   loadFooter() {
     return (
-      <Footer
-        currentPageNumber={this.state.currentPage}
-        onLoadNext={this.loadNext.bind(this)}
-        onLoadPrev={this.loadPrev.bind(this)}
-        onMenuClick={this.toggleMenu.bind(this)}
-        totalPages={13}
-      />
+        <Footer
+          currentPageNumber={this.state.currentPage}
+          onLoadNext={this.loadNext.bind(this)}
+          onLoadPrev={this.loadPrev.bind(this)}
+          onMenuClick={this.toggleMenu.bind(this)}
+          totalPages={13}
+        />
     )
   }
 
@@ -56,7 +83,10 @@ export default class Shell extends React.Component {
       <div>
         {this.loadHeader()}
         {this.state.currentPage && this.pageLoader()}
-        {this.loadFooter()}
+        <MediaQuery query='(min-width: 680px)'>
+          {this.loadFooter()}
+        </MediaQuery>
+
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Interactivity extends React.Component {
+export default class Interactivity1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
