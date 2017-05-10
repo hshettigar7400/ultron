@@ -41,7 +41,10 @@
        font-size: 1.5em;
        font-weight: normal;
     }
-    
+    body
+    {
+        font-size: 16px;
+    }
   .content .welcome_text
   {
     margin: 20% auto auto auto;
@@ -143,7 +146,10 @@
     }
     
        @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
-            
+       .content
+         {
+             font-size: 0.875em;
+         }
            h1
            {
                font-size: 1.5em;
@@ -177,6 +183,10 @@
 }
 
 .static-page1 {
+     body
+    {
+        font-size: 16px;
+    }
     
    h1
 {
@@ -242,6 +252,94 @@
     margin-left:25px;
   }
     
+    @media only screen and (max-device-width: 1024px) {
+        .flex-container
+        {
+            margin-top: 23%;
+        }
+        
+    }
+      @media only screen and (max-device-width: 800px) {
+          
+            .content
+         {
+             font-size: 0.875em;
+         }
+          .intro_heading {  
+            margin-top: 0px;
+          }       
+         h1
+         {
+             font-size: 1.5em;
+         }
+          
+        .bg
+        {
+            background-size: 100%;
+            background-position-y: -30px; 
+        }
+        
+          .flex-container
+          {
+              margin-top: 10%;
+              height: 225px;  
+          }
+          
+          .left-side{
+              width: 80%;
+          }
+          .right-side {
+              width: 30%;
+          }
+          .right-side img{
+              width: 90%;
+          }
+          .intro_para
+          {
+              width: 90%;
+          }
+    }
+     @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
+      .content
+         {
+             font-size: 0.875em;
+         }
+         .bg {
+           
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            
+         }
+         
+         h1
+         {
+             font-size: 1.5em;
+         }
+         .flex-container
+         {
+             display: block;
+             height: 100%;
+             margin-top: 20%;
+         }
+         
+         .intro_heading {
+             margin-top: 0px;
+         }
+         .left-side
+         {
+             width: 100%;
+         }
+         .right-side
+         {
+             width: 80%;
+             margin-bottom: 5%;
+         }
+         .right-side img
+         {
+             width: 45%;
+             vertical-align: middle;
+         }
+    }
 }
 
 .static-page2 {
