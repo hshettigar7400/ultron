@@ -30,7 +30,7 @@ export default class StaticPage2 extends React.Component {
       						</div>
       						<div className="btn">
       							<span className="instruction_text">
-                      <img src="/app/assets/images/template/hand_icon.png"/>
+                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
                       <span>Click the button to know more.</span>
                     </span>
                     <span>

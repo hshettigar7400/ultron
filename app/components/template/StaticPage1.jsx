@@ -37,7 +37,7 @@ export default class StaticPage1 extends React.Component {
               </div>
             </div>
         </MediaQuery>
-        <MediaQuery query='(orientation: portrait)'>
+        <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
           <div className="content">
             <div className="bg">
               <div className="intro white">

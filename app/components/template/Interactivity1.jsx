@@ -71,7 +71,7 @@ export default class Interactivity1 extends React.Component {
                   </div>
                   <div className="btn_div">
                     <span className="instruction_text">
-                      <img src="/app/assets/images/template/hand_icon.png" />
+                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
                       <span>Click each button to know more.</span>
                     </span>
                     <div className="buttons">
