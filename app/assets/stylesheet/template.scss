@@ -35,6 +35,13 @@
 }
 
 .intro-container {
+    
+    h1
+   {
+       font-size: 1.5em;
+       font-weight: normal;
+    }
+    
   .content .welcome_text
   {
     margin: 20% auto auto auto;
@@ -42,14 +49,7 @@
     width: 50%;
   }
     
- .content .welcome_text_mobile
-  {
-    margin: 0 auto auto auto;
-    width: 100%;
-    text-align: center;
-  }
-    
-  .flex-container
+   .flex-container
   {
       display: flex;
     display: -webkit-flex;
@@ -77,42 +77,11 @@
   {
     background-image: url("/app/assets/images/template/intro.jpg");
     height:100%;
+    background-repeat: no-repeat;
     
   }
 
-       
-       
-   @media only screen and (min-device-width: 320px)  {
-
-       h1
-       {
-           font-size: 1.5em;
-           font-weight: normal;
-       }
-        .bg
-        {
-             background-position-x: -220px;
-        }
-    }
-  
-
-     
-   @media only screen and (max-device-width: 732px)
-   {
-        .bg
-        {
-             background-position-x: -160px;
-        }
-  
-    }
-    
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-      
-     .bg {
-        background-position-x: -280px;
-    }
-}
-    @media only screen  and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) { 
+         @media only screen  and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) { 
           .bg
         {
              background-position-x: -10px;
@@ -131,8 +100,10 @@
     cursor: pointer;
     text-align: right;
     width: 80%;
+      margin-top: 5%;
   }
-
+    
+    
   .btn .btn_text
   {
     color: #5e9e44;
@@ -150,6 +121,59 @@
     text-align: center;
     width: 112px;
   }
+    
+          @media only screen and (max-device-width: 800px) {
+          
+        .bg
+        {
+             background-position-x: -160px;
+        }
+              
+         .content .welcome_text {
+            margin: 0% auto auto auto;
+            width: 100%;
+        }
+                  
+            .btn
+          {
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    
+       @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
+            
+           h1
+           {
+               font-size: 1.5em;
+               font-weight: normal;
+           }
+            .bg
+            {
+                 background-position-x: -400px;
+            }
+           
+           .content .welcome_text {
+            margin: 25% auto auto auto;
+            width: 100%;
+           }
+
+            .btn
+          {
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+        }
+           
+           .instruction_text
+           {
+               font-size: 14px;
+           }
+    
+    }
+    
+        
 }
 
 .static-page1 {

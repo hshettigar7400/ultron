@@ -92,7 +92,7 @@ export default class Intro extends React.Component {
               <div className="bg">
                 <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
 
-                <div className="title welcome_text_mobile">
+                <div className="title welcome_text">
                   <h1 className="white">Welcome to the course,</h1>
                   <h1 className="black">SEC Compliance Readiness</h1>
                   <div className="flex-container white">
@@ -100,7 +100,7 @@ export default class Intro extends React.Component {
                     <div className="right-side ">Strategy <br/>Governance <br/>Security</div>
                   </div>
                 </div>
-                <br/>
+                
                 <div className="btn white">
                   <span className="instruction_text">Click Start to begin </span>
                   <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
