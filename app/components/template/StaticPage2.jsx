@@ -29,9 +29,9 @@ export default class StaticPage2 extends React.Component {
       							</ul>
       						</div>
       						<div className="btn">
-      							<span className="instruction_text">
-                      <img src="/app/assets/images/template/hand_icon.png"/>
-                      <span>Click the button to know more.</span>
+      							<span className="instruction_img">
+                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
+                      <span className="instruction_text">Click the button to know more.</span>
                     </span>
                     <span>
                       <button id="btn_01">Benefits of this Course</button>
