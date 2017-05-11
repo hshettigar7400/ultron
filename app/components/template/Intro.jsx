@@ -61,8 +61,13 @@ export default class Intro extends React.Component {
               </div>
             </div>
           </MediaQuery>
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> origin/abhi-focus
                     <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
             <div className="content">
               <div className="bg">
@@ -85,8 +90,13 @@ export default class Intro extends React.Component {
               </div>
             </div>
           </MediaQuery>
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> origin/abhi-focus
           <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
             <div className="content">
               <div className="bg">
@@ -100,7 +110,11 @@ export default class Intro extends React.Component {
                     <div className="right-side ">Strategy <br/>Governance <br/>Security</div>
                   </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
                 <div className="btn white">
                   <span className="instruction_text">Click Start to begin </span>
                   <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
@@ -110,7 +124,11 @@ export default class Intro extends React.Component {
               </div>
             </div>
           </MediaQuery>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
         </div>
       )
     }

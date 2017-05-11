@@ -35,20 +35,35 @@
 }
 
 .intro-container {
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
     h1
    {
        font-size: 1.5em;
        font-weight: normal;
     }
+<<<<<<< HEAD
 
+=======
+    body
+    {
+        font-size: 16px;
+    }
+>>>>>>> origin/abhi-focus
   .content .welcome_text
   {
     margin: 20% auto auto auto;
     text-align: center;
     width: 50%;
   }
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
    .flex-container
   {
       display: flex;
@@ -78,6 +93,7 @@
     background-image: url("/app/assets/images/template/intro.jpg");
     height:100%;
     background-repeat: no-repeat;
+<<<<<<< HEAD
 
   }
 
@@ -87,6 +103,17 @@
          background-position-x: -10px;
   }
 }
+=======
+
+  }
+
+         @media only screen  and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+          .bg
+        {
+             background-position-x: -10px;
+        }
+    }
+>>>>>>> origin/abhi-focus
   .instruction_text
   {
     color:#fff;
@@ -102,15 +129,20 @@
     width: 80%;
       margin-top: 5%;
   }
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> origin/abhi-focus
   .btn .btn_text
   {
     color: #5e9e44;
     font-size: 1.25em;
     left: -15px;
     position: relative;
-    top: 10px;
+    top: 12px;
   }
 
   .start-button {
@@ -121,6 +153,7 @@
     text-align: center;
     width: 112px;
   }
+<<<<<<< HEAD
 
    @media only screen and (max-device-width: 800px) {
     .bg
@@ -177,13 +210,85 @@
 
 .static-page1 {
 
+=======
+
+          @media only screen and (max-device-width: 800px) {
+
+        .bg
+        {
+             background-position-x: -160px;
+        }
+
+         .content .welcome_text {
+            margin: 0% auto auto auto;
+            width: 100%;
+        }
+
+            .btn
+          {
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+       @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
+       .content
+         {
+             font-size: 0.875em;
+         }
+           h1
+           {
+               font-size: 1.5em;
+               font-weight: normal;
+           }
+            .bg
+            {
+                 background-position-x: -400px;
+            }
+
+           .content .welcome_text {
+            margin: 25% auto auto auto;
+            width: 100%;
+           }
+
+            .btn
+          {
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+        }
+
+           .instruction_text
+           {
+               font-size: 14px;
+           }
+
+    }
+
+
+}
+
+.static-page1 {
+     body
+    {
+        font-size: 16px;
+    }
+
+>>>>>>> origin/abhi-focus
    h1
 {
 	font-size : 1.875em;
 	font-weight : normal;
+<<<<<<< HEAD
 
 }
 
+=======
+
+}
+
+>>>>>>> origin/abhi-focus
   .flex-container
   {
     background-color:#5e9e44;
@@ -240,18 +345,123 @@
   {
     margin-left:25px;
   }
+<<<<<<< HEAD
 
+=======
+
+    @media only screen and (max-device-width: 1024px) {
+        .flex-container
+        {
+            margin-top: 23%;
+        }
+
+    }
+      @media only screen and (max-device-width: 800px) {
+
+            .content
+         {
+             font-size: 0.875em;
+         }
+          .intro_heading {
+            margin-top: 0px;
+          }
+         h1
+         {
+             font-size: 1.5em;
+         }
+
+        .bg
+        {
+            background-size: 100%;
+            background-position-y: -30px;
+        }
+
+          .flex-container
+          {
+              margin-top: 10%;
+              height: 225px;
+          }
+
+          .left-side{
+              width: 80%;
+          }
+          .right-side {
+              width: 30%;
+          }
+          .right-side img{
+              width: 90%;
+          }
+          .intro_para
+          {
+              width: 90%;
+          }
+    }
+     @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
+      .content
+         {
+             font-size: 0.875em;
+         }
+         .bg {
+
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+         }
+
+         h1
+         {
+             font-size: 1.5em;
+         }
+         .flex-container
+         {
+             display: block;
+             height: 100%;
+             margin-top: 20%;
+         }
+
+         .intro_heading {
+             margin-top: 0px;
+         }
+         .left-side
+         {
+             width: 100%;
+         }
+         .right-side
+         {
+             width: 80%;
+             margin-bottom: 5%;
+         }
+         .right-side img
+         {
+             width: 45%;
+             vertical-align: middle;
+         }
+    }
+>>>>>>> origin/abhi-focus
 }
 
-.static-page2 {
 
+
+
+.static-page2 {
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> origin/abhi-focus
     h1
 {
 	font-size : 1.875em;
 	font-weight : normal;
+<<<<<<< HEAD
 
 }
 
+=======
+
+}
+
+>>>>>>> origin/abhi-focus
   .flex-container {
     display: -webkit-flex;
     display: flex;
@@ -261,12 +471,20 @@
   .left-side {
     width: 100%;
   }
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
      .middle_align
     {
         vertical-align: middle;
     }
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
   .right-side {
     margin: auto;
     width: 30%;
@@ -324,17 +542,115 @@
     margin-left:20px;
     width: 200px;
   }
+
+      @media only screen and (max-device-width: 800px) {
+
+          .bg{
+              background-position-x: -150px;
+          }
+            .content
+         {
+             font-size: 0.875em;
+         }
+
+          .intro_heading {
+              margin-top: 0px;
+          }
+
+          .intro{
+              width: 100%;
+          }
+          .intro_para{
+              margin-top: 0px;
+          }
+
+          .intro_list{
+              width: 90%;
+          }
+
+          .btn{
+              margin-top: 0px;
+              text-align: center;
+          }
+
+          button
+          {
+            margin-left: 0px;
+            width: 40%;
+          }
+    }
+
+      @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
+
+          .bg
+          {
+              height: 568px;
+          }
+
+          h1
+          {
+              font-size: 1.5em;
+          }
+      .content
+         {
+             font-size: 1em;
+         }
+
+          button
+          {
+              width: 200px;
+          }
+
+          .intro
+          {
+              width: 100%;
+              height: auto;
+          }
+
+          .intro_para
+          {
+              margin-top: 0px;
+          }
+           .intro_heading {
+
+              margin-top: 5%;
+          }
+
+          .intro_list
+          {
+              width: 90%;
+          }
+          .btn {
+              float: none;
+              text-align: center;
+              height: 35%;
+              display: grid;
+              margin-top: 0px;
+          }
+    }
+
+
 }
 
 .static-page3 {
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
     h1
 {
 	font-size : 1.875em;
 	font-weight : normal;
+<<<<<<< HEAD
 
 }
 
+=======
+
+}
+
+>>>>>>> origin/abhi-focus
     .intro {
     width: 100%;
     border-top: 2px solid #ccc;
@@ -342,7 +658,11 @@
   .bg {
     background-image: url("/app/assets/images/template/bg3.jpg");
     height:100%;
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
   }
 
   .instruction_text {
@@ -350,7 +670,11 @@
     color:#fff;
   }
 
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
 .flex-container {
     display: -webkit-flex;
     display: flex;
@@ -379,14 +703,24 @@
 
 
 .static-page4 {
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
     h1
 {
 	font-size : 1.875em;
 	font-weight : normal;
+<<<<<<< HEAD
 
 }
 
+=======
+
+}
+
+>>>>>>> origin/abhi-focus
   .flex-container
   {
   	display: -webkit-flex;
@@ -416,7 +750,11 @@
 
   	background-image: url("/app/assets/images/template/bg4.jpg");
   	height:100%;
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
 
   }
 
@@ -469,14 +807,24 @@
 }
 
 .interactivity1 {
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
     h1
 {
 	font-size : 1.875em;
 	font-weight : normal;
+<<<<<<< HEAD
 
 }
 
+=======
+
+}
+
+>>>>>>> origin/abhi-focus
   .flex-container
   {
   	display: -webkit-flex;
@@ -493,7 +841,11 @@
     {
         vertical-align: middle;
     }
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
   .right-side
   {
     bottom: 60px;
@@ -537,7 +889,7 @@
   {
   	margin-left: 5%;
       margin-top: 40px;
-      width: 80%;
+      width: 75%;
   }
 
   .btn_div
@@ -570,15 +922,126 @@
     width: 465px;
     height: 250px;
   }
+
+    @media only screen and (max-device-width: 800px) {
+
+         h1
+           {
+               font-size: 1.5em;
+           }
+        .content{
+            font-size: 0.875em;
+        }
+        .intro{
+            width: 100%;
+        }
+
+       .intro_heading {
+        margin-left: 2%;
+        margin-top: 0px;
+        width: 100%;
+        }
+
+        .intro_para{
+            margin-top: 0px;
+        }
+        .buttons
+        {
+            margin-top: 0px;
+            margin-left: 10%;
+        }
+
+        button
+        {
+            height: 40px;
+        }
+        .btn_div{
+        margin: 0% auto auto 3%;
+        }
+
+        popup-container {
+        width: 90%;
+        height: 280px;
+        margin: auto;
+        }
+
+        right-side {
+
+            right: 0px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+
+    }
+
+       @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
+
+           h1
+           {
+               font-size: 1.5em;
+           }
+           .intro
+           {
+               width: 100%;
+           }
+
+           .intro_heading
+           {
+               width: 100%;
+               margin-top: 0px;
+           }
+
+           .intro_para
+           {
+               margin-top: 0px;
+           }
+           .buttons
+           {
+               display: block;
+               margin-left: 10%;
+           }
+
+           button
+           {
+               height: 40px;
+               margin: 5px;
+           }
+           .btn_div
+           {
+               margin: 0% auto auto 3%;
+           }
+
+           .right-side{
+               right: 0;
+               bottom: 0;
+               width: 100%;
+           }
+           .popup-container
+           {
+               margin: auto;
+               width: 90%;
+           }
+
+    }
 }
 
 .interactivity2 {
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
     h1
 {
 	font-size : 1.875em;
 	font-weight : normal;
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
 }
   .flex-container
   {
@@ -673,13 +1136,22 @@
 }
 
 .dragdrop1 {
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
    h1
     {
 	font-size : 1.875em;
 	font-weight : normal;
+<<<<<<< HEAD
 
     }
+=======
+
+    }
+>>>>>>> origin/abhi-focus
   .bg
   {
   	background-image: url("/app/assets/images/template/bg9.jpg");
@@ -779,12 +1251,20 @@
 
 .static-page5
 {
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
 h1
 {
 	font-size : 1.875em;
 	font-weight : normal;
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/abhi-focus
 }
 
 .header
@@ -831,7 +1311,11 @@ h1
 .bg
 {
 	background-image: url("/app/assets/images/template/bg8.jpg");
+<<<<<<< HEAD
     background-position-y: -50px;
+=======
+    background-position-y: -50px;
+>>>>>>> origin/abhi-focus
 	height:100%;
 
 }
@@ -855,5 +1339,10 @@ h1
 .summary
 {
 	margin-left: 10%;
+<<<<<<< HEAD
 }
 }
+=======
+}
+}
+>>>>>>> origin/abhi-focus
