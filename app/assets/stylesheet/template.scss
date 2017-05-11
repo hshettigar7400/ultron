@@ -564,6 +564,66 @@
   .intro_list {
     margin-left:25px;
   }
+
+  @media only screen and (max-device-width: 800px)
+     {
+         h1 {
+                font-size: 1.5em;
+                font-weight: normal;
+            }
+         .flex-container {
+                display: -webkit-flex;
+                display: flex;
+                background-color: #5e9e44;
+                height: 100%;
+                opacity: 0.9;
+                margin-top: 0px;
+            }
+         .intro {
+                width: 100%;
+                border-top: 2px solid #ccc;
+                height: 700px;
+                }
+         .intro_para {
+                margin-left: 46px;
+                width: 408px;
+                margin-top: 24px;
+            }
+         .bg{
+                 background-position-x: -328px;
+         }
+    }
+    @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
+         h1 {
+                font-size: 1.5em;
+                font-weight: normal;
+            }
+        .flex-container {
+                display: -webkit-flex;
+                display: flex;
+                background-color: #5e9e44;
+                height: 24%;
+                opacity: 0.9;
+                margin-top: 266px;
+            }
+        .intro {
+                width: 100%;
+                border-top: 2px solid #ccc;
+                height: 700px;
+                }
+        .intro_para {
+                margin-left: 11px;
+                width: 306px;
+                margin-top: 0px;
+            }
+        .intro_heading {
+                margin-left: 12px;
+                margin-top: 20px;
+            }
+        .bg{
+                 background-position-x: -430px;
+         }
+    }
 }
 
 
@@ -1148,5 +1208,49 @@ h1
 .summary
 {
 	margin-left: 10%;
-}   
+}
+
+
+     @media only screen and (max-device-width: 800px)
+     {
+         h1 {
+                font-size: 1.5em;
+                font-weight: normal;
+            }
+
+         .container {
+            background-color: #3A821F;
+             float: left;
+            height: 100%;
+            opacity: 0.9;
+            width: 100%;
+            margin-top: 0px;
+         }
+         .summary {
+                margin-left: 4%;
+                margin-top: 26px;
+            }
+    }
+    @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
+         h1 {
+                font-size: 1.5em;
+                font-weight: normal;
+            }
+
+        .line_height {
+                    line-height: 20px;
+        }
+         .container {
+            background-color: #3A821F;
+             float: left;
+            height: 100%;
+            opacity: 0.9;
+            width: 100%;
+            margin-top: 0px;
+         }
+         .summary {
+                margin-left: 4%;
+                margin-top: 68px;
+            }
+    }
 }
