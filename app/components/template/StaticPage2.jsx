@@ -16,7 +16,15 @@ export default class StaticPage2 extends React.Component {
     switch(parseInt(currentPopup)) {
       case 1:
         return (
-          <div>Popup1</div>
+          <div><h1>Benefits of this Course</h1>
+            <ul>
+                <li>Documentation Requests</li>
+                <li>On-Site Interviews</li>  
+                    <li>Exit Interviews</li>  
+                        <li>Post-Examination Follow Up</li>  
+  
+                </ul>
+            </div>
         );
         break;
       
