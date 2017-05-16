@@ -52,6 +52,13 @@ export default class StaticPage2 extends React.Component {
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
+                        
+                          <div className="left-side">
+                  {
+                    this.displayPopup()
+                  }
+                </div>
+                        
       					<div className="right-side">
       						<div className="intro_heading">
       							<h1>Course Objectives </h1>
@@ -78,15 +85,11 @@ export default class StaticPage2 extends React.Component {
                     </span>
                   </div>
       					</div>
-                    
+                     
                         
       				</div>
       			</div>
-                     <div className="left-side">
-                  {
-                    this.displayPopup()
-                  }
-                </div>
+                  
       		</div>
       	</div>
             </MediaQuery>
@@ -95,7 +98,14 @@ export default class StaticPage2 extends React.Component {
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
-      					<div className="left-side">
+                        
+                          <div className="left-side">
+                  {
+                    this.displayPopup()
+                  }
+                </div>
+                        
+      					<div className="right-side">
       						<div className="intro_heading">
       							<h1>Course Objectives </h1>
       						</div>
@@ -117,12 +127,15 @@ export default class StaticPage2 extends React.Component {
                       <span className="instruction_text">Click the button to know more.</span>
                     </span>
                     <span>
-                      <button id="btn_01">Benefits of this Course</button>
+                      <button id="btn_01" onClick={this.openPopup.bind(this, 1)}>Benefits of this Course</button>
                     </span>
                   </div>
       					</div>
+                     
+                        
       				</div>
       			</div>
+                  
       		</div>
       	</div>
             </MediaQuery>
@@ -131,7 +144,14 @@ export default class StaticPage2 extends React.Component {
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
-      					<div className="left-side">
+                        
+                          <div className="left-side">
+                  {
+                    this.displayPopup()
+                  }
+                </div>
+                        
+      					<div className="right-side">
       						<div className="intro_heading">
       							<h1>Course Objectives </h1>
       						</div>
@@ -153,12 +173,15 @@ export default class StaticPage2 extends React.Component {
                       <span className="instruction_text">Click the button to know more.</span>
                     </span>
                     <span>
-                      <button id="btn_01">Benefits of this Course</button>
+                      <button id="btn_01" onClick={this.openPopup.bind(this, 1)}>Benefits of this Course</button>
                     </span>
                   </div>
       					</div>
+                     
+                        
       				</div>
       			</div>
+                  
       		</div>
       	</div>
             </MediaQuery>
