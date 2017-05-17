@@ -15,12 +15,22 @@ export default class Interactivity1 extends React.Component {
     switch(parseInt(currentPopup)) {
       case 1:
         return (
-          <div>Popup1</div>
+          <div><div>High-level assessment of the adviser’s overall business activities </div>
+                <div>Review of substantiating documents and representations made on disclosure documents and marketing materials to assess your compliance program.</div></div>
+
         );
         break;
       case 2:
         return (
-          <div>Popup2</div>
+          <div>Regional examination staff may choose a comprehensive, risk-based examination of:
+               <ul>
+                   <li>Compliance Program</li>
+                <li>Filings and Disclosures</li>
+                <li>Marketing Materials</li>
+                <li>Portfolio Management</li>
+                <li>Safety of Client Assets</li>
+                   </ul>
+</div>
         );
         break;
     }
@@ -92,7 +102,7 @@ export default class Interactivity1 extends React.Component {
           </div>
         </div>
           </MediaQuery>
-            
+
               <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
         <div className="content">
           <div className="bg">
@@ -137,7 +147,7 @@ export default class Interactivity1 extends React.Component {
           </div>
         </div>
           </MediaQuery>
-            
+
               <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
         <div className="content">
           <div className="bg">
