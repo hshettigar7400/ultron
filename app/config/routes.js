@@ -30,10 +30,14 @@ const routes = [
   { path: '/page6',
     comp: Interactivity2
   },
-  { path: '/page6',
+  { path: '/page7',
     comp: DragDrop1
   },
+<<<<<<< HEAD
+  { path: '/page8',
+=======
     { path: '/page7',
+>>>>>>> origin/abhi-focus
     comp: StaticPage5
   }
 ];

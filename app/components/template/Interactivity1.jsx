@@ -102,7 +102,7 @@ export default class Interactivity1 extends React.Component {
           </div>
         </div>
           </MediaQuery>
-            
+
               <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
         <div className="content">
           <div className="bg">
@@ -147,7 +147,7 @@ export default class Interactivity1 extends React.Component {
           </div>
         </div>
           </MediaQuery>
-            
+
               <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
         <div className="content">
           <div className="bg">
