@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route,Link} from 'react-router-dom';
 import {routes} from '../config/routes.js';
 import SideBar from 'react-sidebar';
+import _ from "lodash";
 
 export default class PageLoader extends React.Component {
   constructor(props) {
@@ -14,11 +15,6 @@ export default class PageLoader extends React.Component {
   componentDidMount() {
     window.addEventListener("resize", this.updateDimensions.bind(this));
     this.updateDimensions();
-    this.getMenuList();
-  }
-
-  getMenuList() {
-
   }
 
   componentWillUnmount() {
@@ -37,6 +33,11 @@ export default class PageLoader extends React.Component {
   }
 
   loadMenuItem() {
+    const menuList = this.props.menuData;
+    if(menuList) {
+      console.log(menuList);
+      debugger;
+    }
     return (
       <b>Sidebar content</b>
     )

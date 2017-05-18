@@ -1,7 +1,64 @@
 {
   "menu": {
-    "courseTitle": {
-      
-    }
+    "courseTitle": "SEC  Compliance Readiness",
+    "modules": [
+      {
+        "topic": [
+          {
+            "topicTtile": "SEC  Compliance Readiness",
+            "pages":[
+              {
+                "pageTitle": "Introduction to SEC",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 1
+              },
+              {
+                "pageTitle": "Course Objectives",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 2
+              },
+              {
+                "pageTitle": "Our Goal",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 3
+              },
+              {
+                "pageTitle": "The National Examination Program 'NEP'",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 4
+              },
+              {
+                "pageTitle": "The National Examination Program 'NEP'",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 5
+              },
+              {
+                "pageTitle": "Kinds of Examinations",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 6
+              },
+              {
+                "pageTitle": "Activity",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 7
+              },
+              {
+                "pageTitle": "Lesson Summary",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 8
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

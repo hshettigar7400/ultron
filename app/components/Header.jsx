@@ -13,7 +13,7 @@ export default class Header extends React.Component {
         </div>
         <div className="title-holder clearfix">
           <div id="courseTitle" className="course-title title">
-            <p>SEC  Compliance Readiness</p>
+            <p>{this.props.courseTitle}</p>
           </div>
         </div>
         <div className="course-progress">
