@@ -14,17 +14,35 @@ export default class Interactivity2 extends React.Component {
     switch(parseInt(currentTab)) {
       case 1:
       return (
-        <div>Tab1</div>
+        <div><ul>
+		<li>Top to bottom review of the firm</li>
+			<li>Request List: 22 - 25 Pages</li>
+			<li>Onsite: 1 Week to Several Months</li>
+			<li>Not used very often</li>
+			</ul>
+			</div>
       );
       break;
       case 2:
       return (
-        <div>Tab2</div>
+        <div><ul>
+		<li>For advisers/broker-dealers</li>
+			<li>examined by a team</li>
+			<li>conflicts of interest that may not be apparent or understood by clients</li>
+			</div>
       );
       break;
       case 3:
       return (
-        <div>Tab3</div>
+        <div>
+		<ul>
+		<li>Presence Exam</li>
+			<li>Advisers <span className="bold">of private</span> funds</li>
+			<li>Exempt from registration prior to Dodd-Frank and most had no written policies and procedures</li>
+			<li>Exam Requests list:    < 5 Pages</li>
+			<li>Prior to the Onsite examination</li>
+			</ul>
+			</div>
       );
       break;
     }
