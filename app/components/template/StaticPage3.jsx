@@ -1,9 +1,6 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
-<<<<<<< HEAD
 
-=======
->>>>>>> c6e7530729fe96f39801c776f5fe8c46010576c3
 export default class StaticPage3 extends React.Component {
   constructor(props) {
     super(props);

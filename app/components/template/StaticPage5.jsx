@@ -43,11 +43,7 @@ export default class StaticPage3 extends React.Component {
         <span> In this module you learned about:</span>
         <ul>
         <li>The National Examination Program ("NEP"), generally follows a risk-based approach in the selection of examination candidates.</li>
-<<<<<<< HEAD
         <li className="lineHeight">There are three kinds of examinations:</li>
-=======
-        <li className="line_height">There are three kinds of examinations:</li>
->>>>>>> origin/abhi-focus
         <ul>
         <li>Traditional Examination </li>
         <li>Dual registrant exams </li>
