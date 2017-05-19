@@ -12,7 +12,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolveLoader: {
-  moduleExtensions: ['-loader']
+    moduleExtensions: ['-loader']
   },
   devServer: {
     host: '0.0.0.0',
@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file?name=assets/fonts/[name].[ext]'
+         loader: 'url-loader',
       }
     ]
  },

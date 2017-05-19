@@ -31,7 +31,7 @@ export default class StaticPage1 extends React.Component {
                     </div>
                   </div>
                   <div className="right-side">
-                    <img src="/app/assets/images/template/image1.jpg" /></div>
+                    <img src="app/assets/images/template/image1.jpg" /></div>
                   </div>
                 </div>
               </div>
@@ -59,7 +59,7 @@ export default class StaticPage1 extends React.Component {
                     </div>
                   </div>
                   <div className="right-side">
-                    <img src="/app/assets/images/template/image1.jpg" /></div>
+                    <img src="app/assets/images/template/image1.jpg" /></div>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default class StaticPage1 extends React.Component {
                     </div>
                   </div>
                   <div className="right-side">
-                    <img src="/app/assets/images/template/image1.jpg" /></div>
+                    <img src="app/assets/images/template/image1.jpg" /></div>
                   </div>
                 </div>
               </div>

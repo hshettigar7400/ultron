@@ -17,7 +17,7 @@ export default class Interactivity1 extends React.Component {
         return (
           <div><div>High-level assessment of the adviser’s overall business activities </div>
                 <div>Review of substantiating documents and representations made on disclosure documents and marketing materials to assess your compliance program.</div></div>
-            
+
         );
         break;
       case 2:
@@ -83,7 +83,7 @@ export default class Interactivity1 extends React.Component {
                   </div>
                   <div className="btn_div">
                     <span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
+                      <img src="app/assets/images/template/hand_icon.png" className ="middle_align"/>
                      <span className="instruction_text">Click each button to know more.</span>
                     </span>
                     <div className="buttons">
@@ -128,7 +128,7 @@ export default class Interactivity1 extends React.Component {
                   </div>
                   <div className="btn_div">
                     <span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
+                      <img src="app/assets/images/template/hand_icon.png" className ="middle_align"/>
                      <span className="instruction_text">Click each button to know more.</span>
                     </span>
                     <div className="buttons">
@@ -173,7 +173,7 @@ export default class Interactivity1 extends React.Component {
                   </div>
                   <div className="btn_div">
                     <span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
+                      <img src="app/assets/images/template/hand_icon.png" className ="middle_align"/>
                       <span className="instruction_text">Click each button to know more.</span>
                     </span>
                     <div className="buttons">

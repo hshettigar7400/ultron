@@ -17,7 +17,7 @@ export default class DragDrop1 extends React.Component {
                   <div className="summary_list white">
                     <span> Can you match the type of examination to its respective description.</span><br/><br/>
                     <span className="instruction_text">
-                      <img src="/app/assets/images/template/hand_icon.png"/>
+                      <img src="../../assets/images/template/hand_icon.png"/>
                       <span>Drag the exam type to its respective description and click Submit.</span>
                     </span>
                   </div>

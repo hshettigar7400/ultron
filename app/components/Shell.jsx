@@ -58,9 +58,6 @@ export default class Shell extends React.Component {
   }
 
   loadHeader() {
-    debugger;
-    const courseTitle = this.state.menuData ? this.state.menuData.menu.courseTitle : "";
-
     return (
         <div>
           <MediaQuery query='(max-width: 680px)'>
@@ -73,7 +70,7 @@ export default class Shell extends React.Component {
             />
           </MediaQuery>
           <MediaQuery query='(min-width: 680px)'>
-            <Header ref="header" courseTitle={courseTitle}/>
+            <Header ref="header"/>
           </MediaQuery>
         </div>
     )

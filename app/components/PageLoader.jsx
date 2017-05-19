@@ -33,11 +33,6 @@ export default class PageLoader extends React.Component {
   }
 
   loadMenuItem() {
-    const menuList = this.props.menuData;
-    if(menuList) {
-      console.log(menuList);
-      debugger;
-    }
     return (
       <b>Sidebar content</b>
     )

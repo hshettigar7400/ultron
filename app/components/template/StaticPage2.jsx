@@ -4,12 +4,12 @@ import MediaQuery from 'react-responsive';
 export default class StaticPage2 extends React.Component {
   constructor(props) {
     super(props);
-      
+
        this.state = {
       isPopupOpen: false,
       currentPopup: 0
     }
-      
+
   }
      getPopupContent() {
     var currentPopup = this.state.currentPopup;
@@ -19,18 +19,18 @@ export default class StaticPage2 extends React.Component {
           <div><h1>Benefits of this Course</h1>
             <ul>
                 <li>Documentation Requests</li>
-                <li>On-Site Interviews</li>  
-                    <li>Exit Interviews</li>  
-                        <li>Post-Examination Follow Up</li>  
-  
+                <li>On-Site Interviews</li>
+                    <li>Exit Interviews</li>
+                        <li>Post-Examination Follow Up</li>
+
                 </ul>
             </div>
         );
         break;
-      
+
     }
   }
-    
+
      displayPopup() {
     return (
       <div>
@@ -49,8 +49,8 @@ export default class StaticPage2 extends React.Component {
   closePopup() {
     this.setState({isPopupOpen: false})
   }
-    
-    
+
+
 
   render() {
     return (
@@ -60,13 +60,13 @@ export default class StaticPage2 extends React.Component {
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
-                        
+
                           <div className="left-side">
                   {
                     this.displayPopup()
                   }
                 </div>
-                        
+
       					<div className="right-side">
       						<div className="intro_heading">
       							<h1>Course Objectives </h1>
@@ -85,7 +85,7 @@ export default class StaticPage2 extends React.Component {
       						</div>
       						<div className="btn">
       							<span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
+                      <img src="app/assets/images/template/hand_icon.png" className ="middle_align"/>
                       <span className="instruction_text">Click the button to know more.</span>
                     </span>
                     <span>
@@ -93,11 +93,11 @@ export default class StaticPage2 extends React.Component {
                     </span>
                   </div>
       					</div>
-                     
-                        
+
+
       				</div>
       			</div>
-                  
+
       		</div>
       	</div>
             </MediaQuery>
@@ -106,13 +106,13 @@ export default class StaticPage2 extends React.Component {
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
-                        
+
                           <div className="left-side">
                   {
                     this.displayPopup()
                   }
                 </div>
-                        
+
       					<div className="right-side">
       						<div className="intro_heading">
       							<h1>Course Objectives </h1>
@@ -131,7 +131,7 @@ export default class StaticPage2 extends React.Component {
       						</div>
       						<div className="btn">
       							<span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
+                      <img src="app/assets/images/template/hand_icon.png" className ="middle_align"/>
                       <span className="instruction_text">Click the button to know more.</span>
                     </span>
                     <span>
@@ -139,11 +139,11 @@ export default class StaticPage2 extends React.Component {
                     </span>
                   </div>
       					</div>
-                     
-                        
+
+
       				</div>
       			</div>
-                  
+
       		</div>
       	</div>
             </MediaQuery>
@@ -152,13 +152,13 @@ export default class StaticPage2 extends React.Component {
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
-                        
+
                           <div className="left-side">
                   {
                     this.displayPopup()
                   }
                 </div>
-                        
+
       					<div className="right-side">
       						<div className="intro_heading">
       							<h1>Course Objectives </h1>
@@ -177,7 +177,7 @@ export default class StaticPage2 extends React.Component {
       						</div>
       						<div className="btn">
       							<span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
+                      <img src="app/assets/images/template/hand_icon.png" className ="middle_align"/>
                       <span className="instruction_text">Click the button to know more.</span>
                     </span>
                     <span>
@@ -185,11 +185,11 @@ export default class StaticPage2 extends React.Component {
                     </span>
                   </div>
       					</div>
-                     
-                        
+
+
       				</div>
       			</div>
-                  
+
       		</div>
       	</div>
             </MediaQuery>

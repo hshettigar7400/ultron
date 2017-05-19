@@ -86,7 +86,7 @@ export default class Interactivity2 extends React.Component {
                   </div>
                   <div className="btn_div">
                     <span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className="middle_align"/>
+                      <img src="app/assets/images/template/hand_icon.png" className="middle_align"/>
                       <span className="instruction_text">Click each tab to know more.</span>
                     </span>
                   </div>
@@ -122,7 +122,7 @@ export default class Interactivity2 extends React.Component {
                   </div>
                   <div className="btn_div">
                     <span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className="middle_align"/>
+                      <img src="app/assets/images/template/hand_icon.png" className="middle_align"/>
                       <span className="instruction_text">Click each tab to know more.</span>
                     </span>
                   </div>
@@ -158,7 +158,7 @@ export default class Interactivity2 extends React.Component {
                   </div>
                   <div className="btn_div">
                     <span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className="middle_align"/>
+                      <img src="app/assets/images/template/hand_icon.png" className="middle_align"/>
                       <span className="instruction_text">Click each tab to know more.</span>
                     </span>
                   </div>
