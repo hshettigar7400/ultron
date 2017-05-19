@@ -4,6 +4,7 @@ import Footer from './Footer';
 import TopNav from './TopNav';
 import PageLoader from './PageLoader';
 import MediaQuery from 'react-responsive';
+import axios from 'axios';
 import $ from "jquery";
 
 export default class Shell extends React.Component {
@@ -16,21 +17,14 @@ export default class Shell extends React.Component {
       menuOpen: false,
       menuData: {}
     };
+
   }
 
-  componentDidMount() {
-    this.getMenuList();
-  }
-
-  getMenuList() {
-    let menuData = {}
-    $.ajax({
-      url: 'app/assets/data/coursemenu.json',
-      dataType: 'json',
-      success: function(parsed_json){
-        this.setState({menuData: parsed_json})
-      }.bind(this)
-    });
+  componentWillMount() {
+    axios.get(`app/assets/data/coursemenu.json`)
+      .then(res => {
+        this.setState({ menuData: res.data });
+      });
   }
 
   loadNext() {
@@ -45,7 +39,13 @@ export default class Shell extends React.Component {
     this.setState({menuOpen: !this.state.menuOpen})
   }
 
-  showTovNav() {
+  menuItemClicked(e){
+   var pageId = e.target.dataset.pageId;
+   this.setState({currentPage: parseInt(pageId)});
+   this.toggleMenu();
+  }
+
+  showTopNav() {
     return (
       <TopNav
         currentPageNumber={this.state.currentPage}
@@ -70,7 +70,7 @@ export default class Shell extends React.Component {
             />
           </MediaQuery>
           <MediaQuery query='(min-width: 680px)'>
-            <Header ref="header"/>
+            <Header ref="header" courseTitle={this.state.menuData.menu ? this.state.menuData.menu.courseTitle:""}/>
           </MediaQuery>
         </div>
     )
@@ -78,12 +78,16 @@ export default class Shell extends React.Component {
 
   pageLoader() {
     return (
-      <PageLoader
-      currentPage={this.state.currentPage}
-      currentPage={this.state.currentPage}
-      menuData={this.state.menuData}
-      menuOpen={this.state.menuOpen}
-      />
+      <div>
+        {this.state.menuData.menu && <PageLoader
+        currentPage={this.state.currentPage}
+        currentPage={this.state.currentPage}
+        onCloseMenuClick={this.toggleMenu.bind(this)}
+        menuList={this.state.menuData.menu ? this.state.menuData.menu : {}}
+        menuOpen={this.state.menuOpen}
+        menuItemClicked={this.menuItemClicked.bind(this)}
+        />}
+      </div>
     )
   }
 

@@ -17,14 +17,14 @@
   border: 1px solid #C1C6C9;
   border-bottom: none;
   border-left: none;
-  color: #5C6670;
+  color: $nav-button-color;;
   cursor: pointer;
   display: block;
   height: $footer-height - 2;
   line-height: 42px;
   text-align: center;
   text-decoration: none;
-  width: 40px;
+  width: 43px;
 }
 
 .button-box a.disabled {

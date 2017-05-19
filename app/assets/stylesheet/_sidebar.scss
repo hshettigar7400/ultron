@@ -9,3 +9,15 @@
 .menu-style {
   width: $menu-width;
 }
+
+@media (max-width:768px) {
+  .menu-custom-style .menu-style {
+    width: $menu-width-mobile;
+    margin-right: 0;
+  }
+
+  .menu-custom-style .menu-list__contentInner ul li {
+    font-size: 13px ;
+    padding: 15px 10px 15px 30px;
+  }
+}

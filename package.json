@@ -7,6 +7,7 @@
   "author": "Hari Prasad <hshettigar7400@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.16.1",
     "css-loader": "^0.28.1",
     "font-loader": "^0.1.2",
     "html-webpack-plugin": "^2.28.0",

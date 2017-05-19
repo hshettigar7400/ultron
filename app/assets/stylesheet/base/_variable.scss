@@ -17,9 +17,10 @@ $intro-bg: #5B6770;
 $course-background: #ededed;
 $theme-light-blue: #0A4166;
 $theme-dark-blue: #083451;
-$button-bg: #1792E5;
-$button-bg-hover: #e9eced;
+$button-bg: #5e9f45;
+$button-bg-hover: #5e9f45;
 $footer-bg: #ededed;
+$theme: #5e9f45;
 $nav-button-color: #5e9f45;
 $header-bg: #ededed;
 
@@ -40,7 +41,8 @@ $disabled: #AAB1B9;
 //Height and Width
 $header-height: 61px;
 $footer-height: 46px;
-$menu-width: 350px;
+$menu-width: 400px;
+$menu-width-mobile: 100%;
 
 //z-index
 $header-zIndex: 100;

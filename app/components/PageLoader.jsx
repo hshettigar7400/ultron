@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route,Link} from 'react-router-dom';
 import {routes} from '../config/routes.js';
 import SideBar from 'react-sidebar';
-import _ from "lodash";
+import MenuInnerList from './MenuInnerList';
 
 export default class PageLoader extends React.Component {
   constructor(props) {
@@ -34,7 +34,11 @@ export default class PageLoader extends React.Component {
 
   loadMenuItem() {
     return (
-      <b>Sidebar content</b>
+      <MenuInnerList
+        menuList={this.props.menuList}
+        onPageLinkClick={this.props.menuItemClicked}
+        onCloseMenuClick={this.props.onCloseMenuClick}
+      />
     )
   }
 
