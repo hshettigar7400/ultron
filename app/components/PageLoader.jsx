@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route,Link} from 'react-router-dom';
 import {routes} from '../config/routes.js';
 import SideBar from 'react-sidebar';
 import MenuInnerList from './MenuInnerList';
+import Sound from 'react-sound';
 
 export default class PageLoader extends React.Component {
   constructor(props) {
@@ -42,6 +43,19 @@ export default class PageLoader extends React.Component {
     )
   }
 
+  loadAudio() {
+    return (
+      <Sound
+       url="/app/assets/audio/p1.mp3"
+       playStatus={Sound.status.PLAYING}
+       playFromPosition={300 /* in milliseconds */}
+       onLoading={this.handleSongLoading}
+       onPlaying={this.handleSongPlaying}
+       onFinishedPlaying={this.handleSongFinishedPlaying}
+     />
+    )
+  }
+
   loadSideBar() {
     return (
       <SideBar
@@ -76,6 +90,7 @@ export default class PageLoader extends React.Component {
   render() {
     return (
       <div className="page-loader" ref="pageLoader">
+        {this.loadAudio()}
         {this.loadSideBar()}
         {this.loadRouter()}
       </div>
