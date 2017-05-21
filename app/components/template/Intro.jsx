@@ -39,7 +39,7 @@ export default class Intro extends React.Component {
               </div>
             </div>
           }
-          <MediaQuery query='(min-device-width: 1224px)'>
+          <MediaQuery query='(min-device-width: 1024px)'>
             <div className="content">
               <div className="bg">
                 <div className="logo"> <img src="app/assets/images/template/logo.jpg"/></div>

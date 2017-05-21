@@ -28,8 +28,8 @@ export default class Interactivity2 extends React.Component {
       return (
         <div><ul>
 		<li>For advisers/broker-dealers</li>
-			<li>examined by a team</li>
-			<li>conflicts of interest that may not be apparent or understood by clients</li>
+			<li>Examined by a team</li>
+			<li>Conflicts of interest that may not be apparent or understood by clients</li>
 			</ul>
 			</div>
       );
