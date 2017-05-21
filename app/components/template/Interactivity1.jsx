@@ -15,14 +15,19 @@ export default class Interactivity1 extends React.Component {
     switch(parseInt(currentPopup)) {
       case 1:
         return (
-          <div><div>High-level assessment of the adviser’s overall business activities </div>
-                <div>Review of substantiating documents and representations made on disclosure documents and marketing materials to assess your compliance program.</div></div>
+          <div>
+                <h1>Approach1</h1>
+                <div>High-level assessment of the adviser’s overall business activities </div>
+        
+                <div className="content_pading">Review of substantiating documents and representations made on disclosure documents and marketing materials to assess your compliance program.</div></div>
 
         );
         break;
       case 2:
         return (
-          <div>Regional examination staff may choose a comprehensive, risk-based examination of:
+            <div>
+                <h1>Approach2</h1>
+          <div className="content_margin">Regional examination staff may choose a comprehensive, risk-based examination of:
                <ul>
                    <li>Compliance Program</li>
                 <li>Filings and Disclosures</li>
@@ -30,7 +35,8 @@ export default class Interactivity1 extends React.Component {
                 <li>Portfolio Management</li>
                 <li>Safety of Client Assets</li>
                    </ul>
-</div>
+            </div>
+                </div>
         );
         break;
     }
