@@ -5,6 +5,7 @@ import SideBar from 'react-sidebar';
 import MenuInnerList from './MenuInnerList';
 import Dock from 'react-dock';
 import HelpContent from './template/HelpContent';
+import MediaQuery from 'react-responsive';
 
 export default class PageLoader extends React.Component {
   constructor(props) {
@@ -99,7 +100,9 @@ export default class PageLoader extends React.Component {
   render() {
     return (
       <div className="page-loader" ref="pageLoader">
-        {this.loadHelp()}
+        <MediaQuery query='(min-width: 680px)'>
+          {this.loadHelp()}
+        </MediaQuery>
         {this.loadSideBar()}
         {this.loadRouter()}
       </div>

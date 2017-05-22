@@ -20,9 +20,8 @@ export default class DropContainer extends Component {
   }
 
   render() {
-    const { canDrop, isOver, connectDropTarget } = this.props;
+    const { canDrop, isOver, connectDropTarget, lastDroppedItem } = this.props;
     const isActive = canDrop && isOver;
-
 
     return connectDropTarget(
       <div className="drop-container">
