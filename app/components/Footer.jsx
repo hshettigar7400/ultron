@@ -51,7 +51,7 @@ export default class Footer extends React.Component {
             </div>
           }
           <div className="button-box">
-            <a aria-disabled="false" aria-label="replay" aria-pressed="false" href="#" role="button" >
+            <a aria-disabled="false" aria-label="replay" aria-pressed="false" onClick={this.props.onReplay.bind(null, this)} role="button" >
               <span className="icon-replay"></span>
             </a>
           </div>

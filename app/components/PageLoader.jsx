@@ -49,7 +49,6 @@ export default class PageLoader extends React.Component {
   }
 
   loadHelp() {
-    console.log(this.props.showHelp)
     return (
     <div className="help-container">
       <Dock

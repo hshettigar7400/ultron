@@ -17,6 +17,7 @@ export default class Shell extends React.Component {
       currentTopic: 1,
       currentPage: 1,
       isPlaying: true,
+      isAudioFinished: false,
       audioVolume: 100,
       menuData: {},
       menuOpen: false,
@@ -38,11 +39,11 @@ export default class Shell extends React.Component {
   }
 
   loadNext() {
-    this.setState({currentPage: this.state.currentPage + 1})
+    this.setState({currentPage: this.state.currentPage + 1, isAudioFinished: false})
   }
 
   loadPrev() {
-    this.setState({currentPage: this.state.currentPage - 1})
+    this.setState({currentPage: this.state.currentPage - 1, isAudioFinished: false})
   }
 
   toggleMenu() {
@@ -66,6 +67,10 @@ export default class Shell extends React.Component {
 
   toggleHelp() {
     this.setState({showHelp: !this.state.showHelp})
+  }
+
+  replayPage() {
+    this.setState({isAudioFinished: false})
   }
 
   menuItemClicked(e){
@@ -113,6 +118,7 @@ export default class Shell extends React.Component {
           onLoadPrev={this.loadPrev.bind(this)}
           onMenuClick={this.toggleMenu.bind(this)}
           onPlayPause={this.togglePlay.bind(this)}
+          onReplay={this.replayPage.bind(this)}
           isPlaying={this.state.isPlaying}
           totalPages={8}
           onToggleVolume={this.toggleVolume.bind(this)}
@@ -137,6 +143,10 @@ export default class Shell extends React.Component {
     )
   }
 
+  handleFinishedPlaying() {
+    this.setState({isAudioFinished: true})
+  }
+
   loadAudio() {
     let audioPath = `app/assets/audio/p${this.state.currentPage}.mp3`;
     return (
@@ -146,7 +156,7 @@ export default class Shell extends React.Component {
        playFromPosition={0 /* in milliseconds */}
        onLoading={this.handleSongLoading}
        onPlaying={this.handleSongPlaying}
-       onFinishedPlaying={this.handleSongFinishedPlaying}
+       onFinishedPlaying={this.handleFinishedPlaying.bind(this)}
        volume={this.state.audioVolume}
      />
     )
@@ -171,7 +181,7 @@ export default class Shell extends React.Component {
   render() {
     return (
       <div>
-        {this.state.currentPage && this.loadAudio()}
+        {!this.state.isAudioFinished && this.loadAudio()}
         {this.loadHeader()}
         {this.state.currentPage && this.pageLoader()}
         {this.state.showTranscript &&  this.loadTranscript()}
