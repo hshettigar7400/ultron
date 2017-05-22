@@ -33,8 +33,12 @@ module.exports = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-         loader: 'url-loader',
-      }
+        loader: 'url-loader',
+      },
+      {
+        test: /\.mp3$/,
+        loader: 'url-loader'
+    }
     ]
  },
 externals: {
