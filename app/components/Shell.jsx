@@ -171,7 +171,7 @@ export default class Shell extends React.Component {
   render() {
     return (
       <div>
-        {this.loadAudio()}
+        {this.state.currentPage && this.loadAudio()}
         {this.loadHeader()}
         {this.state.currentPage && this.pageLoader()}
         {this.state.showTranscript &&  this.loadTranscript()}

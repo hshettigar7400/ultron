@@ -10,8 +10,7 @@ export default class PageLoader extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: props.menuOpen,
-      showHelp: true
+      menuOpen: props.menuOpen
     }
   }
 
@@ -36,7 +35,7 @@ export default class PageLoader extends React.Component {
   }
 
   hideHelp() {
-    this.setState({showHelp: false})
+
   }
 
   loadMenuItem() {
@@ -50,6 +49,7 @@ export default class PageLoader extends React.Component {
   }
 
   loadHelp() {
+    console.log(this.props.showHelp)
     return (
     <div className="help-container">
       <Dock
