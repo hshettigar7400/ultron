@@ -32,29 +32,32 @@ export default class Footer extends React.Component {
             </a>
           </div>*/}
           <div className="button-box">
-            <a aria-disabled="false" aria-label="help" aria-pressed="false" href="#" role="button" >
+            <a aria-disabled="false" aria-label="help" aria-pressed="false" onClick={this.props.onHelpClick.bind(null, this)} role="button" >
               <span className="icon-help"></span>
             </a>
           </div>
           <div className="button-box">
-            <a aria-disabled="false" aria-label="transcript" aria-pressed="false" href="#" role="button" >
+            <a aria-disabled="false" aria-label="transcript" aria-pressed="false"
+                className={!this.props.showTranscript ? "" : "selected"} onClick={this.props.onTranscriptClick.bind(null, this)} role="button" >
               <span className="icon-transcript"></span>
             </a>
           </div>
           {!this.state.isiPad &&
             <div className="button-box">
-              <a aria-disabled="false" aria-label="audio" aria-pressed="false" href="#" role="button" >
+              <a aria-disabled="false" aria-label="audio" aria-pressed="false"
+                className={this.props.audioVolume === 100 ? "" : "selected"} onClick={this.props.onToggleVolume.bind(null, this)} role="button" >
                 <span className="icon-audio"></span>
               </a>
             </div>
           }
           <div className="button-box">
-            <a aria-disabled="false" aria-label="replay" aria-pressed="false" href="#" role="button" >
+            <a aria-disabled="false" aria-label="replay" aria-pressed="false" onClick={this.props.onReplay.bind(null, this)} role="button" >
               <span className="icon-replay"></span>
             </a>
           </div>
           <div className="button-box">
-            <a aria-disabled="false" aria-label="playPause" aria-pressed="false" href="#" role="button" >
+            <a aria-disabled="false" aria-label="playPause" aria-pressed="false"
+              className={this.props.isPlaying ? "" : "selected"} onClick={this.props.onPlayPause.bind(null, this)} role="button" >
               <span className="icon-playPause"></span>
             </a>
           </div>

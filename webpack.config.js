@@ -16,7 +16,9 @@ module.exports = {
   },
   devServer: {
     host: '0.0.0.0',
-    port: 8008
+    port: 8008,
+    compress: true,
+    disableHostCheck: true
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -31,8 +33,12 @@ module.exports = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-         loader: 'url-loader',
-      }
+        loader: 'url-loader',
+      },
+      {
+        test: /\.mp3$/,
+        loader: 'url-loader'
+    }
     ]
  },
 externals: {

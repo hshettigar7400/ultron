@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Route,Link} from 'react-router-dom';
 import {routes} from '../config/routes.js';
 import SideBar from 'react-sidebar';
 import MenuInnerList from './MenuInnerList';
+import Dock from 'react-dock';
+import HelpContent from './template/HelpContent';
 
 export default class PageLoader extends React.Component {
   constructor(props) {
@@ -29,7 +31,11 @@ export default class PageLoader extends React.Component {
   }
 
   closeMenu() {
-    this.setState({closeMenu: false})
+      this.setState({closeMenu: false})
+  }
+
+  hideHelp() {
+
   }
 
   loadMenuItem() {
@@ -40,6 +46,23 @@ export default class PageLoader extends React.Component {
         onCloseMenuClick={this.props.onCloseMenuClick}
       />
     )
+  }
+
+  loadHelp() {
+    return (
+    <div className="help-container">
+      <Dock
+        position='top'
+        isVisible={this.props.showHelp}
+        duration={800}
+        size={0.9}
+        dockStyle={{position: 'absolute', height: 'auto', top: '66px'}}
+        dimStyle={{position: 'relative', height: '100%'}}
+        >
+        <HelpContent closeHelp={this.hideHelp.bind(this)}/>
+      </Dock>
+    </div>
+  )
   }
 
   loadSideBar() {
@@ -76,6 +99,7 @@ export default class PageLoader extends React.Component {
   render() {
     return (
       <div className="page-loader" ref="pageLoader">
+        {this.loadHelp()}
         {this.loadSideBar()}
         {this.loadRouter()}
       </div>

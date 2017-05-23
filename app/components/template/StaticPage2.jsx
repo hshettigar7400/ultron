@@ -55,7 +55,7 @@ export default class StaticPage2 extends React.Component {
   render() {
     return (
       <div className="static-page2">
-        <MediaQuery query='(min-device-width: 1224px)'>
+        <MediaQuery query='(min-device-width: 1024px)'>
         <div className="content">
       		<div className="bg">
       			<div className="intro white">

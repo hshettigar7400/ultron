@@ -9,7 +9,7 @@ export default class StaticPage1 extends React.Component {
   render() {
     return (
       <div className="static-page1">
-        <MediaQuery query='(min-device-width: 1224px)'>
+        <MediaQuery query='(min-device-width: 1024px)'>
           <div className="content">
             <div className="bg">
               <div className="intro white">
@@ -20,7 +20,7 @@ export default class StaticPage1 extends React.Component {
                     </div>
                     <div className="intro_para">
                       <p>As an investment adviser, you need to be aware of all the rules and laws pertaining to the United States securities regulation. </p>
-                      <span>Securities and Exchange Commission (Sec):</span>
+                      <span>Securities and Exchange Commission (SEC):</span>
                     </div>
                     <div className="intro_list">
                       <ul>
@@ -48,7 +48,7 @@ export default class StaticPage1 extends React.Component {
                     </div>
                     <div className="intro_para">
                       <p>As an investment adviser, you need to be aware of all the rules and laws pertaining to the United States securities regulation. </p>
-                      <span>Securities and Exchange Commission (Sec):</span>
+                      <span>Securities and Exchange Commission (SEC):</span>
                     </div>
                     <div className="intro_list">
                       <ul>
@@ -76,7 +76,7 @@ export default class StaticPage1 extends React.Component {
                     </div>
                     <div className="intro_para">
                       <p>As an investment adviser, you need to be aware of all the rules and laws pertaining to the United States securities regulation. </p>
-                      <span>Securities and Exchange Commission (Sec):</span>
+                      <span>Securities and Exchange Commission (SEC):</span>
                     </div>
                     <div className="intro_list">
                       <ul>
