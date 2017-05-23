@@ -1,0 +1,49 @@
+//Font-family
+$base-font-family: 'Arial';
+
+// Font Sizes
+$base-font-size: 1em;
+$mobile-base-font-size: 1em;
+$smaller-font-size: 10px;
+$medium-font-size: 14px;
+$course-title-size: 1.5em;
+
+//Font weight
+$base-font-weight:300;
+$bold-font-weight:700;
+
+//Background Color
+$intro-bg: #5B6770;
+$course-background: #ededed;
+$theme-light-blue: #0A4166;
+$theme-dark-blue: #083451;
+$button-bg: #5e9f45;
+$button-bg-hover: #5e9f45;
+$footer-bg: #ededed;
+$theme: #5e9f45;
+$nav-button-color: #5e9f45;
+$header-bg: #ededed;
+
+//Line height
+$base-line-height: 1.4;
+
+//Spacing
+$base-padding: 10px;
+$base-margin: 10px;
+
+//Text Color
+$white: #FFFFFF;
+$black: #000000;
+$light-dark: #333333;
+$back-with-opacity: rgba(0, 0, 0, 0.65);
+$disabled: #AAB1B9;
+
+//Height and Width
+$header-height: 61px;
+$footer-height: 46px;
+$menu-width: 400px;
+$menu-width-mobile: 100%;
+
+//z-index
+$header-zIndex: 100;
+$footer-zIndex: 99;
