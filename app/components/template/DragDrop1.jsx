@@ -57,19 +57,28 @@ class DragDrop1 extends React.Component {
         $push: [name],
       } : {},
     }));
+
+    if (this.state.droppedBoxNames.length === 2) {
+      this.setState(update(this.state, {
+        showFeedback: {$set: true},
+      }));
+    }
+  }
+
+  closeTab() {
+    this.setState(update(this.state, {
+      showFeedback: {$set: false},
+    }));
   }
 
   isDropped(boxName) {
-    if (this.state.droppedBoxNames.length === 2 ) {
-
-    }
     return this.state.droppedBoxNames.indexOf(boxName) > -1;
   }
 
   displayFeedback() {
     return (
       <div className="feedback-container">
-        <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
+        <span className="close-btn icon-close" onClick={this.closeTab.bind(this)}></span>
           Correct
       </div>
     )
@@ -149,11 +158,13 @@ class DragDrop1 extends React.Component {
                     </div>
                   </div>
                 </div>
+                  {this.state.showFeedback && this.displayFeedback()}
               </div>
+
             </div>
           </div>
+
         </div>
-        {this.state.showFeedback && this.displayFeedback()}
       </div>
     )
   }

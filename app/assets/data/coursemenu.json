@@ -44,10 +44,16 @@
                 "pageId": 6
               },
               {
-                "pageTitle": "Lesson Summary",
+                "pageTitle": "Activity",
                 "moduleId": 1,
                 "topicId": 1,
                 "pageId": 7
+              },
+              {
+                "pageTitle": "Lesson Summary",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 8
               }
             ]
           }
