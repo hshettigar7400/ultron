@@ -25,6 +25,7 @@
     "react-dnd-touch-backend": "^0.3.10",
     "react-dock": "^0.2.4",
     "react-dom": "^15.5.4",
+    "react-draggable": "^2.2.6",
     "react-html-parser": "^1.0.3",
     "react-mediaswitch": "^0.2.1",
     "react-responsive": "^1.2.10",

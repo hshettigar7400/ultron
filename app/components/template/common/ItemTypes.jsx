@@ -1,3 +1,4 @@
 export default {
-  DRAGCONTAINER: 'dragcontainer',
+  CAUSEEXAMS: 'causeexams',
+  SWEEPEXAMS: 'sweepexams'
 };
