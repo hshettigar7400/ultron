@@ -52,3 +52,7 @@ const config = {
       passingScore: 75
   }
 };
+
+module.exports = {
+  config
+}
