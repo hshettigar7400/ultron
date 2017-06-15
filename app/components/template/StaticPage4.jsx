@@ -406,7 +406,11 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
-                  <span>
+                    <span className="img_icon">
+                    
+                    <img src="app/assets/images/template/q_icon.png" />
+                    </span>
+                  <span className="question">
                     Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
                   </span>
                 </div>
@@ -420,6 +424,11 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
+                     <span>
+                    
+                    <img src="app/assets/images/template/q_icon.png" />
+                    </span>
+                    
                   <span>
                     Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
                   </span>
@@ -434,6 +443,11 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
+                     <span>
+                    
+                    <img src="app/assets/images/template/q_icon.png" />
+                    </span>
+                    
                   <span>
                     Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
                   </span>
