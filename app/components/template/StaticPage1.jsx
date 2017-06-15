@@ -39,8 +39,7 @@ export default class StaticPage1 extends React.Component {
                 </p>
                 </div>
             <div className="btn_container">
-            <div className="instruction_text">Chọn Tiếp tục.</div>
-                <div className="button_div"><a href="#" className="button" onClick={this.loadRouter.bind(this)}>Tiếp tục</a></div>
+            <div className="instruction_text">Chọn bên cạnh để tiếp tục.</div>
 
             </div>
 
@@ -63,8 +62,7 @@ export default class StaticPage1 extends React.Component {
                 </p>
                 </div>
             <div className="btn_container">
-            <div className="instruction_text">Chọn Tiếp tục.</div>
-                <div className="button_div"><a href="#" className="button" >Tiếp tục</a></div>
+            <div className="instruction_text">Chọn bên cạnh để tiếp tục.</div>
 
             </div>
 
@@ -95,8 +93,8 @@ export default class StaticPage1 extends React.Component {
                 </p>
                 </div>
             <div className="btn_container">
-            <div className="instruction_text">Chọn Tiếp tục.</div>
-                <div className="button_div"><a href="#" className="button" >Tiếp tục</a></div>
+            <div className="instruction_text">Chọn bên cạnh để tiếp tục.</div>
+                
             </div>
                 </div>
               </div>
