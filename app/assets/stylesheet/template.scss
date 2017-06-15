@@ -369,45 +369,45 @@ h4 {
             width: 25%;
         }
         .pop_container1 {
-            position: absolute;
-            top: 308px;
-            left: 78px;
-            width: 170px;
+           position: absolute;
+            top: 295px;
+            left: 55px;
+            width: 205px;
             background-color: #fff;
-            height: 130px;
+            height: 150px;
             margin: auto;
             color: #000;
             padding: 5px;
         }
         .pop_container2 {
             position: absolute;
-            top: 308px;
-            left: 305px;
-            width: 170px;
+            top: 295px;
+            left: 290px;
+            width: 205px;
             background-color: #fff;
-            height: 130px;
+            height: 150px;
             margin: auto;
             color: #000;
             padding: 5px;
         }
         .pop_container3 {
-            position: absolute;
-            top: 308px;
-            left: 530px;
-            width: 170px;
+             position: absolute;
+            top: 295px;
+            left: 520px;
+            width: 205px;
             background-color: #fff;
-            height: 130px;
+            height: 150px;
             margin: auto;
             color: #000;
             padding: 5px;
         }
         .pop_container4 {
             position: absolute;
-            top: 308px;
-            left: 765px;
-            width: 170px;
+            top: 295px;
+            left: 750px;
+            width: 205px;
             background-color: #fff;
-            height: 130px;
+            height: 150px;
             margin: auto;
             color: #000;
             padding: 5px;
@@ -489,10 +489,7 @@ h4 {
             color: #000;
             padding: 2px;
         }
-        .pop_container1 .text,
-        .pop_container2 .text,
-        .pop_container3 .text,
-        .pop_container4 .text {
+         .text {
             width: 90%;
             margin: auto;
             display: inline-block;
@@ -507,6 +504,7 @@ h4 {
         }
         .background {
             background-position-y: 0px;
+            background-position-x: -220px;
         }
         .flex-container {
             display: block;
@@ -516,54 +514,68 @@ h4 {
         .box2,
         .box3,
         .box4 {
-            display: block;
-            width: 80%;
+               display: inline-block;
+            width: 50%;
             margin: auto;
+        }
+        
+        .text
+        {
+            margin-left: 0px;
+            margin-top: 0px;
+        }
+        
+        .box1 img,
+        .box2 img,
+        .box3 img,
+        .box4 img{
+            width: 100%;
         }
         .top-header {
             text-align: left;
             line-height: 1.2;
             padding: 5px;
+            margin-top: 10px;
         }
         .instruction_img {
             width: 10%;
             text-align: left;
         }
         .pop_container1 {
-            position: absolute;
-            top: 51px;
-            left: 9px;
-            width: 225px;
+             position: absolute;
+            top: 32px;
+            left: 3px;
+            width: 135px;
             background-color: #fff;
-            height: 157px;
+            height: 105px;
             margin: auto;
         }
         .pop_container2 {
-            position: absolute;
-            top: 51px;
-            left: 9px;
-            width: 225px;
+             position: absolute;
+             top: 32px;
+            left: 6px;
+            width: 135px;
             background-color: #fff;
-            height: 157px;
+            height: 105px;
             margin: auto;
         }
         .pop_container3 {
             position: absolute;
-            top: 51px;
-            left: 9px;
-            width: 225px;
+            top: 30px;
+            left: 2px;
+            width: 135px;
             background-color: #fff;
-            height: 157px;
+            height: 105px;
             margin: auto;
             ;
         }
         .pop_container4 {
-            position: absolute;
-            top: 51px;
-            left: 9px;
-            width: 225px;
+                position: absolute;
+            top: 30px;
+            left: 2px;
+            width: 135px;
             background-color: #fff;
-            height: 157px;
+            height: 105px;
             margin: auto;
         }
     }
@@ -678,6 +690,12 @@ h4 {
             height: 100%;
             margin: 40px auto auto;
         }
+        
+         .feedback-container {
+            bottom: 70px;
+        }
+        
+        
         .box1,
         .box2,
         .box3,
@@ -711,6 +729,10 @@ h4 {
         .flex-container {
             display: block;
             text-align: center;
+        }
+        
+        .feedback-container {
+            bottom: 90px;
         }
         .box1,
         .box2,
@@ -803,6 +825,16 @@ h4 {
         .box4 img {
             width: 100%;
         }
+       .feedback-container {
+        position: absolute;
+        bottom: 220px;
+        margin: 0 auto;
+        width: 90%;
+        height: 40px;
+        margin-left: 5px;
+        z-index: 9999999;
+        }
+        
     }
 }
 .static-page4 {
