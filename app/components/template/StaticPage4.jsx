@@ -418,8 +418,13 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
-                  <span>
-                    Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
+                     <span className="img_icon">
+                    
+                    <img src="app/assets/images/template/q_icon.png" />
+                    </span>
+                   <span className="question">
+                    Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn? <br/><br/>
+                     Giải quyết chênh lệch chi phí nhân công.
                   </span>
                 </div>
                 {this.displayContent()}
@@ -432,8 +437,13 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
-                  <span>
-                    Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
+                     <span className="img_icon">
+                    
+                    <img src="app/assets/images/template/q_icon.png" />
+                    </span>
+                   <span className="question">
+                    Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?<br/><br/>
+                     Giải quyết chênh lệch chi phí nhân công.
                   </span>
                 </div>
                   {this.displayContent()}
@@ -446,9 +456,15 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
-                  <span>
-                    Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
+                      <span className="img_icon">
+                    
+                    <img src="app/assets/images/template/q_icon.png" />
+                    </span>
+                   <span className="question">
+                    Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?<br/><br/>
+                     Giải quyết chênh lệch chi phí nhân công.
                   </span>
+                    
                 </div>
                 {this.displayContent()}
               </div>

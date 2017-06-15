@@ -8,7 +8,7 @@ export default class StaticPage5 extends React.Component {
 
   render() {
     return (
-      <div className="static-page5">
+      <div className="staticPage5">
 
         <MediaQuery query='(min-device-width: 1224px)'>
           <div className="content">
