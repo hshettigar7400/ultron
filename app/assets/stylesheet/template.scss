@@ -712,6 +712,11 @@ h4 {
             display: block;
             text-align: center;
             width: 60%;
+            margin-left: 100px;
+
+            .drop-container {
+              margin-right: 110px;
+            }
         }
 
         .button_box {
