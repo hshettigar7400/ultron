@@ -102,9 +102,7 @@ export default class MenuList extends React.Component {
 
 
   handleTriggerClick(event) {
-
     event.preventDefault();
-
     if(this.props.triggerDisabled) {
       return
     }
@@ -173,7 +171,7 @@ export default class MenuList extends React.Component {
   }
 
   getProgressColor() {
-    return "#5e9f45";
+    return "#ED1C22";
   }
 
   render() {
