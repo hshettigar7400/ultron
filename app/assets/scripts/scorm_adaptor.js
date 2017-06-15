@@ -7,29 +7,29 @@ var sessionSetTimeOut;
 function scormAdaptor_getAPI(){
 
   var myAPI = null;
-  var tries = 0, triesMax = 10;  
+  var tries = 0, triesMax = 10;
   while (tries <= triesMax && myAPI == null){
     myAPI = findAPI(window);
-    
+
     if (myAPI == null && typeof(window.parent) != 'undefined'){
     	myAPI = findAPI(window.parent);
     }
-    
+
     if (myAPI == null && typeof(window.top) != 'undefined'){
     	myAPI = findAPI(window.top);
-    }	
+    }
 
     if (myAPI == null && typeof(window.opener) != 'undefined'){
     	if (window.opener != null && !window.opener.closed){
     		myAPI = findAPI(window.opener);
     	}
-    	
+
     	try {
 		if (myAPI == null && typeof(window.opener.parent) != 'undefined'){
 			myAPI = findAPI(window.opener.parent);
-		}	
+		}
 	} catch(e) {}
-	
+
 		try {
 		    if (myAPI == null && typeof(window.opener.top) != 'undefined'){
 			if (window.opener.top != null && !window.opener.top.closed){
@@ -37,20 +37,20 @@ function scormAdaptor_getAPI(){
 			}
 
 			if (myAPI == null && window.opener.top.opener != null && !window.opener.top.opener.closed){
-				myAPI = findAPI(window.opener.top.opener);			
+				myAPI = findAPI(window.opener.top.opener);
 
 				if (myAPI == null && window.opener.top.opener.top != null && !window.opener.top.opener.top.closed){
 					myAPI = findAPI(window.opener.top.opener.top);
-				}			
-			}	
+				}
+			}
 		    }
 		} catch(e) {}
-		
+
     }
     tries++;
   }
   if (myAPI == null){
-  	
+
   } else {
     scormAPIHandle = myAPI;
     //scormAdaptor_adlOnload();
@@ -69,7 +69,7 @@ function findAPI(win){
   return null;
 }
 
-// KB - This function earlier was on Load of Player html .. now calling after API is found .. 
+// KB - This function earlier was on Load of Player html .. now calling after API is found ..
 function scormAdaptor_adlOnload(){
   if (scormAPIHandle != null){
     var res = scormAPIHandle.LMSInitialize("");
@@ -77,7 +77,7 @@ function scormAdaptor_adlOnload(){
     	}else{
     	}
     	fGetLastError();
-    	
+
     	fGetLastError();
     	fGetLastError();
 
@@ -86,11 +86,11 @@ function scormAdaptor_adlOnload(){
 
 	var res = scormAPIHandle.LMSGetValue("cmi.core.entry");
     	fGetLastError();
-    	
+
 
 	var res = scormAPIHandle.LMSGetValue("cmi.comments");
     	fGetLastError();
-    	
+
 	var res = scormAPIHandle.LMSGetValue("cmi.objectives._children");
     	fGetLastError();
 
@@ -108,7 +108,7 @@ function scormAdaptor_adlOnload(){
     	scormAdaptor_incomplete();
     	if(is_chrome) sessionSetTimeOut = setTimeout("scormAdaptor_setSessionTime()",30000);
     	// only for SABA
-    	//keepLMSAlive();	
+    	//keepLMSAlive();
   }
 }
 
@@ -117,14 +117,14 @@ function fGetLastError(){
 		var res = scormAPIHandle.LMSGetLastError();
 		if (res=="0"){
 		}else{
-		}	
+		}
 	}
 }
 
 function scormAdaptor_adlOnunload(){
 	if(! LMSFinishCalled){
 		if (scormAPIHandle != null){
-		
+
 			scormAdaptor_setSessionTime();
 
 			// only for SABA
@@ -180,18 +180,17 @@ function scormAdaptor_setlocation(lPageNum){
 		}
 		fGetLastError();
 		if(is_chrome){
-			scormAdaptor_setSessionTime();	
-		}		
+			scormAdaptor_setSessionTime();
+		}
   }
   /*else if($.jStorage.storageAvailable()){
   	$.jStorage.set("_lesson_location",lPageNum);
-  }	*/	  
+  }	*/
 }
 
 function scormAdaptor_complete(){
 	if(scormAPIHandle != null){
 		//var res = scormAPIHandle.LMSSetValue("cmi.core.lesson_status", "passed");
-		alert('completed');
 		var res = scormAPIHandle.LMSSetValue("cmi.core.lesson_status", "completed");
 		if (res=="true"){
 		}else{
@@ -260,7 +259,7 @@ function scormAdaptor_setscore(score){
 		fGetLastError();
 	}else if($.jStorage.storageAvailable()){
   		$.jStorage.set("_score",score);
-  	}	
+  	}
 }
 
 function scormAdaptor_getscore(){
@@ -270,8 +269,8 @@ function scormAdaptor_getscore(){
     	if (res==""){
     		res = "0";
     	}
-    	return res;  
-    	
+    	return res;
+
    }else if($.jStorage.storageAvailable()){
 	var res = $.jStorage.get("_score");
 	if (res == null){
@@ -279,7 +278,7 @@ function scormAdaptor_getscore(){
 	}
 	return res;
    } else {
-   	return 0;  
+   	return 0;
    }
  }
 
@@ -339,12 +338,12 @@ function scormAdaptor_commit(){
 		}else{
 		}
 		fGetLastError();
-	}	
+	}
 }
 
 /*function scormAdaptor_setInteraction(lNum, lId, lType, lCorrectResponses, lStudentResponse, lResult){
 	return ;
-	
+
 	scormAPIHandle.LMSSetValue("cmi.interactions."+lNum+".id",lId);
 	scormAPIHandle.LMSSetValue("cmi.interactions."+lNum+".type",lType);
 	scormAPIHandle.LMSSetValue("cmi.interactions."+lNum+".correct_responses.0.pattern",lCorrectResponses);
@@ -385,7 +384,7 @@ function scormAdaptor_setSessionTime(){
 	{
 		formattedTime = "00:00:00.0";
 	}
-			
+
 	if(scormAPIHandle != null){
 		var res = scormAPIHandle.LMSSetValue("cmi.core.session_time", formattedTime);
 		if (res == "true"){
@@ -432,10 +431,10 @@ function getduration(ts){
      return strTime;
 }
 
-// KB - Commenting this here... calling from document onload .. 
+// KB - Commenting this here... calling from document onload ..
 // scormAdaptor_getAPI();
 
-// only for SABA 
+// only for SABA
 function convertTotalSeconds(ts)
 {
    var sec = (ts % 60);
@@ -446,7 +445,7 @@ function convertTotalSeconds(ts)
 
    // convert seconds to conform to CMITimespan type (e.g. SS.00)
    sec = Math.round(sec*100)/100;
-   
+
    var strSec = new String(sec);
    var strWholeSec = strSec;
    var strFractionSec = "";
@@ -456,13 +455,13 @@ function convertTotalSeconds(ts)
       strWholeSec =  strSec.substring(0, strSec.indexOf("."));
       strFractionSec = strSec.substring(strSec.indexOf(".")+1, strSec.length);
    }
-   
+
    if (strWholeSec.length < 2)
    {
       strWholeSec = "0" + strWholeSec;
    }
    strSec = strWholeSec;
-   
+
    if (strFractionSec.length)
    {
       strSec = strSec+ "." + strFractionSec;
@@ -487,7 +486,7 @@ function convertTotalSeconds(ts)
 }
 
 
-// only for SABA 
+// only for SABA
 /*var tKeepAlive;
 function keepLMSAlive()
 {
