@@ -1,0 +1,17 @@
+.header-nav {
+  background-color: #C1C6C9;
+  display: table;
+  width: 100%;
+  z-index: 99999;
+}
+
+.left-buttons,
+.right-buttons {
+  display: table-cell;
+  width: 100px;
+}
+
+.middle-buttons {
+  text-align: center;
+  width: 100%;
+}

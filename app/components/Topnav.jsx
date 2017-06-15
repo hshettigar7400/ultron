@@ -20,12 +20,12 @@ export default class TopNav extends React.Component {
         <div className="left-buttons"></div>
         <div className="middle-buttons">
           <div className="button-container">
-            <div className="button-box">
+            {/*<div className="button-box">
               <a aria-disabled="false" aria-label="menu" aria-pressed="false" href="#" onClick={this.props.onMenuClick} role="button">
                 <span className="icon-tools"></span>
               </a>
             </div>
-            {/*<div className="button-box">
+            <div className="button-box">
             <a aria-disabled="false" aria-label="resources" aria-pressed="false" href="#" role="button" >
               <span className="icon-resources"></span>
             </a>
@@ -34,13 +34,13 @@ export default class TopNav extends React.Component {
             <a aria-disabled="false" aria-label="glossary" aria-pressed="false" href="#" role="button" >
               <span className="icon-glossary"></span>
             </a>
-          </div>*/}
+          </div>
             <div className="button-box">
               <a aria-disabled="false" aria-label="playPause" aria-pressed="false"
                 className={this.props.isPlaying ? "" : "selected"} onClick={this.props.onPlayPause.bind(null, this)} role="button">
                 <span className="icon-playPause"></span>
               </a>
-            </div>
+            </div>*/}
             <div className="button-box">
               <a aria-disabled="false" aria-label="back" aria-pressed="false" className={(this.props.currentPageNumber !== 1)
                 ? "tabindex"
@@ -60,12 +60,6 @@ export default class TopNav extends React.Component {
                 ? "tabindex"
                 : "tabindex disabled"} href="#" onClick={this.props.onLoadNext.bind(null, this)} role="button">
                 <span className="icon-next"></span>
-              </a>
-            </div>
-            <div className="button-box">
-              <a aria-disabled="false" aria-label="transcript" aria-pressed="false"
-                className={!this.props.showTranscript ? "" : "selected"} onClick={this.props.onTranscriptClick.bind(null, this)} role="button" >
-                <span className="icon-transcript"></span>
               </a>
             </div>
             <div className="button-box">
