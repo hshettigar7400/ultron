@@ -237,7 +237,7 @@ class StaticPage3 extends React.Component {
             {this.showFeedback()}
           </div>
         </MediaQuery>
-        <MediaQuery query='(min-device-width: 769px) and (max-device-width: 1024px)'>
+        <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)'>
           <div className="content">
             <div className="background">
               <div className="intro white">

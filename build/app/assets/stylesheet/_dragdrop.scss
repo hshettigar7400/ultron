@@ -144,9 +144,16 @@
      
 .drag-image__container {
   position: absolute;
-  right: 5px;
+  right: 140px;
   top: 8px;
 }
+     
+     .drop-container__image {
+  bottom: 30px;
+  left: 30px;
+  position: absolute;
+     }
+     
 }
 
 

@@ -7,8 +7,8 @@ const appData = {
   title: 'Compliance'
 }
 
-//window.scormAdaptor_getAPI();
-//window.scormAdaptor_adlOnload();
+window.scormAdaptor_getAPI();
+window.scormAdaptor_adlOnload();
 
 ReactDOM.render(
   <FrameWork data={appData} />, document.getElementById('container')
