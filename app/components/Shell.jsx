@@ -150,7 +150,6 @@ export default class Shell extends React.Component {
   }
 
   loadAudio() {
-
   }
 
   loadTranscript() {

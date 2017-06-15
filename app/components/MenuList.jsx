@@ -100,7 +100,6 @@ export default class MenuList extends React.Component {
     }
   }
 
-
   handleTriggerClick(event) {
     event.preventDefault();
     if(this.props.triggerDisabled) {

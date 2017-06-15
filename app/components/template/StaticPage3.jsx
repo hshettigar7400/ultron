@@ -110,7 +110,33 @@ class StaticPage3 extends React.Component {
     userAnswer = [0,0,0,0];
     document.querySelectorAll(".drop-container__image").forEach((item) => {
     })
-    this.setState({droppedBoxNames:[], showFeedback: false})
+    this.setState({
+      droppedBoxNames:[],
+      showFeedback: false,
+      dragbox: [
+        {
+          accepts: [
+            ItemTypes.STAR
+          ],
+          lastDroppedItem: null
+        },{
+          accepts: [
+            ItemTypes.STAR
+          ],
+          lastDroppedItem: null
+        },{
+          accepts: [
+            ItemTypes.STAR
+          ],
+          lastDroppedItem: null
+        },{
+          accepts: [
+            ItemTypes.STAR
+          ],
+          lastDroppedItem: null
+        }
+      ]
+    })
   }
 
   showFeedback() {
@@ -132,7 +158,7 @@ class StaticPage3 extends React.Component {
         <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
         Bạn chưa chọn được các câu trả lời đúng
         <span className="button_div try-again__button">
-          <a href="#" className="button" onClick={this.tryAgain.bind(this)}>đóng</a>
+          <a href="#" className="button" onClick={this.tryAgain.bind(this)}>Thử lại lần nữa</a>
         </span>
         </div>}
       </div>

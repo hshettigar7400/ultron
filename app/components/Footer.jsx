@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome';
 export default class Footer extends React.Component {
   constructor(props) {
     var uagent = navigator.userAgent.toLowerCase();
@@ -66,6 +67,7 @@ export default class Footer extends React.Component {
               className={(this.props.currentPageNumber !== 1)? "tabindex" : "tabindex disabled"} href="#"
               onClick={this.props.onLoadPrev.bind(null, this)} role="button" >
               <span className="icon-back"></span>
+              <FontAwesome name='angle-left' />
             </a>
           </div>
           <div className="nav-comp-container">

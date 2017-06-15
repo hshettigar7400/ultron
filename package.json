@@ -28,6 +28,7 @@
     "react-dock": "^0.2.4",
     "react-dom": "^15.5.4",
     "react-draggable": "^2.2.6",
+    "react-fontawesome": "^1.6.1",
     "react-html-parser": "^1.0.3",
     "react-mediaswitch": "^0.2.1",
     "react-native-custom-checkbox": "^1.5.1",

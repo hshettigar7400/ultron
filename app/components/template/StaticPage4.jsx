@@ -50,7 +50,7 @@ export default class StaticPage3 extends React.Component {
           <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
           {feebackText}
           {attempts > 0 && <span className="button_div try-again__button">
-            <a href="#" className="button" onClick={this.tryAgain.bind(this)}>đóng</a>
+            <a href="#" className="button" onClick={this.tryAgain.bind(this)}>Thử lại lần nữa</a>
           </span>
 }
         </div>
