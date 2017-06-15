@@ -1,0 +1,88 @@
+.footer {
+  background-color: $footer-bg;
+  bottom: 0px;
+  height: $footer-height;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+
+.button-container {
+  display: flex;
+  float: right;
+}
+
+.button-box a {
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-bottom: none;
+  border-left: none;
+  color: $nav-button-color;;
+  cursor: pointer;
+  display: block;
+  height: $footer-height - 2;
+  line-height: 42px;
+  text-align: center;
+  text-decoration: none;
+  width: 43px;
+}
+
+.button-box a img{
+margin-top: 10px;
+}
+.button-box a.disabled {
+  color: #AAB1B9;
+  cursor: default;
+  pointer-events: none;
+}
+
+.footer .button-box a,.footer .nav-comp-container .page-counter,.footer .button-box a.disabled,.footer .button-box a.selected{
+  background: #000000; /* Old browsers */
+  }
+
+.footer .button-box a:hover{
+  color : #fff !important;
+  background-color: $button-bg-hover; /* Old browsers */
+  border-top: 1px solid $button-bg-hover;
+  }
+
+.nav-comp-container {
+  background-color: #000000;
+  color: $nav-button-color;
+  display: inline-block;
+  font-size: $base-font-size;
+  height: $footer-height - 2;
+  line-height: $footer-height - 2;
+  padding: ($base-padding * 0.1) ($base-padding * 0.1) 0 0;
+  vertical-align: top;
+}
+
+.nav-comp-container .page-counter {
+  padding: 0 $base-padding;
+}
+
+.icon-transcript::before {
+  content: "";
+}
+
+.icon-audio:before {
+  content: "";
+}
+
+.icon-playPause:before {
+  content: "";
+}
+
+.selected {
+  .icon-transcript:before {
+    content: "";
+  }
+
+  .icon-audio:before {
+    content: "";
+  }
+
+  .icon-playPause:before {
+    content: "";
+  }
+}

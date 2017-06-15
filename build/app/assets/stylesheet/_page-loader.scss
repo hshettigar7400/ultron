@@ -1,0 +1,14 @@
+.page-loader {
+  background-color: $course-background;
+  display: table;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  width: 100%;
+}
+
+.player {
+  height: 100%;
+  overflow-y: auto;
+}
