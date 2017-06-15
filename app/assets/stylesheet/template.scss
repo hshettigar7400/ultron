@@ -12,7 +12,6 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  z-index: 99;
 }
 
 h1,
@@ -740,6 +739,19 @@ h4 {
     border: none;
     padding: 10px;
   }
+
+  .feedback-container {
+    position: absolute;
+    bottom: 35px;
+    margin: 0 auto;
+    width: 80%;
+    margin-left: 60px;
+  }
+
+  .close-btn {
+    color: #ED1B24;
+  }
+
   @media only screen and (max-device-width: 1024px) and(orientation: landscape) {
     .bg {
       background-position-x: -150px;
@@ -776,6 +788,7 @@ h4 {
       border: none;
       padding: 10px;
       width: 90px;
+      cursor: pointer;
     }
   }
   @media only screen and (max-device-width: 768px) and(orientation: portrait) {

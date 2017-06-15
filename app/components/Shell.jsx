@@ -86,7 +86,9 @@ export default class Shell extends React.Component {
             {this.showTopNav()}
           </MediaQuery>
           <MediaQuery query='(min-width: 680px)'>
-            <Header ref="header" courseTitle={this.state.menuData.menu ? this.state.menuData.menu.courseTitle:""}/>
+            <Header ref="header"
+              courseTitle={this.state.menuData.menu ? this.state.menuData.menu.courseTitle:""}
+              onMenuClick={this.toggleMenu.bind(this)}/>
           </MediaQuery>
         </div>
     )
@@ -148,7 +150,7 @@ export default class Shell extends React.Component {
   }
 
   loadAudio() {
-    
+
   }
 
   loadTranscript() {

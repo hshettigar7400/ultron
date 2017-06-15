@@ -7,12 +7,12 @@
 }
 
 .menu-style {
-  background-color: #fff;
+  background-color: #000000;
   bottom: 2px !important;
   font-size: 1em;
   box-shadow: -3px 0 10px rgba(0,0,0,0.6) !important;
   margin-right: -10px;
-  z-index: 99 !important;
+  z-index: 9999999 !important;
 }
 
 .menu-header h1 {
@@ -21,7 +21,7 @@
 }
 
 .menu-header {
-  background-color: $theme;
+  background-color: #ED1C22;
   display: table;
   font-size: 1.25em;
   height: 40px;
@@ -51,11 +51,10 @@
 }
 /* Style for list view expand componen t */
 .menu-list {
-  background-color: #e9e9e9;
+  background-color: #000000;
 }
 
 .menu-list__contentInner {
-  border: 1px solid #ebebeb;
   border-top: 0;
   position: relative;
 }
@@ -74,7 +73,7 @@
 }
 
 .menu-list__contentInner ul li a {
-  color: #333333;
+  color: #ffffff;
 }
 
 .menu-list__contentInner ul li:active,
@@ -133,7 +132,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid #5e9f45;
+  border: 1px solid #ED1C22;
   vertical-align: sub;
   right: 18px;
   position: absolute;

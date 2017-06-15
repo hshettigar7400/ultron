@@ -16,6 +16,11 @@ export default class Header extends React.Component {
             <p>{this.props.courseTitle}</p>
           </div>
         </div>
+        <div className="button-box menu-button">
+          <a aria-disabled="false" aria-label="menu" aria-pressed="false" href="#" onClick={this.props.onMenuClick} role="button" >
+            <span className="icon-menu"></span>
+          </a>
+        </div>
         <div className="course-progress">
           <span id="course-progress__update"></span>
         </div>

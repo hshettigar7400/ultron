@@ -12,7 +12,7 @@
 }
 
 .title-holder {
-  color: #5C6670;
+  color: $white;
   display: table;
   font-size: $base-font-size;
   font-weight: $bold-font-weight;
@@ -42,4 +42,10 @@
   height: 4px;
   text-align: center;
   width: 0%;
+}
+
+.menu-button {
+  position: absolute;
+  top:10px;
+  right: 10px
 }
