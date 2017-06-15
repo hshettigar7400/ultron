@@ -323,7 +323,7 @@ h4 {
             margin: auto;
             color: #000;
         }
-    
+
   .box1,
   .box2,
   .box3,
@@ -583,7 +583,7 @@ h4 {
       height: 100%;
       font-size: 0.875em;
     }
-      
+
       .background
       {
             background-position-y: 0px;
@@ -693,7 +693,7 @@ h4 {
     display: inline-block;
     height: 100%;
     width: 100%;
-        background-position-y: -65px;
+    background-position-y: -65px;
   }
 
   .instruction_text {
@@ -808,7 +808,7 @@ h4 {
     }
   }
   @media only screen and (max-device-width: 768px) and(orientation: portrait) {
-           
+
     .background {
       background-repeat: no-repeat;
       background-size: cover;
@@ -848,12 +848,12 @@ h4 {
     }
   }
   @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait) {
-      .background
+    .background
       {
-            background-position-y: 0px;
+        background-position-y: 0px;
       }
-      
-      .content {
+
+    .content {
       height: 100%;
       font-size: 0.875em;
     }
@@ -888,6 +888,10 @@ h4 {
       width: 60%;
       text-align: left;
       vertical-align: -webkit-baseline-middle;
+    }
+
+    .instruction_text { {
+      text-align: left;
     }
 
     .button_box {
@@ -926,19 +930,19 @@ h4 {
     padding-top: 100px;
     width: 70%;
   }
-    
+
     .img_icon
     {
         display: inline-block;
         width: 10%;
          vertical-align: middle;
     }
-    
+
     .img_icon img
     {
         width: 80%;
     }
-    
+
     .question
     {
         display: inline-block;
@@ -959,26 +963,26 @@ h4 {
         display: block;
       }
     }
-      
-          
+
+
     .img_icon
     {
         display: inline-block;
         width: 10%;
          vertical-align: middle;
     }
-    
+
     .img_icon img
     {
         width: 80%;
     }
-    
+
     .question
     {
         display: inline-block;
         width: 80%;
     }
-      
+
     .feedback-container {
       background: #000 !important;
       padding: 0 !important;

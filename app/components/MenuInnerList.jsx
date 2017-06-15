@@ -7,16 +7,17 @@ export default class MenuInnerList extends React.Component {
   }
 
   getProgressColor(id) {
-    return "#5e9f45";
-  }
+    if (window.pageStatusList[id] == 1)
+      return "#ED1C22";
+    }
 
   displayMenuList() {
     return (this.props.menuList.modules[0].topic[0].pages.map((page, index) => {
       return (
-        <li onClick={this.props.onPageLinkClick} data-page-id={index+1} key={index}>
-          <a className="disable-event" data-page-id={index+1}>{page.pageTitle}</a>
+        <li onClick={this.props.onPageLinkClick} data-page-id={index + 1} key={index}>
+          <a className="disable-event" data-page-id={index + 1}>{page.pageTitle}</a>
           <span className="menu-page-progress" style={{
-            backgroundColor: this.getProgressColor(1)
+            backgroundColor: this.getProgressColor(index)
           }}></span>
         </li>
       )
@@ -39,8 +40,7 @@ export default class MenuInnerList extends React.Component {
         <div>
           <MenuList>
             <ul>
-              {this.displayMenuList()
-}
+              {this.displayMenuList()}
             </ul>
           </MenuList>
         </div>

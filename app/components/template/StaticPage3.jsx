@@ -5,12 +5,14 @@ import {DragDropContext} from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import TouchBackend from 'react-dnd-touch-backend';
 import MultiBackend, {TouchTransition, Preview} from 'react-dnd-multi-backend';
+import withScrolling from 'react-dnd-scrollzone';
 import DropContainer from './common/DropContainer';
 import DragContainer from './common/DragContainer';
 import ItemTypes from './common/ItemTypes';
 
 var userAnswer = [0,0,0,0];
 const correctAnswer = [1,0,1,1];
+const ScrollingComponent = withScrolling('div');
 const HTML5toTouch = {
   backends: [
     {
@@ -316,8 +318,10 @@ class StaticPage3 extends React.Component {
                   <span className="instruction">
                     Nhấp vào từng người để xem lời khuyên.</span>
 
+                  <ScrollingComponent>
                     <DragContainer name="star" type={ItemTypes.STAR} isDropped={this.isDropped("star")} key={1}>
                     </DragContainer>
+                  </ScrollingComponent>
 
                 </div>
               </div>

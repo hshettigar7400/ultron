@@ -36,10 +36,13 @@ export default class Shell extends React.Component {
       .then(res => {
         this.setState({ transcript: res.data.transcript });
     });
+    window.pageStatusList = [0, 0, 0, 0, 0];
   }
 
   loadNext() {
     this.setState({currentPage: this.state.currentPage + 1, isAudioFinished: false})
+    window.pageStatusList[this.state.currentPage] = 1;
+    localStorage.setItem("pageStatusList", window.pageStatusList);
   }
 
   loadPrev() {
