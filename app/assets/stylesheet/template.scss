@@ -729,6 +729,7 @@ h4 {
         .flex-container {
             display: block;
             text-align: center;
+            width: 60%;
         }
         
         .feedback-container {
@@ -746,6 +747,8 @@ h4 {
             display: inline-block;
             width: 50%;
         }
+
+
         .button_box {
             float: right;
             width: 25%;
@@ -768,24 +771,12 @@ h4 {
         }
         .flex-container {
             margin: 10px auto auto;
-            display: inline;
             text-align: center;
         }
         .top-header {
             margin-top: 5px;
         }
-        .drop-container {
-            display: inline;
-            position: relative;
-        }
-        .box1,
-        .box2,
-        .box3,
-        .box4 {
-            display: inline-block;
-            width: 50%;
-            margin: auto;
-        }
+
         .top-header {
             text-align: left;
             line-height: 1.2;
@@ -835,6 +826,10 @@ h4 {
         z-index: 9999999;
         }
         
+    }
+
+    .flex-container__row {
+      display: flex;
     }
 }
 .static-page4 {
