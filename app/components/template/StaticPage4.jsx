@@ -34,32 +34,41 @@ export default class StaticPage3 extends React.Component {
     this.setState({showFeedback: false, reset: 1})
   }
 
+  continue() {
+    this.setState({attempts: 2})
+  }
+
   displayFeedback() {
     const {attempts, correctAnswer, showFeedback} = this.state;
-    let feebackText = "";
     if (correctAnswer) {
-     
-         this.setState({
-          attempts: 2
-      })
-           
+      return (
+        <div>
+          {showFeedback && <div className="feedback-container">
+            <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
+            Rất tốt
+            {attempts > 0 && <span className="button_div try-again__button">
+              <a href="#" className="button" onClick={this.continue.bind(this)}>Tiếp tục</a>
+            </span>
+            }
+          </div>
+          }
+        </div>
+      )
     } else {
-      feebackText = "Bạn chưa chọn được các câu trả lời đúng";
-    }
     return (
       <div>
         {showFeedback && <div className="feedback-container">
           <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
-          {feebackText}
+          Bạn chưa chọn được các câu trả lời đúng
           {attempts > 0 && <span className="button_div try-again__button">
             <a href="#" className="button" onClick={this.tryAgain.bind(this)}>Thử lại lần nữa</a>
           </span>
           }
-           
         </div>
-}
+        }
       </div>
     )
+  }
   }
 
   openPopup(currentPopup) {
@@ -409,11 +418,7 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
-                    <span className="img_icon">
-                    
-                    <img src="app/assets/images/template/q_icon.png" />
-                    </span>
-                  <span className="question">
+                  <span>
                     Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
                   </span>
                 </div>
@@ -427,11 +432,6 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
-                     <span>
-                    
-                    <img src="app/assets/images/template/q_icon.png" />
-                    </span>
-                    
                   <span>
                     Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
                   </span>
@@ -446,11 +446,6 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
-                     <span>
-                    
-                    <img src="app/assets/images/template/q_icon.png" />
-                    </span>
-                    
                   <span>
                     Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
                   </span>
