@@ -140,6 +140,27 @@
   top: 8px;
 }
 
+ @media only screen and (max-device-width: 768px) and (orientation: portrait) {
+     
+.drag-image__container {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+}
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+.drag-image__container {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+}
+}
+
+
+
+
 .static-page5 {
   .li_padding {
     width: 94%;

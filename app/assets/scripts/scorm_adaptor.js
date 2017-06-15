@@ -191,6 +191,7 @@ function scormAdaptor_setlocation(lPageNum){
 function scormAdaptor_complete(){
 	if(scormAPIHandle != null){
 		//var res = scormAPIHandle.LMSSetValue("cmi.core.lesson_status", "passed");
+		alert('completed');
 		var res = scormAPIHandle.LMSSetValue("cmi.core.lesson_status", "completed");
 		if (res=="true"){
 		}else{

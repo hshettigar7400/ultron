@@ -12,7 +12,7 @@ export default class Intro extends React.Component {
       isLoading: true,
     }
   }
-
+  
   startCourse() {
     this.setState({isStartCourse: true})
   }

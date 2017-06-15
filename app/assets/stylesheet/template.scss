@@ -60,7 +60,7 @@ h4 {
     border: 1px solid white;
     padding: 10px;
     width: 60%;
-    margin: 220px auto auto;
+    margin: 185px auto auto;
   }
 
   .welcome_text {
@@ -885,7 +885,7 @@ h4 {
 
     .instruction {
       display: inline-block;
-      width: 60%;
+        width: 80%;
       text-align: left;
       vertical-align: -webkit-baseline-middle;
     }
@@ -919,6 +919,7 @@ h4 {
     background-image: url("../../assets/images/template/bg4.jpg");
     height: 100%;
     background-repeat: no-repeat;
+      background-size: cover;
   }
 
   .activity-container {
@@ -931,7 +932,7 @@ h4 {
     {
         display: inline-block;
         width: 10%;
-         vertical-align: middle;
+        vertical-align: super;
     }
     
     .img_icon img
@@ -944,7 +945,28 @@ h4 {
         display: inline-block;
         width: 80%;
     }
+
+    
+       
+     @media only screen and(min-device-width: 768px) and (orientation: portrait) {
+         
+    .question {
+        display: inline-block;
+        width: 60%;
+        vertical-align: -webkit-baseline-middle;
+        }   
+    
+         .content
+         {
+             height: 910px;
+         }
+    }
+
+
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+    
+      
+      
     .activity-container {
       margin: auto;
       padding-top: 20px;
@@ -964,7 +986,7 @@ h4 {
     .img_icon
     {
         display: inline-block;
-        width: 10%;
+        width: 25%;
          vertical-align: middle;
     }
     
@@ -976,7 +998,8 @@ h4 {
     .question
     {
         display: inline-block;
-        width: 80%;
+        width: 75%;
+        vertical-align: middle;
     }
       
     .feedback-container {
@@ -1170,7 +1193,7 @@ h4 {
   }
 }
 
-.static-page5 {
+.staticPage5 {
   .content {
     height: 580px;
   }
@@ -1185,7 +1208,7 @@ h4 {
     border: 1px solid white;
     padding: 10px;
     width: 60%;
-    margin: 100px auto auto;
+    margin: 127px auto auto;
   }
 
   .welcome_text {
@@ -1236,6 +1259,7 @@ h4 {
       background-size: cover;
     }
   }
+    
   @media only screen and (max-device-width: 768px) and(orientation: portrait) {
     .content {
       height: 910px;

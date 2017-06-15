@@ -66,8 +66,8 @@ export default class Footer extends React.Component {
             <a aria-disabled="false" aria-label="back" aria-pressed="false"
               className={(this.props.currentPageNumber !== 1)? "tabindex" : "tabindex disabled"} href="#"
               onClick={this.props.onLoadPrev.bind(null, this)} role="button" >
-              <span className="icon-back"></span>
-              <FontAwesome name='angle-left' />
+              <span className="icon-back"><img src="app/assets/images/ui/back.png" /></span>
+                {/* <FontAwesome name='angle-left' /> */}
             </a>
           </div>
           <div className="nav-comp-container">
@@ -82,7 +82,9 @@ export default class Footer extends React.Component {
               className={(this.props.currentPageNumber !== this.props.totalPages)? "tabindex" : "tabindex disabled"} href="#"
               onClick={this.props.onLoadNext.bind(null, this)} role="button"
               >
-              <span className="icon-next"></span>
+              <span className="icon-next">
+                <img src="app/assets/images/ui/next.png" />
+                </span>
             </a>
           </div>
         </div>

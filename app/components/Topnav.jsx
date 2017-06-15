@@ -45,7 +45,7 @@ export default class TopNav extends React.Component {
               <a aria-disabled="false" aria-label="back" aria-pressed="false" className={(this.props.currentPageNumber !== 1)
                 ? "tabindex"
                 : "tabindex disabled"} href="#" onClick={this.props.onLoadPrev.bind(null, this)} role="button">
-                <span className="icon-back"></span>
+                <span className="icon-back"><img src="app/assets/images/ui/back.png" /></span>
               </a>
             </div>
             <div className="nav-comp-container">
@@ -59,7 +59,9 @@ export default class TopNav extends React.Component {
               <a aria-disabled="false" aria-label="next" aria-pressed="false" className={(this.props.currentPageNumber !== this.props.totalPages)
                 ? "tabindex"
                 : "tabindex disabled"} href="#" onClick={this.props.onLoadNext.bind(null, this)} role="button">
-                <span className="icon-next"></span>
+                 <span className="icon-next">
+                <img src="app/assets/images/ui/next.png" />
+                </span>
               </a>
             </div>
             <div className="button-box">
