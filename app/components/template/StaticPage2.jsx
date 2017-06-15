@@ -96,19 +96,43 @@ export default class StaticPage2 extends React.Component {
   }
 
   openPopup1(currentPopup) {
-    this.setState({isPopup1Open: true, currentPopup: currentPopup})
+    this.setState({
+      isPopup1Open: true,
+      isPopup2Open: false,
+      isPopup3Open: false,
+      isPopup4Open: false,
+      currentPopup: currentPopup
+    })
   }
 
   openPopup2(currentPopup) {
-    this.setState({isPopup2Open: true, currentPopup: currentPopup})
+    this.setState({
+      isPopup1Open: false,
+      isPopup2Open: true,
+      isPopup3Open: false,
+      isPopup4Open: false,
+      currentPopup: currentPopup
+    })
   }
 
   openPopup3(currentPopup) {
-    this.setState({isPopup3Open: true, currentPopup: currentPopup})
+    this.setState({
+      isPopup1Open: false,
+      isPopup2Open: false,
+      isPopup3Open: true,
+      isPopup4Open: false,
+      currentPopup: currentPopup
+    })
   }
 
   openPopup4(currentPopup) {
-    this.setState({isPopup4Open: true, currentPopup: currentPopup})
+    this.setState({
+      isPopup1Open: false,
+      isPopup2Open: false,
+      isPopup3Open: false,
+      isPopup4Open: true,
+      currentPopup: currentPopup
+    })
   }
 
   closePopup() {

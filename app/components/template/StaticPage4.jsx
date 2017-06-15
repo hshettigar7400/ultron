@@ -320,43 +320,83 @@ export default class StaticPage3 extends React.Component {
         <div>
           <MediaQuery query='(min-device-width: 1224px)'>
             <div className="question-container">
-            <div className="choice-container__row">
-              <div className={currentPopup === 1?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 1)}>
-                <label>
-                  + Sắp xếp nhân viên đúng vị trí
-                </label>
+              <div className="choice-container__row">
+                <div className={currentPopup === 1?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 1)}>
+                  <label>
+                    + Sắp xếp nhân viên đúng vị trí
+                  </label>
+                </div>
+                <div className={currentPopup === 2?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 2)}>
+                  <label>
+                    + Lập kế hoạch
+                  </label>
+                </div>
               </div>
-              <div className={currentPopup === 2?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 2)}>
-                <label>
-                  + Lập kế hoạch
-                </label>
+              <div className="choice-container__row">
+                <div className={currentPopup === 3?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 3)}>
+                  <label>
+                    + Quản lý giờ công trung bình
+                  </label>
+                </div>
+                <div className={currentPopup === 4?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 4)}>
+                  <label>
+                    + Theo dõi năng suất lao động
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className={currentPopup === 5?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 5)}>
+                  <label>
+                    + Quản lý mức lương phải trả
+                  </label>
+                </div>
+                <div className={currentPopup === 6?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 6)}>
+                  <label>
+                    + Không thể kiểm soát
+                  </label>
+                </div>
               </div>
             </div>
-            <div className="choice-container__row">
-              <div className={currentPopup === 3?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 3)}>
-                <label>
-                  + Quản lý giờ công trung bình
-                </label>
+          </MediaQuery>
+          <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
+            <div className="question-container">
+              <div className="choice-container__row">
+                <div className={currentPopup === 1?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 1)}>
+                  <label>
+                    + Sắp xếp nhân viên đúng vị trí
+                  </label>
+                </div>
+                <div className={currentPopup === 2?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 2)}>
+                  <label>
+                    + Lập kế hoạch
+                  </label>
+                </div>
               </div>
-              <div className={currentPopup === 4?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 4)}>
-                <label>
-                  + Theo dõi năng suất lao động
-                </label>
+              <div className="choice-container__row">
+                <div className={currentPopup === 3?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 3)}>
+                  <label>
+                    + Quản lý giờ công trung bình
+                  </label>
+                </div>
+                <div className={currentPopup === 4?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 4)}>
+                  <label>
+                    + Theo dõi năng suất lao động
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className={currentPopup === 5?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 5)}>
+                  <label>
+                    + Quản lý mức lương phải trả
+                  </label>
+                </div>
+                <div className={currentPopup === 6?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 6)}>
+                  <label>
+                    + Không thể kiểm soát
+                  </label>
+                </div>
               </div>
             </div>
-            <div className="choice-container__row">
-              <div className={currentPopup === 5?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 5)}>
-                <label>
-                  + Quản lý mức lương phải trả
-                </label>
-              </div>
-              <div className={currentPopup === 6?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 6)}>
-                <label>
-                  + Không thể kiểm soát
-                </label>
-              </div>
-            </div>
-          </div>
           </MediaQuery>
           <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
             <div className="question-container">
@@ -419,7 +459,7 @@ export default class StaticPage3 extends React.Component {
               <div className="activity-container">
                 <div className="activity-instruction__text">
                      <span className="img_icon">
-                    
+
                     <img src="app/assets/images/template/q_icon.png" />
                     </span>
                    <span className="question">
@@ -438,7 +478,7 @@ export default class StaticPage3 extends React.Component {
               <div className="activity-container">
                 <div className="activity-instruction__text">
                      <span className="img_icon">
-                    
+
                     <img src="app/assets/images/template/q_icon.png" />
                     </span>
                    <span className="question">
@@ -457,14 +497,14 @@ export default class StaticPage3 extends React.Component {
               <div className="activity-container">
                 <div className="activity-instruction__text">
                       <span className="img_icon">
-                    
+
                     <img src="app/assets/images/template/q_icon.png" />
                     </span>
                    <span className="question">
                     Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?<br/><br/>
                      Giải quyết chênh lệch chi phí nhân công.
                   </span>
-                    
+
                 </div>
                 {this.displayContent()}
               </div>
