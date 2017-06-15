@@ -23,6 +23,7 @@
   margin-top: $base-margin * 2.5;
   padding: 0 10px;
   vertical-align: middle;
+    color: #fff;
 }
 
 .course-progress {
@@ -31,6 +32,7 @@
   position: relative;
   top: 2px;
   width: 100%;
+    display: none;
 }
 
 .course-progress span {

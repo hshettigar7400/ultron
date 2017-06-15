@@ -38,9 +38,11 @@ export default class StaticPage3 extends React.Component {
     const {attempts, correctAnswer, showFeedback} = this.state;
     let feebackText = "";
     if (correctAnswer) {
-      this.setState({
-        attempts: 2
+     
+         this.setState({
+          attempts: 2
       })
+           
     } else {
       feebackText = "Bạn chưa chọn được các câu trả lời đúng";
     }
@@ -52,7 +54,8 @@ export default class StaticPage3 extends React.Component {
           {attempts > 0 && <span className="button_div try-again__button">
             <a href="#" className="button" onClick={this.tryAgain.bind(this)}>Thử lại lần nữa</a>
           </span>
-}
+          }
+           
         </div>
 }
       </div>
@@ -406,7 +409,11 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
-                  <span>
+                    <span className="img_icon">
+                    
+                    <img src="app/assets/images/template/q_icon.png" />
+                    </span>
+                  <span className="question">
                     Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
                   </span>
                 </div>
@@ -420,6 +427,11 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
+                     <span>
+                    
+                    <img src="app/assets/images/template/q_icon.png" />
+                    </span>
+                    
                   <span>
                     Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
                   </span>
@@ -434,6 +446,11 @@ export default class StaticPage3 extends React.Component {
             <div className="background">
               <div className="activity-container">
                 <div className="activity-instruction__text">
+                     <span>
+                    
+                    <img src="app/assets/images/template/q_icon.png" />
+                    </span>
+                    
                   <span>
                     Câu hỏi 1: làm thể nào để có thể kiểm soát chi phí lao động nhưng vẫn duy trì tiêu chuẩn?
                   </span>

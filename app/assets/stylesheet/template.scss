@@ -37,7 +37,8 @@ h4 {
 }
 
 .close-btn {
-  color: #000;
+   padding: 5px;
+    color: #ED1B24;
   float: right;
   font-weight: 700;
   cursor: pointer;
@@ -283,49 +284,46 @@ h4 {
 
 .static-page2 {
   .pop_container1 {
-    position: absolute;
-    top: 315px;
-    left: 75px;
-    width: 170px;
-    background-color: #fff;
-    height: 130px;
-    margin: auto;
-    color: #000;
-  }
-
-  .pop_container2 {
-    position: absolute;
-    top: 315px;
-    left: 305px;
-    width: 170px;
-    background-color: #fff;
-    height: 130px;
-    margin: auto;
-    color: #000;
-  }
-
-  .pop_container3 {
-    position: absolute;
-    top: 315px;
-    left: 530px;
-    width: 170px;
-    background-color: #fff;
-    height: 130px;
-    margin: auto;
-    color: #000;
-  }
-
-  .pop_container4 {
-    position: absolute;
-    top: 315px;
-    left: 757px;
-    width: 170px;
-    background-color: #fff;
-    height: 130px;
-    margin: auto;
-    color: #000;
-  }
-
+            position: absolute;
+            top: 294px;
+            left: 58px;
+            width: 211px;
+            background-color: #fff;
+            height: 165px;
+            margin: auto;
+            color: #000;
+        }
+        .pop_container2 {
+            position: absolute;
+            top: 296px;
+            left: 283px;
+            width: 213px;
+            background-color: #fff;
+            height: 163px;
+            margin: auto;
+            color: #000;
+        }
+        .pop_container3 {
+            position: absolute;
+            top: 296px;
+            left: 508px;
+            width: 213px;
+            background-color: #fff;
+            height: 163px;
+            margin: auto;
+            color: #000;
+        }
+        .pop_container4 {
+            position: absolute;
+            top: 296px;
+            left: 735px;
+            width: 213px;
+            background-color: #fff;
+            height: 163px;
+            margin: auto;
+            color: #000;
+        }
+    
   .box1,
   .box2,
   .box3,
@@ -374,6 +372,7 @@ h4 {
     display: inline-block;
     height: 100%;
     width: 100%;
+    background-position-y: -65px;
   }
 
   .instruction_text {
@@ -499,6 +498,7 @@ h4 {
       background-repeat: no-repeat;
       background-size: cover;
       background-position-x: -400px;
+        background-position-y: 0px;
     }
 
     .content {
@@ -583,7 +583,11 @@ h4 {
       height: 100%;
       font-size: 0.875em;
     }
-
+      
+      .background
+      {
+            background-position-y: 0px;
+      }
     .flex-container {
       display: block;
       text-align: center;
@@ -610,43 +614,43 @@ h4 {
     }
 
     .pop_container1 {
-      position: absolute;
-      top: 27px;
-      left: 65px;
-      width: 170px;
-      background-color: #fff;
-      height: 130px;
-      margin: auto;
+        position: absolute;
+        top: 51px;
+        left: 9px;
+        width: 225px;
+        background-color: #fff;
+        height: 157px;
+        margin: auto;
     }
 
     .pop_container2 {
       position: absolute;
-      top: 315px;
-      left: 305px;
-      width: 170px;
-      background-color: #fff;
-      height: 130px;
-      margin: auto;
+        top: 51px;
+        left: 9px;
+        width: 225px;
+        background-color: #fff;
+        height: 157px;
+        margin: auto;
     }
 
     .pop_container3 {
       position: absolute;
-      top: 315px;
-      left: 530px;
-      width: 170px;
-      background-color: #fff;
-      height: 130px;
-      margin: auto;
+        top: 51px;
+        left: 9px;
+        width: 225px;
+        background-color: #fff;
+        height: 157px;
+        margin: auto;;
     }
 
     .pop_container4 {
-      position: absolute;
-      top: 315px;
-      left: 757px;
-      width: 170px;
-      background-color: #fff;
-      height: 130px;
-      margin: auto;
+       position: absolute;
+        top: 51px;
+        left: 9px;
+        width: 225px;
+        background-color: #fff;
+        height: 157px;
+        margin: auto;
     }
   }
 }
@@ -689,6 +693,7 @@ h4 {
     display: inline-block;
     height: 100%;
     width: 100%;
+        background-position-y: -65px;
   }
 
   .instruction_text {
@@ -803,10 +808,12 @@ h4 {
     }
   }
   @media only screen and (max-device-width: 768px) and(orientation: portrait) {
+           
     .background {
       background-repeat: no-repeat;
       background-size: cover;
       background-position-x: -400px;
+        background-position-y: 0px;
     }
 
     .content {
@@ -841,7 +848,12 @@ h4 {
     }
   }
   @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait) {
-    .content {
+      .background
+      {
+            background-position-y: 0px;
+      }
+      
+      .content {
       height: 100%;
       font-size: 0.875em;
     }
@@ -914,7 +926,24 @@ h4 {
     padding-top: 100px;
     width: 70%;
   }
-
+    
+    .img_icon
+    {
+        display: inline-block;
+        width: 10%;
+         vertical-align: middle;
+    }
+    
+    .img_icon img
+    {
+        width: 80%;
+    }
+    
+    .question
+    {
+        display: inline-block;
+        width: 80%;
+    }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
     .activity-container {
       margin: auto;
@@ -930,7 +959,26 @@ h4 {
         display: block;
       }
     }
-
+      
+          
+    .img_icon
+    {
+        display: inline-block;
+        width: 10%;
+         vertical-align: middle;
+    }
+    
+    .img_icon img
+    {
+        width: 80%;
+    }
+    
+    .question
+    {
+        display: inline-block;
+        width: 80%;
+    }
+      
     .feedback-container {
       background: #000 !important;
       padding: 0 !important;
@@ -1019,7 +1067,10 @@ h4 {
   }
 
   .close-btn {
-    color: $white;
+    padding: 5px;
+      color: #ED1B24;
+      padding: 5px;
+      color: #ED1B24;
   }
 
   .popup-container {
