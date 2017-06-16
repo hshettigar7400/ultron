@@ -1,4 +1,5 @@
 import React from 'react';
+import * as utils from './Utils';
 import Intro from './template/Intro';
 
 export default class FrameWork extends React.Component {
@@ -19,7 +20,7 @@ export default class FrameWork extends React.Component {
     const windowHeight = window.innerHeight,
           windowWidth = window.innerWidth;
     if (this.refs) {
-      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      if(utils.isMobile) {
         document.body.style.minWidth= "320px";
         document.body.style.height= "100%";
       }

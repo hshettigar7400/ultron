@@ -1,14 +1,14 @@
 import React from 'react';
 import Shell from '../Shell';
+import * as utils from './Utils';
 import MediaQuery from 'react-responsive';
 
 export default class Intro extends React.Component {
   constructor(props) {
     super(props);
-    var uagent = navigator.userAgent.toLowerCase();
     this.state = {
       isStartCourse: false,
-      isMobile: uagent.search("mobile") > -1,
+      isMobile: utils.isMobile,
       isLoading: true,
     }
   }
