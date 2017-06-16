@@ -35,20 +35,37 @@ const config = {
      *  4: 'topic'
      */
     navigationControl: 1,
-    contentSync: true
+    /* openinPage
+     * 1: 'Intro',
+     * 2: 'languageSelection',
+     * 3: 'Language and Intro'
+    */
+    openinPage: 1,
+    /* contentSync
+     * true: Course has Audio,
+     * false: Course does not have Audio
+    */
+    contentSync: true,
+    /* hasAssessment
+     * true: Course has Assessment
+     * false: Course does not have Assessment
+    */
+    hasAssessment: false
   },
   tracking: {
-      /** Status
+      /* Status
        * 1: incomplete/completed
        * 2: incomplete/passed/failed
        */
       status: 1,
-      /** ComplianceType
-       *  1: STANDALONE/No tracking
-       *  2: SCORM1.2
-       *  3: SCORM2004
+      /* ComplianceType
+       * 1: STANDALONE
+       * 2: SCORM1.2
+       * 3: SCORM2004
+       * 4: LocalStorage
        */
       complianceType: 1,
+
       passingScore: 75
   }
 };

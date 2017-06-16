@@ -1,6 +1,7 @@
 import React from 'react';
+import * as utils from './Utils';
 import Intro from './template/Intro';
-import ConfigData from '../config/config';
+import ConfigData from '../config/Config';
 
 export default class FrameWork extends React.Component {
   constructor(props) {
@@ -19,8 +20,9 @@ export default class FrameWork extends React.Component {
   updateDimensions() {
     const windowHeight = window.innerHeight,
           windowWidth = window.innerWidth;
+          
     if (this.refs) {
-      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      if(utils.isMobile) {
         document.body.style.minWidth = ConfigData.config.window.minWidth;
         document.body.style.height= "100%";
       }

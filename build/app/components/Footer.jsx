@@ -1,10 +1,11 @@
 import React from 'react';
+import * as utils from './Utils';
+
 export default class Footer extends React.Component {
   constructor(props) {
-    var uagent = navigator.userAgent.toLowerCase();
     super(props);
     this.state = {
-      isiPad: uagent.search("mobile") > -1,
+      isiPad: utils.isMobile,
     }
   }
 
