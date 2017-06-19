@@ -4,6 +4,8 @@
 @import "base/font";
 @import "base/base";
 
+@import "components/button";
+
 @import "page-loader";
 @import "footer";
 @import "header";
@@ -14,3 +16,5 @@
 @import "transcript";
 @import "help";
 @import "dragdrop";
+@import "langselection";
+@import "components/select/select-component"

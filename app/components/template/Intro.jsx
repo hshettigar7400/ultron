@@ -1,5 +1,6 @@
 import React from 'react';
 import Shell from '../Shell';
+import VisualMenu from './VisualMenu';
 import * as utils from '../Utils';
 import MediaQuery from 'react-responsive';
 
@@ -22,11 +23,16 @@ export default class Intro extends React.Component {
 
   render() {
     if (this.state.isStartCourse) {
-      return (
-        <div>
-          <Shell />
-        </div>
-      )
+      if(utils.configData.course.hasVisualMenu)
+        return (
+          <VisualMenu />
+        )
+      else
+        return (
+          <div>
+            <Shell />
+          </div>
+        )
     }
     else {
       return (
