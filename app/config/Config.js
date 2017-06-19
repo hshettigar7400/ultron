@@ -27,20 +27,22 @@ const config = {
      *  3: Depend on both, pages completion and user score >= 'passingScore.
      */
     courseCompletion: 2,
-    pageCompletionIndicatorOnPage: false,
     /* navigationControl
-     *  1: 'course',
-     *  2: 'module'
-     *  3: 'section'
-     *  4: 'topic'
+     *  1: 'pagewise',
+     *  2: 'visulamenu
      */
     navigationControl: 1,
-    /* openinPage
+    /* pageIndicatorType
+     * 1: 'coursewise',
+     * 2: 'topicwise'
+    */
+    pageIndicatorType: 1,
+    /* openingPage
      * 1: 'Intro',
      * 2: 'languageSelection',
      * 3: 'Language and Intro'
     */
-    openinPage: 1,
+    openingPage: 2,
     /* contentSync
      * true: Course has Audio,
      * false: Course does not have Audio
@@ -50,7 +52,12 @@ const config = {
      * true: Course has Assessment
      * false: Course does not have Assessment
     */
-    hasAssessment: false
+    hasAssessment: false,
+    /* hasVisualMenu
+     * true: Course has Visual Menu
+     * false: Course does not have Visual Menu
+    */
+    hasVisualMenu: false
   },
   tracking: {
       /* Status

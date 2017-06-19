@@ -1,6 +1,7 @@
 import React from 'react';
 import * as utils from './Utils';
 import Intro from './template/Intro';
+import LanguageSelection from './template/LangSelection';
 import ConfigData from '../config/Config';
 
 export default class FrameWork extends React.Component {
@@ -20,7 +21,7 @@ export default class FrameWork extends React.Component {
   updateDimensions() {
     const windowHeight = window.innerHeight,
           windowWidth = window.innerWidth;
-          
+
     if (this.refs) {
       if(utils.isMobile) {
         document.body.style.minWidth = ConfigData.config.window.minWidth;
@@ -36,10 +37,30 @@ export default class FrameWork extends React.Component {
     }
   }
 
+  loadIntro () {
+      return (
+        <Intro />
+      )
+  }
+
+  loadLanguage () {
+    return (
+      <LanguageSelection />
+    )
+  }
+
+
   render() {
+    let _page;
+    if(ConfigData.config.course.openingPage == 1) {
+      _page = <Intro />
+    } else if(ConfigData.config.course.openingPage == 2 || ConfigData.config.course.openingPage == 3){
+      _page = <LanguageSelection />
+    }
+
     return (
       <div className="player" ref="container">
-        <Intro />
+        {_page}
       </div>
     )
   }
