@@ -27,6 +27,13 @@ class StaticPage3 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      activityState: 1,
+      isPopup1Open: false,
+      isPopup2Open: false,
+      isPopup3Open: false,
+      isPopup4Open: false,
+      currentPopup: 0,
+      btnArr: [0,0,0,0],
       dragbox: [
         {
           accepts: [
@@ -69,6 +76,148 @@ class StaticPage3 extends React.Component {
       enableClick: false,
       feedbacText: ""
     };
+  }
+
+  getPopupContent() {
+    var currentPopup = this.state.currentPopup;
+    switch (parseInt(currentPopup)) {
+      case 1:
+        return (
+          <div className="pop_container1">
+            <span className="close-btn icon-close" onClick={this.closePopup1.bind(this)}></span>
+            <span className="text">Nguyên nhân gây chênh lệch là do dự đoán sales không chính xác</span>
+          </div>
+        );
+        break;
+
+      case 2:
+        return (
+          <div className="pop_container2">
+            <span className="close-btn icon-close" onClick={this.closePopup1.bind(this)}></span>
+            <span className="text">Không thể xác định được nguyên nhân</span>
+          </div>
+        );
+        break;
+      case 3:
+        return (
+          <div className="pop_container3">
+            <span className="close-btn icon-close" onClick={this.closePopup1.bind(this)}></span>
+            <span className="text">Nguyên nhân có thể do thực thi kế hoạch kém, năng suất lao động thấp & lương trung bình cao</span>
+          </div>
+        );
+        break;
+      case 4:
+        return (
+          <div className="pop_container4">
+            <span className="close-btn icon-close" onClick={this.closePopup1.bind(this)}></span>
+            <span className="text">Nguyên nhân có thể do xếp lịch làm việc không hiệu quả</span>
+          </div>
+        );
+        break;
+
+    }
+  }
+
+  displayPopup1() {
+    return (
+      <div>
+        {this.state.isPopup1Open && <div className="popup-container">
+          {this.getPopupContent()}
+        </div>}
+      </div>
+    )
+  }
+
+  displayPopup2() {
+    return (
+      <div>
+        {this.state.isPopup2Open && <div className="popup-container">
+          {this.getPopupContent()}
+        </div>}
+      </div>
+    )
+  }
+
+  displayPopup3() {
+    return (
+      <div>
+        {this.state.isPopup3Open && <div className="popup-container">
+          {this.getPopupContent()}
+        </div>}
+      </div>
+    )
+  }
+
+  displayPopup4() {
+    return (
+      <div>
+        {this.state.isPopup4Open && <div className="popup-container">
+          {this.getPopupContent()}
+        </div>}
+      </div>
+    )
+  }
+
+  openInitialPopup (currentPopup) {
+    console.log('currentPopup: ', currentPopup);
+    this.setState({
+      isPopup1Open: false,
+      isPopup2Open: false,
+      isPopup3Open: false,
+      isPopup4Open: false,
+      currentPopup: currentPopup,
+    });
+
+    let btnArr = this.state.btnArr;
+    btnArr[currentPopup-1] = 1;
+
+    this.setState({
+      btnArr
+    });
+
+    let cnt = 0;
+    for(let i = 0; i < this.state.btnArr.length; i++) {
+      if(this.state.btnArr[i] == 1)
+        cnt++;
+    }
+
+    if(cnt == this.state.btnArr.length)
+      this.setState({
+        activityState: 2
+      });
+
+    switch (currentPopup) {
+      case 1:
+        this.setState({
+          isPopup1Open: true
+        })
+        break;
+      case 2:
+        this.setState({
+          isPopup2Open: true
+        })
+        break;
+      case 3:
+        this.setState({
+          isPopup3Open: true
+        })
+        break;
+      case 4:
+        this.setState({
+          isPopup4Open: true
+        })
+        break;
+    }
+  }
+
+  closePopup1() {
+    console.log('testing');
+    this.setState({
+      isPopup1Open: false,
+      isPopup2Open: false,
+      isPopup3Open: false,
+      isPopup4Open: false
+    })
   }
 
   generatePreview(type, item, style) {
@@ -217,21 +366,33 @@ class StaticPage3 extends React.Component {
                 </div>
                 <div className="instruction_text black">
                   <div className="instruction_img">
-                    <img src="app/assets/images/template/hand_icon.png"/>
-                  </div>
-                  Kéo ngôi sao vào những người với lời khuyên tốt và chọn Gửi đi
-                  <DragContainer name="star" type={ItemTypes.STAR} isDropped={this.isDropped("star")} key={1}>
+                    <img src="app/assets/images/template/hand_icon.png"/></div>
+                  Nhấp vào từng người để xem lời khuyên, kéo ngôi sao vào người có lời khuyên tốt
+                  <DragContainer name="star" type={ItemTypes.STAR} isDisable={(this.state.activityState == 1)? true : false} isDropped={this.isDropped("star")} key={1} closePopup1={this.closePopup1.bind(this)}>
 
                   </DragContainer>
-
                 </div>
+
                 <div className="flex-container">
+                  <div className="pop1">
+                    {this.displayPopup1()}
+                  </div>
+                  <div className="pop2">
+                    {this.displayPopup2()}
+                  </div>
+                  <div className="pop3">
+                    {this.displayPopup3()}
+                  </div>
+                  <div className="pop4">
+                    {this.displayPopup4()}
+                  </div>
                   <DropContainer
                     accepts={[ItemTypes.STAR]}
                     lastDroppedItem={dragbox[0].lastDroppedItem}
                     onDrop={item => this.handleDrop(0, item)}
                     imagePath="app/assets/images/template/pic01.png"
                     enableClick={this.state.enableClick}
+                    openInitialPopup={this.openInitialPopup.bind(this)}
                     id={1}
                     key={1} />
 
@@ -241,6 +402,7 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(1, item)}
                       imagePath="app/assets/images/template/pic02.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={2}
                       key={2} />
 
@@ -250,6 +412,7 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(2, item)}
                       imagePath="app/assets/images/template/pic03.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={3}
                       key={3} />
 
@@ -259,11 +422,12 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(3, item)}
                       imagePath="app/assets/images/template/pic04.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={4}
                       key={4} />
                 </div>
 
-                <div className="button_box">
+                <div className={(this.state.activityState == 1) ? "button_box hide-element":" button_box show-element"}>
                   <button name="submit" className={enableSubmit?"submit_btn":"submit_btn disable-event"} onClick={this.submitAnswer.bind(this)}>Gửi đi</button>
                 </div>
               </div>
@@ -282,21 +446,33 @@ class StaticPage3 extends React.Component {
                 </div>
                 <div className="instruction_text black">
                   <div className="instruction_img">
-                    <img src="app/assets/images/template/hand_icon.png"/>
+                    <img src="app/assets/images/template/hand_icon.png"/></div>
+                      Nhấp vào từng người để xem lời khuyên, kéo ngôi sao vào người có lời khuyên tốt
+                      <DragContainer name="star" type={ItemTypes.STAR} isDisable={(this.state.activityState == 1)? true : false} isDropped={this.isDropped("star")} key={1} closePopup1={this.closePopup1.bind(this)}>
 
-                  </div>
-
-                  Kéo ngôi sao vào những người với lời khuyên tốt và chọn Gửi đi
-                  <DragContainer name="star" type={ItemTypes.STAR} isDropped={this.isDropped("star")} key={1}>
-                  </DragContainer>
+                      </DragContainer>
                 </div>
+
                 <div className="flex-container">
+                  <div className="pop1">
+                    {this.displayPopup1()}
+                  </div>
+                  <div className="pop2">
+                    {this.displayPopup2()}
+                  </div>
+                  <div className="pop3">
+                    {this.displayPopup3()}
+                  </div>
+                  <div className="pop4">
+                    {this.displayPopup4()}
+                  </div>
                   <DropContainer
                     accepts={[ItemTypes.STAR]}
                     lastDroppedItem={dragbox[0].lastDroppedItem}
                     onDrop={item => this.handleDrop(0, item)}
                     imagePath="app/assets/images/template/pic01.png"
                     enableClick={this.state.enableClick}
+                    openInitialPopup={this.openInitialPopup.bind(this)}
                     id={1}
                     key={1} />
 
@@ -306,6 +482,7 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(1, item)}
                       imagePath="app/assets/images/template/pic02.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={2}
                       key={2} />
 
@@ -315,6 +492,7 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(2, item)}
                       imagePath="app/assets/images/template/pic03.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={3}
                       key={3} />
 
@@ -324,11 +502,12 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(3, item)}
                       imagePath="app/assets/images/template/pic04.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={4}
                       key={4} />
                 </div>
 
-                <div className="button_box">
+                <div className={(this.state.activityState == 1) ? "button_box hide-element":"button_box show-element"}>
                   <button name="submit" className={enableSubmit?"submit_btn":"submit_btn disable-event"} onClick={this.submitAnswer.bind(this)}>Gửi đi</button>
                 </div>
               </div>
@@ -347,22 +526,34 @@ class StaticPage3 extends React.Component {
                 </div>
                 <div className="instruction_text black">
                   <div className="instruction_img">
-                    <img src="app/assets/images/template/hand_icon.png"/>
+                    <img src="app/assets/images/template/hand_icon.png"/></div>
+                      Nhấp vào từng người để xem lời khuyên, kéo ngôi sao vào người có lời khuyên tốt
+                      <DragContainer name="star" type={ItemTypes.STAR} isDisable={(this.state.activityState == 1)? true : false} isDropped={this.isDropped("star")} key={1} closePopup1={this.closePopup1.bind(this)}>
 
-                  </div>
-
-                 Kéo ngôi sao vào những người với lời khuyên tốt và chọn Gửi đi
-                  <DragContainer name="star" type={ItemTypes.STAR} isDropped={this.isDropped("star")} key={1}>
-                  </DragContainer>
+                      </DragContainer>
                 </div>
+
                 <div className="flex-container">
                   <div className="flex-container__row">
+                    <div className="pop1">
+                      {this.displayPopup1()}
+                    </div>
+                    <div className="pop2">
+                      {this.displayPopup2()}
+                    </div>
+                    <div className="pop3">
+                      {this.displayPopup3()}
+                    </div>
+                    <div className="pop4">
+                      {this.displayPopup4()}
+                    </div>
                   <DropContainer
                     accepts={[ItemTypes.STAR]}
                     lastDroppedItem={dragbox[0].lastDroppedItem}
                     onDrop={item => this.handleDrop(0, item)}
                     imagePath="app/assets/images/template/pic01.png"
                     enableClick={this.state.enableClick}
+                    openInitialPopup={this.openInitialPopup.bind(this)}
                     id={1}
                     key={1} />
 
@@ -372,6 +563,7 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(1, item)}
                       imagePath="app/assets/images/template/pic02.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={2}
                       key={2} />
                   </div>
@@ -383,6 +575,7 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(2, item)}
                       imagePath="app/assets/images/template/pic03.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={3}
                       key={3} />
 
@@ -392,12 +585,13 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(3, item)}
                       imagePath="app/assets/images/template/pic04.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={4}
                       key={4} />
                   </div>
                 </div>
 
-                <div className="button_box">
+                <div className={(this.state.activityState == 1) ? "button_box hide-element":" button_box show-element"}>
                   <button name="submit" className={enableSubmit?"submit_btn":"submit_btn disable-event"} onClick={this.submitAnswer.bind(this)}>Gửi đi</button>
                 </div>
               </div>
@@ -423,20 +617,33 @@ class StaticPage3 extends React.Component {
                 <div className="instruction_text black">
                   <div className="instruction_img">
                     <img src="app/assets/images/template/hand_icon.png"/></div>
-                  <span className="instruction">
-                   Kéo ngôi sao vào những người với lời khuyên tốt và chọn Gửi đi</span>
-                    <DragContainer name="star" type={ItemTypes.STAR} isDropped={this.isDropped("star")} key={1}>
-                    </DragContainer>
+                      Nhấp vào từng người để xem lời khuyên, kéo ngôi sao vào người có lời khuyên tốt
+                      <DragContainer name="star" type={ItemTypes.STAR} isDisable={(this.state.activityState == 1)? true : false} isDropped={this.isDropped("star")} key={1} closePopup1={this.closePopup1.bind(this)}>
+
+                      </DragContainer>
                 </div>
               </div>
               <div className="flex-container">
                 <div className="flex-container__row">
+                  <div className="pop1">
+                    {this.displayPopup1()}
+                  </div>
+                  <div className="pop2">
+                    {this.displayPopup2()}
+                  </div>
+                  <div className="pop3">
+                    {this.displayPopup3()}
+                  </div>
+                  <div className="pop4">
+                    {this.displayPopup4()}
+                  </div>
                   <DropContainer
                     accepts={[ItemTypes.STAR]}
                     lastDroppedItem={dragbox[0].lastDroppedItem}
                     onDrop={item => this.handleDrop(0, item)}
                     imagePath="app/assets/images/template/pic01.png"
                     enableClick={this.state.enableClick}
+                    openInitialPopup={this.openInitialPopup.bind(this)}
                     id={1}
                     key={1} />
 
@@ -446,6 +653,7 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(1, item)}
                       imagePath="app/assets/images/template/pic02.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={2}
                       key={2} />
                   </div>
@@ -456,6 +664,7 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(2, item)}
                       imagePath="app/assets/images/template/pic03.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={3}
                       key={3} />
 
@@ -465,12 +674,13 @@ class StaticPage3 extends React.Component {
                       onDrop={item => this.handleDrop(3, item)}
                       imagePath="app/assets/images/template/pic04.png"
                       enableClick={this.state.enableClick}
+                      openInitialPopup={this.openInitialPopup.bind(this)}
                       id={4}
                       key={4} />
                 </div>
               </div>
 
-              <div className="button_box">
+              <div className={(this.state.activityState == 1) ? "button_box hide-element":" button_box show-element"}>
                 <button name="submit" className={enableSubmit?"submit_btn":"submit_btn disable-event"} onClick={this.submitAnswer.bind(this)}>Gửi đi</button>
               </div>
             </div>

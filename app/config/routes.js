@@ -8,9 +8,6 @@ import {
 } from '../components/Templates.jsx';
 
 const routes = [
-  { path: '/page2',
-    comp: StaticPage2
-  },
   { path: '/page3',
     comp: StaticPage3
   },

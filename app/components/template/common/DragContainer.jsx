@@ -14,6 +14,8 @@ const style = {
 
 const dragSource = {
   beginDrag(props) {
+    console.log('tees');
+    props.closePopup1();
     return {
       name: props.name,
     };
@@ -31,6 +33,7 @@ export default class DragContainer extends Component {
   }
 
   componentDidMount() {
+
     const { connectDragPreview } = this.props;
     const img = new Image();
     img.src = 'app/assets/images/template/star.png';
@@ -41,8 +44,8 @@ export default class DragContainer extends Component {
     const { name, isDropped, isDragging, connectDragSource } = this.props;
     return (
       connectDragSource(
-        <div className="drag-image__container">
-          <img src="app/assets/images/template/star.png"/>
+        <div onMouseDown={this.props.closePopup1} className={(this.props.isDisable) ? "drag-image__container disable-star" : "drag-image__container enable-star"}>
+          <img src="app/assets/images/template/star.png" />
         </div>,
       )
     );
