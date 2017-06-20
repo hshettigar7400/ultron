@@ -136,7 +136,7 @@
 
 .drag-image__container {
   position: absolute;
-  right: 265px;
+  right: 15%;
   top: 8px;
 }
 
@@ -144,7 +144,7 @@
      
 .drag-image__container {
   position: absolute;
-  right: 140px;
+  right: 7%;
   top: 8px;
 }
      
@@ -160,8 +160,11 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
 .drag-image__container {
   position: absolute;
-  right: 5px;
-  top: 8px;
+  right: -10px;
+  top: 30px;
+    img{
+        width: 70%;
+    }
 }
 }
 

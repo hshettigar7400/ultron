@@ -65,7 +65,6 @@ export default class Checkbox extends React.Component {
   };
 
   render() {
-    console.log("sdfgsdfsdfd")
     const {
       prefixCls,
       className,

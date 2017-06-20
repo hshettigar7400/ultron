@@ -10,7 +10,8 @@ export default class StaticPage3 extends React.Component {
       showPopup: false,
       attempts: 0,
       correctAnswer: false,
-      reset: 0
+      reset: 0,
+      enableSubmit: false
     }
   }
 
@@ -31,11 +32,11 @@ export default class StaticPage3 extends React.Component {
   }
 
   tryAgain() {
-    this.setState({showFeedback: false, reset: 1})
+    this.setState({showFeedback: false, reset: 1, enableSubmit: false})
   }
 
   continue() {
-    this.setState({attempts: 2})
+    this.setState({attempts: 3})
   }
 
   displayFeedback() {
@@ -47,7 +48,7 @@ export default class StaticPage3 extends React.Component {
             <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
             Rất tốt
             {attempts > 0 && <span className="button_div try-again__button">
-              <a href="#" className="button" onClick={this.continue.bind(this)}>Tiếp tục</a>
+              <button name="submit" className="button" onClick={this.continue.bind(this)}>Tiếp tục</button>
             </span>
             }
           </div>
@@ -61,7 +62,7 @@ export default class StaticPage3 extends React.Component {
           <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
           Bạn chưa chọn được các câu trả lời đúng
           {attempts > 0 && <span className="button_div try-again__button">
-            <a href="#" className="button" onClick={this.tryAgain.bind(this)}>Thử lại lần nữa</a>
+              <button name="submit" className="button" onClick={this.tryAgain.bind(this)}>Thử lại lần nữa</button>
           </span>
           }
         </div>
@@ -145,9 +146,13 @@ export default class StaticPage3 extends React.Component {
     )
   }
 
+  handleClick() {
+    this.setState({enableSubmit: true})
+  }
+
   displayContent() {
-    const {currentPopup} =this.state;
-    if (this.state.attempts < 2) {
+    const {currentPopup, correctAnswer, enableSubmit} =this.state;
+    if (this.state.attempts < 2 && !correctAnswer) {
       return (
         <div>
           <MediaQuery query='(min-device-width: 1224px)'>
@@ -155,13 +160,13 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset}/>
+                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Sắp xếp nhân viên đúng vị trí
                   </label>
                 </div>
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset}/>
+                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Lập kế hoạch
                   </label>
                 </div>
@@ -169,13 +174,13 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset}/>
+                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Quản lý giờ công trung bình
                   </label>
                 </div>
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset}/>
+                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Theo dõi năng suất lao động
                   </label>
                 </div>
@@ -183,13 +188,13 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset}/>
+                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Quản lý mức lương phải trả
                   </label>
                 </div>
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset}/>
+                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Không thể kiểm soát
                   </label>
                 </div>
@@ -198,7 +203,7 @@ export default class StaticPage3 extends React.Component {
             <div className="button-container">
               Chọn câu trả lời đúng cho câu hỏi sau đây.
               <span className="button_div">
-                <a href="#" className="button" onClick={this.submitAnswer.bind(this)}>Gửi</a>
+                <button name="submit" className={enableSubmit?"button":"submit_btn disable-event"} onClick={this.submitAnswer.bind(this)}>Gửi</button>
               </span>
             </div>
           </MediaQuery>
@@ -207,13 +212,13 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset}/>
+                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Sắp xếp nhân viên đúng vị trí
                   </label>
                 </div>
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset}/>
+                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Lập kế hoạch
                   </label>
                 </div>
@@ -221,13 +226,13 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset}/>
+                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Quản lý giờ công trung bình
                   </label>
                 </div>
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset}/>
+                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Theo dõi năng suất lao động
                   </label>
                 </div>
@@ -235,13 +240,13 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset}/>
+                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Quản lý mức lương phải trả
                   </label>
                 </div>
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset}/>
+                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Không thể kiểm soát
                   </label>
                 </div>
@@ -250,7 +255,7 @@ export default class StaticPage3 extends React.Component {
             <div className="button-container">
               Chọn câu trả lời đúng cho câu hỏi sau đây.
               <span className="button_div">
-                <a href="#" className="button" onClick={this.submitAnswer.bind(this)}>Gửi</a>
+                <button name="submit" className={enableSubmit?"button":"submit_btn disable-event"} onClick={this.submitAnswer.bind(this)}>Gửi</button>
               </span>
             </div>
           </MediaQuery>
@@ -259,7 +264,7 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset}/>
+                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Sắp xếp nhân viên đúng vị trí
                   </label>
                 </div>
@@ -267,7 +272,7 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset}/>
+                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Lập kế hoạch
                   </label>
                 </div>
@@ -275,7 +280,7 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset}/>
+                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Quản lý giờ công trung bình
                   </label>
                 </div>
@@ -283,7 +288,7 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset}/>
+                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Theo dõi năng suất lao động
                   </label>
                 </div>
@@ -291,7 +296,7 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset}/>
+                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Quản lý mức lương phải trả
                   </label>
                 </div>
@@ -299,7 +304,7 @@ export default class StaticPage3 extends React.Component {
               <div className="choice-container__row">
                 <div className="choice-container__cell">
                   <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset}/>
+                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
                     Không thể kiểm soát
                   </label>
                 </div>
@@ -308,14 +313,184 @@ export default class StaticPage3 extends React.Component {
             <div className="button-container">
               Chọn câu trả lời đúng cho câu hỏi sau đây.
               <span className="button_div">
-                <a href="#" className="button" onClick={this.submitAnswer.bind(this)}>Gửi</a>
+                <button name="submit" className={enableSubmit?"button":"submit_btn disable-event"} onClick={this.submitAnswer.bind(this)}>Gửi</button>
               </span>
             </div>
           </MediaQuery>
           {this.displayFeedback()}
         </div>
       )
-    } else {
+    }
+    else if ((this.state.attempts === 2 && correctAnswer) || (this.state.attempts < 2 && correctAnswer)) {
+      return (
+        <div>
+          <MediaQuery query='(min-device-width: 1224px)'>
+            <div className="question-container">
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Sắp xếp nhân viên đúng vị trí
+                  </label>
+                </div>
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Lập kế hoạch
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Quản lý giờ công trung bình
+                  </label>
+                </div>
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Theo dõi năng suất lao động
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Quản lý mức lương phải trả
+                  </label>
+                </div>
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Không thể kiểm soát
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div className="button-container">
+              Chọn câu trả lời đúng cho câu hỏi sau đây.
+              <span className="button_div">
+                <button name="submit" className={enableSubmit?"button":"submit_btn disable-event"} onClick={this.submitAnswer.bind(this)}>Gửi</button>
+              </span>
+            </div>
+          </MediaQuery>
+          <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
+            <div className="question-container">
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Sắp xếp nhân viên đúng vị trí
+                  </label>
+                </div>
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Lập kế hoạch
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Quản lý giờ công trung bình
+                  </label>
+                </div>
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Theo dõi năng suất lao động
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Quản lý mức lương phải trả
+                  </label>
+                </div>
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Không thể kiểm soát
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div className="button-container">
+              Chọn câu trả lời đúng cho câu hỏi sau đây.
+              <span className="button_div">
+                <button name="submit" className={enableSubmit?"button":"submit_btn disable-event"} onClick={this.submitAnswer.bind(this)}>Gửi</button>
+              </span>
+            </div>
+          </MediaQuery>
+          <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
+            <div className="question-container">
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Sắp xếp nhân viên đúng vị trí
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Lập kế hoạch
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Quản lý giờ công trung bình
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Theo dõi năng suất lao động
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Quản lý mức lương phải trả
+                  </label>
+                </div>
+              </div>
+              <div className="choice-container__row">
+                <div className="choice-container__cell">
+                  <label>
+                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                    Không thể kiểm soát
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div className="button-container">
+              Chọn câu trả lời đúng cho câu hỏi sau đây.
+              <span className="button_div">
+                <button name="submit" className={enableSubmit?"button":"submit_btn disable-event"} onClick={this.submitAnswer.bind(this)}>Gửi</button>
+              </span>
+            </div>
+          </MediaQuery>
+          {this.displayFeedback()}
+        </div>
+      )
+    }
+    else if(this.state.attempts > 2 || (this.state.attempts === 2 && !correctAnswer) ) {
       return (
         <div>
           <MediaQuery query='(min-device-width: 1224px)'>

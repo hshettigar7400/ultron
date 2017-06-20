@@ -85,9 +85,6 @@ export default class PageLoader extends React.Component {
   loadRouter() {
     const route = routes[this.props.currentPage-1];
     window.pageStatusList[0] = 1;
-    if(window.pageStatusList.indexOf("0") === -1 || window.pageStatusList.indexOf(0) === -1) {
-      window.scormAdaptor_complete()
-    }
     return (
       <Router>
         {

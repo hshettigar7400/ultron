@@ -29,7 +29,7 @@ export default class MenuInnerList extends React.Component {
       <div>
         <div className="menu-header">
           <div className="menu-header-title">
-            <label>Menu</label>
+            <label>Thực đơn</label>
           </div>
           <div className="menu-close-button-container" onClick={this.props.onCloseMenuClick}>
             <a>

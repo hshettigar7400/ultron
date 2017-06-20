@@ -42,6 +42,9 @@ export default class Shell extends React.Component {
   loadNext() {
     this.setState({currentPage: this.state.currentPage + 1, isAudioFinished: false})
     window.pageStatusList[this.state.currentPage] = 1;
+    if(window.pageStatusList.indexOf(0) === -1) {
+      window.scormAdaptor_complete()
+    }
     localStorage.setItem("pageStatusList", window.pageStatusList);
   }
 

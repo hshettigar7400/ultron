@@ -36,6 +36,7 @@
     "react-responsive": "^1.2.10",
     "react-router-dom": "next",
     "react-sidebar": "^2.3.2",
+    "react-skylight": "^0.4.2",
     "react-sound": "^0.6.1",
     "sass-loader": "^6.0.3",
     "standard": "^10.0.2",

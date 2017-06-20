@@ -4565,6 +4565,12 @@ react-sidebar@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/react-sidebar/-/react-sidebar-2.3.2.tgz#ec140bea8a6f5fa3d8ea7a56479665b44cf4f9cf"
 
+react-skylight@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/react-skylight/-/react-skylight-0.4.2.tgz#939b8972705ccd39fda3186e34708010e0b1cf17"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-sound@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/react-sound/-/react-sound-0.6.1.tgz#1191a1f46b799d024a5b37fb4f324c2316f23442"
