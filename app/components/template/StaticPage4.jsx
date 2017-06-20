@@ -4,6 +4,7 @@ import Checkbox from './common/Checkbox';
 export default class StaticPage3 extends React.Component {
   constructor(props) {
     super(props);
+    this.optionsText = ["Sắp xếp nhân viên đúng vị trí", "Lập kế hoạch", "Quản lý giờ công trung bình", "Theo dõi năng suất lao động", "Quản lý mức lương phải trả", "Không thể kiểm soát"];
     this.state = {
       currentPopup: 0,
       showFeedback: false,
@@ -150,53 +151,42 @@ export default class StaticPage3 extends React.Component {
     this.setState({enableSubmit: true})
   }
 
+  randomNumber () {
+    let max = 6;
+    let random = [];
+    var _html;
+    for(let i = 0;i<max ; i++){
+        let temp = Math.floor(Math.random()*max) +1;
+        if(random.indexOf(temp) == -1){
+            random.push(temp);
+        } else {
+         i--;
+       }
+     }
+
+     return random;
+  }
+
+
   displayContent() {
-    const {currentPopup, correctAnswer, enableSubmit} =this.state;
+    const randomArr = this.randomNumber();
+    const {currentPopup, correctAnswer, enableSubmit} = this.state;
+
     if (this.state.attempts < 2 && !correctAnswer) {
       return (
         <div>
           <MediaQuery query='(min-device-width: 1224px)'>
             <div className="question-container">
-              <div className="choice-container__row">
+              <div className="choice-container__row" >
                 <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Sắp xếp nhân viên đúng vị trí
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Lập kế hoạch
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý giờ công trung bình
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Theo dõi năng suất lao động
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý mức lương phải trả
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Không thể kiểm soát
-                  </label>
+                  {randomArr.map((num, index) => {
+                    return (
+                      <label key={index}>
+                        <Checkbox ref="checkbox{num}" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                        {this.optionsText[num-1]}
+                      </label>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -209,46 +199,16 @@ export default class StaticPage3 extends React.Component {
           </MediaQuery>
           <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
             <div className="question-container">
-              <div className="choice-container__row">
+              <div className="choice-container__row" >
                 <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Sắp xếp nhân viên đúng vị trí
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Lập kế hoạch
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý giờ công trung bình
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Theo dõi năng suất lao động
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý mức lương phải trả
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Không thể kiểm soát
-                  </label>
+                  {randomArr.map((num, index) => {
+                    return (
+                      <label key={index}>
+                        <Checkbox ref="checkbox{num}" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                        {this.optionsText[num-1]}
+                      </label>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -261,52 +221,16 @@ export default class StaticPage3 extends React.Component {
           </MediaQuery>
           <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
             <div className="question-container">
-              <div className="choice-container__row">
+              <div className="choice-container__row" >
                 <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Sắp xếp nhân viên đúng vị trí
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Lập kế hoạch
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý giờ công trung bình
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Theo dõi năng suất lao động
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý mức lương phải trả
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Không thể kiểm soát
-                  </label>
+                  {randomArr.map((num, index) => {
+                    return (
+                      <label key={index}>
+                        <Checkbox ref="checkbox{num}" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                        {this.optionsText[num-1]}
+                      </label>
+                    )
+                  })}
                 </div>
               </div>
             </div>

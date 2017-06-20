@@ -1410,14 +1410,26 @@ h4 {
   }
 
   .choice-container__cell {
-    border-bottom: 2px solid #ddd;
-    border-right: 2px solid #ddd;
+    /*border-bottom: 2px solid #ddd;
+    border-right: 2px solid #ddd;*/
     background-color: rgba(0, 0, 0, 0.8);
-    display: table-cell;
-    padding: 15px 5px;
+    /*display: table-cell;*/
+
 
     label {
       cursor: pointer;
+      width: 48%;
+      display: inline-block;
+      border-bottom: 2px solid #ddd;
+      padding: 15px 6px;
+    }
+
+    label:nth-child(odd) {
+      border-right: 2px solid #ddd;
+    }
+
+    label:last-child, label:nth-child(5) {
+      border-bottom: 0;
     }
   }
 
