@@ -49,7 +49,7 @@ export default class DropContainer extends Component {
       backgroundColor: '#ffffff',
       color: '#000000',
       width: '78%',
-      height: '100px',
+      height: '150px',
       marginTop: '-25px',
       marginLeft: '-47%',
       padding: '25px'
