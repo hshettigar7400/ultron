@@ -4,6 +4,7 @@ import Checkbox from './common/Checkbox';
 export default class StaticPage3 extends React.Component {
   constructor(props) {
     super(props);
+    this.optionsText = ["Sắp xếp nhân viên đúng vị trí", "Lập kế hoạch", "Quản lý giờ công trung bình", "Theo dõi năng suất lao động", "Quản lý mức lương phải trả", "Không thể kiểm soát"];
     this.state = {
       currentPopup: 0,
       showFeedback: false,
@@ -11,7 +12,9 @@ export default class StaticPage3 extends React.Component {
       attempts: 0,
       correctAnswer: false,
       reset: 0,
-      enableSubmit: false
+      enableSubmit: false,
+      continueClicked: false,
+      optionArray: [1, 2, 3, 4, 5, 6]
     }
   }
 
@@ -32,11 +35,17 @@ export default class StaticPage3 extends React.Component {
   }
 
   tryAgain() {
-    this.setState({showFeedback: false, reset: 1, enableSubmit: false})
+    var test = this.randomNumber()
+    this.setState({
+      showFeedback: false,
+      reset: !this.state.reset,
+      enableSubmit: false,
+      optionArray: test
+    })
   }
 
   continue() {
-    this.setState({attempts: 3})
+    this.setState({attempts: 5, continueClicked: true})
   }
 
   displayFeedback() {
@@ -150,53 +159,41 @@ export default class StaticPage3 extends React.Component {
     this.setState({enableSubmit: true})
   }
 
+  randomNumber () {
+    let max = 6;
+    let random = [];
+    var _html;
+    for(let i = 0;i<max ; i++){
+        let temp = Math.floor(Math.random()*max) +1;
+        if(random.indexOf(temp) == -1){
+            random.push(temp);
+        } else {
+         i--;
+       }
+     }
+
+     return random;
+  }
+
+
   displayContent() {
-    const {currentPopup, correctAnswer, enableSubmit} =this.state;
-    if (this.state.attempts < 2 && !correctAnswer) {
+    const {currentPopup, correctAnswer, enableSubmit} = this.state;
+
+    if (!correctAnswer) {
       return (
         <div>
           <MediaQuery query='(min-device-width: 1224px)'>
             <div className="question-container">
-              <div className="choice-container__row">
+              <div className="choice-container__row" >
                 <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Sắp xếp nhân viên đúng vị trí
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Lập kế hoạch
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý giờ công trung bình
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Theo dõi năng suất lao động
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý mức lương phải trả
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Không thể kiểm soát
-                  </label>
+                  {this.state.optionArray.map((num, index) => {
+                    return (
+                      <label key={index}>
+                        <Checkbox ref={"checkbox"+num} key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                        {this.optionsText[num-1]}
+                      </label>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -209,46 +206,16 @@ export default class StaticPage3 extends React.Component {
           </MediaQuery>
           <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
             <div className="question-container">
-              <div className="choice-container__row">
+              <div className="choice-container__row" >
                 <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Sắp xếp nhân viên đúng vị trí
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Lập kế hoạch
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý giờ công trung bình
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Theo dõi năng suất lao động
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý mức lương phải trả
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Không thể kiểm soát
-                  </label>
+                  {this.state.optionArray.map((num, index) => {
+                    return (
+                      <label key={index}>
+                        <Checkbox ref={"checkbox"+num} key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                        {this.optionsText[num-1]}
+                      </label>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -261,52 +228,16 @@ export default class StaticPage3 extends React.Component {
           </MediaQuery>
           <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
             <div className="question-container">
-              <div className="choice-container__row">
+              <div className="choice-container__row" >
                 <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Sắp xếp nhân viên đúng vị trí
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Lập kế hoạch
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý giờ công trung bình
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Theo dõi năng suất lao động
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý mức lương phải trả
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Không thể kiểm soát
-                  </label>
+                  {this.state.optionArray.map((num, index) => {
+                    return (
+                      <label key={index}>
+                        <Checkbox ref={"checkbox"+num} key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                        {this.optionsText[num-1]}
+                      </label>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -321,51 +252,21 @@ export default class StaticPage3 extends React.Component {
         </div>
       )
     }
-    else if ((this.state.attempts === 2 && correctAnswer) || (this.state.attempts < 2 && correctAnswer)) {
+    else if (correctAnswer && !this.state.continueClicked) {
       return (
         <div>
           <MediaQuery query='(min-device-width: 1224px)'>
             <div className="question-container">
-              <div className="choice-container__row">
+              <div className="choice-container__row" >
                 <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Sắp xếp nhân viên đúng vị trí
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Lập kế hoạch
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý giờ công trung bình
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Theo dõi năng suất lao động
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý mức lương phải trả
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Không thể kiểm soát
-                  </label>
+                  {this.state.optionArray.map((num, index) => {
+                    return (
+                      <label key={index}>
+                        <Checkbox ref={"checkbox"+num} key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                        {this.optionsText[num-1]}
+                      </label>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -378,46 +279,16 @@ export default class StaticPage3 extends React.Component {
           </MediaQuery>
           <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
             <div className="question-container">
-              <div className="choice-container__row">
+              <div className="choice-container__row" >
                 <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Sắp xếp nhân viên đúng vị trí
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Lập kế hoạch
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý giờ công trung bình
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Theo dõi năng suất lao động
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý mức lương phải trả
-                  </label>
-                </div>
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Không thể kiểm soát
-                  </label>
+                  {this.state.optionArray.map((num, index) => {
+                    return (
+                      <label key={index}>
+                        <Checkbox ref={"checkbox"+num} key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                        {this.optionsText[num-1]}
+                      </label>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -430,52 +301,16 @@ export default class StaticPage3 extends React.Component {
           </MediaQuery>
           <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
             <div className="question-container">
-              <div className="choice-container__row">
+              <div className="choice-container__row" >
                 <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox1" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Sắp xếp nhân viên đúng vị trí
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox2" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Lập kế hoạch
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox3" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý giờ công trung bình
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox4" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Theo dõi năng suất lao động
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox5" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Quản lý mức lương phải trả
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className="choice-container__cell">
-                  <label>
-                    <Checkbox ref="checkbox6" key={this.state.reset} onClick={this.handleClick.bind(this)}/>
-                    Không thể kiểm soát
-                  </label>
+                  {this.state.optionArray.map((num, index) => {
+                    return (
+                      <label key={index}>
+                        <Checkbox ref={"checkbox"+num} key={this.state.reset} onClick={this.handleClick.bind(this)}/>
+                        {this.optionsText[num-1]}
+                      </label>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -490,135 +325,33 @@ export default class StaticPage3 extends React.Component {
         </div>
       )
     }
-    else if(this.state.attempts > 2 || (this.state.attempts === 2 && !correctAnswer) ) {
+    else if(this.state.continueClicked) {
       return (
         <div>
-          <MediaQuery query='(min-device-width: 1224px)'>
             <div className="question-container">
               <div className="choice-container__row">
-                <div className={currentPopup === 1?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 1)}>
-                  <label>
+                <div className="choice-container__cell">
+                  <label className={currentPopup === 1?"selected":""} onClick={this.openPopup.bind(this, 1)}>
                     + Sắp xếp nhân viên đúng vị trí
                   </label>
-                </div>
-                <div className={currentPopup === 2?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 2)}>
-                  <label>
+                  <label className={currentPopup === 2?"selected":""} onClick={this.openPopup.bind(this, 2)}>
                     + Lập kế hoạch
                   </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className={currentPopup === 3?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 3)}>
-                  <label>
+                  <label className={currentPopup === 3?"selected":""} onClick={this.openPopup.bind(this, 3)}>
                     + Quản lý giờ công trung bình
                   </label>
-                </div>
-                <div className={currentPopup === 4?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 4)}>
-                  <label>
+                  <label className={currentPopup === 4?"selected":""} onClick={this.openPopup.bind(this, 4)}>
                     + Theo dõi năng suất lao động
                   </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className={currentPopup === 5?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 5)}>
-                  <label>
+                  <label className={currentPopup === 5?"selected":""} onClick={this.openPopup.bind(this, 5)}>
                     + Quản lý mức lương phải trả
                   </label>
-                </div>
-                <div className={currentPopup === 6?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 6)}>
-                  <label>
+                  <label className={currentPopup === 6?"selected":""} onClick={this.openPopup.bind(this, 6)}>
                     + Không thể kiểm soát
                   </label>
                 </div>
               </div>
             </div>
-          </MediaQuery>
-          <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
-            <div className="question-container">
-              <div className="choice-container__row">
-                <div className={currentPopup === 1?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 1)}>
-                  <label>
-                    + Sắp xếp nhân viên đúng vị trí
-                  </label>
-                </div>
-                <div className={currentPopup === 2?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 2)}>
-                  <label>
-                    + Lập kế hoạch
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className={currentPopup === 3?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 3)}>
-                  <label>
-                    + Quản lý giờ công trung bình
-                  </label>
-                </div>
-                <div className={currentPopup === 4?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 4)}>
-                  <label>
-                    + Theo dõi năng suất lao động
-                  </label>
-                </div>
-              </div>
-              <div className="choice-container__row">
-                <div className={currentPopup === 5?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 5)}>
-                  <label>
-                    + Quản lý mức lương phải trả
-                  </label>
-                </div>
-                <div className={currentPopup === 6?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 6)}>
-                  <label>
-                    + Không thể kiểm soát
-                  </label>
-                </div>
-              </div>
-            </div>
-          </MediaQuery>
-          <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
-            <div className="question-container">
-            <div className="choice-container__row">
-              <div className={currentPopup === 1?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 1)}>
-                <label>
-                  + Sắp xếp nhân viên đúng vị trí
-                </label>
-              </div>
-            </div>
-            <div className="choice-container__row">
-              <div className={currentPopup === 2?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 2)}>
-                <label>
-                  + Lập kế hoạch
-                </label>
-              </div>
-            </div>
-            <div className="choice-container__row">
-              <div className={currentPopup === 3?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 3)}>
-                <label>
-                  + Quản lý giờ công trung bình
-                </label>
-              </div>
-            </div>
-            <div className="choice-container__row">
-              <div className={currentPopup === 4?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 4)}>
-                <label>
-                  + Theo dõi năng suất lao động
-                </label>
-              </div>
-            </div>
-            <div className="choice-container__row">
-              <div className={currentPopup === 5?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 5)}>
-                <label>
-                  + Quản lý mức lương phải trả
-                </label>
-              </div>
-            </div>
-            <div className="choice-container__row">
-              <div className={currentPopup === 6?"choice-container__cell selected":"choice-container__cell"} onClick={this.openPopup.bind(this, 6)}>
-                <label>
-                  + Không thể kiểm soát
-                </label>
-              </div>
-            </div>
-          </div>
-          </MediaQuery>
           {this.displayPopup()}
         </div>
       )

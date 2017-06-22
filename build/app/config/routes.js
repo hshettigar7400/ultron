@@ -8,21 +8,11 @@ import {
 } from '../components/Templates.jsx';
 
 const routes = [
-  { path: '/page1',
-    exact: true,
-    comp: StaticPage1
-  },
-  { path: '/page2',
-    comp: StaticPage2
-  },
   { path: '/page3',
     comp: StaticPage3
   },
   { path: '/page4',
     comp: StaticPage4
-  },
-  { path: '/page5',
-    comp: StaticPage5
   }
 ];
 

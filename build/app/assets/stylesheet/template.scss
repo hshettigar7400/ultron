@@ -676,12 +676,89 @@ h4 {
     height: 560px;
   }
 
+  .show-element {
+    display: block;
+  }
+
+  .hide-element {
+    display: none;
+  }
+
+  .disable-star {
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  .enable-star {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .flex-container {
     display: -webkit-flex;
     display: flex;
     width: 90%;
     height: 100%;
     margin: 40px auto auto;
+  }
+
+  .pop_container1 {
+    position: absolute;
+    top: 294px;
+    left: 58px;
+    width: 211px;
+    background-color: #fff;
+    height: 165px;
+    margin: auto;
+    color: #000;
+    z-index: 9999999;
+  }
+
+  .pop_container2 {
+    position: absolute;
+    top: 296px;
+    left: 283px;
+    width: 213px;
+    background-color: #fff;
+    height: 163px;
+    margin: auto;
+    color: #000;
+    z-index: 9999999;
+  }
+
+  .pop_container3 {
+    position: absolute;
+    top: 296px;
+    left: 508px;
+    width: 213px;
+    background-color: #fff;
+    height: 163px;
+    margin: auto;
+    color: #000;
+    z-index: 9999999;
+  }
+
+  .pop_container4 {
+    position: absolute;
+    top: 296px;
+    left: 735px;
+    width: 213px;
+    background-color: #fff;
+    height: 163px;
+    margin: auto;
+    color: #000;
+    z-index: 9999999;
+  }
+
+  .pop_container1 .text,
+  .pop_container2 .text,
+  .pop_container3 .text,
+  .pop_container4 .text {
+    width: 90%;
+    margin: auto;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 15px;
   }
 
   .middle_align {
@@ -786,6 +863,11 @@ h4 {
   .skylight-close-button {
     color: #ED1B24;
   }
+
+  p {
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+  }
   @media only screen and (max-device-width: 1024px) and(orientation: landscape) {
     .bg {
       background-position-x: -150px;
@@ -816,6 +898,62 @@ h4 {
       width: 25%;
     }
 
+    .pop_container1 {
+      position: absolute;
+      top: 295px;
+      left: 55px;
+      width: 205px;
+      background-color: #fff;
+      height: 150px;
+      margin: auto;
+      color: #000;
+      padding: 5px;
+    }
+
+    .pop_container2 {
+      position: absolute;
+      top: 295px;
+      left: 290px;
+      width: 205px;
+      background-color: #fff;
+      height: 150px;
+      margin: auto;
+      color: #000;
+      padding: 5px;
+    }
+
+    .pop_container3 {
+      position: absolute;
+      top: 295px;
+      left: 520px;
+      width: 205px;
+      background-color: #fff;
+      height: 150px;
+      margin: auto;
+      color: #000;
+      padding: 5px;
+    }
+
+    .pop_container4 {
+      position: absolute;
+      top: 295px;
+      left: 750px;
+      width: 205px;
+      background-color: #fff;
+      height: 150px;
+      margin: auto;
+      color: #000;
+      padding: 5px;
+    }
+
+    .text {
+      width: 90%;
+      margin: auto;
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 15px;
+    }
+
     .button_box {
       float: right;
       width: 15%;
@@ -839,6 +977,67 @@ h4 {
     .drop-container {
       margin-right: 75px;
     }
+
+    .instruction_text {
+      padding-left: 5%;
+      text-align: left !important;
+    }
+
+    .pop_container1 {
+      position: absolute;
+      top: 50px;
+      left: 65px;
+      width: 210px;
+      background-color: #fff;
+      height: 160px;
+      margin: auto;
+      color: #000;
+      padding: 2px;
+    }
+
+    .pop_container2 {
+      position: absolute;
+      top: 50px;
+      left: 68px;
+      width: 208px;
+      background-color: #fff;
+      height: 160px;
+      margin: auto;
+      color: #000;
+      padding: 2px;
+    }
+
+    .pop_container3 {
+      position: absolute;
+      top: 52px;
+      left: 68px;
+      width: 213px;
+      background-color: #fff;
+      height: 160px;
+      margin: auto;
+      color: #000;
+      padding: 2px;
+    }
+
+    .pop_container4 {
+      position: absolute;
+      top: 50px;
+      left: 68px;
+      width: 210px;
+      background-color: #fff;
+      height: 160px;
+      margin: auto;
+      color: #000;
+      padding: 2px;
+    }
+
+    .text {
+      width: 90%;
+      margin: auto;
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 15px;
+    }
   }
   @media only screen and (max-device-width: 768px) and(orientation: portrait) {
     .background {
@@ -854,7 +1053,6 @@ h4 {
 
     .flex-container {
       display: block;
-      text-align: center;
     }
 
     .feedback-container {
@@ -873,6 +1071,66 @@ h4 {
       padding: 10px;
       width: 90px;
     }
+
+    .pop_container1 {
+      position: absolute;
+      top: 290px;
+      left: 104px;
+      width: 210px;
+      background-color: #fff;
+      height: 160px;
+      margin: auto;
+      color: #000;
+      padding: 2px;
+    }
+
+    .pop_container2 {
+      position: absolute;
+      top: 290px;
+      left: 410px;
+      width: 208px;
+      background-color: #fff;
+      height: 160px;
+      margin: auto;
+      color: #000;
+      padding: 2px;
+    }
+
+    .pop_container3 {
+      position: absolute;
+      top: 520px;
+      left: 104px;
+      width: 213px;
+      background-color: #fff;
+      height: 160px;
+      margin: auto;
+      color: #000;
+      padding: 2px;
+    }
+
+    .pop_container4 {
+      position: absolute;
+      top: 520px;
+      left: 410px;
+      width: 210px;
+      background-color: #fff;
+      height: 160px;
+      margin: auto;
+      color: #000;
+      padding: 2px;
+    }
+
+    .text {
+      width: 90%;
+      margin: auto;
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 15px;
+    }
+
+    .static-page3 .instruction_text {
+      text-align: left !important;
+    }
   }
   @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait) {
     .background {
@@ -885,7 +1143,7 @@ h4 {
     }
 
     .flex-container {
-      margin: 10px auto auto;
+      display: block;
       text-align: center;
     }
 
@@ -955,10 +1213,68 @@ h4 {
         width: 100px;
       }
     }
+
+    .popup-container {
+      position: relative;
+    }
+
+    .pop_container1 {
+      position: absolute;
+      top: 25px;
+      left: 3px;
+      width: 145px;
+      background-color: #fff;
+      height: 120px;
+      margin: auto;
+    }
+
+    .pop_container2 {
+      position: absolute;
+      top: 25px;
+      left: 170px;
+      width: 145px;
+      background-color: #fff;
+      height: 120px;
+      margin: auto;
+    }
+
+    .pop_container3 {
+      position: absolute;
+      top: 190px;
+      left: 2px;
+      width: 145px;
+      background-color: #fff;
+      height: 120px;
+      margin: auto;
+    }
+
+    .pop_container4 {
+      position: absolute;
+      top: 190px;
+      left: 170px;
+      width: 145px;
+      background-color: #fff;
+      height: 120px;
+      margin: auto;
+    }
   }
 
   .flex-container__row {
     display: flex;
+  }
+
+  .inst-text {
+    width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .instruction_text {
+    text-align: center;
+  }
+
+  .instruction_img {
+    margin-top: 10px;
   }
 }
 
@@ -1026,6 +1342,10 @@ h4 {
 
     .content {
       height: 910px;
+    }
+
+   .activity-container {
+        width: 85%;
     }
   }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
@@ -1097,14 +1417,26 @@ h4 {
   }
 
   .choice-container__cell {
-    border-bottom: 2px solid #ddd;
-    border-right: 2px solid #ddd;
+    /*border-bottom: 2px solid #ddd;
+    border-right: 2px solid #ddd;*/
     background-color: rgba(0, 0, 0, 0.8);
-    display: table-cell;
-    padding: 15px 5px;
+    /*display: table-cell;*/
+
 
     label {
       cursor: pointer;
+      width: 48%;
+      display: inline-block;
+      border-bottom: 2px solid #ddd;
+      padding: 15px 6px;
+    }
+
+    label:nth-child(odd) {
+      border-right: 2px solid #ddd;
+    }
+
+    label:last-child, label:nth-child(5) {
+      border-bottom: 0;
     }
   }
 
@@ -1167,9 +1499,25 @@ h4 {
       top: -220px;
       width: 94%;
     }
+
+    label {
+      cursor: pointer;
+      width: 100% !important;
+      display: inline-block;
+      border-bottom: 2px solid #ddd;
+      padding: 15px 6px;
+    }
+
+    label:nth-child(odd) {
+      border-right: 2px solid #ddd;
+    }
+
+    label:last-child, label:nth-child(5) {
+      border-bottom: 0;
+    }
   }
 
-  .choice-container__cell.selected {
+  label.selected {
     background-color: #ED1C22;
   }
   /*Checkboxes styles*/

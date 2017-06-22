@@ -34,6 +34,7 @@ class StaticPage3 extends React.Component {
       isPopup4Open: false,
       currentPopup: 0,
       btnArr: [0,0,0,0],
+      attempts: 0,
       dragbox: [
         {
           accepts: [
@@ -264,8 +265,9 @@ class StaticPage3 extends React.Component {
 
   tryAgain() {
     userAnswer = [0,0,0,0];
-    this.setState({enableSubmit: false})
     this.setState({
+      attempts: this.state.attempts + 1,
+      enableSubmit: false,
       droppedBoxNames:[],
       showFeedback: false,
       dragbox: [
@@ -307,17 +309,31 @@ class StaticPage3 extends React.Component {
       )
     }
     else {
-    return (
-      <div>
-        {showFeedback && <div className="feedback-container">
-        <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
-        <span className="button_div try-again__button">
-          {feedbacText}
-          <a href="#" className="button" onClick={this.tryAgain.bind(this)}>Thử lại lần nữa</a>
-        </span>
-        </div>}
-      </div>
-    )
+      if (this.state.attempts < 3) {
+        return (
+          <div>
+            {showFeedback && <div className="feedback-container">
+            <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
+            <span className="button_div try-again__button">
+              {feedbacText}
+              <a href="#" className="button" onClick={this.tryAgain.bind(this)}>Thử lại lần nữa</a>
+            </span>
+            </div>}
+          </div>
+        )
+      }
+      else {
+        return (
+          <div>
+            {showFeedback && <div className="feedback-container">
+            <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
+            <span className="button_div">
+              Thử lại lần nữa, Vui lòng xem lại gợi ý của người thứ 1, 3, 4 cho đáp án đúng
+            </span>
+            </div>}
+          </div>
+        )
+      }
     }
   }
 
@@ -336,6 +352,9 @@ class StaticPage3 extends React.Component {
       })
     }
     this.setState({showFeedback: true, enableSubmit: false});
+    if (this.state.attempts >= 3) {
+      this.setState({enableClick: true, activityState: 1});
+    }
   }
 
   handleClick(id) {

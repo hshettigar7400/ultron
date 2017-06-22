@@ -980,7 +980,7 @@ h4 {
 
     .instruction_text {
       padding-left: 5%;
-      text-align: left;
+      text-align: left !important;
     }
 
     .pop_container1 {
@@ -1053,7 +1053,6 @@ h4 {
 
     .flex-container {
       display: block;
-      text-align: center;
     }
 
     .feedback-container {
@@ -1075,8 +1074,8 @@ h4 {
 
     .pop_container1 {
       position: absolute;
-      top: 50px;
-      left: 65px;
+      top: 290px;
+      left: 104px;
       width: 210px;
       background-color: #fff;
       height: 160px;
@@ -1087,8 +1086,8 @@ h4 {
 
     .pop_container2 {
       position: absolute;
-      top: 50px;
-      left: 68px;
+      top: 290px;
+      left: 410px;
       width: 208px;
       background-color: #fff;
       height: 160px;
@@ -1099,8 +1098,8 @@ h4 {
 
     .pop_container3 {
       position: absolute;
-      top: 52px;
-      left: 68px;
+      top: 520px;
+      left: 104px;
       width: 213px;
       background-color: #fff;
       height: 160px;
@@ -1111,8 +1110,8 @@ h4 {
 
     .pop_container4 {
       position: absolute;
-      top: 50px;
-      left: 68px;
+      top: 520px;
+      left: 410px;
       width: 210px;
       background-color: #fff;
       height: 160px;
@@ -1127,6 +1126,10 @@ h4 {
       display: inline-block;
       margin-top: 10px;
       margin-left: 15px;
+    }
+
+    .static-page3 .instruction_text {
+      text-align: left !important;
     }
   }
   @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait) {
@@ -1340,6 +1343,10 @@ h4 {
     .content {
       height: 910px;
     }
+
+   .activity-container {
+        width: 85%;
+    }
   }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
     .activity-container {
@@ -1492,9 +1499,25 @@ h4 {
       top: -220px;
       width: 94%;
     }
+
+    label {
+      cursor: pointer;
+      width: 100% !important;
+      display: inline-block;
+      border-bottom: 2px solid #ddd;
+      padding: 15px 6px;
+    }
+
+    label:nth-child(odd) {
+      border-right: 2px solid #ddd;
+    }
+
+    label:last-child, label:nth-child(5) {
+      border-bottom: 0;
+    }
   }
 
-  .choice-container__cell.selected {
+  label.selected {
     background-color: #ED1C22;
   }
   /*Checkboxes styles*/
