@@ -1,4 +1,5 @@
 import config from '../config/Config';
+import routes from '../config/routes';
 
 let uagent = navigator.userAgent.toLowerCase();
 
@@ -8,4 +9,6 @@ export let isCourseStarted = false;
 
 export let selectedLanguage = '';
 
-export let configData = config.config;
+export const configData = config.config;
+
+export const Routes = routes;

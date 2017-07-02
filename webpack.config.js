@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const injectConfig = new HtmlWebpackPlugin({
   template: './index.html',
@@ -7,6 +8,7 @@ const injectConfig = new HtmlWebpackPlugin({
 module.exports = {
   context: __dirname + '/app',
   entry: './index.js',
+  devtool: 'source-map',
   output: {
     path: __dirname + '/build',
     filename: 'bundle.js'
@@ -46,5 +48,11 @@ externals: {
 'react/addons': true,
 'react/lib/ReactContext': 'window'
   },
- plugins: [injectConfig]
+ plugins: [
+   injectConfig,
+   new webpack.optimize.UglifyJsPlugin({
+      include: /\.min\.js$/,
+      minimize: true
+    })
+ ]
 }

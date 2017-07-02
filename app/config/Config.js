@@ -42,7 +42,7 @@ const config = {
      * 2: 'languageSelection',
      * 3: 'Language and Intro'
     */
-    openingPage: 2,
+    openingPage: 1,
     /* contentSync
      * true: Course has Audio,
      * false: Course does not have Audio
