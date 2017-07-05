@@ -10,86 +10,20 @@ import Sound from 'react-sound';
 import ReactHtmlParser from 'react-html-parser';
 import ConfigData from '../config/Config';
 import Routes from '../config/routes';
-import _ from 'lodash';
+import * as tracker from './CourseTracker';
+
+import * as utils from './Utils';
+//import TextComponent from './TextComponent';
+
 
 export default class Shell extends React.Component {
   constructor(props) {
     super(props);
-
-    let _lessonLocation,
-        _suspendData,
-        _pageStatusList = [],
-        currentModule,
-        currentTopic,
-        currentPage;
-    let _courseMenu = Routes.routes;
-    let _totalModules = _.size(_courseMenu.module);
-
-
-
-    // if(ConfigData.config.tracking.complianceType == 1)
-
-    switch (ConfigData.config.tracking.complianceType) {
-      case 1:
-
-        break;
-      case 2:
-        //Need to add SCORM1.2 Code
-        break;
-      case 3:
-        //Need to add SCORM2004 Code
-        break;
-      case 4:
-        _lessonLocation = localStorage.getItem('lesson_location');
-        _suspendData = localStorage.getItem('suspend_data');
-
-        break;
-    }
-
-    if(_lessonLocation == null || _lessonLocation == '') {
-      if(_totalModules == 1) {
-        _lessonLocation = '01|01';
-      } else {
-        _lessonLocation = '01|01|01';
-      }
-    }
-
-    if(_suspendData == null || _suspendData == '') {
-      _.forEach(_courseMenu.module, function (moduleData, i) {
-        if(_totalModules == 1) {
-          _.forEach(moduleData.topic, function (topicData, i) {
-            _pageStatusList[i] = [];
-            _.forEach(topicData.page, function (pageData, j) {
-              _pageStatusList[i].push(0);
-            });
-          });
-        } else {
-          _pageStatusList[i] = [];
-          _.forEach(moduleData.topic, function (topicData, j) {
-            _pageStatusList[i][j] = [];
-            _.forEach(topicData.page, function (pageData, k) {
-              _pageStatusList[i][j].push(0);
-            });
-          });
-        }
-      });
-    }
-
-    if(_totalModules == 1) {
-      currentModule = 1;
-      currentTopic = Number(_lessonLocation.split('|')[0]);
-      currentPage = Number(_lessonLocation.split('|')[1]);
-    } else {
-      currentModule = Number(_lessonLocation.split('|')[0]);
-      currentTopic = Number(_lessonLocation.split('|')[1]);
-      currentPage = Number(_lessonLocation.split('|')[2]);
-    }
-
-
+    console.log('tracker: ', tracker.getCourseRoute);
     this.state = {
-      currentModule,
-      currentTopic,
-      currentPage,
+      currentModule: tracker.getCourseRoute()[0],
+      currentTopic: tracker.getCourseRoute()[1],
+      currentPage: tracker.getCourseRoute()[2],
       isPlaying: true,
       isAudioFinished: false,
       audioVolume: 100,
@@ -167,6 +101,8 @@ export default class Shell extends React.Component {
   }
 
   pageLoader() {
+
+    //console.log('data: ', T);
     return (
       <div>
         {this.state.menuData.menu && <PageLoader

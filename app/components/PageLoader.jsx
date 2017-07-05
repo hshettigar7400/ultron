@@ -83,6 +83,7 @@ export default class PageLoader extends React.Component {
   }
 
   loadRouter() {
+    
     const route = routes.module[this.props.currentModule-1].topic[this.props.currentTopic-1].page[this.props.currentPage-1];
     return (
       <Router>

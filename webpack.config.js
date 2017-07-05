@@ -25,22 +25,20 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
+  node: {
+    fs: 'empty'
+  },
   module: {
     loaders: [
+      //{ test: /\.yaml$/, include: path.resolve('app/assets/data'), loader: 'yaml', exclude: /node_modules/ },
       { test: /\.js$/, loader: 'babel?presets[]=es2015', exclude: /node_modules/ },
       { test: /\.jsx?$/, loader: 'babel-loader', include: __dirname, exclude: /node_modules/ },
       { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader'], exclude: /node_modules/ },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i, loader: 'url-loader?limit=100000000'
-      },
-      {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'url-loader',
-      },
-      {
-        test: /\.mp3$/,
-        loader: 'url-loader'
-    }
+      { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'url-loader?limit=100000000'},
+      { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'url-loader'},
+      { test: /\.mp3$/, loader: 'url-loader'},
+      { test: /\.json/, loader: "json-loader" },
+      { test: /\.yaml/, loader: "file-loader" }
     ]
  },
 externals: {

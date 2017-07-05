@@ -1,5 +1,6 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
+import * as utils from '../Utils';
 
 export default class StaticPage1 extends React.Component {
   constructor(props) {
@@ -7,6 +8,7 @@ export default class StaticPage1 extends React.Component {
   }
 
   render() {
+    console.log('data: ', utils.TextComponent);
     return (
       <div className="static-page1">
         <MediaQuery query='(min-device-width: 1024px)'>
