@@ -1,17 +1,51 @@
 .header {
-  background-color: $header-bg;
-  display: inline-block;
-  max-height: 61px;
+  background-color:#b2eacf;
+  display: flex;
+  max-height: 65px;
   position: relative;
   width: 100%;
   z-index: 100;
 }
 
+.header_child_width{
+    width:336px;
+}
+
 .course-logo {
   float: left;
 }
+.course-title {
+    text-align: center;
+}
 
-.title-holder {
+.course-menu-section{
+    text-align: right;
+    display: inline-block;
+    margin-top: $base-margin * 2.5;;
+    color: $black;
+    font-size: 25px;
+    
+}
+.header-title{
+    padding: 0 10px;
+    vertical-align: middle;
+    font-size: 21px;
+    color: $black;
+    margin-top: $base-margin * 2.5;
+}
+
+.header_span_inline{
+    float: left;
+}
+.header_right_help{
+    padding-left: 7em;
+}
+
+.header_right_toggle{
+    padding-left: 1em;
+}
+
+/*.title-holder {
   color: #5C6670;
   display: table;
   font-size: $base-font-size;
@@ -40,4 +74,4 @@
   height: 4px;
   text-align: center;
   width: 0%;
-}
+}*/

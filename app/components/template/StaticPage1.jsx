@@ -14,24 +14,17 @@ export default class StaticPage1 extends React.Component {
             <div className="bg">
               <div className="intro white">
                 <div className="flex-container">
-                  <div className="left-side">
                     <div className="intro_heading">
-                      <h1>Introduction to SEC </h1>
+                      <h1><span className="intr_sub_span">Intr</span>oduction to the Code of Conduct</h1>
                     </div>
-                    <div className="intro_para">
-                      <p>As an investment adviser, you need to be aware of all the rules and laws pertaining to the United States securities regulation. </p>
-                      <span>Securities and Exchange Commission (SEC):</span>
+                    
+                    <div className="intro_pop_up">
+                      
                     </div>
-                    <div className="intro_list">
-                      <ul>
-                        <li>Makes the rules</li>
-                        <li>Enforces policy</li>
-                        <li>Oversees the markets</li>
-                      </ul>
+                    
+                    <div className="intro_sub_heading">
+                      <p>Select the envelope to read a message from our CEO.</p>
                     </div>
-                  </div>
-                  <div className="right-side">
-                    <img src="app/assets/images/template/image1.jpg" /></div>
                   </div>
                 </div>
               </div>
@@ -42,24 +35,9 @@ export default class StaticPage1 extends React.Component {
             <div className="bg">
               <div className="intro white">
                 <div className="flex-container">
-                  <div className="left-side">
-                    <div className="intro_heading">
-                      <h1>Introduction to SEC </h1>
+                  <div className="intro_heading">
+                      <h1><span className="intr_sub_span">Intr</span>oduction to the Code of Conduct</h1>
                     </div>
-                    <div className="intro_para">
-                      <p>As an investment adviser, you need to be aware of all the rules and laws pertaining to the United States securities regulation. </p>
-                      <span>Securities and Exchange Commission (SEC):</span>
-                    </div>
-                    <div className="intro_list">
-                      <ul>
-                        <li>Makes the rules</li>
-                        <li>Enforces policy</li>
-                        <li>Oversees the markets</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="right-side">
-                    <img src="app/assets/images/template/image1.jpg" /></div>
                   </div>
                 </div>
               </div>
@@ -70,24 +48,9 @@ export default class StaticPage1 extends React.Component {
             <div className="bg">
               <div className="intro white">
                 <div className="flex-container">
-                  <div className="left-side">
                     <div className="intro_heading">
-                      <h1>Introduction to SEC </h1>
+                      <h1><span className="intr_sub_span">Intr</span>oduction to the Code of Conduct</h1>
                     </div>
-                    <div className="intro_para">
-                      <p>As an investment adviser, you need to be aware of all the rules and laws pertaining to the United States securities regulation. </p>
-                      <span>Securities and Exchange Commission (SEC):</span>
-                    </div>
-                    <div className="intro_list">
-                      <ul>
-                        <li>Makes the rules</li>
-                        <li>Enforces policy</li>
-                        <li>Oversees the markets</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="right-side">
-                    <img src="app/assets/images/template/image1.jpg" /></div>
                   </div>
                 </div>
               </div>

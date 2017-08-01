@@ -1,0 +1,122 @@
+
+
+.static-page1 {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+
+  
+
+  .bg {
+    background-image: url("../../assets/images/template/coc_2.png");
+    height: 100%;
+  }
+    
+.flex-container {
+   
+    height: 545px;
+    
+  }
+
+ .intro_heading {
+    margin-left: 30px;
+    margin-top: 40px;
+    letter-spacing: 1px;
+  }
+
+  .instruction_text {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .intro {
+    border-top: 1px solid #ccc;
+    width: 100%;
+  }
+    
+    .intr_sub_span{
+        border-bottom:solid #b5d4c8;
+        border-radius:2px 2px;
+        padding-bottom:15px;
+    }
+    .intro_sub_heading {
+        text-align: center;
+        font-style: italic;
+        font-size: larger;
+        letter-spacing: 0.5px;
+        margin-top: 30%;
+    }
+    
+  .intro_para {
+    margin-left: 30px;
+    width: 80%;
+  }
+
+  .intro_list {
+    margin-left: 25px;
+  }
+  @media only screen and (max-device-width: 1024px) {
+    .flex-container {
+      margin-top: 32%;
+      height: 100%;
+    }
+  }
+  @media only screen and (max-device-width: 700px) {
+    .content {
+      font-size: 0.875em;
+    }
+
+    .intro_heading {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    .bg {
+      background-size: 100%;
+      background-position-y: -30px;
+    }
+
+    .flex-container {
+      margin-top: 10%;
+      height: 225px;
+    }
+
+
+    .intro_para {
+      width: 90%;
+    }
+  }
+  @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait) {
+    .content {
+      font-size: 0.875em;
+    }
+
+    .bg {
+      /*background-size: 100% 100%;*/
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    .flex-container {
+      display: block;
+      height: 440px;
+      margin-top: 20%;
+    }
+
+    .intro_heading {
+      margin-top: 0;
+    }
+
+  }
+}
