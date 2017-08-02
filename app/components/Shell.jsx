@@ -138,6 +138,7 @@ export default class Shell extends React.Component {
         onPlayPause={this.togglePlay.bind(this)}
         isPlaying={this.state.isPlaying}
         totalPages={8}
+        courseTitle="Code of Conduct"
         onTranscriptClick={this.toggleTranscript.bind(this)}
       />
     )
@@ -185,7 +186,7 @@ export default class Shell extends React.Component {
         {this.loadHeader()}
         {this.state.currentPage && this.pageLoader()}
         {this.state.showTranscript &&  this.loadTranscript()}
-        <MediaQuery query='(min-width: 680px)'>
+        <MediaQuery query='(min-width: 320px)'>
           {this.loadFooter()}
         </MediaQuery>
       </div>

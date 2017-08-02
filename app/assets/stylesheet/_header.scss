@@ -38,40 +38,85 @@
     float: left;
 }
 .header_right_help{
-    padding-left: 7em;
+    padding-left: 9em;
 }
 
 .header_right_toggle{
-    padding-left: 1em;
+    padding-left: 2em;
 }
 
-/*.title-holder {
-  color: #5C6670;
-  display: table;
-  font-size: $base-font-size;
-  font-weight: $bold-font-weight;
-  height: 100%;
+
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
+     .course-menu-section{
+    text-align: right;
+    display: inline-block;
+    margin-top: $base-margin * 2.5;;
+    color: $black;
+    font-size: 18px;
+    
+}
+.header-title{
+    padding: 0 10px;
+    vertical-align: middle;
+    font-size: 22px;
+    color: $black;
+    margin-top: $base-margin * 2.5;
+}
 }
 
-.title-holder > div {
-  margin-top: $base-margin * 2.5;
-  padding: 0 10px;
-  vertical-align: middle;
-}
+@media only screen   and (min-device-width : 361px)   and (max-device-width : 640px) {
+        .course-menu-section{
+            margin-top: 10px;
+            font-size: 20px;
 
-.course-progress {
-  background: #c5cdcf;
-  height: 4px;
-  position: relative;
-  top: 2px;
-  width: 100%;
-}
+        }
+        
+    .header {
+        padding: 10px;
+    }
+        
+        .header-title{
+            padding: 0;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
 
-.course-progress span {
-  background: rgb(238, 49, 36);
-  color: $black;
-  display: block;
-  height: 4px;
-  text-align: center;
-  width: 0%;
-}*/
+    
+       .header_right_help{
+            padding-left: 3em;
+        }
+
+        .header_right_toggle{
+            padding-left: 1em;
+        }
+        
+    }
+
+ @media only screen and (max-device-width : 360px){
+        .course-menu-section{
+            margin-top: 10px;
+            font-size: 20px;
+
+        }
+     
+        .header {
+        padding: 5px;
+        }
+        
+        .header-title{
+            padding: 0;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+    
+       .header_right_help{
+            padding-left: 3em;
+        }
+
+        .header_right_toggle{
+            padding-left: 1em;
+        }
+    }

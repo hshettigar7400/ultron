@@ -21,7 +21,7 @@ export default class Header extends React.Component {
                 <span> ? </span>
             </div>
             <div className="header_right_toggle header_span_inline">
-                <span>menu tab</span>
+                <span>?</span>
             </div>
         </div>
     </div>

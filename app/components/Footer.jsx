@@ -60,7 +60,7 @@ export default class Footer extends React.Component {
                 className={this.props.isPlaying ? "" : "selected"} onClick={this.props.onPlayPause.bind(null, this)} role="button" >
               <span className="icon-next">?</span></a>
           </div>
-          <div className="button-box">
+          <div className="nav-comp-container">
             <a aria-disabled="false" aria-label="back" aria-pressed="false"
               className={(this.props.currentPageNumber !== 1)? "tabindex" : "tabindex"} href="#"
               onClick={this.props.onLoadPrev.bind(null, this)} role="button" >
@@ -74,7 +74,7 @@ export default class Footer extends React.Component {
               <span className="total-pages">{this.getDoubleDigit(this.props.totalPages)}</span>
             </div>
           </div>
-          <div className="button-box">
+          <div className="nav-comp-container">
             <a aria-disabled="false" aria-label="next" aria-pressed="false"
               className={(this.props.currentPageNumber !== this.props.totalPages)? "tabindex" : "tabindex disabled"} href="#"
               onClick={this.props.onLoadNext.bind(null, this)} role="button"

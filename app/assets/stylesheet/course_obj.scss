@@ -1,0 +1,125 @@
+.static-page2 {
+
+h1 {
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+
+  .bg {
+    background-image: url("../../assets/images/template/coc_2.png");
+    height: 100%;
+  }
+    
+ .close-btn {
+      color: #3f4040;
+      float: right;
+      font-weight: 700;
+      cursor: pointer;
+    }   
+    
+    
+.flex-container {
+    height: 545px;
+    margin-left: 4em;
+  }
+
+ .intro_heading_2 {
+    margin-top: 40px;
+    letter-spacing: 1px;
+  }
+
+  .instruction_text {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .intro {
+    border-top: 1px solid #ccc;
+    width: 100%;
+  }
+    
+    .intr_sub_span{
+        border-bottom:solid #b5d4c8;
+        border-radius:2px 2px;
+        padding-bottom:15px;
+    }
+    .intro_sub_heading_2 {
+        font-size: larger;
+        letter-spacing: 0.5px;
+        margin-top: 6%;
+        font-size: 21px;
+    }
+    
+    .intro_sub_heading_list ul li {
+         list-style-type: circle;
+        line-height: 55px;
+        font-size: larger;
+        letter-spacing: 1px;
+    }
+    
+    .intro_grp_benefit {
+        margin-top: 5em;
+    }
+    
+    .intro_text_benefit {
+        font-size: medium;
+        letter-spacing: 1px;
+        font-style: italic;
+    }
+    
+    .intro_btn_benefit {
+        border: 2px solid #fff;
+        border-radius: 65px;
+        padding: 22px 28px;
+        margin-left: 1em;
+        font-size: 15px;
+    }
+    .intro_pop_up{
+        position: relative;
+    }
+    
+
+  @media only screen and (max-device-width: 1024px) {
+    .bg {
+      background-position-x: -150px;
+      height: 600px;
+    }
+
+    .content {
+      font-size: 0.875em;
+    }
+
+    .flex-container {
+      display: block;
+      height: 100%;
+    }
+
+    .intro_heading {
+      margin-top: 25%;
+    }
+
+  }
+  @media only screen and (max-device-width: 700px) {
+    .bg {
+      background-position-x: -150px;
+    }
+
+    .content {
+      font-size: 0.875em;
+    }
+
+    .flex-container {
+      display: block;
+    }
+
+  }
+  @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait) {
+    .bg {
+      height: 530px;
+    }
+
+    h1 {
+      font-size: 1.5em;
+  }
+}
+}
