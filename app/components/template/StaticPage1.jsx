@@ -71,9 +71,9 @@ export default class StaticPage1 extends React.Component {
 
                         <div className="intro_pop_up">
                             <div className="intro_pop_up_outer">
-                                <div className="intro_pop_up_inner">
+                                <div className="intro_pop_up_inner" onClick={this.openPopup.bind(this, 1)}>
                                     <a aria-disabled="false" aria-label="audio" aria-pressed="false" id="btn_01" 
-                                        className="intro_pop_up_link" onClick={this.openPopup.bind(this, 1)} role="button" >
+                                        className="intro_pop_up_link" role="button" >
                                         <span className="icon-audio"></span>
                                       </a>
                                 </div>
@@ -107,9 +107,9 @@ export default class StaticPage1 extends React.Component {
 
                         <div className="intro_pop_up">
                             <div className="intro_pop_up_outer">
-                                <div className="intro_pop_up_inner">
+                                <div className="intro_pop_up_inner" onClick={this.openPopup.bind(this, 1)} >
                                     <a aria-disabled="false" aria-label="audio" aria-pressed="false" id="btn_01" 
-                                        className="intro_pop_up_link" onClick={this.openPopup.bind(this, 1)} role="button" >
+                                        className="intro_pop_up_link"  role="button" >
                                         <span className="icon-audio"></span>
                                       </a>
                                 </div>
@@ -143,9 +143,9 @@ export default class StaticPage1 extends React.Component {
 
                         <div className="intro_pop_up">
                             <div className="intro_pop_up_outer">
-                                <div className="intro_pop_up_inner">
+                                <div className="intro_pop_up_inner" onClick={this.openPopup.bind(this, 1)}>
                                     <a aria-disabled="false" aria-label="audio" aria-pressed="false" id="btn_01" 
-                                        className="intro_pop_up_link" onClick={this.openPopup.bind(this, 1)} role="button" >
+                                        className="intro_pop_up_link" role="button" >
                                         <span className="icon-audio"></span>
                                       </a>
                                 </div>

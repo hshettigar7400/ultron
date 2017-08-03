@@ -103,7 +103,7 @@ export default class PageLoader extends React.Component {
         <MediaQuery query='(min-width: 680px)'>
           {this.loadHelp()}
         </MediaQuery>
-        {this.loadSideBar()}
+        
         {this.loadRouter()}
       </div>
     )

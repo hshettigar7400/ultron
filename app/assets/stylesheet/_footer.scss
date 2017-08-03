@@ -1,11 +1,9 @@
-
-
 .footer {
     width: 45%;
     position: absolute;
-    margin-left: 22%;
-    margin-right: 25%;
-    bottom:0;
+    left: 23%;
+    right: 25%;
+    bottom: 0;
     border-bottom: 60px solid #142330;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
@@ -21,7 +19,7 @@
     color: #b2eacf;
     cursor: pointer;
     display: block;
-    line-height: 25px; 
+    line-height: 25px;
     text-decoration: none;
     width: 45px;
     font-size: 1em;
@@ -31,11 +29,10 @@
 }
 
 .button-box a.disabled {
-  color: #AAB1B9;
-  cursor: default;
-  pointer-events: none;
+    color: #AAB1B9;
+    cursor: default;
+    pointer-events: none;
 }
-
 
 .nav-comp-container {
     color: #b2eacf;
@@ -54,64 +51,79 @@
     color: #b2eacf;
 }
 
-
 .icon-transcript::before {
-  content: "";
+    content: "";
 }
 
 .icon-audio:before {
-  content: "";
+    content: "";
 }
 
 .icon-playPause:before {
-  content: "";
+    content: "";
 }
 
 .selected {
-  .icon-transcript:before {
-    content: "";
-  }
-
-  .icon-audio:before {
-    content: "";
-  }
-
-  .icon-playPause:before {
-    content: "";
-  }
-}
-
- @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
-     .footer {
-            position: absolute;
-            margin-left: 18%;
-            bottom:375px;
-            left: 0;
-            right: 0;
-            width: 52%;
-        } 
-}
-
-@media only screen   and (min-device-width : 360px)   and (max-device-width : 640px) {
-        .button-box a {
-            width: 48px;
-            padding: 0 5px;
-        }
-    
-        .nav-comp-container {
-            width: 52px;
-            padding: 0 2px;
-        }
-    
-        .footer {
-            width: 100%;
-            position: absolute;
-            margin-left: 0;
-            margin-right:0;
-            bottom:0;
-            border-bottom: 60px solid #142330;
-            border-left: none;
-            border-right: none;
-        }
-        
+    .icon-transcript:before {
+        content: "";
     }
+    .icon-audio:before {
+        content: "";
+    }
+    .icon-playPause:before {
+        content: "";
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .footer {
+        position: absolute;
+        margin-left: 18%;
+        bottom: 28%;
+        left: 0;
+        right: 0;
+        width: 52%;
+    }
+}
+
+@media only screen and (min-device-width: 361px) and (max-device-width: 640px) {
+    .button-box a {
+        width: 48px;
+        padding: 0 5px;
+    }
+    .nav-comp-container {
+        width: 52px;
+        padding: 0 2px;
+    }
+    .footer {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 60px solid #142330;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media only screen and (max-device-width: 360px) {
+    .button-box a {
+        width: 48px;
+        padding: 0 5px;
+    }
+    .nav-comp-container {
+        width: 52px;
+        padding: 0 2px;
+    }
+    .footer {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 60px solid #142330;
+        border-left: none;
+        border-right: none;
+    }
+}

@@ -7,7 +7,8 @@ export default class StaticPage2 extends React.Component {
 
        this.state = {
       isPopupOpen: false,
-      currentPopup: 0
+      currentPopup: 0,
+           hidePageText: false
     }
 
   }
@@ -16,19 +17,19 @@ export default class StaticPage2 extends React.Component {
     switch(parseInt(currentPopup)) {
       case 1:
         return (
-          <div className="popup-container-text">
-            <p>
-                Dear Colleagues, <br/><br/>
-
-                Our vision can only be translated into reality by hard-work, discipline and the daily results and behaviour of each and every one of us. It is critical that we act in accordance with the highest standards of personal and professional integrity and highest level of ethical conduct. <br/><br/>
-
-                As an employee, you need to be aware of the code of conduct of your organization. 
-                Codes are meant for a purpose. They help us during decision making. They help us understand why it is important to be fair and transparent in every work we do.
-                We must conduct our duties according to the Code of Conduct and avoid even the appearance of improper behavior. <br/><br/>
-
-                With best wishes <br/>
-                CEO
+          <div className="flex-container-inner">
+            <p className="popup-container-heading">
+                Benefits of this Course    
             </p>
+            <ul className="popup-container-text">
+                <li>
+                    You will understand what needs to be done when faced with dilemma situations
+                </li>
+                
+                <li>
+                    Apply the code during critical meetings with customers, media and other stakeholders
+                </li>
+            </ul>
         </div>
         );
         break;
@@ -39,7 +40,7 @@ export default class StaticPage2 extends React.Component {
      displayPopup() {
     return (
       <div>
-        {this.state.isPopupOpen && <div className="popup-container">
+            {this.state.isPopupOpen && <div className="popup-container">
             <span className="instruction_img"></span>
           <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
           {this.getPopupContent()}
@@ -49,64 +50,129 @@ export default class StaticPage2 extends React.Component {
   }
 
   openPopup(currentPopup) {
-      console.log("kljjhh");
-    this.setState({isPopupOpen: true, currentPopup: currentPopup})
+    this.setState({isPopupOpen: true, currentPopup: currentPopup, hidePageText: true})
   }
 
   closePopup() {
-    this.setState({isPopupOpen: false})
+    this.setState({isPopupOpen: false, hidePageText: false})
   }
+    
+    pageText() {
+        return (
+            <div className="static-page2" >
+            <MediaQuery query='(min-device-width: 1024px)'>
+                <div className="flex-main-content">
+                      <h1><span className="intr_sub_span">Cou</span>rse Objectives</h1>
+                    
+                        <p className="intro_sub_heading_2">
+                            In this course, you will be able to:
+                        </p>
+                
+                        <ul className="intro_sub_heading_list">
+                            <li>
+                                State the importance of code of conduct
+                            </li>
+
+                            <li>
+                                Recognize the key aspects of the code of conduct
+                            </li>
+
+                            <li>
+                                Understand conflict of interest  given few scenarios
+                            </li>
+                        </ul>
+            
+                    <div className="intro_grp_benefit">
+                        <span className="intro_text_benefit">Click the button to know more.</span><span onClick={this.openPopup.bind(this, 1)} className="intro_btn_benefit">Benefits of this Course</span>
+                    </div>
+                </div>
+            </MediaQuery>
+            
+            <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
+                <div className="flex-main-content">
+                      <h1><span className="intr_sub_span">Cou</span>rse Objectives</h1>
+                    
+                        <p className="intro_sub_heading_2">
+                            In this course, you will be able to:
+                        </p>
+                
+                        <ul className="intro_sub_heading_list">
+                            <li>
+                                State the importance of code of conduct
+                            </li>
+
+                            <li>
+                                Recognize the key aspects of the code of conduct
+                            </li>
+
+                            <li>
+                                Understand conflict of interest  given few scenarios
+                            </li>
+                        </ul>
+            
+                    <div className="intro_grp_benefit">
+                        <span className="intro_text_benefit">Click the button to know more.</span><span onClick={this.openPopup.bind(this, 1)} className="intro_btn_benefit">Benefits of this Course</span>
+                    </div>
+                </div>
+            </MediaQuery>
+            
+            <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
+                <div className="flex-main-content">
+                      <h1><span className="intr_sub_span">Cou</span>rse Objectives</h1>
+                    
+                        <p className="intro_sub_heading_2">
+                            In this course, you will be able to:
+                        </p>
+                
+                        <ul className="intro_sub_heading_list">
+                            <li>
+                                State the importance of code of conduct
+                            </li>
+
+                            <li>
+                                Recognize the key aspects of the code of conduct
+                            </li>
+
+                            <li>
+                                Understand conflict of interest  given few scenarios
+                            </li>
+                        </ul>
+            
+                    
+                    
+                    <div className="intro_text_benefit">
+                            Click the button to know more.
+                    </div>
+                    
+                    <div className="intro_btn_benefit" onClick={this.openPopup.bind(this, 1)}>
+                        Benefits of this Course
+                    </div>
+                </div>
+                </MediaQuery>
+            </div>
+            )
+        }
 
 
 
   render() {
     return (
-      <div className="static-page2">
+      <div className="static-page2" >
         <MediaQuery query='(min-device-width: 1024px)'>
         <div className="content">
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
-                        <div>
-                            <div className="intro_heading_2">
-                              <h1><span className="intr_sub_span">Cou</span>rse Objective</h1>
-                            </div>
-
-                            <div className="intro_sub_heading_2">
-                                <p>
-                                    In this course, you will be able to:
-                                </p>
+                        <div className="flex-container-inner">
+                            <div>
+                                {!this.state.hidePageText && this.pageText()}
                             </div>
                             
-                            <div className="intro_sub_heading_list">
-                                <ul>
-                                    <li>
-                                        State the importance of code of conduct
-                                    </li>
-                                    
-                                    <li>
-                                        Recognize the key aspects of the code of conduct
-                                    </li>
-                                    
-                                    <li>
-                                        Understand conflict of interest  given few scenarios
-                                    </li>
-                                </ul>
+                            <div>
+                                {
+                                this.displayPopup()
+                                }
                             </div>
-
-                            <div className="intro_pop_up">
-                                
-                            </div>
-
-                            <div className="intro_grp_benefit">
-                              <span className="intro_text_benefit">Click the button to know more.</span><span className="intro_btn_benefit"><a id="btn_01" onClick={this.openPopup.bind(this, 1)} role="button" >Benefits of this Course</a></span>
-                            </div>
-                        </div>
-                     
-                        <div>
-                            {
-                            this.displayPopup()
-                            }
                         </div>
       		        </div>
       			</div>
@@ -118,8 +184,17 @@ export default class StaticPage2 extends React.Component {
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
-
-
+                        <div className="flex-container-inner">
+                            <div>
+                                {!this.state.hidePageText && this.pageText()}
+                            </div>
+                            
+                            <div>
+                                {
+                                this.displayPopup()
+                                }
+                            </div>
+                        </div>
       				</div>
       			</div>
 
@@ -131,7 +206,15 @@ export default class StaticPage2 extends React.Component {
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
+                        <div>
+                            {!this.state.hidePageText && this.pageText()}
+                        </div>
 
+                        <div>
+                            {
+                            this.displayPopup()
+                            }
+                        </div>
       				</div>
       			</div>
 

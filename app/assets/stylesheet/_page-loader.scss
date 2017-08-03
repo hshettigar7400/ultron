@@ -1,12 +1,16 @@
 .page-loader {
-  background-color: $course-background;
-  display: table;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+    background-color: $course-background;
+    display: table;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .player {
-  height: 100%;
+    height: 100%;
+}
+
+.player>div {
+    overflow: hidden;
 }

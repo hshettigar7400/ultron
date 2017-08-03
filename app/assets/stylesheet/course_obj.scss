@@ -1,125 +1,162 @@
 .static-page2 {
-
-h1 {
-    font-size: 1.8em;
-    font-weight: 600;
-  }
-
-  .bg {
-    background-image: url("../../assets/images/template/coc_2.png");
     height: 100%;
-  }
-    
- .close-btn {
-      color: #3f4040;
-      float: right;
-      font-weight: 700;
-      cursor: pointer;
-    }   
-    
-    
-.flex-container {
-    height: 545px;
-    margin-left: 4em;
-  }
-
- .intro_heading_2 {
-    margin-top: 40px;
-    letter-spacing: 1px;
-  }
-
-  .instruction_text {
-    color: #fff;
-    font-weight: bold;
-  }
-
-  .intro {
-    border-top: 1px solid #ccc;
-    width: 100%;
-  }
-    
-    .intr_sub_span{
-        border-bottom:solid #b5d4c8;
-        border-radius:2px 2px;
-        padding-bottom:15px;
+    .bg {
+        background-image: url("../../assets/images/template/coc_3.png");
+        height: 100%;
+    }
+    .close-btn {
+        color: #3f4040;
+        cursor: pointer;
+        float: right;
+        font-weight: 700;
+    }
+    h1 {
+        font-size: 1.8em;
+        font-weight: 600;
+        margin-left: 2em;
+        margin-top: 5%;
+        letter-spacing: 1px;
+    }
+    .instruction_text {
+        color: #fff;
+        font-weight: bold;
+    }
+    .intro {
+        border-top: 1px solid #ccc;
+        width: 100%;
+    }
+    .intr_sub_span {
+        border-bottom: solid #b5d4c8;
+        border-radius: 2px 2px;
+        padding-bottom: 15px;
     }
     .intro_sub_heading_2 {
-        font-size: larger;
         letter-spacing: 0.5px;
         margin-top: 6%;
+        margin-left: 2.5em;
         font-size: 21px;
     }
-    
-    .intro_sub_heading_list ul li {
-         list-style-type: circle;
-        line-height: 55px;
-        font-size: larger;
+    .intro_sub_heading_list li {
+        font-size: 18px;
+        margin-left: 2em;
         letter-spacing: 1px;
+        list-style-type: circle;
+        line-height: 55px;
     }
-    
     .intro_grp_benefit {
         margin-top: 5em;
+        margin-left: 3em;
     }
-    
     .intro_text_benefit {
-        font-size: medium;
-        letter-spacing: 1px;
+        font-size: 18px;
         font-style: italic;
+        letter-spacing: 1px;
     }
-    
     .intro_btn_benefit {
         border: 2px solid #fff;
         border-radius: 65px;
-        padding: 22px 28px;
-        margin-left: 1em;
+        text-align: center;
+        cursor: pointer;
         font-size: 15px;
+        margin-left: 1em;
+        padding: 22px 28px;
     }
-    .intro_pop_up{
+    .intro_pop_up {
         position: relative;
     }
-    
-
-  @media only screen and (max-device-width: 1024px) {
-    .bg {
-      background-position-x: -150px;
-      height: 600px;
+    .popup-container {
+        background: url("../../assets/images/template/popup-bg.png");
+        background-position-x: -213px;
+        color: #333;
+        height: 305px;
+        left: 22%;
+        padding: 20px;
+        position: absolute;
+        top: 16%;
+        width: 50%;
     }
-
-    .content {
-      font-size: 0.875em;
+    .popup-container-heading {
+        font-size: 2em;
+        letter-spacing: 1px;
+        margin-top: 14px;
+        position: relative;
+        text-align: center;
     }
-
-    .flex-container {
-      display: block;
-      height: 100%;
+    .popup-container-text li {
+        color: #000;
+        font-size: 19px;
+        letter-spacing: 1px;
+        line-height: 32px;
+        list-style-type: circle;
+        margin-top: 2em;
     }
-
-    .intro_heading {
-      margin-top: 25%;
+    @media only screen and (max-device-width: 1024px) {
+        .bg {
+            height: 100%;
+        }
+        .intro_sub_heading {
+            margin-top: 10%;
+        }
+        .popup-container {
+            height: 330px;
+            left: 16%;
+            position: absolute;
+            top: 13%;
+            width: 60%;
+        }
     }
-
-  }
-  @media only screen and (max-device-width: 700px) {
-    .bg {
-      background-position-x: -150px;
+    @media only screen and (min-device-width: 361px) and (max-device-width: 640px) {
+        .bg {
+            background-position-x: -508px;
+        }
+        h1 {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-left: 1em;
+            margin-top: 2em;
+            letter-spacing: 1px;
+        }
+        .intro_sub_heading_2 {
+            letter-spacing: 1px;
+            margin-top: 10%;
+            margin-left: 2em;
+            font-size: 16px;
+        }
+        .intro_text_benefit {
+            font-size: 18px;
+            margin-top: 18%;
+            text-align: center;
+        }
+        .intro_btn_benefit {
+            font-size: 15px;
+            padding: 23px 11px;
+            margin-top: 6%;
+            margin-left: 22%;
+            width: 180px;
+        }
+        .intro_sub_heading_list li {
+            font-size: 14px;
+            margin-left: 0.5em;
+            letter-spacing: 1px;
+            list-style-type: circle;
+            line-height: 25px;
+            padding-top: 18px;
+        }
+        .popup-container {
+            height: 315px;
+            left: 4%;
+            padding: 20px;
+            position: absolute;
+            top: 16%;
+            width: 81%;
+        }
+        .popup-container-heading {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        .popup-container-text li {
+            font-size: 14px;
+            margin-left: -15px;
+        }
     }
-
-    .content {
-      font-size: 0.875em;
-    }
-
-    .flex-container {
-      display: block;
-    }
-
-  }
-  @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait) {
-    .bg {
-      height: 530px;
-    }
-
-    h1 {
-      font-size: 1.5em;
-  }
-}
 }
