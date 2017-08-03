@@ -1,5 +1,6 @@
 import React from 'react';
 import * as utils from './Utils';
+import FontAwesome from 'react-fontawesome';
 export default class Footer extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ export default class Footer extends React.Component {
           </div>*/}
           <div className="button-box">
             <a aria-disabled="false" aria-label="resources" aria-pressed="false" href="#" role="button" >
-              <span className="icon-resources">?</span>
+              <FontAwesome name='rocket' />
             </a>
           </div>
           {/*<div className="button-box">
@@ -46,7 +47,7 @@ export default class Footer extends React.Component {
             <div className="button-box">
               <a aria-disabled="false" aria-label="audio" aria-pressed="false"
                 className={this.props.audioVolume === 100 ? "" : "selected"} onClick={this.props.onToggleVolume.bind(null, this)} role="button" >
-                <span className="icon-audio"></span>
+                <FontAwesome name='rocket' />
               </a>
             </div>
           }
