@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -18,10 +19,10 @@ export default class Header extends React.Component {
 
         <div className="header_child_width course-menu-section">
             <div className="header_right_help header_span_inline">
-                <span> ? </span>
+                <FontAwesome name='question-circle' />
             </div>
             <div className="header_right_toggle header_span_inline">
-                <span>?</span>
+                <FontAwesome name='bars' />
             </div>
         </div>
     </div>

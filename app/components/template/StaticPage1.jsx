@@ -1,5 +1,6 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
+import FontAwesome from 'react-fontawesome';
 
 export default class StaticPage1 extends React.Component {
   constructor(props) {
@@ -40,7 +41,7 @@ export default class StaticPage1 extends React.Component {
     return (
       <div>
         {this.state.isPopupOpen && <div className="popup-container">
-        <span className="instruction_img"></span>
+            <span><FontAwesome className="envolope-open" name='envelope-open' /></span>
           <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
           {this.getPopupContent()}
         </div>}
@@ -65,16 +66,16 @@ export default class StaticPage1 extends React.Component {
               <div className="intro white">
                 <div className="flex-container">
                     <div>
-                        <div className="intro_heading">
-                          <h1><span className="intr_sub_span">Intr</span>oduction to the Code of Conduct</h1>
-                        </div>
+                        
+                          <h1 className="white intro_head"><span className="intr_sub_span">Intr</span>oduction to the Code of Conduct</h1>
+                        
 
                         <div className="intro_pop_up">
                             <div className="intro_pop_up_outer">
                                 <div className="intro_pop_up_inner" onClick={this.openPopup.bind(this, 1)}>
                                     <a aria-disabled="false" aria-label="audio" aria-pressed="false" id="btn_01" 
                                         className="intro_pop_up_link" role="button" >
-                                        <span className="icon-audio"></span>
+                                        <FontAwesome name='envelope' />
                                       </a>
                                 </div>
                             </div>
@@ -101,16 +102,14 @@ export default class StaticPage1 extends React.Component {
               <div className="intro white">
                 <div className="flex-container">
                     <div>
-                        <div className="intro_heading">
-                          <h1><span className="intr_sub_span">Intr</span>oduction to the Code of Conduct</h1>
-                        </div>
+                        <h1 className="white intro_head"><span className="intr_sub_span">Intr</span>oduction to the Code of Conduct</h1>
 
                         <div className="intro_pop_up">
                             <div className="intro_pop_up_outer">
                                 <div className="intro_pop_up_inner" onClick={this.openPopup.bind(this, 1)} >
                                     <a aria-disabled="false" aria-label="audio" aria-pressed="false" id="btn_01" 
                                         className="intro_pop_up_link"  role="button" >
-                                        <span className="icon-audio"></span>
+                                        <FontAwesome name='envelope' />
                                       </a>
                                 </div>
                             </div>
@@ -137,16 +136,14 @@ export default class StaticPage1 extends React.Component {
               <div className="intro white">
                 <div className="flex-container">
                     <div>
-                        <div className="intro_heading">
-                          <h1>Introduction to <br/><span className="intr_sub_span">the</span> Code of Conduct</h1>
-                        </div>
+                        <h1 className="white intro_head">Introduction to <br/><span className="intr_sub_span">the</span> Code of Conduct</h1>
 
                         <div className="intro_pop_up">
                             <div className="intro_pop_up_outer">
                                 <div className="intro_pop_up_inner" onClick={this.openPopup.bind(this, 1)}>
                                     <a aria-disabled="false" aria-label="audio" aria-pressed="false" id="btn_01" 
                                         className="intro_pop_up_link" role="button" >
-                                        <span className="icon-audio"></span>
+                                        <FontAwesome name='envelope' />
                                       </a>
                                 </div>
                             </div>

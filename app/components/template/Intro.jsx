@@ -3,6 +3,7 @@ import Shell from '../Shell';
 import VisualMenu from './VisualMenu';
 import * as utils from '../Utils';
 import MediaQuery from 'react-responsive';
+import FontAwesome from 'react-fontawesome';
 
 export default class Intro extends React.Component {
   constructor(props) {
@@ -56,7 +57,7 @@ export default class Intro extends React.Component {
                 <br/>
                 <div className="btn">
                   <a href="#" className="btn_text" role="button" onClick={this.startCourse.bind(this)}>
-                    BEGIN
+                    BEGIN<FontAwesome name='long-arrow-right' className="arror-right"/>
                   </a>
                 </div>
               </div>
@@ -75,7 +76,7 @@ export default class Intro extends React.Component {
                 <br/>
                 <div className="btn">
                   <a href="#" className="btn_text" role="button" onClick={this.startCourse.bind(this)}>
-                    BEGIN
+                    BEGIN<FontAwesome name='long-arrow-right' className="arror-right"/>
                   </a>
                 </div>
               </div>
@@ -94,7 +95,7 @@ export default class Intro extends React.Component {
                 <br/>
                 <div className="btn">
                   <a href="#" className="btn_text" role="button" onClick={this.startCourse.bind(this)}>
-                    BEGIN
+                    BEGIN<FontAwesome name='long-arrow-right' className="arror-right"/>
                   </a>
                 </div>
               </div>

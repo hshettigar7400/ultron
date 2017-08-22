@@ -62,7 +62,7 @@ export default class StaticPage2 extends React.Component {
             <div className="static-page2" >
             <MediaQuery query='(min-device-width: 1024px)'>
                 <div className="flex-main-content">
-                      <h1><span className="intr_sub_span">Cou</span>rse Objectives</h1>
+                      <h1 className="white intro_head"><span className="intr_sub_span">Cou</span>rse Objectives</h1>
                     
                         <p className="intro_sub_heading_2">
                             In this course, you will be able to:
@@ -90,7 +90,7 @@ export default class StaticPage2 extends React.Component {
             
             <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
                 <div className="flex-main-content">
-                      <h1><span className="intr_sub_span">Cou</span>rse Objectives</h1>
+                      <h1 className="white intro_head"><span className="intr_sub_span">Cou</span>rse Objectives</h1>
                     
                         <p className="intro_sub_heading_2">
                             In this course, you will be able to:
@@ -118,7 +118,7 @@ export default class StaticPage2 extends React.Component {
             
             <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
                 <div className="flex-main-content">
-                      <h1><span className="intr_sub_span">Cou</span>rse Objectives</h1>
+                      <h1 className="white intro_head"><span className="intr_sub_span">Cou</span>rse Objectives</h1>
                     
                         <p className="intro_sub_heading_2">
                             In this course, you will be able to:

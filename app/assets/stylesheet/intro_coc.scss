@@ -5,6 +5,7 @@
     }
     .bg {
         background-image: url("../../assets/images/template/coc_2.png");
+        background-repeat: no-repeat;
         height: 100%;
     }
     .close-btn {
@@ -13,14 +14,11 @@
         float: right;
         font-weight: 700;
     }
-    h1 {
-        font-size: 1.8em;
-        font-weight: 600;
-    }
-    .intro_heading {
-        letter-spacing: 1px;
-        margin-left: 30px;
-        margin-top: 40px;    
+    .envolope-open {
+        font-size: 28px;
+        position: absolute;
+        left: 45%;
+        top: 4%;
     }
     .instruction_text {
         color: #fff;
@@ -52,7 +50,7 @@
         margin-right: auto;
         margin-top: 8%;
         height: 170px;
-        width: 170px;   
+        width: 170px;
     }
     .intro_pop_up_inner {
         border: 2px solid #fff;
@@ -67,117 +65,148 @@
         background: #63ca91;
         border: none;
         height: 135px;
-        width: 135px; 
+        width: 135px;
     }
     .intro_pop_up_link {
-        font-size: 2em;
-        left: 35%;
+        font-size: 4em;
+        left: 25%;
         margin-left: auto;
         margin-right: auto;
         position: relative;
-        top: 37%;
+        top: 21%;
     }
     .popup-container {
         background: url("../../assets/images/template/popup-bg.png");
         color: #333;
-        height: 350px;
-        padding: 20px;
+        height: 290px;
+        padding: 25px;
         margin-left: auto;
         margin-right: auto;
-        width: 75%;
+        width: 65%;
         position: relative;
-        margin-top: -33%;
+        margin-top: -32%;
     }
     .popup-container-text {
         color: #3f4040;
+        font-size: 16px;
         letter-spacing: 1px;
-        line-height: 20px;
-        margin-top: 4em;
+        line-height: 17px;
+        margin-top: 2em;
     }
-    @media only screen and (max-device-width: 1024px) {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
         .bg {
-            background-image: url("../../assets/images/template/coc_2.png")no-repeat;
-            height: 100%;
+            background-size: cover;
+            background-position-x: -517px;
         }
-        
         .intro_pop_up_outer {
-            margin-top: 15%;
+            margin-top: 20%;
         }
         .intro_sub_heading {
             margin-top: 10%;
         }
+        .intro_pop_up_link {
+            font-size: 4em;
+            left: 25%;
+            top: 20%;
+        }
         .popup-container {
-            background: url("../../assets/images/template/popup-bg.png");
             height: 350px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 71%;
-            position: relative;
-            margin-top: -42%;
+            width: 58%;
+            margin-top: -52%;
         }
         .popup-container-text {
             font-size: 14px;
             margin-top: 3em;
         }
     }
-    @media only screen and (min-device-width: 361px) and (max-device-width: 640px) {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
         .bg {
-            background-position-x: -330px;
-            background-position-y: -68px;
-        }
-        /*.flex-container {
-            height: 625px;
-            width: 380px;
-          }*/
-        .intro_heading {
-            margin-top: 25px;
-            letter-spacing: 1.5px;
-        }
-        .intro_pop_up_outer {
-            margin-top: 20%;
-        }
-        .intro_sub_heading {
-            font-size: medium;
-            margin-top: 18%;
-            line-height: 30px;
-            letter-spacing: 1px;
-        }
-        .popup-container {
-            background: url("../../assets/images/template/popup-bg.png");
-            background-position-x: -285px;
-            color: #333;
-            height: 390px;
-            width: 80%;
-            position: relative;
-            margin-top: -24em;
-        }
-        .popup-container-text {
-            color: #000;
-            letter-spacing: 1px;
-            line-height: 16px;
-            font-size: 12.5px;
-            margin-top: 3em;
+            background-size: cover;
+            background-position-x: 0px;
         }
     }
-    @media only screen and (max-device-width: 360px) {
+    @media (min-width: 321px) and (max-width: 480px) {
         .bg {
-            background-position-x: -330px;
-            background-position-y: -68px;
+            background-position-x: -325px;
+        }
+        .intro_pop_up_outer {
+            margin-top: 25%;
+            height: 140px;
+            width: 140px;
+        }
+        .intro_pop_up_inner {
+            margin-top: 10%;
+            width: 105px;
+            height: 107px;
+        }
+        .intro_pop_up_link {
+            font-size: 4em;
+            left: 20%;
+            top: 15%;
+        }
+        .intro_pop_up_inner:hover {
+            height: 100px;
+            width: 100px;
         }
         .intro_sub_heading {
-            font-size: medium;
-            margin-top: 18%;
-            line-height: 30px;
+            font-size: 18px;
             letter-spacing: 1px;
+            line-height: 30px;
+            margin-top: 15%;
+        }
+        .popup-container {
+            height: 345px;
+            width: 80%;
+            margin-top: -86%;
+        }
+        .popup-container-text {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 15px;
+        }
+    }
+    @media (max-width: 320px) {
+        .bg {
+            background-position-x: -330px;
+            background-position-y: -45px;
+        }
+        .envolope-open {
+            font-size: 21px;
+            top: 5%;
+        }
+        .intro_sub_heading {
+            font-size: 14px;
+            margin-top: 18%;
+            line-height: 25px;
+            letter-spacing: 1px;
+        }
+        .intro_pop_up_link {
+            font-size: 3em;
+            left: 43%;
+            position: absolute;
+            top: 30%;
+        }
+        .intro_pop_up_outer {
+            margin-top: 8%;
+            height: 145px;
+            width: 145px;
+        }
+        .intro_pop_up_inner {
+            margin-top: 10%;
+            width: 110px;
+            height: 110px;
+        }
+        .intro_pop_up {
+            margin-top: 21%;
         }
         .popup-container {
             margin-top: -21em;
-            height: 328px;
+            height: 320px;
             width: 80%;
         }
         .popup-container-text {
-            line-height: 14px;
-            font-size: 12px;
+            line-height: 13px;
+            font-size: 13px;
             margin-top: 2em;
         }
     }

@@ -120,7 +120,7 @@ export default class Shell extends React.Component {
           onPlayPause={this.togglePlay.bind(this)}
           onReplay={this.replayPage.bind(this)}
           isPlaying={this.state.isPlaying}
-          totalPages={8}
+          totalPages={10}
           onToggleVolume={this.toggleVolume.bind(this)}
           onTranscriptClick={this.toggleTranscript.bind(this)}
           showTranscript={this.state.showTranscript}

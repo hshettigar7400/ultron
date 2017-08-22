@@ -1,0 +1,92 @@
+.static-page5 {
+    height: 100%;
+    .bg {
+        background-image: url("../../assets/images/template/coc_6.png");
+        background-repeat: no-repeat;
+        background-position-y: -53px;
+        height: 100%;
+    }
+    .intro {
+        border-top: 1px solid #ccc;
+        width: 100%;
+    }
+    .intr_sub_span {
+        border-bottom: solid #b5d4c8;
+        border-radius: 2px 2px;
+        padding-bottom: 15px;
+    }
+    .intro_sub_heading_list {
+        left: -1%;
+        margin-top: 2em;
+        position: absolute;
+        width: 50%;
+    }
+    .intro_sub_heading_list li {
+        font-size: 16px;
+        margin-left: 4em;
+        letter-spacing: 1px;
+        list-style-type: circle;
+        line-height: 16px;
+        padding-bottom: 20px;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        .bg {
+            background-size: cover;
+            background-position-x: -400px;
+            background-position-y: 0px;
+        }
+        .intro_sub_heading {
+            margin-top: 10%;
+        }
+        .intro_sub_heading_list {
+            margin-top: 3em;
+            width: 71%;
+        }
+        .intro_sub_heading_list li {
+            font-size: 16px;
+            margin-left: 3em;
+            line-height: 18px;
+            padding-bottom: 38px;
+        }
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        .bg {
+            background-size: cover;
+            background-position-y: 0px;
+        }
+    }
+    @media (min-width: 321px) and (max-width: 480px) {
+        .bg {
+            background-image: url("../../assets/images/template/coc_6_sm.png");
+            //background-position-x: -102px;
+            //background-position-y: -168px;
+        }
+        .intro_sub_heading_list {
+            margin-top: 1em;
+            width: 80%;
+        }
+        .intro_sub_heading_list li {
+            font-size: 16px;
+            margin-left: 0.5em;
+            line-height: 16px;
+            padding-top: 1px;
+        }
+    }
+    @media (max-width: 320px) {
+        .bg {
+            background-image: url("../../assets/images/template/coc_6_sm.png");
+            //background-position-x: -102px;
+            //background-position-y: -168px;
+        }
+        .intro_sub_heading_list {
+            margin-top: 1em;
+            width: 80%;
+        }
+        .intro_sub_heading_list li {
+            font-size: 12px;
+            margin-left: 0.5em;
+            line-height: 12px;
+            padding-top: 1px;
+        }
+    }
+}

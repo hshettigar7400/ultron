@@ -14,7 +14,7 @@ export default class StaticPage3 extends React.Component {
           <div className="bg">
             <div className="intro white">
               <div className="flex-container">
-                    <h1><span className="intr_sub_span">Our</span> Goal</h1>
+                    <h1 className="white intro_head"><span className="intr_sub_span">Our</span> Goal</h1>
                   <div className="intro_para">
                     <span>Our goal is to help you be better prepared by knowing what to expect, which will keep you focused on your work. </span>
                   </div>
@@ -29,7 +29,7 @@ export default class StaticPage3 extends React.Component {
           <div className="bg">
             <div className="intro white">
               <div className="flex-container">
-                    <h1><span className="intr_sub_span">Our</span> Goal</h1>
+                  <h1 className="white intro_head"><span className="intr_sub_span">Our</span> Goal</h1>
                   <div className="intro_para">
                     <span>Our goal is to help you be better prepared by knowing what to expect, which will keep you focused on your work. </span>
                   </div>
@@ -44,7 +44,7 @@ export default class StaticPage3 extends React.Component {
           <div className="bg">
             <div className="intro white">
               <div className="flex-container">
-                    <h1><span className="intr_sub_span">Our</span> Goal</h1>
+                  <h1 className="white intro_head"><span className="intr_sub_span">Our</span> Goal</h1>
                   <div className="intro_para">
                     <span>Our goal is to help you be better prepared by knowing what to expect, which will keep you focused on your work. </span>
                   </div>

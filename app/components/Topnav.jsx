@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome';
 import * as utils from './Utils';
 
 export default class TopNav extends React.Component {
@@ -28,10 +29,10 @@ export default class TopNav extends React.Component {
 
         <div className="header_child_width course-menu-section">
             <div className="header_right_help header_span_inline">
-                <span> ? </span>
+                <FontAwesome name='question' />
             </div>
             <div className="header_right_toggle header_span_inline">
-                <span>?</span>
+                <FontAwesome name='align-right' />
             </div>
         </div>
     </div>

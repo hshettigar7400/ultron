@@ -1,4 +1,4 @@
 export default {
-  CAUSEEXAMS: 'causeexams',
-  SWEEPEXAMS: 'sweepexams'
+  CAUSEEXAMS: 'Conflict of Interest',
+  SWEEPEXAMS: 'Media policy'
 };
