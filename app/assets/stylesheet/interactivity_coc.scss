@@ -168,7 +168,7 @@
             margin-top: 4%;
         }
         .popup-container {
-            height: 168px;
+            height: 170px;
         }
         .popup-container-heading {
             font-size: 14px;
@@ -178,7 +178,7 @@
             left: -5%;
         }
         .right-side {
-            top: 22%;
+            top: 21%;
             right: 1%;
             width: 46%;
         }
@@ -191,8 +191,11 @@
             background-size: cover;
             background-position-y: 0px;
         }
+        .popup-container {
+            height: 161px;
+        }
         .right-side {
-            top: 31%;
+            top: 29%;
         }
     }
     @media (min-width: 321px) and (max-width: 480px) {

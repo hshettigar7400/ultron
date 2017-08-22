@@ -189,6 +189,11 @@
         margin-right: 3%;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        .static-page4 .activity-container {
+    margin-left: 8%;
+    margin-top: 7%;
+    width: 100%;
+}
         .buttons {
             margin-top: 4%;
         }
@@ -210,22 +215,25 @@
         }
         .popup-container {
             height: 290px;
-            top: 14%;
+            top: 12%;
             width: 80%;
         }
         .popup_main_txt {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 700;
             line-height: 20px;
+        }
+        .popup_rt_container {
+            top: 20%;
         }
         .popup_radio_txt {
             margin-top: 0%;
         }
         .radio-feedback-value {
-            bottom: -41px;
+            bottom: -52px;
             font-size: 14px;
-            height: 68px;
-            line-height: 12px;
+            height: 74px;
+            line-height: 15px;
             padding: 2px 10px;
             width: 390px;
         }
@@ -241,7 +249,7 @@
             top: 60%;
         }
         .submit_btn {
-            bottom: -1.5em;
+                bottom: -24px;
         }
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
@@ -249,9 +257,24 @@
             background-size: cover;
             background-position-x: 0px;
         }
+        .popup-container {
+            height: 290px;
+            top: 20%;
+            width: 80%;
+        }
+        .popup_rt_container {
+            top: 20%;
+        }
         .radio-feedback-value {
-            bottom: -62px;
-            width: 555px;
+            bottom: -36px;
+            height: 80px;
+            width: 565px;
+        }
+        .scenario_img_blk>p {
+            top: 62%;
+        }
+        .submit_btn {
+            bottom: -1em;
         }
     }
     @media (min-width: 321px) and (max-width: 480px) {

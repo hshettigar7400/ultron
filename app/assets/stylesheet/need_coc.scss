@@ -195,11 +195,26 @@
                 background-color: #63ca91;
             }
         }
-        @media only screen and(min-device-width: 768px) and (orientation: portrait) {
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+            .activity-container {
+                margin-left: 7%;
+            }
+            .intro_sub_heading_2 {
+                margin-left: 7%;
+            }
             .question {
                 display: inline-block;
                 width: 60%;
                 vertical-align: -webkit-baseline-middle;
+            }
+        }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+            .intro_head {
+                margin-left: 10%;
+                margin-top: 10%;
+            }
+            .intro_sub_heading_2 {
+                margin-left: 10%;
             }
         }
         @media (min-width: 321px) and (max-width: 480px) {
