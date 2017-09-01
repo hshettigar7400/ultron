@@ -7,7 +7,8 @@ export default class StaticPage2 extends React.Component {
 
        this.state = {
       isPopupOpen: false,
-      currentPopup: 0
+      currentPopup: 0,
+           hidePageText: false
     }
 
   }
@@ -16,15 +17,20 @@ export default class StaticPage2 extends React.Component {
     switch(parseInt(currentPopup)) {
       case 1:
         return (
-          <div><h1>Benefits of this Course</h1>
-            <ul>
-                <li>Documentation Requests</li>
-                <li>On-Site Interviews</li>
-                    <li>Exit Interviews</li>
-                        <li>Post-Examination Follow Up</li>
-
-                </ul>
-            </div>
+          <div className="flex-container-inner">
+            <p className="popup-container-heading">
+                Benefits of this Course    
+            </p>
+            <ul className="popup-container-text">
+                <li>
+                    You will understand what needs to be done when faced with dilemma situations
+                </li>
+                
+                <li>
+                    Apply the code during critical meetings with customers, media and other stakeholders
+                </li>
+            </ul>
+        </div>
         );
         break;
 
@@ -34,7 +40,8 @@ export default class StaticPage2 extends React.Component {
      displayPopup() {
     return (
       <div>
-        {this.state.isPopupOpen && <div className="popup-container">
+            {this.state.isPopupOpen && <div className="popup-container">
+            <span className="instruction_img"></span>
           <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
           {this.getPopupContent()}
         </div>}
@@ -43,61 +50,132 @@ export default class StaticPage2 extends React.Component {
   }
 
   openPopup(currentPopup) {
-    this.setState({isPopupOpen: true, currentPopup: currentPopup})
+    this.setState({isPopupOpen: true, currentPopup: currentPopup, hidePageText: true})
   }
 
   closePopup() {
-    this.setState({isPopupOpen: false})
+    this.setState({isPopupOpen: false, hidePageText: false})
   }
+    
+    pageText() {
+        return (
+            <div className="static-page2" >
+            <MediaQuery query='(min-device-width: 1024px)'>
+                <div className="flex-main-content">
+                      <h1 className="white intro_head"><span className="intr_sub_span">Cou</span>rse Objectives</h1>
+                    
+                        <p className="intro_sub_heading_2">
+                            In this course, you will be able to:
+                        </p>
+                
+                        <ul className="intro_sub_heading_list">
+                            <li>
+                                State the importance of code of conduct
+                            </li>
+
+                            <li>
+                                Recognize the key aspects of the code of conduct
+                            </li>
+
+                            <li>
+                                Understand conflict of interest  given few scenarios
+                            </li>
+                        </ul>
+            
+                    <div className="intro_grp_benefit">
+                        <span className="intro_text_benefit">Click the button to know more.</span><span onClick={this.openPopup.bind(this, 1)} className="intro_btn_benefit">Benefits of this Course</span>
+                    </div>
+                </div>
+            </MediaQuery>
+            
+            <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
+                <div className="flex-main-content">
+                      <h1 className="white intro_head"><span className="intr_sub_span">Cou</span>rse Objectives</h1>
+                    
+                        <p className="intro_sub_heading_2">
+                            In this course, you will be able to:
+                        </p>
+                
+                        <ul className="intro_sub_heading_list">
+                            <li>
+                                State the importance of code of conduct
+                            </li>
+
+                            <li>
+                                Recognize the key aspects of the code of conduct
+                            </li>
+
+                            <li>
+                                Understand conflict of interest  given few scenarios
+                            </li>
+                        </ul>
+            
+                    <div className="intro_grp_benefit">
+                        <span className="intro_text_benefit">Click the button to know more.</span><span onClick={this.openPopup.bind(this, 1)} className="intro_btn_benefit">Benefits of this Course</span>
+                    </div>
+                </div>
+            </MediaQuery>
+            
+            <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
+                <div className="flex-main-content">
+                      <h1 className="white intro_head"><span className="intr_sub_span">Cou</span>rse Objectives</h1>
+                    
+                        <p className="intro_sub_heading_2">
+                            In this course, you will be able to:
+                        </p>
+                
+                        <ul className="intro_sub_heading_list">
+                            <li>
+                                State the importance of code of conduct
+                            </li>
+
+                            <li>
+                                Recognize the key aspects of the code of conduct
+                            </li>
+
+                            <li>
+                                Understand conflict of interest  given few scenarios
+                            </li>
+                        </ul>
+            
+                    
+                    
+                    <div className="intro_text_benefit">
+                            Click the button to know more.
+                    </div>
+                    
+                    <div className="intro_btn_benefit" onClick={this.openPopup.bind(this, 1)}>
+                        Benefits of this Course
+                    </div>
+                </div>
+                </MediaQuery>
+            </div>
+            )
+        }
 
 
 
   render() {
     return (
-      <div className="static-page2">
+      <div className="static-page2" >
         <MediaQuery query='(min-device-width: 1024px)'>
         <div className="content">
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
-
-                          <div className="left-side">
-                  {
-                    this.displayPopup()
-                  }
-                </div>
-
-      					<div className="right-side">
-      						<div className="intro_heading">
-      							<h1>Course Objectives </h1>
-      						</div>
-
-      						<div className="intro_para">
-      							<span>In this course, you will learn about:</span>
-      						</div>
-
-      						<div className="intro_list">
-      							<ul>
-      								<li>Structure of the US Securities and Exchange Commission (SEC)</li>
-      								<li>Operations of SEC</li>
-      								<li>Initiatives of National Examination program for SEC registered investment Advisers</li>
-      							</ul>
-      						</div>
-      						<div className="btn">
-      							<span className="instruction_img">
-                      <img src="app/assets/images/template/hand_icon.png" className ="middle_align"/>
-                      <span className="instruction_text">Click the button to know more.</span>
-                    </span>
-                    <span>
-                      <button id="btn_01" onClick={this.openPopup.bind(this, 1)}>Benefits of this Course</button>
-                    </span>
-                  </div>
-      					</div>
-
-
-      				</div>
+                        <div className="flex-container-inner">
+                            <div>
+                                {!this.state.hidePageText && this.pageText()}
+                            </div>
+                            
+                            <div>
+                                {
+                                this.displayPopup()
+                                }
+                            </div>
+                        </div>
+      		        </div>
       			</div>
-
       		</div>
       	</div>
             </MediaQuery>
@@ -106,41 +184,17 @@ export default class StaticPage2 extends React.Component {
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
-
-                          <div className="left-side">
-                  {
-                    this.displayPopup()
-                  }
-                </div>
-
-      					<div className="right-side">
-      						<div className="intro_heading">
-      							<h1>Course Objectives </h1>
-      						</div>
-
-      						<div className="intro_para">
-      							<span>In this course, you will learn about:</span>
-      						</div>
-
-      						<div className="intro_list">
-      							<ul>
-      								<li>Structure of the US Securities and Exchange Commission (SEC)</li>
-      								<li>Operations of SEC</li>
-      								<li>Initiatives of National Examination program for SEC registered investment Advisers</li>
-      							</ul>
-      						</div>
-      						<div className="btn">
-      							<span className="instruction_img">
-                      <img src="app/assets/images/template/hand_icon.png" className ="middle_align"/>
-                      <span className="instruction_text">Click the button to know more.</span>
-                    </span>
-                    <span>
-                      <button id="btn_01" onClick={this.openPopup.bind(this, 1)}>Benefits of this Course</button>
-                    </span>
-                  </div>
-      					</div>
-
-
+                        <div className="flex-container-inner">
+                            <div>
+                                {!this.state.hidePageText && this.pageText()}
+                            </div>
+                            
+                            <div>
+                                {
+                                this.displayPopup()
+                                }
+                            </div>
+                        </div>
       				</div>
       			</div>
 
@@ -152,41 +206,15 @@ export default class StaticPage2 extends React.Component {
       		<div className="bg">
       			<div className="intro white">
       				<div className="flex-container">
+                        <div>
+                            {!this.state.hidePageText && this.pageText()}
+                        </div>
 
-                          <div className="left-side">
-                  {
-                    this.displayPopup()
-                  }
-                </div>
-
-      					<div className="right-side">
-      						<div className="intro_heading">
-      							<h1>Course Objectives </h1>
-      						</div>
-
-      						<div className="intro_para">
-      							<span>In this course, you will learn about:</span>
-      						</div>
-
-      						<div className="intro_list">
-      							<ul>
-      								<li>Structure of the US Securities and Exchange Commission (SEC)</li>
-      								<li>Operations of SEC</li>
-      								<li>Initiatives of National Examination program for SEC registered investment Advisers</li>
-      							</ul>
-      						</div>
-      						<div className="btn">
-      							<span className="instruction_img">
-                      <img src="app/assets/images/template/hand_icon.png" className ="middle_align"/>
-                      <span className="instruction_text">Click the button to know more.</span>
-                    </span>
-                    <span>
-                      <button id="btn_01" onClick={this.openPopup.bind(this, 1)}>Benefits of this Course</button>
-                    </span>
-                  </div>
-      					</div>
-
-
+                        <div>
+                            {
+                            this.displayPopup()
+                            }
+                        </div>
       				</div>
       			</div>
 

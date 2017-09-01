@@ -1,3 +1,4 @@
 export default {
-  DRAGCONTAINER: 'dragcontainer',
+  CAUSEEXAMS: 'Conflict of Interest',
+  SWEEPEXAMS: 'Media policy'
 };

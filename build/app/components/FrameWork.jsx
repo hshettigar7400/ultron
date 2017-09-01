@@ -1,6 +1,8 @@
 import React from 'react';
 import * as utils from './Utils';
 import Intro from './template/Intro';
+import LanguageSelection from './template/LangSelection';
+import ConfigData from '../config/Config';
 
 export default class FrameWork extends React.Component {
   constructor(props) {
@@ -19,14 +21,15 @@ export default class FrameWork extends React.Component {
   updateDimensions() {
     const windowHeight = window.innerHeight,
           windowWidth = window.innerWidth;
+
     if (this.refs) {
       if(utils.isMobile) {
-        document.body.style.minWidth= "320px";
+        document.body.style.minWidth = ConfigData.config.window.minWidth;
         document.body.style.height= "100%";
       }
       else {
-        document.body.style.maxHeight= "650px";
-        document.body.style.maxWidth= "1010px";
+        document.body.style.maxHeight= ConfigData.config.window.maxHeight;
+        document.body.style.maxWidth= ConfigData.config.window.maxWidth;
         document.body.style.overflow= "hidden";
         document.body.style.margin= "0 auto";
         document.body.style.position= "relative";
@@ -34,10 +37,30 @@ export default class FrameWork extends React.Component {
     }
   }
 
+  loadIntro () {
+      return (
+        <Intro />
+      )
+  }
+
+  loadLanguage () {
+    return (
+      <LanguageSelection />
+    )
+  }
+
+
   render() {
+    let _page;
+    if(ConfigData.config.course.openingPage == 1) {
+      _page = <Intro />
+    } else if(ConfigData.config.course.openingPage == 2 || ConfigData.config.course.openingPage == 3){
+      _page = <LanguageSelection />
+    }
+
     return (
       <div className="player" ref="container">
-        <Intro />
+        {_page}
       </div>
     )
   }

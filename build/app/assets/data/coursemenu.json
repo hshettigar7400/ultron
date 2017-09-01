@@ -1,6 +1,6 @@
 {
   "menu": {
-    "courseTitle": "SEC  Compliance Readiness",
+    "courseTitle": "Code Of Conduct",
     "modules": [
       {
         "topic": [
@@ -44,10 +44,22 @@
                 "pageId": 6
               },
               {
-                "pageTitle": "Lesson Summary",
+                "pageTitle": "Activity",
                 "moduleId": 1,
                 "topicId": 1,
                 "pageId": 7
+              },
+              {
+                "pageTitle": "Lesson Summary",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 8
+              },
+                {
+                "pageTitle": "Lesson Summary",
+                "moduleId": 1,
+                "topicId": 1,
+                "pageId": 9
               }
             ]
           }

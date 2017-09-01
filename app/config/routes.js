@@ -1,7 +1,7 @@
 
 import {
-  StaticPage1,
-  StaticPage2,
+  Introduction,
+  CourseObjective,
   StaticPage3,
   StaticPage4,
   StaticPage5,
@@ -17,10 +17,10 @@ import {
 const routes = [
   { path: '/page1',
     exact: true,
-    comp: StaticPage1
+    comp: Introduction
   },
   { path: '/page2',
-    comp: StaticPage2
+    comp: CourseObjective
   },
   { path: '/page3',
     comp: StaticPage3

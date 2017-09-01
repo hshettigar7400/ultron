@@ -1,7 +1,7 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 
-export default class StaticPage3 extends React.Component {
+export default class StaticPage5 extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -9,75 +9,118 @@ export default class StaticPage3 extends React.Component {
   render() {
     return (
       <div className="static-page5">
+       <MediaQuery query='(min-device-width: 1024px)'>
         <div className="content">
-        <div className="bg">
-         <MediaQuery query='(min-device-width: 1024px)'>
-        <div className="container">
-        <div className="summary">
-        <div className="summary_heading">
-        <h1 className="white">Lesson Summary</h1></div>
+          <div className="bg">
+            <div className="intro white">
+              <div className="flex-main-content">
+                <h1 className="white intro_head"><span className="intr_sub_span">Gen</span>eral Guidelines</h1>
+                
+                <ul className="intro_sub_heading_list">
+                    <li>
+                        Code of Conduct sets forth the policies with which each of us must comply.
+                    </li>
 
-        <div className="summary_list white">
-        <span> In this module you learned about:</span>
-        <ul>
-        <li className="li_padding">The National Examination Program ("NEP"), generally follows a risk-based approach in the selection of examination candidates.</li>
-        <li className="line_height">There are three kinds of examinations:</li>
-        <ul>
-        <li>Traditional Examination </li>
-        <li>Dual registrant exams </li>
-        <li>Presence Exam</li>
-        </ul>
-        </ul>
-        </div>
-        </div>
+                    <li>
+                        Additionally, it is important that all of us comply with  all applicable laws and regulations that govern us.
+                    </li>
+
+                    <li>
+                        The Code will help all employees understand their responsibilities and obligations, and provide guidance when faced with an ethical dilemma or conflict of interest at work.
+                    </li>
+                    
+                    <li>
+                        THE COMPANY is concerned not only with results, but also with how those results are achieved.
+                    </li>
+                    
+                    <li>
+                        THE COMPANY will never accept efforts or activities to achieve results through illegal or unethical dealings
+                    </li>
+                    
+                    <li>
+                        Any violation of this Code may result in disciplinary action, including termination from employment.
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         </MediaQuery>
+            
+       <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
+        <div className="content">
+          <div className="bg">
+            <div className="intro white">
+              <div className="flex-main-content">
+                <h1 className="white intro_head"><span className="intr_sub_span">Gen</span>eral Guidelines</h1>
+                
+                <ul className="intro_sub_heading_list">
+                    <li>
+                        Code of Conduct sets forth the policies with which each of us must comply.
+                    </li>
 
-        <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
-        <div className="container">
-        <div className="summary">
-        <div className="summary_heading">
-        <h1 className="white">Lesson Summary</h1></div>
+                    <li>
+                        Additionally, it is important that all of us comply with  all applicable laws and regulations that govern us.
+                    </li>
 
-        <div className="summary_list white">
-        <span> In this module you learned about:</span>
-        <ul>
-        <li className="li_padding">The National Examination Program ("NEP"), generally follows a risk-based approach in the selection of examination candidates.</li>
-        <li className="lineHeight">There are three kinds of examinations:</li>
-        <ul>
-        <li>Traditional Examination </li>
-        <li>Dual registrant exams </li>
-        <li>Presence Exam</li>
-        </ul>
-        </ul>
-        </div>
-        </div>
+                    <li>
+                        The Code will help all employees understand their responsibilities and obligations, and provide guidance when faced with an ethical dilemma or conflict of interest at work.
+                    </li>
+                    
+                    <li>
+                        THE COMPANY is concerned not only with results, but also with how those results are achieved.
+                    </li>
+                    
+                    <li>
+                        THE COMPANY will never accept efforts or activities to achieve results through illegal or unethical dealings
+                    </li>
+                    
+                    <li>
+                        Any violation of this Code may result in disciplinary action, including termination from employment.
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         </MediaQuery>
+            
         <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
-        <div className="container">
-        <div className="summary">
-        <div className="summary_heading">
-        <h1 className="white">Lesson Summary</h1></div>
+        <div className="content">
+          <div className="bg">
+            <div className="intro white">
+              <div className="flex-main-content">
+                <h1 className="white intro_head"><span className="intr_sub_span">Gen</span>eral Guidelines</h1>
+                <ul className="intro_sub_heading_list">
+                    <li>
+                        Code of Conduct sets forth the policies with which each of us must comply.
+                    </li>
 
-        <div className="summary_list white">
-        <span> In this module you learned about:</span>
-        <ul className="uls_leftside">
-        <li className="li_padding">The National Examination Program ("NEP"), generally follows a risk-based approach in the selection of examination candidates.</li>
-        <li className="line_height">There are three kinds of examinations:</li>
-        <ul>
-        <li>Traditional Examination </li>
-        <li>Dual registrant exams </li>
-        <li>Presence Exam</li>
-        </ul>
-        </ul>
-        </div>
-        </div>
+                    <li>
+                        Additionally, it is important that all of us comply with  all applicable laws and regulations that govern us.
+                    </li>
+
+                    <li>
+                        The Code will help all employees understand their responsibilities and obligations, and provide guidance when faced with an ethical dilemma or conflict of interest at work.
+                    </li>
+                    
+                    <li>
+                        THE COMPANY is concerned not only with results, but also with how those results are achieved.
+                    </li>
+                    
+                    <li>
+                        THE COMPANY will never accept efforts or activities to achieve results through illegal or unethical dealings
+                    </li>
+                    
+                    <li>
+                        Any violation of this Code may result in disciplinary action, including termination from employment.
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         </MediaQuery>
-
-</div>
-</div>
       </div>
     )
   }

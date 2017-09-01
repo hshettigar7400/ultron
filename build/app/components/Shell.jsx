@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import TopNav from './TopNav';
+import TopNav from './Topnav';
 import PageLoader from './PageLoader';
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
@@ -120,7 +120,7 @@ export default class Shell extends React.Component {
           onPlayPause={this.togglePlay.bind(this)}
           onReplay={this.replayPage.bind(this)}
           isPlaying={this.state.isPlaying}
-          totalPages={7}
+          totalPages={10}
           onToggleVolume={this.toggleVolume.bind(this)}
           onTranscriptClick={this.toggleTranscript.bind(this)}
           showTranscript={this.state.showTranscript}
@@ -137,7 +137,8 @@ export default class Shell extends React.Component {
         onMenuClick={this.toggleMenu.bind(this)}
         onPlayPause={this.togglePlay.bind(this)}
         isPlaying={this.state.isPlaying}
-        totalPages={7}
+        totalPages={8}
+        courseTitle="Code of Conduct"
         onTranscriptClick={this.toggleTranscript.bind(this)}
       />
     )
@@ -185,7 +186,7 @@ export default class Shell extends React.Component {
         {this.loadHeader()}
         {this.state.currentPage && this.pageLoader()}
         {this.state.showTranscript &&  this.loadTranscript()}
-        <MediaQuery query='(min-width: 680px)'>
+        <MediaQuery query='(min-width: 320px)'>
           {this.loadFooter()}
         </MediaQuery>
       </div>

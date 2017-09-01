@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { DragSource } from 'react-dnd';
-import ItemTypes from './ItemTypes';
 
 const style = {
   border: '1px dashed gray',
@@ -13,26 +12,15 @@ const style = {
   float: 'left',
 };
 
-const boxSource = {
+const dragSource = {
   beginDrag(props) {
     return {
       name: props.name,
     };
   },
-
-  endDrag(props, monitor) {
-    const item = monitor.getItem();
-    const dropResult = monitor.getDropResult();
-
-    if (dropResult) {
-      window.alert( // eslint-disable-line no-alert
-        `You dropped ${item.name} into ${dropResult.name}!`,
-      );
-    }
-  },
 };
 
-@DragSource(ItemTypes.DRAGCONTAINER, boxSource, (connect, monitor) => ({
+@DragSource(props => props.type, dragSource, (connect, monitor) => ({
   connectDragSource: connect.dragSource(),
   isDragging: monitor.isDragging(),
 }))
@@ -42,13 +30,14 @@ export default class DragContainer extends Component {
   }
 
   render() {
-    const { isDragging, connectDragSource } = this.props;
-    const { name } = this.props;
-
+    const { name, isDropped, isDragging, connectDragSource } = this.props;
     return (
       connectDragSource(
-        <div className="drag-container">
-          {name}
+        <div className={isDropped?"drag-container disable-drag" : "drag-container"}>
+          {isDropped ?
+          <span>{name}</span> :
+          name
+          }
         </div>,
       )
     );

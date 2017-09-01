@@ -10,7 +10,7 @@ export default class Header extends React.Component {
     return (
       <div className="header">
         <div className="course-logo header_child_width">
-            <img src="app/assets/images/template/Tesseract_logo.png" />
+            <img src="app/assets/images/template/logo_tafe.png" />
         </div>
 
         <div id="courseTitle" className="course-title title header_child_width">

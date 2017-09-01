@@ -1,0 +1,506 @@
+.interactivity7 {
+    height: 100%;
+    .bg {
+        background-image: url("../../assets/images/template/coc_2.png");
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+    .buttons {
+        display: flex;
+        margin-left: 7%;
+        margin-top: 3%;
+    }
+    .btn_text_cntr {
+        text-align: center;
+    }
+    .content_margin {
+        width: 90%;
+    }
+    .content_pading {
+        margin-top: 10px;
+    }
+    .close-btn {
+        font-weight: 900;
+        position: absolute;
+        right: 2%;
+        top: 5%;
+    }
+    .feedback-bold {
+        font-weight: 700;
+    }
+    .flex-container {
+        display: flex;
+        display: -webkit-flex;
+        width: 100%;
+    }
+    .intro {
+        border-top: 1px solid #ccc;
+        width: 100%;
+    }
+    .intro_heading {
+        margin-left: 5%;
+        margin-top: 10%;
+        width: 100%;
+    }
+    .intro_sub_heading {
+        font-size: 18px;
+        margin-top: 4%;
+        margin-left: 7%;
+    }
+    .intro_sub_heading_2 {
+        font-size: 16px;
+        font-style: italic;
+        font-weight: normal;
+        letter-spacing: 0.5px;
+        margin-top: 1%;
+        margin-left: 7%;
+    }
+    .intr_sub_span {
+        border-bottom: solid #b5d4c8;
+        border-radius: 2px 2px;
+        padding-bottom: 15px;
+    }
+    .intro_btn_benefit {
+        border: 2px solid #fff;
+        cursor: pointer;
+        padding: 5px;
+        position: relative;
+        text-align: center;
+        width: 27%;
+        height: 205px;
+    }
+    .intro_btn_benefit>p {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    input[type='radio'] {
+        border: 1px solid #000;
+        border-radius: 50%;
+        height: 20px;
+        outline: none;
+        -webkit-appearance: none;
+        width: 20px;
+    }
+    input[type='radio']:before {
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 60%;
+        margin: 20% auto;
+        width: 60%;
+    }
+    input[type='radio']:checked:before {
+        background: #35de95;
+    }
+    .popup-container {
+        background: url("../../assets/images/template/coc_8_pop_desk.png");
+        color: #333;
+        height: 310px;
+        left: 7%;
+        padding: 10px 30px;
+        position: absolute;
+        top: 21%;
+        width: 80%;
+    }
+    .popup_main_head {
+        font-size: 1.3em;
+        letter-spacing: 2px;
+    }
+    .popup_rt_container {
+        position: absolute;
+        top: 16%;
+    }
+    .popup_main_txt {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        width: 80%;
+    }
+    .popup_radio_txt {
+        font-style: italic;
+        margin-top: 4%;
+    }
+    .radio-label {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 600;
+        margin-right: 17%;
+        margin-top: 0.7%;
+        padding-left: 1%;
+        vertical-align: middle;
+    }
+    .radio-input {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .radio-feedback-value {
+        background: #63be97;
+        bottom: -70px;
+        color: #fff;
+        font-size: 16px;
+        height: 85px;
+        line-height: 18px;
+        padding: 2px 10px;
+        position: absolute;
+        width: 554px;
+    }
+    .scenario_main_container {
+        float: left;
+        display: inline-flex;
+        margin-top: 2%;
+        text-align: center;
+        width: 100%;
+    }
+    .scenario_img_blk {
+        border: 2px solid #000;
+        width: 25%;
+        height: 160px;
+    }
+    .scenario_img_blk>img {
+        width: 175px;
+    }
+    .scenario_img_blk>p {
+        font-weight: 600;
+        font-size: 14px;
+        position: absolute;
+        left: 11%;
+        top: 57%;
+    }
+    .scenario_txt_blk {
+        margin-left: 5%;
+        text-align: left;
+        width: 55%;
+    }
+    .submit_btn {
+        border: 2px solid #565656;
+        border-radius: 65px;
+        bottom: -2em;
+        cursor: pointer;
+        float: right;
+        font-size: 18px;
+        padding: 12px 18px;
+        position: relative;
+        right: 1em;
+        text-align: center;
+        width: 100px;
+    }
+    .tab_btn_rt {
+        margin-right: 3%;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        .static-page4 .activity-container {
+    margin-left: 8%;
+    margin-top: 7%;
+    width: 100%;
+}
+        .buttons {
+            margin-top: 4%;
+        }
+        .bg {
+            background-size: cover;
+            background-position-y: 0px;
+        }
+        .intro_btn_benefit {
+            height: 155px;
+            width: 27%;
+        }
+        .intro_btn_benefit>p {
+            position: absolute;
+            bottom: -2%;
+            left: 30%;
+        }
+        .intro_btn_benefit>img {
+            width: 188px;
+        }
+        .popup-container {
+            height: 290px;
+            top: 12%;
+            width: 80%;
+        }
+        .popup_main_txt {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 20px;
+        }
+        .popup_rt_container {
+            top: 20%;
+        }
+        .popup_radio_txt {
+            margin-top: 0%;
+        }
+        .radio-feedback-value {
+            bottom: -52px;
+            font-size: 14px;
+            height: 74px;
+            line-height: 15px;
+            padding: 2px 10px;
+            width: 390px;
+        }
+        .scenario_img_blk {
+            height: 160px;
+            width: 30%;
+        }
+        .scenario_img_blk>img {
+            width: 160px;
+        }
+        .scenario_img_blk>p {
+            left: 14%;
+            top: 60%;
+        }
+        .submit_btn {
+                bottom: -24px;
+        }
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        .bg {
+            background-size: cover;
+            background-position-x: 0px;
+        }
+        .popup-container {
+            height: 290px;
+            top: 20%;
+            width: 80%;
+        }
+        .popup_rt_container {
+            top: 20%;
+        }
+        .radio-feedback-value {
+            bottom: -36px;
+            height: 80px;
+            width: 565px;
+        }
+        .scenario_img_blk>p {
+            top: 62%;
+        }
+        .submit_btn {
+            bottom: -1em;
+        }
+    }
+    @media (min-width: 321px) and (max-width: 480px) {
+        .bg {
+            background-position-x: -350px;
+        }
+        .buttons {
+            margin-top: 7%;
+        }
+        .buttons_2 {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .close-btn {
+            right: 3%;
+            top: 5%;
+        }
+        .intro_btn_benefit,
+        .intro_btn_benefit_2 {
+            height: 115px;
+            padding: 3px;
+            position: relative;
+            text-align: center;
+            width: 39%;
+        }
+        .intro_btn_benefit_2 {
+            border: 2px solid #fff;
+        }
+        .intro_sub_heading {
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 10%;
+        }
+        .intro_sub_heading_2 {
+            font-size: 14px;
+            margin-top: 3%;
+        }
+        .intro_btn_benefit>img {
+            width: 135px;
+        }
+        .intro_btn_benefit_2>img {
+            width: 145px;
+            height: 90px;
+        }
+        .intro_btn_benefit>p {
+            font-size: 12px;
+            bottom: 9%;
+            position: relative;
+        }
+        .intro_btn_benefit_2>p {
+            font-size: 12px;
+            font-weight: 600;
+            bottom: 10%;
+            position: relative;
+        }
+        .popup-container {
+            height: 351px;
+            left: 2%;
+            padding: 10px 15px;
+            position: absolute;
+            top: 21%;
+            width: 88%;
+        }
+        .popup_main_head {
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        .popup_radio_grp>p {
+            font-size: 14px;
+        }
+        .popup_radio_txt {
+            margin-top: -3%;
+        }
+        .radio-feedback-value {
+            bottom: 0px;
+            font-size: 14px;
+            height: 75px;
+            line-height: 12px;
+            padding: 1px 12px;
+            left: 4px;
+            width: 327px;
+        }
+        .scenario_img_blk {
+            height: 130px;
+            width: 50%;
+        }
+        .scenario_img_blk>p {
+            font-size: 16px;
+            font-weight: 600;
+            left: 17%;
+            top: 43%;
+        }
+        .scenario_img_blk>img {
+            width: 140px;
+        }
+        .scenario_main_container {
+            margin-bottom: 3%;
+        }
+        .scenario_txt_blk {
+            font-size: 14px;
+            margin-left: 4%;
+            margin-top: -5%;
+        }
+        .submit_btn {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px 7px;
+            right: 0em;
+            bottom: -2em;
+            width: 90px;
+        }
+        .tab_btn_rt {
+            margin-right: 3%;
+        }
+    }
+    @media (max-width: 320px) {
+        .bg {
+            background-position-x: -513px;
+        }
+        .buttons {
+            margin-top: 5%;
+        }
+        .buttons_2 {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .close-btn {
+            right: 3%;
+            top: 5%;
+        }
+        .intro_btn_benefit,
+        .intro_btn_benefit_2 {
+            height: 99px;
+            padding: 3px;
+            position: relative;
+            text-align: center;
+            width: 39%;
+        }
+        .intro_btn_benefit_2 {
+            border: 2px solid #fff;
+        }
+        .intro_sub_heading {
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 10%;
+        }
+        .intro_sub_heading_2 {
+            font-size: 14px;
+            margin-top: 2%;
+        }
+        .intro_btn_benefit>img {
+            width: 115px;
+        }
+        .intro_btn_benefit_2>img {
+            height: 75px;
+            width: 125px;
+        }
+        .intro_btn_benefit>p {
+            font-size: 12px;
+            bottom: 9%;
+            position: relative;
+        }
+        .intro_btn_benefit_2>p {
+            font-size: 12px;
+            font-weight: 600;
+            bottom: 10%;
+            position: relative;
+        }
+        .popup-container {
+            height: 310px;
+            left: 2%;
+            padding: 10px 15px;
+            position: absolute;
+            top: 23%;
+            width: 88%;
+        }
+        .popup_main_head {
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        .popup_radio_grp>p {
+            font-size: 14px;
+        }
+        .popup_radio_txt {
+            margin-top: -3%;
+        }
+        .radio-feedback-value {
+            bottom: 0px;
+            font-size: 12px;
+            height: 48px;
+            line-height: 11px;
+            padding: 1px 12px;
+            left: 4px;
+            width: 280px;
+        }
+        .scenario_img_blk {
+            height: 130px;
+            width: 50%;
+        }
+        .scenario_img_blk>p {
+            font-size: 12px;
+            font-weight: 600;
+            left: 17%;
+            top: 43%;
+        }
+        .scenario_img_blk>img {
+            width: 140px;
+        }
+        .scenario_main_container {
+            margin-bottom: 3%;
+        }
+        .scenario_txt_blk {
+            font-size: 13px;
+            margin-left: 4%;
+            margin-top: -5%;
+        }
+        .submit_btn {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 5px;
+            right: 0em;
+            bottom: 0em;
+            width: 90px;
+        }
+        .tab_btn_rt {
+            margin-right: 3%;
+        }
+    }
+}

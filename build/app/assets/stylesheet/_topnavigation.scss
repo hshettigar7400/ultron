@@ -1,5 +1,5 @@
 .header-nav {
-  background-color: #C1C6C9;
+  background-color: #b2eacf;
   display: table;
   width: 100%;
   z-index: 99999;
@@ -15,3 +15,16 @@
   text-align: center;
   width: 100%;
 }
+
+
+ @media only screen   and (min-device-width : 360px)   and (max-device-width : 640px) {
+        .header-nav {
+            background-color: #b2eacf;
+            color: #000;
+            display: table;
+            width: 100%;
+            z-index: 99999;
+            position: relative;
+        }
+        
+    }

@@ -1,18 +1,18 @@
-//Font-family
-$base-font-family: 'Arial';
+/************* Course Font Family ***********************/
+$base-font-family: 'Calibri';
 
-// Font Sizes
+/************* Course Font Size ***********************/
 $base-font-size: 1em;
 $mobile-base-font-size: 1em;
 $smaller-font-size: 10px;
 $medium-font-size: 14px;
 $course-title-size: 1.5em;
 
-//Font weight
+/************* Course Font Weight ***********************/
 $base-font-weight:300;
 $bold-font-weight:700;
 
-//Background Color
+/************* Course Background Colors ***********************/
 $intro-bg: #5B6770;
 $course-background: #ededed;
 $theme-light-blue: #0A4166;
@@ -40,10 +40,17 @@ $disabled: #AAB1B9;
 
 //Height and Width
 $header-height: 61px;
-$footer-height: 46px;
+$footer-height: 65px;
 $menu-width: 400px;
 $menu-width-mobile: 100%;
 
 //z-index
 $header-zIndex: 100;
 $footer-zIndex: 99;
+
+/************ Button Styling Variables ******************/
+$btn-primary-bg: #5e9f45;
+$btn-primary-color: #fff;
+$btn-primary-bg-hover: #5e9f45;
+$btn-secondary-bg: #ae9f45;
+$btn-border-radius: 5px;

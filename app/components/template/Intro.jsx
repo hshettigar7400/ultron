@@ -51,8 +51,8 @@ export default class Intro extends React.Component {
               <div className="bg">
                 <div className="logo"> <img src="app/assets/images/template/Tesseract_logo.png"/></div>
                 <div className="title welcome_text">
-                  <h1 className="white"><span className="intro_para_one_bold">Welcome</span> <br/> <span className="intro_para_one_normal">to the course,</span></h1>
-                  <h1 className="white"><span className="intro_para_main_head">Code of <br/> Conduct</span></h1>
+                  <h1 className="white"><span className="intro_para_one_bold">Welcome</span> <br/> <span className="intro_para_one_normal">to the short course,</span></h1>
+                  <h1 className="white"><span className="intro_para_main_head">What is <br/> Kaizen?</span></h1>
                 </div>
                 <br/>
                 <div className="btn">
@@ -70,8 +70,8 @@ export default class Intro extends React.Component {
               <div className="bg">
                 <div className="logo"> <img src="app/assets/images/template/Tesseract_logo.png"/></div>
                 <div className="title welcome_text">
-                  <h1 className="white"><span className="intro_para_one_bold">Welcome</span> <br/> <span className="intro_para_one_normal">to the course,</span></h1>
-                  <h1 className="white"><span className="intro_para_main_head">Code of <br/> Conduct</span></h1>
+                  <h1 className="white"><span className="intro_para_one_bold">Welcome</span> <br/> <span className="intro_para_one_normal">to the short course,</span></h1>
+                  <h1 className="white"><span className="intro_para_main_head">What is <br/> Kaizen?</span></h1>
                 </div>
                 <br/>
                 <div className="btn">
@@ -89,8 +89,8 @@ export default class Intro extends React.Component {
               <div className="bg">
                 <div className="logo"> <img src="app/assets/images/template/Tesseract_logo.png"/></div>
                 <div className="title welcome_text">
-                  <h1 className="white"><span className="intro_para_one_bold">Welcome</span> <br/> <span className="intro_para_one_normal">to the course,</span></h1>
-                  <h1 className="white"><span className="intro_para_main_head">Code of <br/> Conduct</span></h1>
+                  <h1 className="white"><span className="intro_para_one_bold">Welcome</span> <br/> <span className="intro_para_one_normal">to the short course,</span></h1>
+                  <h1 className="white"><span className="intro_para_main_head">What is <br/> Kaizen?</span></h1>
                 </div>
                 <br/>
                 <div className="btn">

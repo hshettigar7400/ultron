@@ -1,0 +1,308 @@
+    .static-page4 {
+        height: 100%;
+        .activity-container {
+            margin-left: 36%;
+            margin-top: 7%;
+            width: 100%;
+        }
+        .bg {
+            background-image: url("../../assets/images/template/coc-5.png");
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .button-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: table;
+            opacity: 0.8;
+            padding: 15px 0;
+            text-align: right;
+            width: 100%;
+            margin-top: 5px;
+        }
+        .button {
+            background-color: #63ca91;
+            border: 1px solid #fff;
+            cursor: pointer;
+            padding: 8px 30px;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+        .choice-container__row {
+            border-spacing: 4px;
+            display: table-row;
+            padding: 5px 10px;
+        }
+        .choice-container__row:last-child .choice-container__cell {
+            border-bottom: none;
+        }
+        .choice-container__cell {
+            border-bottom: 2px solid #ddd;
+            border-right: 2px solid #ddd;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: table-cell;
+            padding: 15px 5px;
+            width: 285px;
+            label {
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+        .choice-container__cell:last-child {
+            border-right: none;
+        }
+        .close-btn {
+            color: #fff;
+            float: right;
+            padding: 5px;
+        }
+        .choice-container__cell.selected {
+            background-color: #63ca91;
+        }
+        .feedback-container {
+            background-color: #63ca91;
+            display: inline-block;
+            color: #FFFFFF;
+            margin-top: 5px;
+            min-height: 60px;
+            padding: 10px;
+            position: relative;
+            width: 97%;
+        }
+        .intro_sub_heading_2 {
+            font-size: 18px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            margin-top: 5%;
+            margin-left: 7%;
+        }
+        .intro {
+            border-top: none;
+            top: 0;
+            position: absolute;
+        }
+        .intro_sub_heading_2 {
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            margin-top: 4%;
+            margin-left: 8%;
+        }
+        .intr_sub_span {
+            border-bottom: solid #b5d4c8;
+            border-radius: 2px 2px;
+            padding-bottom: 15px;
+        }
+        .img_icon {
+            display: inline-block;
+            width: 10%;
+            vertical-align: super;
+        }
+        .img_icon img {
+            width: 80%;
+        }
+        .question {
+            display: inline-block;
+            width: 80%;
+        }
+        .text {
+            display: inline-block;
+            width: 85%;
+        }
+        .rc-checkbox-disabled {
+            &.rc-checkbox-checked {
+                &:hover {
+                    .rc-checkbox-inner {
+                        border-color: #d9d9d9;
+                    }
+                }
+                .rc-checkbox-inner {
+                    background-color: #f3f3f3;
+                    border-color: #d9d9d9;
+                    &:after {
+                        animation-name: none;
+                        border-color: #cccccc;
+                    }
+                }
+            }
+            &:hover {
+                .rc-checkbox-inner {
+                    border-color: #d9d9d9;
+                }
+            }
+            .rc-checkbox-inner {
+                border-color: #d9d9d9;
+                background-color: #f3f3f3;
+                &:after {
+                    animation-name: none;
+                    border-color: #f3f3f3;
+                }
+            }
+            .rc-checkbox-inner-input {
+                cursor: default;
+            }
+        }
+        .question-container {
+            display: table;
+            opacity: 0.8;
+            width: 100%;
+        }
+        .popup-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: inline-block;
+            color: $white;
+            margin-top: 20px;
+            min-height: 60px;
+            padding: 20px;
+            position: relative;
+            width: 94%;
+        }
+        /*Checkboxes styles*/
+        .rc-checkbox {
+            white-space: nowrap;
+            cursor: pointer;
+            outline: none;
+            display: inline-block;
+            position: relative;
+            line-height: 1;
+            float: right;
+            &-inner {
+                background-color: #c5c5c5;
+                border: 2px solid $white;
+                margin-right: $base-margin;
+                position: relative;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+            }
+            &-input {
+                position: absolute;
+                left: 0;
+                z-index: 9999;
+                cursor: pointer;
+                opacity: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        .rc-checkbox-checked {
+            .rc-checkbox-inner {
+                border: 2px solid $white;
+                background-color: #63ca91;
+            }
+        }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+            .activity-container {
+                margin-left: 7%;
+            }
+            .intro_sub_heading_2 {
+                margin-left: 7%;
+            }
+            .question {
+                display: inline-block;
+                width: 60%;
+                vertical-align: -webkit-baseline-middle;
+            }
+        }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+            .intro_head {
+                margin-left: 10%;
+                margin-top: 10%;
+            }
+            .intro_sub_heading_2 {
+                margin-left: 10%;
+            }
+        }
+        @media (min-width: 321px) and (max-width: 480px) {
+            .activity-container {
+                padding-top: 0px;
+                padding-left: 0px;
+                margin-left: 8%;
+                width: 100%;
+            }
+            .button-container {
+                background-color: transparent;
+                text-align: right;
+                .button_div {
+                    margin-top: 25px;
+                    display: block;
+                }
+            }
+            .choice-container__cell {
+                width: 315px;
+            }
+            .close-btn {
+                color: #000;
+                position: absolute;
+                float: right;
+                right: 0;
+                top: 5px;
+            }
+            .img_icon img {
+                width: 80%;
+            }
+            .question {
+                display: inline-block;
+                width: 100%;
+                vertical-align: top;
+            }
+            .feedback-container {
+                background: #fff;
+                color: #000;
+                padding: 16px;
+                width: 294px;
+                position: absolute;
+                height: 314px;
+                top: 155px;
+            }
+            .intro_sub_heading_2 {
+                font-size: 18px;
+                font-weight: normal;
+                letter-spacing: 0.5px;
+                margin-top: 10%;
+                margin-left: 8%;
+            }
+            .popup-container {
+                background-color: rgba(0, 0, 0, 0.8);
+                display: inline-block;
+                color: $white;
+                margin-top: 20px;
+                min-height: 60px;
+                padding: 20px;
+                position: relative;
+                top: -220px;
+                width: 94%;
+            }
+        }
+        @media (max-width: 320px) {
+            .activity-container {
+                margin-left: 8%;
+                margin-top: 0%;
+                width: 100%;
+            }
+            .choice-container__cell {
+                padding: 12px 5px;
+                width: 275px;
+            }
+            .close-btn {
+                color: #000;
+                position: absolute;
+                float: right;
+                right: 0;
+                top: 5px;
+            }
+            .feedback-container {
+                background: #fff;
+                color: #000;
+                padding: 16px;
+                width: 253px;
+                position: absolute;
+                height: 265px;
+                top: 132px;
+            }
+        }
+    }

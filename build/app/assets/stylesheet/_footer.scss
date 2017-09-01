@@ -1,85 +1,142 @@
 .footer {
-  background-color: $footer-bg;
-  bottom: 0px;
-  height: $footer-height;
-  position: absolute;
-  width: 100%;
-  z-index: 99;
+    width: 45%;
+    position: absolute;
+    left: 23%;
+    right: 25%;
+    bottom: 0;
+    border-bottom: 60px solid #142330;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
 }
 
 .button-container {
-  display: flex;
-  float: right;
+    display: flex;
+    position: absolute;
 }
 
 .button-box a {
-  background-color: #C1C6C9;
-  border: 1px solid #C1C6C9;
-  border-bottom: none;
-  border-left: none;
-  color: $nav-button-color;;
-  cursor: pointer;
-  display: block;
-  height: $footer-height - 2;
-  line-height: 42px;
-  text-align: center;
-  text-decoration: none;
-  width: 43px;
+    border-right: 1px solid #22353e;
+    color: #b2eacf;
+    cursor: pointer;
+    display: block;
+    line-height: 25px;
+    text-decoration: none;
+    width: 45px;
+    font-size: 1em;
+    margin: 20px auto;
+    text-align: center;
+    padding: 0 10px;
 }
 
 .button-box a.disabled {
-  color: #AAB1B9;
-  cursor: default;
-  pointer-events: none;
+    color: #AAB1B9;
+    cursor: default;
+    pointer-events: none;
 }
-
-.footer .button-box a,.footer .nav-comp-container .page-counter,.footer .button-box a.disabled,.footer .button-box a.selected{
-  background: #ededed; /* Old browsers */
-  }
-
-.footer .button-box a:hover{
-  color : #fff !important;
-  background-color: $button-bg-hover; /* Old browsers */
-  border-top: 1px solid $button-bg-hover;
-  }
 
 .nav-comp-container {
-  background-color: #C1C6C9;
-  color: $nav-button-color;
-  display: inline-block;
-  font-size: $base-font-size;
-  height: $footer-height - 2;
-  line-height: $footer-height - 2;
-  padding: ($base-padding * 0.1) ($base-padding * 0.1) 0 0;
-  vertical-align: top;
+    color: #b2eacf;
+    display: inline-block;
+    line-height: 25px;
+    width: 45px;
+    text-align: center;
+    text-decoration: none;
+    width: 52px;
+    font-size: 1em;
+    margin: 20px auto;
+    padding: 0 10px;
 }
 
-.nav-comp-container .page-counter {
-  padding: 0 $base-padding;
+.nav-comp-container a {
+    color: #b2eacf;
+    font-size: 1.6em;
 }
 
 .icon-transcript::before {
-  content: "";
+    content: "";
 }
 
 .icon-audio:before {
-  content: "";
+    content: "";
 }
 
 .icon-playPause:before {
-  content: "";
+    content: "";
 }
 
 .selected {
-  .icon-transcript:before {
-    content: "";
-  }
+    .icon-transcript:before {
+        content: "";
+    }
+    .icon-audio:before {
+        content: "";
+    }
+    .icon-playPause:before {
+        content: "";
+    }
+}
 
-  .icon-audio:before {
-    content: "";
-  }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .footer {
+        position: absolute;
+        margin-left: 15%;
+        bottom: 0%;
+        left: 0;
+        right: 0;
+        width: 58%;
+    }
+}
 
-  .icon-playPause:before {
-    content: "";
-  }
+@media (min-width: 321px) and (max-width: 480px) {
+    .button-box a {
+        font-size: 16px;
+        line-height: 18px;
+        height: 18px;
+        width: 48px;
+        padding: 0 1px;
+    }
+    .nav-comp-container {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 17px auto;
+        width: 50px;
+        padding: 0 2px;
+    }
+    .footer {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 60px solid #142330;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .button-box a {
+        font-size: 16px;
+        line-height: 18px;
+        height: 18px;
+        width: 40px;
+        padding: 0 1px;
+    }
+    .nav-comp-container {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 17px auto;
+        width: 50px;
+        padding: 0 2px;
+    }
+    .footer {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 60px solid #142330;
+        border-left: none;
+        border-right: none;
+    }
 }

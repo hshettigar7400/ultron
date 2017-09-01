@@ -1,31 +1,45 @@
-import React, { Component } from 'react';
+import React, {
+    Component
+} from 'react';
 import PropTypes from 'prop-types';
-import { DropTarget } from 'react-dnd';
-import ItemTypes from './ItemTypes';
+import {
+    DropTarget
+} from 'react-dnd';
 
-const boxTarget = {
-  drop() {
-    return { name: 'DropContainer' };
-  },
+const dropTarget = {
+    drop(props, monitor) {
+        props.onDrop(monitor.getItem());
+    },
 };
 
-@DropTarget(ItemTypes.DRAGCONTAINER, boxTarget, (connect, monitor) => ({
-  connectDropTarget: connect.dropTarget(),
-  isOver: monitor.isOver(),
-  canDrop: monitor.canDrop(),
+@DropTarget(props => props.accepts, dropTarget, (connect, monitor) => ({
+    connectDropTarget: connect.dropTarget(),
+    isOver: monitor.isOver(),
+    canDrop: monitor.canDrop(),
 }))
 export default class DropContainer extends Component {
-  constructor(props) {
-    super(props)
-  }
+    constructor(props) {
+        super(props)
+    }
 
-  render() {
-    const { canDrop, isOver, connectDropTarget, lastDroppedItem } = this.props;
-    const isActive = canDrop && isOver;
-
-    return connectDropTarget(
-      <div className="drop-container">
-      </div>,
-    );
-  }
+    render() {
+        const {
+            accepts,
+            isOver,
+            canDrop,
+            connectDropTarget,
+            lastDroppedItem
+        } = this.props;
+        const isActive = canDrop && isOver;
+        return connectDropTarget( <
+            div className = "drop-container" > {
+                lastDroppedItem &&
+                <
+                div className = "drag-container" > {
+                    lastDroppedItem.name
+                } < /div>
+            } <
+            /div>,
+        );
+    }
 }
