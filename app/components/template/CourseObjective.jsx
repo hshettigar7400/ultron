@@ -1,5 +1,6 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
+import FontAwesome from 'react-fontawesome';
 
 export default class CourseObjective extends React.Component {
   constructor(props) {
@@ -13,33 +14,14 @@ export default class CourseObjective extends React.Component {
         <MediaQuery query='(min-device-width: 1024px)'>
         <div className="content">
       		<div className="bg">
-      			<div className="intro white">
+      			<div className="intro">
       				<div className="flex-container">
-                        <h1 className="intro_head"><span className="intr_sub_span">Cou</span>rse Objectives</h1>
-                        <div className="box-conatiner-top">
-                            <div className="box-top-first">
-
+                        <h1 className="intro_head">COURSE OBJECTIVES</h1>
+                            <p>By the end of this short course,you will be able to:</p>
+                            <div className="icon_text_grp">
+                                <span className="check_outer_box"><FontAwesome className="font-awesome-icon" name='check' /></span>
+                                <span className="kaizen_text">Define Kaizen</span>
                             </div>
-                            <div className="box-top-second">
-                                <p className="box-top-text">
-                                    <span>By the end of this short course,</span><br />
-                                    <span>You will be able to:</span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div className="line" id="line1"></div>
-
-                        <div className="box-conatiner-bottom">
-                            <div className="box-bottom-first">
-
-                            </div>
-                            <div className="box-bottom-second">
-                                  <p className="box-top-text">
-                                    Define Kaizen
-                                </p>  
-                            </div>
-                        </div>
       		        </div>
       			</div>
       		</div>
@@ -48,33 +30,14 @@ export default class CourseObjective extends React.Component {
         <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
             <div className="content">
       		<div className="bg">
-      			<div className="intro white">
+      			<div className="intro">
       				<div className="flex-container">
-                        <h1 className="intro_head"><span className="intr_sub_span">Cou</span>rse Objectives</h1>
-                        <div className="box-conatiner-top">
-                            <div className="box-top-first">
-
+                        <h1 className="intro_head">COURSE OBJECTIVES</h1>
+                            <p>By the end of this short course,you will be able to:</p>
+                            <div className="icon_text_grp">
+                                <span className="check_outer_box"><FontAwesome className="font-awesome-icon" name='check' /></span>
+                                <span className="kaizen_text">Define Kaizen</span>
                             </div>
-                            <div className="box-top-second">
-                                <p className="box-top-text">
-                                    <span>By the end of this short course,</span><br />
-                                    <span>You will be able to:</span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div className="line" id="line1"></div>
-
-                        <div className="box-conatiner-bottom">
-                            <div className="box-bottom-first">
-
-                            </div>
-                            <div className="box-bottom-second">
-                                  <p className="box-top-text">
-                                    Define Kaizen
-                                </p>  
-                            </div>
-                        </div>
       		        </div>
       			</div>
 
@@ -84,31 +47,14 @@ export default class CourseObjective extends React.Component {
         <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
             <div className="content">
       		<div className="bg">
-      			<div className="intro white">
+      			<div className="intro">
       				<div className="flex-container">
-                        <h1 className="intro_head"><span className="intr_sub_span">Cou</span>rse Objectives</h1>
-                        <div className="box-conatiner-top">
-                            <div className="box-top-first">
-
-                            </div>
-                            <div className="box-top-second">
-                                <p className="box-top-text">
-                                    <span>By the end of this short course,</span><br />
-                                    <span>You will be able to:</span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div className="line" id="line1"></div>
-
-                        <div className="box-conatiner-bottom">
-                            <div className="box-bottom-first">
-
-                            </div>
-                            <div className="box-bottom-second">
-                                  <p className="box-top-text">
-                                    Define Kaizen
-                                </p>  
+                        <h1 className="intro_head">COURSE OBJECTIVES</h1>
+                        <div className="container_sm">
+                            <p>By the end of this short course,you will be able to:</p>
+                            <div className="icon_text_grp">
+                                <span className="check_outer_box"><FontAwesome className="font-awesome-icon" name='check' /></span>
+                                <span className="kaizen_text">Define Kaizen</span>
                             </div>
                         </div>
       		        </div>

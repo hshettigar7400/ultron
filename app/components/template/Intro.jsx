@@ -49,15 +49,15 @@ export default class Intro extends React.Component {
           <MediaQuery query='(min-device-width: 1024px)'>
             <div className="content">
               <div className="bg">
-                <div className="logo"> <img src="app/assets/images/template/Tesseract_logo.png"/></div>
+                <div className="logo"> <img src=""/></div>
                 <div className="title welcome_text">
-                  <h1 className="white"><span className="intro_para_one_bold">Welcome</span> <br/> <span className="intro_para_one_normal">to the short course,</span></h1>
-                  <h1 className="white"><span className="intro_para_main_head">What is <br/> Kaizen?</span></h1>
+                  <h1><span className="intro_para_one_bold">Welcome <br/> to this short course,</span></h1>
+                  <h1 className="intro_para_main_head"><span >What is </span><br/><span className="intro_para_main_head_red"> Kaizen</span>?</h1>
                 </div>
                 <br/>
                 <div className="btn">
                   <a href="#" className="btn_text" role="button" onClick={this.startCourse.bind(this)}>
-                    BEGIN<FontAwesome name='long-arrow-right' className="arror-right"/>
+                    BEGIN<FontAwesome name='arrow-right' className="arror-right"/>
                   </a>
                 </div>
               </div>
@@ -70,8 +70,8 @@ export default class Intro extends React.Component {
               <div className="bg">
                 <div className="logo"> <img src="app/assets/images/template/Tesseract_logo.png"/></div>
                 <div className="title welcome_text">
-                  <h1 className="white"><span className="intro_para_one_bold">Welcome</span> <br/> <span className="intro_para_one_normal">to the short course,</span></h1>
-                  <h1 className="white"><span className="intro_para_main_head">What is <br/> Kaizen?</span></h1>
+                  <h1 className="white"><span className="intro_para_one_bold">Welcome <br/>to this short course,</span></h1>
+                  <h1 className="white"><span className="intro_para_main_head">What is <br/> <span className="intro_para_main_head_red"> Kaizen</span>?</span></h1>
                 </div>
                 <br/>
                 <div className="btn">
@@ -89,8 +89,8 @@ export default class Intro extends React.Component {
               <div className="bg">
                 <div className="logo"> <img src="app/assets/images/template/Tesseract_logo.png"/></div>
                 <div className="title welcome_text">
-                  <h1 className="white"><span className="intro_para_one_bold">Welcome</span> <br/> <span className="intro_para_one_normal">to the short course,</span></h1>
-                  <h1 className="white"><span className="intro_para_main_head">What is <br/> Kaizen?</span></h1>
+                  <h1 className="white"><span className="intro_para_one_bold">Welcome <br/> to this short course,</span></h1>
+                  <h1 className="white"><span className="intro_para_main_head">What is <br/> <span className="intro_para_main_head_red"> Kaizen</span></span></h1>
                 </div>
                 <br/>
                 <div className="btn">

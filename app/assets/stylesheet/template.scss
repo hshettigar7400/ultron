@@ -1,16 +1,19 @@
 /* Intro page */
-
+.bg{
+    background-size: cover;
+}
 .intro-container {
     height: 100%;
     width: 100%;
 }
 
 .intro_head {
-    font-size: 1.8em;
-    font-weight: 600;
+    color: #dc3635;
+    font-size: 21px;
     letter-spacing: 1px;
     margin-left: 7%;
     margin-top: 5%;
+    text-transform: uppercase;
 }
 
 .content {
@@ -28,10 +31,17 @@
     color: $white;
 }
 
+.red {
+    color: #dc3635;
+}
 
-
-
-
-
-
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
+    .intro_head {
+        color: #dc3635;
+        font-size: 17px;
+        letter-spacing: 0px;
+        margin-left: 5%;
+        margin-top: 10%;
+        text-transform: uppercase;
+    }
+}

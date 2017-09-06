@@ -1,0 +1,108 @@
+.question_1 {
+    height: 100%;
+    .bg {
+        background-image: url("../../assets/images/template/scrn5_img.png");
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+    .option-text {
+        margin-top: -2px;
+        margin-left: 18px;
+    }
+    .que_no {
+        color: #dc3635;
+        font-size: 19px;
+        font-weight: 600;
+        margin-right: 10px;
+    }
+    .que_grp {
+        display: flex;
+    }
+    .radio_container {
+        margin-left: 7%;
+        margin-top: 3%;
+        font-size: 17px;
+        letter-spacing: 1px;
+        width: 70%;
+    }
+    .radio_grp {
+        margin-left: 5%;
+        line-height: 36px;
+    }
+    .submit_btn {
+        background-color: #dc3635;
+        color: #fff;
+        cursor: pointer;
+        width: 10%;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-align: center;
+        padding: 8px 18px;
+        margin-top: 5%;
+    }
+    .text_italic {
+        font-weight: 500;
+        font-style: italic;
+        margin-left: 4%;
+    }
+    .intro {
+        border-top: none;
+        top: 0;
+        position: absolute;
+    }
+    input[type='radio'] {
+        -webkit-appearance: none;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        outline: none;
+    }
+    input[type='radio']:before {
+        content: '';
+        display: block;
+        width: 55%;
+        height: 55%;
+        margin: 26% auto;
+        border-radius: 50%;
+    }
+    input[type='radio']:checked:before {
+        background: red;
+    }
+    label {
+        display: flex;
+        position: relative;
+        top: -5px;
+        left: 0px;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        .bg{
+                background-position-x: -615px;
+        }
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
+    @media (min-width: 321px) and (max-width: 480px) {
+        .que_detl {
+            line-height: 20px;
+        }
+        .que_no {
+            font-size: 14px;
+        }
+        .radio_container {
+            font-size: 14px;
+            width: 92%;
+        }
+        .submit_btn {
+            width: 25%;
+            margin-left: 3%;
+            margin-top: 8%;
+        }
+        .text_italic {
+            margin-left: 6%;
+            margin-bottom: 9%;
+            margin-top: 9%;
+        }
+    }
+    @media (max-width: 320px) {}
+}

@@ -17,72 +17,117 @@ export default class Interactivity5 extends React.Component {
     switch (parseInt(currentPopup)) {
       case 1:
         return (
-          <div className="flex-container-inner">
-            <div className="popup_icon_head">
-                <FontAwesome className="popup_icon" name='info-circle' /><h1 className="popup-container-heading"><span className="intr_sub_span">Intellect</span>ual and Information Assets</h1>    
-            </div>
-            
-            <ul className="popup-container-text">
-                <li>
-                    Intellectual Property
-                </li>
+            <div>
+                <MediaQuery query='(min-device-width: 1024px)'>
+                  <div className="flex-container-inner">
+                        <div>
+                            <img className="popup_image" src="../../app/assets/images/template/pop1_img.png" />
+                        </div>
+                        <div>
+                            <p className="popup_text">Kaizen is about making small continuous improvements by the persons performing their job in their day-to-day work/activities.<br/>All systems are bound to deteriorate once established. Continuing effort is a must even to maintain status quo. </p>
+                        </div>
+                  </div>
+                </MediaQuery>
                 
-                <li>
-                    Use of THE COMPANY Information Technology Assets
-                </li>
-                <li>
-                    Accurate Records and Records Retention
-                </li>
-            </ul>
-          </div>
-
+                <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
+                  <div className="flex-container-inner">
+                        <div>
+                            <img className="popup_image" src="../../app/assets/images/template/pop1_img.png" />
+                        </div>
+                        <div>
+                            <p className="popup_text">Kaizen is about making small continuous improvements by the persons performing their job in their day-to-day work/activities.<br/>All systems are bound to deteriorate once established. Continuing effort is a must even to maintain status quo. </p>
+                        </div>
+                  </div>
+                </MediaQuery>
+                
+                <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
+                  <div className="flex-container-inner">
+                        <div>
+                            <img className="popup_image" src="../../app/assets/images/template/pop1_img_mob.png" />
+                        </div>
+                        <div>
+                            <p className="popup_text">Kaizen is about making small continuous improvements by the persons performing their job in their day-to-day work/activities.<br/>All systems are bound to deteriorate once established. Continuing effort is a must even to maintain status quo. </p>
+                        </div>
+                  </div>
+                </MediaQuery>
+            </div>
         );
         break;
       case 2:
         return (
-          <div className="flex-container-inner">
-                <div className="popup_icon_head">
-                    <FontAwesome className="popup_icon" name='gift' /><h1 className="popup-container-heading"><span className="intr_sub_span">Gif</span>ts and Entertainment</h1>    
-                </div>
-            
-            <ul className="popup-container-text">
-                <li>
-                    Circumstances when any gift or entertainment cannot be accepted
-                </li>
-                
-                <li>
-                    Guidelines for offering gifts or entertainment
-                </li>
-                <li>
-                    Guidelines and procedures for reporting receipt of gifts
-                </li>
-            </ul>
-          </div>
+            <div>
+                <MediaQuery query='(min-device-width: 1024px)'>
+                      <div className="flex-container-inner">
+                           <div>
+                                <img className="popup_image2_left" src="../../app/assets/images/template/pop2_img.png" />
+                               <img className="popup_image2_rt" src="../../app/assets/images/template/pop2_img2.png" />
+                           </div> 
+                      </div>
+                </MediaQuery>
+                <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
+                      <div className="flex-container-inner">
+                           <div>
+                                <img className="popup_image2_left" src="../../app/assets/images/template/pop2_img.png" />
+                               <img className="popup_image2_rt" src="../../app/assets/images/template/pop2_img2.png" />
+                           </div> 
+                      </div>
+                </MediaQuery>
+                <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
+                      <div className="flex-container-inner">
+                           <div>
+                                <img className="popup_image" src="../../app/assets/images/template/pop21_img_mob.png" />
+                           </div> 
+                          <div>
+                                 <img className="popup_image" src="../../app/assets/images/template/pop22_img_mob.png" />
+                          </div>
+                      </div>
+                </MediaQuery>
+            </div>
         );
         break;
         case 3:
         return (
-          <div className="flex-container-inner">
-                <h1 className="popup-container-heading"><span className="intr_sub_span">Exter</span>nal Communication</h1>
-                <div className="popup_icon_head">
-                    <FontAwesome className="popup_icon" name='comments-o' /><h1 className="popup-container-heading"><span className="intr_sub_span">Exter</span>nal Communication</h1>   
-                </div>
-                <ul className="popup-container-text">
-                    <li>
-                        Agents / Consultants / Third Parties
-                    </li>
-
-                    <li>
-                        Communicating with Regulators and Others
-                    </li>
-                    <li>
-                        Political Activities
-                    </li>
-                    <li>
-                        Privacy/ Confidentiality
-                    </li>
-                </ul>
-          </div>
+            <div>
+                <MediaQuery query='(min-device-width: 1024px)'>
+                      <div className="flex-container-inner">
+                            <img className="" src="../../app/assets/images/template/pop3_img.png" />
+                            <div className="popup3_text">
+                                <p>The challenge is to:</p>
+                                <ul className="popup3_ul">
+                                    <li>Channelize the creativity of the human brain in the direction the organization desires</li>
+                                    <li>Create a sense of pride in the employees</li>
+                                    <li>Document the numerous small and large improvement efforts</li>
+                                </ul>
+                            </div>
+                      </div>
+                </MediaQuery>
+                <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
+                      <div className="flex-container-inner">
+                            <img className="popup_image" src="../../app/assets/images/template/pop3_img.png" />
+                            <div className="popup3_text">
+                                <p>The challenge is to:</p>
+                                <ul className="popup3_ul">
+                                    <li>Channelize the creativity of the human brain in the direction the organization desires</li>
+                                    <li>Create a sense of pride in the employees</li>
+                                    <li>Document the numerous small and large improvement efforts</li>
+                                </ul>
+                            </div>
+                      </div>
+                </MediaQuery>
+                <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
+                      <div className="flex-container-inner">
+                            <img className="popup_image" src="../../app/assets/images/template/pop3_img_sm.png" />
+                            <div className="popup3_text">
+                                <p>The challenge is to:</p>
+                                <ul className="popup3_ul">
+                                    <li>Channelize the creativity of the human brain in the direction the organization desires</li>
+                                    <li>Create a sense of pride in the employees</li>
+                                    <li>Document the numerous small and large improvement efforts</li>
+                                </ul>
+                            </div>
+                      </div>
+                </MediaQuery>
+            </div>
         );
         break;
     }
@@ -120,30 +165,42 @@ export default class Interactivity5 extends React.Component {
         <MediaQuery query='(min-device-width: 1224px)'>
           <div className="content">
             <div className="bg">
-              <div className="intro white">
+              <div className="intro">
                 <div className="flex-main-content">
-                    <h1 className="intro_head"><span className="intr_sub_span">Cod</span>e of Conduct aspects</h1>
-                      <p className="intro_sub_heading_2">
-                            The various aspects are:
-                      </p>
+                    <h1 className="intro_head">Defining Kaizen</h1>
+                     <p className="text_para_first">Let's look at Kaizen in more detail.</p>
+                    <p className="text_para_second">Select each button to know more.</p>
                       <div>
-                        <div className="left-side">
+                        <div>
                             <div className="buttons">
-                                <div className="intro_btn_benefit"  id="btn_01" onClick={this.openPopup.bind(this, 1)}>
-                                    <span className="btn_text_cntr">Intellectual and Information Assets</span><FontAwesome className="btn_icon_rt" name='info-circle' />
+                                <div className="button_flex">
+                                    <div className="intro_btn_benefit_grey btn_gap"  id="btn_00" >
+                                        <span></span>
+                                    </div>
+                                    <div className="intro_btn_benefit"  id="btn_01" onClick={this.openPopup.bind(this, 1)}>
+                                        <span>1</span>
+                                    </div>
                                 </div>
-
-                                <div className="intro_grp_benefit intro_btn_benefit" id="btn_02" onClick={this.openPopup.bind(this, 2)} >
-                                    <span className="btn_text_cntr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gifts and Entertainment</span><FontAwesome className="btn_icon_rt" name='gift' />
+                                <div className="button_flex button_2">
+                                    <div className="intro_btn_benefit btn_gap"  id="btn_02" onClick={this.openPopup.bind(this, 2)} >
+                                        <span>2</span>
+                                    </div>
+                                    <div className="intro_btn_benefit_grey"  id="btn_00" >
+                                        <span></span>
+                                    </div>
                                 </div>
-
-                                <div className="intro_grp_benefit intro_btn_benefit" id="btn_03" onClick={this.openPopup.bind(this, 3)}>
-                                    <span className="btn_text_cntr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;External Communication</span><FontAwesome className="btn_icon_rt" name='comments-o' />
+                                <div className="button_flex button_3">
+                                    <div className="intro_btn_benefit_grey btn_gap"  id="btn_00" >
+                                        <span></span>
+                                    </div>
+                                    <div className="intro_btn_benefit"  id="btn_03" onClick={this.openPopup.bind(this, 3)}>
+                                        <span>3</span>
+                                    </div>
                                 </div>
                               </div>    
                           </div>
 
-                          <div className="right-side">
+                          <div>
                             {this.displayPopup()}
                           </div>
                       </div>
@@ -156,30 +213,42 @@ export default class Interactivity5 extends React.Component {
         <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
           <div className="content">
             <div className="bg">
-              <div className="intro white">
+              <div className="intro">
                 <div className="flex-main-content">
-                    <h1 className="intro_head"><span className="intr_sub_span">Cod</span>e of Conduct aspects</h1>
-                      <p className="intro_sub_heading_2">
-                            The various aspects are:
-                      </p>
-                      <div className="tab_popup_container">
-                        <div className="left-side">
+                    <h1 className="intro_head">Defining Kaizen</h1>
+                     <p className="text_para_first">Let's look at Kaizen in more detail.</p>
+                    <p className="text_para_second">Select each button to know more.</p>
+                      <div>
+                        <div>
                             <div className="buttons">
-                                <div className="intro_btn_benefit" id="btn_01" onClick={this.openPopup.bind(this, 1)}>
-                                    <span className="btn_text_cntr">Intellectual and Information Assets</span><FontAwesome className="btn_icon_rt" name='info-circle' />
+                                <div className="button_flex">
+                                    <div className="intro_btn_benefit_grey btn_gap"  id="btn_00" >
+                                        <span></span>
+                                    </div>
+                                    <div className="intro_btn_benefit"  id="btn_01" onClick={this.openPopup.bind(this, 1)}>
+                                        <span>1</span>
+                                    </div>
                                 </div>
-
-                                <div className="intro_grp_benefit intro_btn_benefit" id="btn_02" onClick={this.openPopup.bind(this, 2)} >
-                                    <span className="btn_text_cntr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gifts and Entertainment</span><FontAwesome className="btn_icon_rt" name='gift' />
+                                <div className="button_flex button_2">
+                                    <div className="intro_btn_benefit btn_gap"  id="btn_02" onClick={this.openPopup.bind(this, 2)} >
+                                        <span>2</span>
+                                    </div>
+                                    <div className="intro_btn_benefit_grey"  id="btn_00" >
+                                        <span></span>
+                                    </div>
                                 </div>
-
-                                <div className="intro_grp_benefit intro_btn_benefit" id="btn_03" onClick={this.openPopup.bind(this, 3)}>
-                                    <span className="btn_text_cntr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;External Communication</span><FontAwesome className="btn_icon_rt" name='comments-o' />
+                                <div className="button_flex button_3">
+                                    <div className="intro_btn_benefit_grey btn_gap"  id="btn_00" >
+                                        <span></span>
+                                    </div>
+                                    <div className="intro_btn_benefit"  id="btn_03" onClick={this.openPopup.bind(this, 3)}>
+                                        <span>3</span>
+                                    </div>
                                 </div>
                               </div>    
                           </div>
 
-                          <div className="right-side">
+                          <div>
                             {this.displayPopup()}
                           </div>
                       </div>
@@ -192,32 +261,44 @@ export default class Interactivity5 extends React.Component {
         <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
           <div className="content">
             <div className="bg">
-              <div className="intro white">
+              <div className="intro">
                 <div className="flex-main-content">
-                    <h1 className="intro_head">Code of Conduct <br/><span className="intr_sub_span">asp</span>ects</h1>
-                      <p className="intro_sub_heading_2">
-                            The various aspects are:
-                      </p>
-                    
-                      <div className="tab_popup_container">
-                            <div className="intro_btn_benefit" id="btn_01" onClick={this.openPopup.bind(this, 1)}>
-                                <span className="btn_text_cntr">Intellectual and Information Assets</span><FontAwesome className="btn_icon_rt" name='info-circle' />
-                            </div>
+                    <h1 className="intro_head">Defining Kaizen</h1>
+                     <p className="text_para_first">Let's look at Kaizen in more detail.</p>
+                    <p className="text_para_second">Select each button to know more.</p>
+                      <div>
+                       
+                            <div className="buttons">
+                                <div className="button_flex">
+                                    <div className="intro_btn_benefit_grey btn_gap"  id="btn_00" >
+                                        <span></span>
+                                    </div>
+                                    <div className="intro_btn_benefit"  id="btn_01" onClick={this.openPopup.bind(this, 1)}>
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                                <div className="button_flex button_2">
+                                    <div className="intro_btn_benefit btn_gap"  id="btn_02" onClick={this.openPopup.bind(this, 2)} >
+                                        <span>2</span>
+                                    </div>
+                                    <div className="intro_btn_benefit_grey"  id="btn_00" >
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div className="button_flex button_3">
+                                    <div className="intro_btn_benefit_grey btn_gap"  id="btn_00" >
+                                        <span></span>
+                                    </div>
+                                    <div className="intro_btn_benefit"  id="btn_03" onClick={this.openPopup.bind(this, 3)}>
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                              </div>    
+                          
 
-                            <div className="intro_grp_benefit intro_btn_benefit" id="btn_02" onClick={this.openPopup.bind(this, 2)} >
-                                <span className="btn_text_cntr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gifts and Entertainment</span><FontAwesome className="btn_icon_rt" name='gift' />
-                            </div>
-
-                            <div className="intro_grp_benefit intro_btn_benefit" id="btn_03" onClick={this.openPopup.bind(this, 3)}>
-                                <span className="btn_text_cntr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;External Communication</span><FontAwesome className="btn_icon_rt" name='comments-o' />
-                            </div>
-
-
-                            <div>
-                                {
-                                    this.displayPopup()
-                                }
-                            </div>
+                          <div>
+                            {this.displayPopup()}
+                          </div>
                       </div>
                 </div>
               </div>

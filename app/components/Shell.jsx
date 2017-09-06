@@ -120,7 +120,7 @@ export default class Shell extends React.Component {
           onPlayPause={this.togglePlay.bind(this)}
           onReplay={this.replayPage.bind(this)}
           isPlaying={this.state.isPlaying}
-          totalPages={10}
+          totalPages={6}
           onToggleVolume={this.toggleVolume.bind(this)}
           onTranscriptClick={this.toggleTranscript.bind(this)}
           showTranscript={this.state.showTranscript}
@@ -183,10 +183,16 @@ export default class Shell extends React.Component {
     return (
       <div>
         {!this.state.isAudioFinished && this.loadAudio()}
-        {this.loadHeader()}
+            <MediaQuery query='(min-width: 621px)'>
+          {this.loadHeader()}
+        </MediaQuery>
+        <MediaQuery query='(max-width: 621px)'>
+          {this.showTopNav()}
+        </MediaQuery>
+        
         {this.state.currentPage && this.pageLoader()}
         {this.state.showTranscript &&  this.loadTranscript()}
-        <MediaQuery query='(min-width: 320px)'>
+        <MediaQuery query='(min-width: 621px)'>
           {this.loadFooter()}
         </MediaQuery>
       </div>

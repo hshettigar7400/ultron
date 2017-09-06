@@ -9,21 +9,23 @@ export default class Header extends React.Component {
   render() {
     return (
       <div className="header">
-        <div className="course-logo header_child_width">
+        <div className="course-logo">
             <img src="app/assets/images/template/logo_tafe.png" />
         </div>
 
-        <div id="courseTitle" className="course-title title header_child_width">
+        <div id="courseTitle" className="course-title">
             <p className="header-title">{this.props.courseTitle}</p>
         </div>
 
-        <div className="header_child_width course-menu-section">
-            <div className="header_right_help header_span_inline">
-                <FontAwesome name='question-circle' />
-            </div>
-            <div className="header_right_toggle header_span_inline">
-                <FontAwesome name='bars' />
-            </div>
+        <div className="course-menu-section">
+            <p>
+                <span className="question">  
+                    ?
+                </span>
+                <span className="course-menu-icon">
+                    <FontAwesome name='align-right' />
+                </span>
+            </p>
         </div>
     </div>
     )

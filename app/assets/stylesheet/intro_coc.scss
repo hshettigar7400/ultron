@@ -1,7 +1,7 @@
 .introduction {
     height: 100%;
     .bg {
-        background-image: url("../../assets/images/template/coc_7.png");
+        background-image: url("../../assets/images/template/scrn_1BG.png");
         background-repeat: no-repeat;
         background-position-y: -60px;
         height: 100%;
@@ -26,14 +26,6 @@
     .content_pading {
         margin-top: 10px;
     }
-    .close-btn {
-        float: right;
-        font-weight: 600;
-        font-size: 14px;
-        right: 8px;
-        top: 15px;
-        position: absolute;
-    }
     .flex-container {
         display: -webkit-flex;
         display: flex;
@@ -54,26 +46,38 @@
         margin-top: 10%;
         width: 100%;
     }
-    .intr_sub_span {
-        border-bottom: solid #cdcecd;
-        border-radius: 2px 2px;
-        padding-bottom: 10px;
-    }
-    .intro_sub_heading_list li {
-        font-size: 18px;
-        letter-spacing: 1px;
-        list-style-type: circle;
-        padding-top: 10px;
-    }
-    .intro_sub_heading_list li:first-child {
-        padding-top: 0px;
+    .img-text-grp {
+        font-size: 21px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        position: relative;
+        left: 10%;
     }
     .left-side {
-        width: 40%;
+        color: #000;
+        margin-left: 7%;
+        width: 60%;
     }
-    .left-side>img {
-        margin-left: 14%;
-        margin-top: 5%;
+    li {
+        font-size: 17px;
+        letter-spacing: 1px;
+        list-style: none;
+        padding-bottom: 8px;
+    }
+    li:before {
+        /* For a round bullet */
+        content: '\2022';
+        /* For a square bullet */
+        /*content:'\25A0';*/
+        display: block;
+        position: relative;
+        max-width: 0;
+        max-height: 0;
+        left: -36px;
+        top: -12px;
+        color: #dc3635;
+        font-size: 40px;
+        padding-top: 12px;
     }
     .main-container {
         display: flex;
@@ -82,75 +86,89 @@
         vertical-align: middle;
     }
     .right-side {
-        width: 60%;
+        margin-top: 4%;
+        width: 40%;
+    }
+    .text-blk {
+        color: $black;
+        margin-left: 6px;
+    }
+    .text-red {
+        color: #dc3635;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
         .bg {
-            background-size: cover;
-            background-position-x: -450px;
             background-position-y: 0px;
-        }
-        .intro_sub_heading_list {
-            margin-left: 4%;
-        }
-        .intro_sub_heading_list li {
-            font-size: 21px;
-        }
-        .main-container {
-            display: block;
-        }
-        .left-side {
-            width: 100%;
-        }
-        .left-side>img {
-            margin-left: 7%;
-            margin-top: 3%;
-        }
-        .right-side {
-            width: 100%;
         }
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
         .bg {
-            background-size: cover;
             background-position-y: 0px;
-        }
-        .right-side {
-            top: 29%;
         }
     }
     @media (min-width: 321px) and (max-width: 480px) {
         .bg {
-            background-image: url("../../assets/images/template/coc_7_sm.png");
+            background-image: url("../../assets/images/template/scrn1_3_4_bg_sm.png");
+            background-position-y: 0px;
         }
-        .btn_icon_rt {
-            right: 6%;
+        .container_sm {
+            margin-left: 4%;
+            color: #000;
+            width: 90%;
         }
         .intr_sub_span {
             padding-bottom: 20px;
+        }
+        .image_blk_sm {
+            position: absolute;
+            top: 60%;
+            left: 24%;
+        }
+        .img-text-grp {
+            font-size: 18px;
+            line-height: 35px;
+            left: 18%;
+        }
+        li {
+            font-size: 14px;
+            line-height: 18px;
+            padding-bottom: 0px;
+        }
+        li:before {
+            top: 0px;
         }
     }
     @media (max-width: 320px) {
         .bg {
-            background-image: url("../../assets/images/template/coc_7_sm.png");
-            background-position-x: -101px;
-            background-position-y: -155px;
+            background-position-y: 0px;
+        }
+        .container_sm {
+            margin-left: 4%;
+            color: #000;
+            width: 85%;
         }
         .intr_sub_span {
             padding-bottom: 20px;
         }
-        .intro_sub_heading_list li {
-            font-size: 12.5px;
-            line-height: 12px;
-            padding-top: 12px;
+        .image_blk_sm {
+            position: absolute;
+            top: 62%;
+            left: 24%;
         }
-        .intro_sub_heading_list li:first-child {
-            padding-top: 0px;
+        .image_blk_sm>img {
+            width: 70%;
         }
-        .mob_img>img {
-            margin-top: 3%;
-            margin-left: 7%;
-            width: 280px;
+        .img-text-grp {
+            font-size: 17px;
+            line-height: 30px;
+        }
+        li {
+            font-size: 12px;
+            line-height: 15px;
+            padding-bottom: 0px;
+        }
+        li:before {
+            top: 0px;
         }
     }
 }

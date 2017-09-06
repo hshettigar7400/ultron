@@ -18,25 +18,20 @@ export default class Introduction extends React.Component {
             <div className="bg">
               <div className="intro white">
                 <div className="flex-main-content">
-                    <h1 className="intro_head"><span className="intr_sub_span">Cou</span>rse introduction</h1>
+                    <h1 className="intro_head">Course introduction</h1>
                     <div className="main-container">
                         <div className="left-side">
-                                <img src="../../app/assets/images/template/intro.png" />
+                            <ul className="left-text-content">
+                                <li>Kaizen started in the year 1986.</li>
+                                <li>Kaizen is an art of continuous improvement. It was originally introduced to the west by Masaaki imai in his book Kaizen: The key to Japan’s Competitive success in 1986. In the recent times, Kaizen is organized worldwide as an important pillar of an organization’s long-term competitive strategy.</li>
+                                <li>This course aims to uncover the basics of Kaizen and important insights to implement Kaizen.</li>
+                            </ul>
                         </div>
                         
                         <div className="right-side">
-                            <ul className="intro_sub_heading_list">
-                                <li>
-                                    Kaizen started in the year 1986.
-                                </li>
-                                
-                                <li>
-                                    Kaizen is an art of continuous improvement. It was originally introduced to the west by Masaaki imai in his book Kaizen: The key to Japan’s Competitive success in 1986. In the recent times, Kaizen is organized worldwide as an important pillar of an organization’s long-term competitive strategy.
-                                </li>
-                                <li>
-                                    This course aims to uncover the basics of Kaizen and important insights to implement Kaizen.
-                                </li>
-                            </ul>
+                            <img src="../../app/assets/images/template/intro.png" />
+                            <div className="img-text-grp"><span className="text-red">Kai =</span><span className="text-blk">Change</span> </div>
+                            <div className="img-text-grp"><span className="text-red">Zen =</span><span className="text-blk">Good</span> </div>
                         </div>
                     </div>
                 </div>
@@ -50,25 +45,20 @@ export default class Introduction extends React.Component {
             <div className="bg">
               <div className="intro white">
                 <div className="flex-main-content">
-                    <h1 className="intro_head"><span className="intr_sub_span">Cou</span>rse introduction</h1>
-                      <div className="main-container">
+                    <h1 className="intro_head">Course introduction</h1>
+                    <div className="main-container">
                         <div className="left-side">
-                                <img src="../../app/assets/images/template/intro.png" />
+                            <ul className="left-text-content">
+                                <li>Kaizen started in the year 1986.</li>
+                                <li>Kaizen is an art of continuous improvement. It was originally introduced to the west by Masaaki imai in his book Kaizen: The key to Japan’s Competitive success in 1986. In the recent times, Kaizen is organized worldwide as an important pillar of an organization’s long-term competitive strategy.</li>
+                                <li>This course aims to uncover the basics of Kaizen and important insights to implement Kaizen.</li>
+                            </ul>
                         </div>
                         
                         <div className="right-side">
-                            <ul className="intro_sub_heading_list">
-                                <li>
-                                    Kaizen started in the year 1986.
-                                </li>
-                                
-                                <li>
-                                    Kaizen is an art of continuous improvement. It was originally introduced to the west by Masaaki imai in his book Kaizen: The key to Japan’s Competitive success in 1986. In the recent times, Kaizen is organized worldwide as an important pillar of an organization’s long-term competitive strategy.
-                                </li>
-                                <li>
-                                    This course aims to uncover the basics of Kaizen and important insights to implement Kaizen.
-                                </li>
-                            </ul>
+                            <img src="../../app/assets/images/template/intro.png" />
+                            <div className="img-text-grp"><span className="text-red">Kai =</span><span className="text-blk">Change</span> </div>
+                            <div className="img-text-grp"><span className="text-red">Zen =</span><span className="text-blk">Good</span> </div>
                         </div>
                     </div>
                 </div>
@@ -82,24 +72,21 @@ export default class Introduction extends React.Component {
             <div className="bg">
               <div className="intro white">
                 <div className="flex-main-content">
-                    <h1 className="intro_head"><span className="intr_sub_span">Cou</span>rse introduction</h1>
-                    <div className="mob_img">
-                            <img src="../../app/assets/images/template/intro.png" />
-                    </div>
-
-                    <div>
-                        <ul className="intro_sub_heading_list">
-                            <li>
-                                Kaizen started in the year 1986.
-                            </li>
-
-                            <li>
-                                Kaizen is an art of continuous improvement. It was originally introduced to the west by Masaaki imai in his book Kaizen: The key to Japan’s Competitive success in 1986. In the recent times, Kaizen is organized worldwide as an important pillar of an organization’s long-term competitive strategy.
-                            </li>
-                            <li>
-                                This course aims to uncover the basics of Kaizen and important insights to implement Kaizen.
-                            </li>
-                        </ul>
+                    <h1 className="intro_head">Course introduction</h1>
+                    <div className="container_sm">
+                        <div className="">
+                            <ul className="left-text-content">
+                                <li>Kaizen started in the year 1986.</li>
+                                <li>Kaizen is an art of continuous improvement. It was originally introduced to the west by Masaaki imai in his book Kaizen: The key to Japan’s Competitive success in 1986. In the recent times, Kaizen is organized worldwide as an important pillar of an organization’s long-term competitive strategy.</li>
+                                <li>This course aims to uncover the basics of Kaizen and important insights to implement Kaizen.</li>
+                            </ul>
+                        </div>
+                        
+                        <div className="image_blk_sm">
+                            <img src="../../app/assets/images/template/scrn1_img_sm.png" />
+                            <div className="img-text-grp"><span className="text-red">Kai =</span><span className="text-blk">Change</span> </div>
+                            <div className="img-text-grp"><span className="text-red">Zen =</span><span className="text-blk">Good</span> </div>
+                        </div>
                     </div>
                 </div>
               </div>

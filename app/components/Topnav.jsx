@@ -1,6 +1,6 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
 import * as utils from './Utils';
+import FontAwesome from 'react-fontawesome';
 
 export default class TopNav extends React.Component {
   constructor(props) {
@@ -18,24 +18,63 @@ export default class TopNav extends React.Component {
 
   render() {
     return (
-      <div className="header">
-        <div className="course-logo header_child_width">
-            <img src="app/assets/images/template/Tesseract_logo_sm.png" />
-        </div>
+      <div className="header-nav">
+            <div className="button-container">
+                <div className="button-box">
+                  <a aria-disabled="false" aria-label="menu" aria-pressed="false" href="#" onClick={this.props.onMenuClick} role="button">
+                    <FontAwesome name='volume-up' />
+                  </a>
+                </div>
+                
+                  <div className="button-box">
+                  <a aria-disabled="false" aria-label="menu" aria-pressed="false" href="#" onClick={this.props.onMenuClick} role="button">
+                    <FontAwesome name='pause' />
+                  </a>
+                </div>
+                
+                <div className="button-box">
+                  <a aria-disabled="false" aria-label="playPause" aria-pressed="false"
+                    className={this.props.isPlaying ? "" : "selected"} onClick={this.props.onPlayPause.bind(null, this)} role="button">
+                    <span className="icon-playPause"></span>
+                  </a>
+                </div>
+                
+                <div className="button-box">
+                  <a aria-disabled="false" aria-label="back" aria-pressed="false" className={(this.props.currentPageNumber !== 1)
+                    ? "tabindex"
+                    : "tabindex disabled"} href="#" onClick={this.props.onLoadPrev.bind(null, this)} role="button">
+                    <FontAwesome name='angle-left' />
+                  </a>
+                </div>
+                
+                <div className="button-box white">  
+                      <span className="page-number ">{this.getDoubleDigit(this.props.currentPageNumber)}</span>
+                      <span className="page-separator "> / </span>
+                      <span className="total-pages ">{this.getDoubleDigit(this.props.totalPages)}</span>
+                </div>
 
-        <div id="courseTitle" className="course-title title header_child_width">
-            <p className="header-title">{this.props.courseTitle}</p>
-        </div>
+                <div className="button-box">
+                  <a aria-disabled="false" aria-label="next" aria-pressed="false" className={(this.props.currentPageNumber !== this.props.totalPages)
+                    ? "tabindex"
+                    : "tabindex disabled"} href="#" onClick={this.props.onLoadNext.bind(null, this)} role="button">
+                    <FontAwesome name='angle-right' />
+                  </a>
+                </div>
 
-        <div className="header_child_width course-menu-section">
-            <div className="header_right_help header_span_inline">
-                <FontAwesome name='question' />
+
+                <div className="button-box">
+                    <a aria-disabled="false" aria-label="resources" aria-pressed="false" href="#" role="button" >
+                      <FontAwesome name='file-text-o' />
+                    </a>
+                </div>
+
+                <div className="button-box">
+                  <a aria-disabled="false" aria-label="menu" aria-pressed="false" href="#" onClick={this.props.onMenuClick} role="button">
+                    <span className="icon-menu"></span>
+                  </a>
+                </div>
             </div>
-            <div className="header_right_toggle header_span_inline">
-                <FontAwesome name='align-right' />
-            </div>
-        </div>
-    </div>
+      </div>
     )
   }
 }
