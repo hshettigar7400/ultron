@@ -1,7 +1,48 @@
 /* Intro page */
-.bg{
+
+.bg {
     background-size: cover;
 }
+
+.fade-in {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .intro-container {
     height: 100%;
     width: 100%;
@@ -35,6 +76,7 @@
     color: #dc3635;
 }
 
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
     .intro_head {
         color: #dc3635;
@@ -44,4 +86,14 @@
         margin-top: 10%;
         text-transform: uppercase;
     }
+    .page-loader{
+        height:672px  !important;
+    }
+}
+
+@media screen and (max-device-width: 767px) and (orientation: landscape) {
+    .intro_head {
+        margin-top: 3%;
+    }
+    
 }

@@ -25,7 +25,7 @@ export default class PageLoader extends React.Component {
   }
 
   updateDimensions() {
-    var pageLoaderHeight = document.body.clientHeight - 65;
+    var pageLoaderHeight = document.body.clientHeight - 57;
     if (this.refs.pageLoader) {
       this.refs.pageLoader.style.height= `${pageLoaderHeight}px`;
     }

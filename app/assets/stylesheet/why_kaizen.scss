@@ -51,8 +51,8 @@
             background-size: cover;
             background-position-x: -530px;
         }
-        ul{
-                margin-bottom: 42%;
+        ul {
+            margin-bottom: 42%;
             width: 90%;
         }
     }
@@ -69,16 +69,40 @@
         li:before {
             top: -12px;
         }
-        ul{
-                width: 80%;
+        ul {
+            width: 80%;
+        }
+        .img_kaizen {
+            width: 98%;
         }
     }
     @media (max-width: 320px) {
+        .img_kaizen {
+            height: auto;
+            max-width: 100%;
+            width: auto;
+        }
         li {
-            font-size: 14px;
+            font-size: 12px;
+            margin-left: 4%;
         }
         li:before {
-            top: 0px;
+            top: -12px;
+        }
+        ul {
+            width: 81%;
+        }
+    }
+    @media screen and (max-device-width: 767px) and (orientation: landscape) {
+        li {
+            font-size: 12px;
+            padding-bottom: 0px;
+        }
+        .img_kaizen {
+            top: 19em;
+        }
+        ul{
+                margin-top: -2%;
         }
     }
 }

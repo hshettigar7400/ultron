@@ -68,7 +68,7 @@ export default class Intro extends React.Component {
           <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
             <div className="content">
               <div className="bg">
-                <div className="logo"> <img src="app/assets/images/template/Tesseract_logo.png"/></div>
+                <div className="logo"> <img src="app/assets/images/template/blank.png"/></div>
                 <div className="title welcome_text">
                   <h1 className="white"><span className="intro_para_one_bold">Welcome <br/>to this short course,</span></h1>
                   <h1 className="white"><span className="intro_para_main_head">What is <br/> <span className="intro_para_main_head_red"> Kaizen</span>?</span></h1>
@@ -87,10 +87,10 @@ export default class Intro extends React.Component {
           <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
             <div className="content">
               <div className="bg">
-                <div className="logo"> <img src="app/assets/images/template/Tesseract_logo.png"/></div>
+                <div className="logo"> <img src="app/assets/images/template/blank.png"/></div>
                 <div className="title welcome_text">
-                  <h1 className="white"><span className="intro_para_one_bold">Welcome <br/> to this short course,</span></h1>
-                  <h1 className="white"><span className="intro_para_main_head">What is <br/> <span className="intro_para_main_head_red"> Kaizen</span></span></h1>
+                  <h1 className=""><span className="intro_para_one_bold">Welcome <br/> to this short course,</span></h1>
+                  <h1 className=""><span className="intro_para_main_head">What is <br/> <span className="intro_para_main_head_red"> Kaizen</span>?</span></h1>
                 </div>
                 <br/>
                 <div className="btn">

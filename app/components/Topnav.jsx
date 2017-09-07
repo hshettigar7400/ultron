@@ -28,7 +28,7 @@ export default class TopNav extends React.Component {
                 
                   <div className="button-box">
                   <a aria-disabled="false" aria-label="menu" aria-pressed="false" href="#" onClick={this.props.onMenuClick} role="button">
-                    <FontAwesome name='pause' />
+                    <span className="bar_pause">||</span>
                   </a>
                 </div>
                 

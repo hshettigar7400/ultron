@@ -61,27 +61,6 @@
             width: 100%;
         }
     }
-    @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait) {
-        .bg {}
-        .content .welcome_text {
-            margin-top: 55%;
-            text-align: center;
-            width: 100%;
-        }
-        .intro_para_main_head {
-            font-size: 65px;
-            font-weight: 700;
-        }
-        .btn {
-            margin-left: auto;
-            margin-right: auto;
-            width: 36%;
-        }
-        .btn_text {
-            padding: 24px 34px;
-            border-radius: 35px;
-        }
-    }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
         .arror-right {
             right: 16%;
@@ -114,12 +93,15 @@
     @media only screen and (max-device-width: 480px) {
         .arror-right {
             right: 14%;
+            top: 36%;
         }
         .bg {
             background-image: url("../../assets/images/template/Intro_bg_sm.png");
         }
         .btn {
-            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 36%;
         }
         .btn_text {
             padding: 20px 33px;
@@ -132,9 +114,28 @@
             font-size: 48px;
         }
         .content .welcome_text {
-            margin-top: 70%;
+            margin-top: 50%;
             text-align: center;
             width: 100%;
+        }
+    }
+    @media screen and (max-device-width: 767px) and (orientation: landscape) {
+        .content .welcome_text {
+            margin-left: 10%;
+            margin-top: -10%;
+        }
+        intro_para_one_bold {
+            font-size: 16px;
+        }
+        .intro_para_main_head{
+            
+        }
+        .intro_para_main_head,
+        .intro_para_main_head_red {
+            font-size: 36px;
+        }
+        .btn_text {
+            padding: 20px 40px;
         }
     }
 }

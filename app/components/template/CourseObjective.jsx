@@ -17,11 +17,13 @@ export default class CourseObjective extends React.Component {
       			<div className="intro">
       				<div className="flex-container">
                         <h1 className="intro_head">COURSE OBJECTIVES</h1>
+                        <div className="fade-in">
                             <p>By the end of this short course,you will be able to:</p>
                             <div className="icon_text_grp">
                                 <span className="check_outer_box"><FontAwesome className="font-awesome-icon" name='check' /></span>
                                 <span className="kaizen_text">Define Kaizen</span>
                             </div>
+                        </div>
       		        </div>
       			</div>
       		</div>
@@ -33,11 +35,13 @@ export default class CourseObjective extends React.Component {
       			<div className="intro">
       				<div className="flex-container">
                         <h1 className="intro_head">COURSE OBJECTIVES</h1>
+                        <div className="fade-in">
                             <p>By the end of this short course,you will be able to:</p>
                             <div className="icon_text_grp">
                                 <span className="check_outer_box"><FontAwesome className="font-awesome-icon" name='check' /></span>
                                 <span className="kaizen_text">Define Kaizen</span>
                             </div>
+                        </div>
       		        </div>
       			</div>
 
@@ -50,7 +54,7 @@ export default class CourseObjective extends React.Component {
       			<div className="intro">
       				<div className="flex-container">
                         <h1 className="intro_head">COURSE OBJECTIVES</h1>
-                        <div className="container_sm">
+                        <div className="container_sm fade-in">
                             <p>By the end of this short course,you will be able to:</p>
                             <div className="icon_text_grp">
                                 <span className="check_outer_box"><FontAwesome className="font-awesome-icon" name='check' /></span>

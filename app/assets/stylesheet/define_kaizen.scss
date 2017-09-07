@@ -5,7 +5,6 @@
         background-image: url("../../assets/images/template/scrn3_bg.png");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position-y: -80px;
         height: 100%;
     }
     .buttons {
@@ -240,6 +239,7 @@
             background-position-y: 0px;
         }
         .popup-container {
+            height: 380px;
             left: 7%;
             top: 13%;
         }
@@ -254,16 +254,15 @@
     @media (min-width: 321px) and (max-width: 480px) {
         .bg {
             background-image: url("../../assets/images/template/scrn1_3_4_bg_sm.png");
-            background-position-y: 0px;
         }
         .buttons {
             margin-top: 4em;
             margin-left: 21%;
         }
         .popup-container {
-            height: 440px;
+            height: 420px;
             left: 2%;
-            top: 12%;
+            top: 10%;
             width: 79%;
         }
         .popup_image {
@@ -274,7 +273,7 @@
             height: auto;
         }
         .popup3_ul {
-            bottom: 78px;
+            bottom: 45px;
         }
         .popup3_text {
             font-size: 16px;
@@ -302,17 +301,17 @@
             margin-left: 17%;
         }
         .popup-container {
-            ;
-            height: 345px;
+            height: 370px;
             left: 5%;
             top: 13%;
             width: 72%;
         }
         .popup_image {
+            height: auto;
+            left: -12px;
+            max-width: 100%;
             position: relative;
             width: auto;
-            max-width: 100%;
-            height: auto;
         }
         .popup3_text {
             font-size: 14px;
@@ -332,6 +331,96 @@
             letter-spacing: 0px;
             margin-left: 6%;
             margin-top: 2%;
+        }
+    }
+    @media screen and (max-device-width: 767px) and (orientation: landscape) {
+        .btn_gap {
+            margin-right: 3px;
+        }
+        .buttons {
+            margin-top: 28px;
+        }
+        .button_2 {
+            margin-top: 29px;
+            margin-left: 32px;
+        }
+        .button_3 {
+            margin-top: 30px;
+            margin-left: 1px;
+        }
+        .popup_image_two {
+            display: flex;
+            margin-top: 36px;
+        }
+        .intro_btn_benefit_grey {
+            width: 63px;
+            height: 25px;
+        }
+        .intro_btn_benefit_grey:before {
+            border-left: 31px solid transparent;
+            border-right: 31px solid transparent;
+            top: -25px;
+        }
+        .intro_btn_benefit_grey:after {
+            border-left: 31px solid transparent;
+            border-right: 31px solid transparent;
+        }
+        .intro_btn_benefit {
+            font-size: 27px;
+            line-height: 28px;
+            width: 63px;
+            height: 25px;
+        }
+        .intro_btn_benefit:before {
+            border-left: 31px solid transparent;
+            border-right: 31px solid transparent;
+        }
+        .intro_btn_benefit:after {
+            border-left: 31px solid transparent;
+            border-right: 31px solid transparent;
+        }
+        .popup-container {
+            height: 235px;
+            left: 4%;
+            top: 7%;
+            width: 82%;
+        }
+        .popup_image {
+            height: auto;
+            max-width: 100%;
+            position: relative;
+            width: auto;
+        }
+        .popup3_ul {
+            line-height: 12px;
+            bottom: -11px;
+        }
+        li {
+            font-size: 12px;
+        }
+        .popup_text {
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: -1%;
+        }
+        .popup3_text p {
+            position: absolute;
+            top: 71%;
+        }
+        .popup3_text {
+            font-size: 12px;
+            line-height: 20px;
+            margin-top: -31px;
+        }
+        .text_para_first {
+            font-size: 14px;
+            margin-left: 7%;
+            margin-top: 0%;
+        }
+        .text_para_second {
+            font-size: 14px;
+            margin-left: 7%;
+            margin-top: 0%;
         }
     }
 }

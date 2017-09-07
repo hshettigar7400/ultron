@@ -5,6 +5,36 @@
         background-repeat: no-repeat;
         height: 100%;
     }
+    .intro {
+        border-top: none;
+        top: 0;
+        position: absolute;
+    }
+    input[type='radio'] {
+        -webkit-appearance: none;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        outline: none;
+    }
+    input[type='radio']:before {
+        content: '';
+        display: block;
+        width: 55%;
+        height: 55%;
+        margin: 26% auto;
+        border-radius: 50%;
+    }
+    input[type='radio']:checked:before {
+        background: red;
+    }
+    label {
+        display: flex;
+        position: relative;
+        top: -5px;
+        left: 0px;
+    }
     .option-text {
         margin-top: -2px;
         margin-left: 18px;
@@ -42,46 +72,28 @@
         margin-top: 5%;
     }
     .text_italic {
-        font-weight: 500;
+        color: #00a551;
+        font-weight: 600;
         font-style: italic;
         margin-left: 4%;
     }
-    .intro {
-        border-top: none;
-        top: 0;
-        position: absolute;
-    }
-    input[type='radio'] {
-        -webkit-appearance: none;
-        width: 25px;
-        height: 25px;
-        border: 1px solid #000;
-        border-radius: 50%;
-        outline: none;
-    }
-    input[type='radio']:before {
-        content: '';
-        display: block;
-        width: 55%;
-        height: 55%;
-        margin: 26% auto;
-        border-radius: 50%;
-    }
-    input[type='radio']:checked:before {
-        background: red;
-    }
-    label {
-        display: flex;
-        position: relative;
-        top: -5px;
-        left: 0px;
-    }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-        .bg{
-                background-position-x: -615px;
+        .bg {
+            background-position-x: -540px;
+        }
+        input[type='radio']:before {
+            margin: 22% auto;
+        }
+        .submit_btn {
+            margin-top: 0%;
+            width: 14%;
         }
     }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        input[type='radio']:before {
+            margin: 20% auto;
+        }
+    }
     @media (min-width: 321px) and (max-width: 480px) {
         .que_detl {
             line-height: 20px;
@@ -103,6 +115,50 @@
             margin-bottom: 9%;
             margin-top: 9%;
         }
+        input[type='radio']:before {
+            margin: 22% auto;
+        }
     }
-    @media (max-width: 320px) {}
+    @media (max-width: 320px) {
+        .radio_container {
+            font-size: 12px;
+            width: 90%;
+        }
+        .submit_btn {
+            margin-left: 3%;
+            width: 25%;
+        }
+        .text_italic {
+            margin-left: 10%;
+            margin-top: 6%;
+        }
+    }
+    @media screen and (max-device-width: 767px) and (orientation: landscape) {
+        .radio_container {
+            margin-top: 0%;
+            font-size: 12px;
+            width: 91%;
+        }
+        .radio_grp {
+            margin-left: 5%;
+            line-height: 17px;
+        }
+        .submit_btn {
+            font-size: 12px;
+            padding: 8px 18px;
+            margin-top: 0%;
+            margin-left: 2%;
+        }
+        input[type='radio'] {
+            width: 20px;
+            height: 20px;
+        }
+        input[type='radio']:before {
+            margin: 22% auto;
+        }
+        .option-text {
+            margin-top: 6px;
+            margin-left: 10px;
+        }
+    }
 }

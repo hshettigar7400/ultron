@@ -19,7 +19,7 @@ export default class Introduction extends React.Component {
               <div className="intro white">
                 <div className="flex-main-content">
                     <h1 className="intro_head">Course introduction</h1>
-                    <div className="main-container">
+                    <div className="main-container fade-in">
                         <div className="left-side">
                             <ul className="left-text-content">
                                 <li>Kaizen started in the year 1986.</li>
@@ -46,7 +46,7 @@ export default class Introduction extends React.Component {
               <div className="intro white">
                 <div className="flex-main-content">
                     <h1 className="intro_head">Course introduction</h1>
-                    <div className="main-container">
+                    <div className="main-container fade-in">
                         <div className="left-side">
                             <ul className="left-text-content">
                                 <li>Kaizen started in the year 1986.</li>
@@ -70,10 +70,10 @@ export default class Introduction extends React.Component {
         <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
           <div className="content">
             <div className="bg">
-              <div className="intro white">
+              <div className="intro">
                 <div className="flex-main-content">
                     <h1 className="intro_head">Course introduction</h1>
-                    <div className="container_sm">
+                    <div className="container_sm fade-in">
                         <div className="">
                             <ul className="left-text-content">
                                 <li>Kaizen started in the year 1986.</li>

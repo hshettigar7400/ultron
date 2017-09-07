@@ -73,7 +73,7 @@ export default class Interactivity5 extends React.Component {
                       </div>
                 </MediaQuery>
                 <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
-                      <div className="flex-container-inner">
+                      <div className="flex-container-inner popup_image_two">
                            <div>
                                 <img className="popup_image" src="../../app/assets/images/template/pop21_img_mob.png" />
                            </div> 

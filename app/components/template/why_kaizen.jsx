@@ -15,16 +15,18 @@ export default class StaticPage3 extends React.Component {
             <div className="intro">
               <div className="flex-container">
                     <h1 className="intro_head">Why Kaizen</h1>
-                    <ul className="">
-                        <li>
-                            Focussed improvement effort results in quantum improvement in focus areas. To enhance all round performance thousands of small improvements would have been made throughout the system
-                        </li>
-                        <li>
-                            Continuous small improvements by everybody in all areas of operation is the most powerful way to reduce variations and defects  that are caused by common causes
-                        </li>
-                    </ul>
-                    <div>
-                        <img className ="img_kaizen" src="../../app/assets/images/template/scrn4_img.png" />
+                    <div className="fade-in">
+                        <ul className="">
+                            <li>
+                                Focussed improvement effort results in quantum improvement in focus areas. To enhance all round performance thousands of small improvements would have been made throughout the system
+                            </li>
+                            <li>
+                                Continuous small improvements by everybody in all areas of operation is the most powerful way to reduce variations and defects  that are caused by common causes
+                            </li>
+                        </ul>
+                        <div>
+                            <img className ="img_kaizen" src="../../app/assets/images/template/scrn4_img.png" />
+                        </div>
                     </div>
               </div>
             </div>
@@ -38,6 +40,7 @@ export default class StaticPage3 extends React.Component {
             <div className="intro ">
               <div className="flex-container">
                   <h1 className="intro_head">Why Kaizen</h1>
+                  <div className="fade-in">
                   <ul className="">
                         <li>
                             Focussed improvement effort results in quantum improvement in focus areas. To enhance all round performance thousands of small improvements would have been made throughout the system
@@ -49,6 +52,7 @@ export default class StaticPage3 extends React.Component {
                     <div>
                         <img className ="img_kaizen" src="../../app/assets/images/template/scrn4_img.png" />
                     </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -61,6 +65,7 @@ export default class StaticPage3 extends React.Component {
             <div className="intro">
               <div className="flex-container">
                   <h1 className="intro_head">Why Kaizen</h1>
+                  <div className="fade-in">
                   <ul className="">
                         <li>
                             Focussed improvement effort results in quantum improvement in focus areas. To enhance all round performance thousands of small improvements would have been made throughout the system
@@ -72,6 +77,7 @@ export default class StaticPage3 extends React.Component {
                     <div>
                         <img className ="img_kaizen" src="../../app/assets/images/template/scrn4_img_sm.png" />
                     </div>
+                  </div>
               </div>
             </div>
           </div>
