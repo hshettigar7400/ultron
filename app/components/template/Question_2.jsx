@@ -124,7 +124,7 @@ export default class Question_1 extends React.Component {
                                 B.
                             </div>
                             <div>
-                                 Kaizen is basically ____________ carried out by the person who is doing the job in his/her way in day-to-day work.
+                                  All systems are bound to _________once established. Continuing effort is a must even to maintain status quo.
                             </div>
                         </div>
 
@@ -155,7 +155,7 @@ export default class Question_1 extends React.Component {
                                 B.
                             </div>
                             <div className="que_detl">
-                                 Kaizen is basically ____________ carried out by the person who is doing the job in his/her way in day-to-day work.
+                                  All systems are bound to _________once established. Continuing effort is a must even to maintain status quo.
                             </div>
                         </div>
 

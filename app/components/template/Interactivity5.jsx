@@ -188,7 +188,6 @@ export default class Interactivity5 extends React.Component {
   }
 
   openPopup(currentPopup) {
-
     this.setState({isPopupOpen: true, currentPopup: currentPopup, stopAudio: false})
     document.querySelector(".fa-pause").classList.add("disabled")
     document.querySelector(".fa-refresh").classList.add("disabled")
@@ -197,6 +196,7 @@ export default class Interactivity5 extends React.Component {
     activeNode[0].classList.remove('active');
     var currentNode = document.getElementById("btn_0"+currentPopup)
     currentNode.classList.add('active');
+          window.soundManager.stopAll();
   }
 
   closePopup() {

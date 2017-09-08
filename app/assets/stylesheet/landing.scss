@@ -1,7 +1,8 @@
 .intro-container {
     height: 100%;
     .arror-right {
-        right: 18%;
+        position: absolute;
+        right: 10%;
         top: 39%;
         margin-left: 5px;
     }
@@ -63,7 +64,7 @@
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
         .arror-right {
-            right: 16%;
+            right: 10%;
         }
         .bg {
             background-position-x: -560px;
@@ -92,7 +93,7 @@
     }
     @media only screen and (max-device-width: 480px) {
         .arror-right {
-            right: 14%;
+            right: 10%;
             top: 36%;
         }
         .bg {
