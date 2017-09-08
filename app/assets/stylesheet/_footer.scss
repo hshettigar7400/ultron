@@ -3,6 +3,7 @@
     line-height: 62px;
 }
 
+
 .button-border a {
     border-right: 1px solid #696969;
     padding-right: 22px;
@@ -10,7 +11,11 @@
 .button_ctrl {
     font-size: 35px;
 }
-
+.disabled {
+    background-color: none !important;
+    color: #808080 !important;
+    pointer-events: none;
+}
 .footer {
     width: 55%;
     height: 60px;
@@ -20,7 +25,9 @@
     background-image: url("../../assets/images/template/footerbg.png");
     background-size: 100% 100%;
 }
-
+.button-box>a:hover {
+  color: #dc3635;
+}
 .footer {
     display: -webkit-flex;
     display: flex;
@@ -40,6 +47,11 @@
         position: absolute;
     left: 72%;
     top: 2%;
+}
+
+.fa {
+  cursor: pointer;
+  width: 20px;
 }
 
 

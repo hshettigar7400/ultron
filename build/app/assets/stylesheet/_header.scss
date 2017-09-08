@@ -1,111 +1,44 @@
-.header {
-    background-color: #b2eacf;
-    display: flex;
-    max-height: 65px;
-    position: relative;
-    width: 100%;
-    z-index: 100;
-}
-
-.header_child_width {
-    width: 336px;
-}
-
 .course-logo {
-    float: left;
+    height: 64px;
+    padding-left: 5%;
 }
 
 .course-title {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 2px;
     text-align: center;
 }
 
 .course-menu-section {
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    position: relative;
     text-align: right;
-    display: inline-block;
-    margin-top: $base-margin * 2.5;
-    ;
-    color: $black;
-    font-size: 25px;
+    top: -10%;
 }
 
-.header-title {
-    padding: 0 10px;
-    vertical-align: middle;
-    font-size: 21px;
-    color: $black;
-    margin-top: $base-margin * 2.5;
+
+
+.course-menu-icon {
+    padding-left: 10%;
+    padding-right: 8%;
 }
 
-.header_span_inline {
-    float: left;
+.header {
+    background-color: #dc3635;
+    display: -webkit-flex;
+    display: flex;
+    height: 57px;
+    justify-content: center;
+    -webkit-justify-content: center;
 }
 
-.header_right_help {
-    padding-left: 9em;
+.header>div {
+    -webkit-flex: 1;
+    flex: 1;
 }
 
-.header_right_toggle {
-    padding-left: 2em;
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    .course-menu-section {
-        text-align: right;
-        display: inline-block;
-        margin-top: $base-margin * 2.5;
-        ;
-        color: $black;
-        font-size: 18px;
-    }
-    .header-title {
-        padding: 0 10px;
-        vertical-align: middle;
-        font-size: 22px;
-        color: $black;
-        margin-top: $base-margin * 2.5;
-    }
-}
-
-@media only screen and (min-device-width: 361px) and (max-device-width: 640px) {
-    .course-menu-section {
-        margin-top: 10px;
-        font-size: 20px;
-    }
-    .header {
-        padding: 10px;
-    }
-    .header-title {
-        padding: 0;
-        font-size: 15px;
-        font-weight: 600;
-        margin-top: 10px;
-    }
-    .header_right_help {
-        padding-left: 3em;
-    }
-    .header_right_toggle {
-        padding-left: 1em;
-    }
-}
-
-@media only screen and (max-device-width: 480px) {
-    .course-menu-section {
-        margin-top: 10px;
-        font-size: 20px;
-    }
-    .header {
-        padding: 5px;
-    }
-    .header-title {
-        padding: 0;
-        font-size: 14px;
-        font-weight: 600;
-        margin-top: 12px;
-    }
-    .header_right_help {
-        padding-left: 2em;
-    }
-    .header_right_toggle {
-        padding-left: 1em;
-    }
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}

@@ -11,27 +11,30 @@
     .button-box {
             line-height: 45px;
     }
-    .button-border a {
-        border-right: 1px solid #696969;
-        padding-right: 22px;
-    }
-    
+    .button-box > a:hover {
+    color: #fff;
+}
+
     .fa {
         font-size: 22px;
     }
-    .bar_pause{
-        font-size: 21px;
-        position: fixed;
-    margin-top: 3.5%;
-    margin-left: -1%;
-    }
+
     .page-number, .page-separator, .total-pages {
         font-size: 14px !important;
             font-weight: 600;
     }
     .disabled {
         background-color: #dc3635 !important;
-        color: #fff !important;
+        color: #808080 !important;
         pointer-events: none;
+    }
+
+    @media (min-width: 321px) and (max-width: 480px) {
+      .button-box a {
+          padding: 0 10px;
+      }
+      .fa {
+          font-size: 18px;
+      }
     }
 }

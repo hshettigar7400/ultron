@@ -1,4 +1,6 @@
 import React from 'react';
+let Draggable = require('react-draggable');
+let DraggableCore = Draggable.DraggableCore;
 import Header from './Header';
 import Footer from './Footer';
 import TopNav from './Topnav';
@@ -47,7 +49,8 @@ export default class Shell extends React.Component {
   }
 
   toggleMenu() {
-    this.setState({menuOpen: !this.state.menuOpen})
+
+    this.setState({menuOpen: !this.state.menuOpen,showTranscript:false})
   }
 
   togglePlay() {
@@ -86,7 +89,11 @@ export default class Shell extends React.Component {
             {this.showTopNav()}
           </MediaQuery>
           <MediaQuery query='(min-width: 680px)'>
-            <Header ref="header" courseTitle={this.state.menuData.menu ? this.state.menuData.menu.courseTitle:""}/>
+            <Header ref="header"
+            courseTitle={this.state.menuData.menu ? this.state.menuData.menu.courseTitle:""}
+            onMenuClick={this.toggleMenu.bind(this)}
+            onHelpClick={this.toggleHelp.bind(this)}
+            onCloseHelpClick={this.toggleHelp.bind(this)}/>
           </MediaQuery>
         </div>
     )
@@ -113,14 +120,12 @@ export default class Shell extends React.Component {
         <Footer
           audioVolume={this.state.audioVolume}
           currentPageNumber={this.state.currentPage}
-          onHelpClick={this.toggleHelp.bind(this)}
           onLoadNext={this.loadNext.bind(this)}
           onLoadPrev={this.loadPrev.bind(this)}
-          onMenuClick={this.toggleMenu.bind(this)}
           onPlayPause={this.togglePlay.bind(this)}
           onReplay={this.replayPage.bind(this)}
           isPlaying={this.state.isPlaying}
-          totalPages={10}
+          totalPages={6}
           onToggleVolume={this.toggleVolume.bind(this)}
           onTranscriptClick={this.toggleTranscript.bind(this)}
           showTranscript={this.state.showTranscript}
@@ -131,13 +136,16 @@ export default class Shell extends React.Component {
   showTopNav() {
     return (
       <TopNav
+        audioVolume={this.state.audioVolume}
         currentPageNumber={this.state.currentPage}
         onLoadNext={this.loadNext.bind(this)}
         onLoadPrev={this.loadPrev.bind(this)}
         onMenuClick={this.toggleMenu.bind(this)}
         onPlayPause={this.togglePlay.bind(this)}
+        onToggleVolume={this.toggleVolume.bind(this)}
+        onReplay={this.replayPage.bind(this)}
         isPlaying={this.state.isPlaying}
-        totalPages={8}
+        totalPages={6}
         courseTitle="Code of Conduct"
         onTranscriptClick={this.toggleTranscript.bind(this)}
       />
@@ -149,12 +157,12 @@ export default class Shell extends React.Component {
   }
 
   loadAudio() {
-    let audioPath = `app/assets/audio/p${this.state.currentPage}.mp3`;
+    let audioPath = `app/assets/audio/slide${this.state.currentPage}.mp3`;
     return (
       <Sound
        url={audioPath}
        playStatus={this.state.isPlaying ? "PLAYING" : "PAUSED"}
-       playFromPosition={0 /* in milliseconds */}
+       playFromPosition={0}
        onLoading={this.handleSongLoading}
        onPlaying={this.handleSongPlaying}
        onFinishedPlaying={this.handleFinishedPlaying.bind(this)}
@@ -165,8 +173,9 @@ export default class Shell extends React.Component {
 
   loadTranscript() {
     return(
+    <Draggable axis="both" handle=".handle" defaultPosition={{x: -200, y: 0}} position={null} grid={[5, 5]} onStart={this.handleStart} onDrag={this.handleDrag} onStop={this.handleStop} bounds={{top: -315, left: -500, right: 180, bottom: 0}}>
       <div className="transcript-container">
-        <div id="transcript-header" className="transcript-header">
+        <div id="transcript-header" className="transcript-header handle">
           <div className="transcript-title">Transcript</div>
           <a href="#" id="transcript-close-button" onClick={this.toggleTranscript.bind(this)} className="transcript-close-button tabindex" aria-label="Transcript close" role="button">
             <span className="icon-close"></span>
@@ -176,6 +185,7 @@ export default class Shell extends React.Component {
           {ReactHtmlParser(this.state.transcript[this.state.currentPage-1].text)}
         </div>
       </div>
+      </Draggable>
     )
   }
 
@@ -183,10 +193,16 @@ export default class Shell extends React.Component {
     return (
       <div>
         {!this.state.isAudioFinished && this.loadAudio()}
-        {this.loadHeader()}
+            <MediaQuery query='(min-width: 621px)'>
+          {this.loadHeader()}
+        </MediaQuery>
+        <MediaQuery query='(max-width: 621px)'>
+          {this.showTopNav()}
+        </MediaQuery>
+
         {this.state.currentPage && this.pageLoader()}
         {this.state.showTranscript &&  this.loadTranscript()}
-        <MediaQuery query='(min-width: 320px)'>
+        <MediaQuery query='(min-width: 669px)'>
           {this.loadFooter()}
         </MediaQuery>
       </div>

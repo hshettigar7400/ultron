@@ -21,51 +21,50 @@ export default class TopNav extends React.Component {
       <div className="header-nav">
             <div className="button-container">
                 <div className="button-box">
-                  <a aria-disabled="false" aria-label="menu" aria-pressed="false" href="#" onClick={this.props.onMenuClick} role="button">
-                    <FontAwesome name='volume-up' />
-                  </a>
+                <a aria-disabled="false" aria-label="audio" aria-pressed="false"
+                  onClick={this.props.onToggleVolume.bind(null, this)} role="button" >
+                  <FontAwesome name={this.props.audioVolume === 100?"volume-up":"volume-down"} /></a>
                 </div>
-                
+
+                <div className="button-box ">
+                    <a aria-disabled="false" aria-label="replay" aria-pressed="false" onClick={this.props.onReplay.bind(null, this)} role="button" >
+                      <FontAwesome name='refresh' />
+                    </a>
+                </div>
+
                   <div className="button-box">
-                  <a aria-disabled="false" aria-label="menu" aria-pressed="false" href="#" onClick={this.props.onMenuClick} role="button">
-                    <span className="bar_pause">||</span>
-                  </a>
-                </div>
-                
-                <div className="button-box">
                   <a aria-disabled="false" aria-label="playPause" aria-pressed="false"
-                    className={this.props.isPlaying ? "" : "selected"} onClick={this.props.onPlayPause.bind(null, this)} role="button">
-                    <span className="icon-playPause"></span>
-                  </a>
+                     onClick={this.props.onPlayPause.bind(null, this)} role="button" >
+                    <FontAwesome name={this.props.isPlaying ?"pause":"play"} /></a>
                 </div>
-                
+
+
                 <div className="button-box">
-                  <a aria-disabled="false" aria-label="back" aria-pressed="false" className={(this.props.currentPageNumber !== 1)
-                    ? "tabindex"
-                    : "tabindex disabled"} href="#" onClick={this.props.onLoadPrev.bind(null, this)} role="button">
+                  <a aria-disabled="false" aria-label="back" aria-pressed="false"
+                  className={this.props.currentPageNumber !== 1? "tabindex": "tabindex disabled"} href="#" onClick={this.props.onLoadPrev.bind(null, this)} role="button">
                     <FontAwesome name='angle-left' />
                   </a>
                 </div>
-                
-                <div className="button-box white">  
+
+                <div className="button-box white">
                       <span className="page-number ">{this.getDoubleDigit(this.props.currentPageNumber)}</span>
                       <span className="page-separator "> / </span>
                       <span className="total-pages ">{this.getDoubleDigit(this.props.totalPages)}</span>
                 </div>
 
                 <div className="button-box">
-                  <a aria-disabled="false" aria-label="next" aria-pressed="false" className={(this.props.currentPageNumber !== this.props.totalPages)
-                    ? "tabindex"
-                    : "tabindex disabled"} href="#" onClick={this.props.onLoadNext.bind(null, this)} role="button">
+                  <a aria-disabled="false" aria-label="next" aria-pressed="false"
+                  className={this.props.currentPageNumber !== this.props.totalPages? "tabindex" : "tabindex disabled"} href="#" onClick={this.props.onLoadNext.bind(null, this)} role="button">
                     <FontAwesome name='angle-right' />
                   </a>
                 </div>
 
 
                 <div className="button-box">
-                    <a aria-disabled="false" aria-label="resources" aria-pressed="false" href="#" role="button" >
-                      <FontAwesome name='file-text-o' />
-                    </a>
+                  <a aria-disabled="false" aria-label="transcript" aria-pressed="false"
+                      className={!this.props.showTranscript ? "" : "selected"} onClick={this.props.onTranscriptClick.bind(null, this)} role="button" >
+                    <FontAwesome name='cc' />
+                  </a>
                 </div>
 
                 <div className="button-box">

@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import FontAwesome from 'react-fontawesome';
 import MediaQuery from 'react-responsive';
+import Sound from 'react-sound';
 
 export default class Interactivity5 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isPopupOpen: false,
-      currentPopup: 0
+      currentPopup: 0,
+      stopAudio: false,
+      audioVolume :100,
+      isAudioFinished: false
     }
   }
 
@@ -21,29 +25,29 @@ export default class Interactivity5 extends React.Component {
                 <MediaQuery query='(min-device-width: 1024px)'>
                   <div className="flex-container-inner">
                         <div>
-                            <img className="popup_image" src="../../app/assets/images/template/pop1_img.png" />
+                            <img className="popup_image" src="app/assets/images/template/pop1_img.png" />
                         </div>
                         <div>
                             <p className="popup_text">Kaizen is about making small continuous improvements by the persons performing their job in their day-to-day work/activities.<br/>All systems are bound to deteriorate once established. Continuing effort is a must even to maintain status quo. </p>
                         </div>
                   </div>
                 </MediaQuery>
-                
+
                 <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
                   <div className="flex-container-inner">
                         <div>
-                            <img className="popup_image" src="../../app/assets/images/template/pop1_img.png" />
+                            <img className="popup_image" src="app/assets/images/template/pop1_img.png" />
                         </div>
                         <div>
                             <p className="popup_text">Kaizen is about making small continuous improvements by the persons performing their job in their day-to-day work/activities.<br/>All systems are bound to deteriorate once established. Continuing effort is a must even to maintain status quo. </p>
                         </div>
                   </div>
                 </MediaQuery>
-                
+
                 <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
                   <div className="flex-container-inner">
                         <div>
-                            <img className="popup_image" src="../../app/assets/images/template/pop1_img_mob.png" />
+                            <img className="popup_image" src="app/assets/images/template/pop1_img_mob.png" />
                         </div>
                         <div>
                             <p className="popup_text">Kaizen is about making small continuous improvements by the persons performing their job in their day-to-day work/activities.<br/>All systems are bound to deteriorate once established. Continuing effort is a must even to maintain status quo. </p>
@@ -59,26 +63,26 @@ export default class Interactivity5 extends React.Component {
                 <MediaQuery query='(min-device-width: 1024px)'>
                       <div className="flex-container-inner">
                            <div>
-                                <img className="popup_image2_left" src="../../app/assets/images/template/pop2_img.png" />
-                               <img className="popup_image2_rt" src="../../app/assets/images/template/pop2_img2.png" />
-                           </div> 
+                                <img className="popup_image2_left" src="app/assets/images/template/pop2_img.png" />
+                               <img className="popup_image2_rt" src="app/assets/images/template/pop2_img2.png" />
+                           </div>
                       </div>
                 </MediaQuery>
                 <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
                       <div className="flex-container-inner">
                            <div>
-                                <img className="popup_image2_left" src="../../app/assets/images/template/pop2_img.png" />
-                               <img className="popup_image2_rt" src="../../app/assets/images/template/pop2_img2.png" />
-                           </div> 
+                                <img className="popup_image2_left" src="app/assets/images/template/pop2_img.png" />
+                               <img className="popup_image2_rt" src="app/assets/images/template/pop2_img2.png" />
+                           </div>
                       </div>
                 </MediaQuery>
                 <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
                       <div className="flex-container-inner popup_image_two">
                            <div>
-                                <img className="popup_image" src="../../app/assets/images/template/pop21_img_mob.png" />
-                           </div> 
+                                <img className="popup_image" src="app/assets/images/template/pop21_img_mob.png" />
+                           </div>
                           <div>
-                                 <img className="popup_image" src="../../app/assets/images/template/pop22_img_mob.png" />
+                                 <img className="popup_image" src="app/assets/images/template/pop22_img_mob.png" />
                           </div>
                       </div>
                 </MediaQuery>
@@ -90,7 +94,7 @@ export default class Interactivity5 extends React.Component {
             <div>
                 <MediaQuery query='(min-device-width: 1024px)'>
                       <div className="flex-container-inner">
-                            <img className="" src="../../app/assets/images/template/pop3_img.png" />
+                            <img className="" src="app/assets/images/template/pop3_img.png" />
                             <div className="popup3_text">
                                 <p>The challenge is to:</p>
                                 <ul className="popup3_ul">
@@ -103,7 +107,7 @@ export default class Interactivity5 extends React.Component {
                 </MediaQuery>
                 <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
                       <div className="flex-container-inner">
-                            <img className="popup_image" src="../../app/assets/images/template/pop3_img.png" />
+                            <img className="popup_image" src="app/assets/images/template/pop3_img.png" />
                             <div className="popup3_text">
                                 <p>The challenge is to:</p>
                                 <ul className="popup3_ul">
@@ -116,7 +120,7 @@ export default class Interactivity5 extends React.Component {
                 </MediaQuery>
                 <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
                       <div className="flex-container-inner">
-                            <img className="popup_image" src="../../app/assets/images/template/pop3_img_sm.png" />
+                            <img className="popup_image" src="app/assets/images/template/pop3_img_sm.png" />
                             <div className="popup3_text">
                                 <p>The challenge is to:</p>
                                 <ul className="popup3_ul">
@@ -136,6 +140,7 @@ export default class Interactivity5 extends React.Component {
   displayPopup() {
     return (
       <div>
+                {!this.state.isAudioFinished && this.loadAudio()}
         {this.state.isPopupOpen && <div className="popup-container">
           <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
           {this.getPopupContent()}
@@ -144,19 +149,60 @@ export default class Interactivity5 extends React.Component {
     )
   }
 
+  handlePlaying() {
+    var volumeNode = document.querySelectorAll(".fa-volume-up");
+    var playNode = document.querySelectorAll(".fa-pause");
+    if (volumeNode.length > 0 ) {
+      this.setState({audioVolume: 100})
+    }
+    else {
+      this.setState({audioVolume: 0})
+    }
+    if (playNode.length > 0 ) {
+      this.setState({stopAudio:false})
+    }
+    else {
+      this.setState({stopAudio: true})
+    }
+  }
+
+  handleFinishedPlaying() {
+    this.setState({isAudioFinished: true})
+  }
+
+  loadAudio() {
+    if (this.state.currentPopup > 0) {
+      let audioPath = `app/assets/audio/slide3_${this.state.currentPopup}.mp3`;
+      return (
+        <Sound
+         url={audioPath}
+         playStatus={!this.state.stopAudio? "PLAYING" :"PAUSED"}
+         playFromPosition={0}
+         onLoading={this.handleSongLoading}
+         onPlaying={this.handlePlaying.bind(this)}
+         onFinishedPlaying={this.handleFinishedPlaying.bind(this)}
+         volume={this.state.audioVolume}
+       />
+      )
+    }
+  }
+
   openPopup(currentPopup) {
-    this.setState({isPopupOpen: true, currentPopup: currentPopup})
-      
-      var activeNode = document.querySelectorAll(".active");
-      if (activeNode.length > 0)
-      activeNode[0].classList.remove('active');
-      
-      var currentNode = document.getElementById("btn_0"+currentPopup)
-      currentNode.classList.add('active');
+
+    this.setState({isPopupOpen: true, currentPopup: currentPopup, stopAudio: false})
+    document.querySelector(".fa-pause").classList.add("disabled")
+    document.querySelector(".fa-refresh").classList.add("disabled")
+    var activeNode = document.querySelectorAll(".active");
+    if (activeNode.length > 0)
+    activeNode[0].classList.remove('active');
+    var currentNode = document.getElementById("btn_0"+currentPopup)
+    currentNode.classList.add('active');
   }
 
   closePopup() {
-    this.setState({isPopupOpen: false})
+    document.querySelector(".fa-pause").classList.remove("disabled")
+    document.querySelector(".fa-refresh").classList.remove("disabled")
+    this.setState({isPopupOpen: false, stopAudio: true})
   }
 
   render() {
@@ -197,7 +243,7 @@ export default class Interactivity5 extends React.Component {
                                         <span>3</span>
                                     </div>
                                 </div>
-                              </div>    
+                              </div>
                           </div>
 
                           <div>
@@ -245,7 +291,7 @@ export default class Interactivity5 extends React.Component {
                                         <span>3</span>
                                     </div>
                                 </div>
-                              </div>    
+                              </div>
                           </div>
 
                           <div>
@@ -267,7 +313,7 @@ export default class Interactivity5 extends React.Component {
                      <p className="text_para_first">Let's look at Kaizen in more detail.</p>
                     <p className="text_para_second">Select each button to know more.</p>
                       <div>
-                       
+
                             <div className="buttons">
                                 <div className="button_flex">
                                     <div className="intro_btn_benefit_grey btn_gap"  id="btn_00" >
@@ -293,8 +339,8 @@ export default class Interactivity5 extends React.Component {
                                         <span>3</span>
                                     </div>
                                 </div>
-                              </div>    
-                          
+                              </div>
+
 
                           <div>
                             {this.displayPopup()}

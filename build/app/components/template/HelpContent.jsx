@@ -13,7 +13,7 @@ export default class HelpContent extends React.Component {
             <h1>Help</h1>
           </div>
           <div className="button-container">
-            <a href="#" id="help-close-button" onClick={this.props.closeHelp} className="help-close-button tabindex" aria-label="Help close button">
+            <a href="#" id="help-close-button" onClick={this.props.onCloseHelpClick} className="help-close-button tabindex" aria-label="Help close button">
               <span className="icon-close"></span>
             </a>
           </div>

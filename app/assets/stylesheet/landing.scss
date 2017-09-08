@@ -1,9 +1,9 @@
 .intro-container {
     height: 100%;
     .arror-right {
-        position: absolute;
         right: 18%;
         top: 39%;
+        margin-left: 5px;
     }
     .bg {
         background-image: url("../../assets/images/template/landing.png");
@@ -128,7 +128,7 @@
             font-size: 16px;
         }
         .intro_para_main_head{
-            
+
         }
         .intro_para_main_head,
         .intro_para_main_head_red {

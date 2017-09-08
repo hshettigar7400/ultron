@@ -1,28 +1,35 @@
-.static-page1 {
+.introduction {
     height: 100%;
-    body {
-        font-size: 16px;
-    }
     .bg {
-        background-image: url("../../assets/images/template/coc_2.png");
+        background-image: url("../../assets/images/template/scrn_1BG.png");
         background-repeat: no-repeat;
+        background-size: cover;
         height: 100%;
     }
-    .close-btn {
-        color: #3f4040;
-        cursor: pointer;
+    .buttons {
+        margin-top: 2em;
+        margin-left: 7%;
+    }
+    .btn_text_cntr {
+        text-align: center;
+    }
+    .btn_icon_rt {
+        font-size: 22px;
         float: right;
-        font-weight: 700;
-    }
-    .envolope-open {
-        font-size: 28px;
         position: absolute;
-        left: 45%;
-        top: 4%;
+        right: 8%;
+        top: 24%;
     }
-    .instruction_text {
-        color: #fff;
-        font-weight: bold;
+    .content_margin {
+        width: 90%;
+    }
+    .content_pading {
+        margin-top: 10px;
+    }
+    .flex-container {
+        display: -webkit-flex;
+        display: flex;
+        width: 100%;
     }
     .intro {
         border-top: 1px solid #ccc;
@@ -31,183 +38,153 @@
     .intr_sub_span {
         border-bottom: solid #b5d4c8;
         border-radius: 2px 2px;
+        letter-spacing: 2px;
         padding-bottom: 15px;
     }
-    .intro_sub_heading {
-        font-style: italic;
-        font-size: larger;
-        letter-spacing: 0.5px;
-        margin-top: 6%;
-        text-align: center;
-    }
-    .intro_pop_up {
-        position: relative;
-    }
-    .intro_pop_up_outer {
-        border: 2px solid #678a89;
-        border-radius: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 8%;
-        height: 170px;
-        width: 170px;
-    }
-    .intro_pop_up_inner {
-        border: 2px solid #fff;
-        border-radius: 50%;
-        margin-left: auto;
-        margin-right: auto;
+    .intro_heading {
+        margin-left: 5%;
         margin-top: 10%;
-        width: 130px;
-        height: 130px;
+        width: 100%;
     }
-    .intro_pop_up_inner:hover {
-        background: #63ca91;
-        border: none;
-        height: 135px;
-        width: 135px;
-    }
-    .intro_pop_up_link {
-        font-size: 4em;
-        left: 25%;
-        margin-left: auto;
-        margin-right: auto;
+    .img-text-grp {
+        font-size: 21px;
+        font-weight: bold;
+        letter-spacing: 2px;
         position: relative;
-        top: 21%;
+        left: 10%;
     }
-    .popup-container {
-        background: url("../../assets/images/template/popup-bg.png");
-        color: #333;
-        height: 290px;
-        padding: 25px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 65%;
-        position: relative;
-        margin-top: -32%;
+    .left-side {
+        color: #000;
+        margin-left: 7%;
+        width: 60%;
     }
-    .popup-container-text {
-        color: #3f4040;
-        font-size: 16px;
+    li {
+        font-size: 17px;
         letter-spacing: 1px;
-        line-height: 17px;
-        margin-top: 2em;
+        list-style: none;
+        padding-bottom: 8px;
+    }
+    li:before {
+        /* For a round bullet */
+        content: '\2022';
+        /* For a square bullet */
+        /*content:'\25A0';*/
+        display: block;
+        position: relative;
+        max-width: 0;
+        max-height: 0;
+        left: -36px;
+        top: -12px;
+        color: #dc3635;
+        font-size: 40px;
+        padding-top: 12px;
+    }
+    .main-container {
+        display: flex;
+    }
+    .middle_align {
+        vertical-align: middle;
+    }
+    .right-side {
+        margin-top: 4%;
+        width: 40%;
+    }
+    .text-blk {
+        color: $black;
+        margin-left: 6px;
+    }
+    .text-red {
+        color: #dc3635;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
         .bg {
-            background-size: cover;
-            background-position-x: -517px;
-        }
-        .intro_pop_up_outer {
-            margin-top: 20%;
-        }
-        .intro_sub_heading {
-            margin-top: 10%;
-        }
-        .intro_pop_up_link {
-            font-size: 4em;
-            left: 25%;
-            top: 20%;
-        }
-        .popup-container {
-            height: 350px;
-            width: 58%;
-            margin-top: -52%;
-        }
-        .popup-container-text {
-            font-size: 14px;
-            margin-top: 3em;
+            background-position-y: 0px;
         }
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
         .bg {
-            background-size: cover;
-            background-position-x: 0px;
+            background-position-y: 0px;
         }
     }
     @media (min-width: 321px) and (max-width: 480px) {
         .bg {
-            background-position-x: -325px;
+            background-image: url("../../assets/images/template/scrn1_3_4_bg_sm.png");
+            
         }
-        .intro_pop_up_outer {
-            margin-top: 25%;
-            height: 140px;
-            width: 140px;
+        .container_sm {
+            margin-left: 4%;
+            margin-top: -6%;
+            color: #000;
+            width: 90%;
         }
-        .intro_pop_up_inner {
-            margin-top: 10%;
-            width: 105px;
-            height: 107px;
+        .intr_sub_span {
+            padding-bottom: 20px;
         }
-        .intro_pop_up_link {
-            font-size: 4em;
-            left: 20%;
-            top: 15%;
+        .image_blk_sm {
+            position: absolute;
+            top: 40%;
+            left: 24%;
         }
-        .intro_pop_up_inner:hover {
-            height: 100px;
-            width: 100px;
-        }
-        .intro_sub_heading {
+        .img-text-grp {
             font-size: 18px;
-            letter-spacing: 1px;
-            line-height: 30px;
-            margin-top: 15%;
+            line-height: 35px;
+            left: 18%;
         }
-        .popup-container {
-            height: 345px;
-            width: 80%;
-            margin-top: -86%;
+        li {
+            font-size: 12px;
+            line-height: 16px;
+            padding-bottom: 0px;
         }
-        .popup-container-text {
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 15px;
+        li:before {
+            top: 0px;
         }
     }
     @media (max-width: 320px) {
         .bg {
-            background-position-x: -330px;
-            background-position-y: -45px;
+            background-image: url("../../assets/images/template/scrn1_3_4_bg_sm.png");
+            background-position-y: 0px;
         }
-        .envolope-open {
-            font-size: 21px;
-            top: 5%;
+        .container_sm {
+            margin-left: 4%;
+            color: #000;
+            width: 85%;
         }
-        .intro_sub_heading {
-            font-size: 14px;
-            margin-top: 18%;
-            line-height: 25px;
-            letter-spacing: 1px;
+        .intr_sub_span {
+            padding-bottom: 20px;
         }
-        .intro_pop_up_link {
-            font-size: 3em;
-            left: 43%;
+        .image_blk_sm {
             position: absolute;
-            top: 30%;
+            top: 62%;
+            left: 24%;
         }
-        .intro_pop_up_outer {
-            margin-top: 8%;
-            height: 145px;
-            width: 145px;
+        .image_blk_sm>img {
+            width: 70%;
         }
-        .intro_pop_up_inner {
-            margin-top: 10%;
-            width: 110px;
-            height: 110px;
+        .img-text-grp {
+            font-size: 17px;
+            line-height: 30px;
         }
-        .intro_pop_up {
-            margin-top: 21%;
+        li {
+            font-size: 12px;
+            line-height: 15px;
+            padding-bottom: 0px;
         }
-        .popup-container {
-            margin-top: -21em;
-            height: 320px;
+        li:before {
+            top: 0px;
+        }
+    }
+    @media screen and (max-device-width: 767px) and (orientation: landscape) {
+        li {
+            font-size: 12px;
+        }
+        .container_sm {
+            display: flex;
+        }
+        .left-text-content {
+            left: 8%;
+            position: relative;
+            top: -30px;
             width: 80%;
-        }
-        .popup-container-text {
-            line-height: 13px;
-            font-size: 13px;
-            margin-top: 2em;
         }
     }
 }

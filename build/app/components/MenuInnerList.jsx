@@ -14,10 +14,7 @@ export default class MenuInnerList extends React.Component {
     return (this.props.menuList.modules[0].topic[0].pages.map((page, index) => {
       return (
         <li onClick={this.props.onPageLinkClick} data-page-id={index+1} key={index}>
-          <a className="disable-event" data-page-id={index+1}>{page.pageTitle}</a>
-          <span className="menu-page-progress" style={{
-            backgroundColor: this.getProgressColor(1)
-          }}></span>
+          <a className="capitalize disable-event" data-page-id={index+1}>{page.pageTitle}</a>
         </li>
       )
     }))

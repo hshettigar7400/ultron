@@ -4,7 +4,7 @@ import FrameWork from './components/FrameWork.jsx';
 import SCSS from './assets/stylesheet/application.scss';
 
 const appData = {
-  title: 'Compliance'
+  title: 'KAIZEN'
 }
 
 ReactDOM.render(

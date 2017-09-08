@@ -99,7 +99,7 @@ displayFeedback() {
                                         <input className="radio-input" type="radio" ref='second'  value='no'  />
                                         <label className="radio-label">No</label>
                                     </div>
-                                    <div className="submit_btn" onClick={this.submitAnswer.bind(this)}>
+                                    <div className="submit_btn"  onClick={this.submitAnswer.bind(this)}>
                                         <span>Submit</span>
                                     </div>
                                     {this.state.showFeedback && this.displayFeedback()}
@@ -417,15 +417,11 @@ displayFeedback() {
         <MediaQuery query='(min-device-width: 1224px)'>
           <div className="content">
             <div className="bg">
-              <div className="intro white">
+              <div className="intro">
                 <div className="flex-main-content">
-                    <h1 className="intro_head"><span className="intr_sub_span">Con</span>flicts of interest-Scenarios</h1>
+                    <h1 className="intro_head">Check Your Understanding</h1>
                      <p className="intro_sub_heading">
                         Lets look at three scenarios that involve potential conflicts of interest.
-                      </p>
-                        
-                      <p className="intro_sub_heading_2">
-                            Select each image to view the scenarios.
                       </p>
                       <div className="buttons">
                             <div className="intro_btn_benefit  tab_btn_rt" id="btn_01" onClick={this.openPopup.bind(this, 1)}>
@@ -456,15 +452,11 @@ displayFeedback() {
         <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
           <div className="content">
             <div className="bg">
-              <div className="intro white">
+              <div className="intro">
                 <div className="flex-main-content">
-                    <h1 className="intro_head"><span className="intr_sub_span">Con</span>flicts of interest-Scenarios</h1>
+                    <h1 className="intro_head">Check Your Understanding</h1>
                      <p className="intro_sub_heading">
                         Lets look at three scenarios that involve potential conflicts of interest.
-                      </p>
-                        
-                      <p className="intro_sub_heading_2">
-                            Select each image to view the scenarios.
                       </p>
                       <div className="buttons">
                             <div className="intro_btn_benefit  tab_btn_rt" id="btn_01" onClick={this.openPopup.bind(this, 1)}>
@@ -495,15 +487,11 @@ displayFeedback() {
         <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
           <div className="content">
             <div className="bg">
-              <div className="intro white">
+              <div className="intro">
                 <div className="flex-main-content">
-                    <h1 className="intro_head">Conflicts of <br/><span className="intr_sub_span">inte</span>rest-Scenarios</h1>
+                    <h1 className="intro_head">Check Your Understanding</h1>
                      <p className="intro_sub_heading">
                         Lets look at three scenarios that involve <br/>potential conflicts of interest.
-                      </p>
-                        
-                      <p className="intro_sub_heading_2">
-                            Select each image to view the scenarios.
                       </p>
                       <div className="buttons">
                             <div className="intro_btn_benefit  tab_btn_rt" id="btn_01" onClick={this.openPopup.bind(this, 1)}>

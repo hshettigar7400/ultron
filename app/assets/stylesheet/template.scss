@@ -1,5 +1,10 @@
 /* Intro page */
-
+body{
+  -webkit-touch-callout: none;
+-webkit-user-select: none; /* Webkit */
+-moz-user-select: none;    /* Firefox */
+-ms-user-select: none;
+}
 .bg {
     background-size: cover;
 }
@@ -54,7 +59,6 @@
     letter-spacing: 1px;
     margin-left: 7%;
     margin-top: 5%;
-    text-transform: uppercase;
 }
 
 .content {
@@ -76,6 +80,10 @@
     color: #dc3635;
 }
 
+.tabindex > .disabled {
+  background-color: none Important;
+  color: #808080 Important;
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
     .intro_head {
@@ -87,7 +95,7 @@
         text-transform: uppercase;
     }
     .page-loader{
-        height:672px  !important;
+        height:721px  !important;
     }
 }
 
@@ -95,5 +103,5 @@
     .intro_head {
         margin-top: 3%;
     }
-    
+
 }

@@ -11,7 +11,7 @@
   bottom: 2px !important;
   font-size: 1em;
   box-shadow: -3px 0 10px rgba(0,0,0,0.6) !important;
-  margin-right: -10px;
+  margin-right: -20px;
   z-index: 99 !important;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .menu-header {
-  background-color: $theme;
+  background-color: #dc3635;
   display: table;
   font-size: 1.25em;
   height: 40px;
@@ -42,6 +42,8 @@
   cursor: pointer;
   display: table-cell;
   height: 100%;
+  position: relative;
+  right: 20px;
   vertical-align: middle;
   width: 40px;
 }
@@ -133,8 +135,13 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid #5e9f45;
+  border: 1px solid #dc3635;
+  background-color: #dc3635 !important;
   vertical-align: sub;
   right: 18px;
   position: absolute;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }

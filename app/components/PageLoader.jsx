@@ -11,7 +11,8 @@ export default class PageLoader extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: props.menuOpen
+      menuOpen: props.menuOpen,
+      closeHelp: props.showHelp
     }
   }
 
@@ -32,11 +33,12 @@ export default class PageLoader extends React.Component {
   }
 
   closeMenu() {
-      this.setState({closeMenu: false})
+    this.setState({closeMenu: false})
   }
 
   hideHelp() {
-
+  debugger;
+    {this.props.onCloseHelpClick}
   }
 
   loadMenuItem() {
@@ -60,7 +62,7 @@ export default class PageLoader extends React.Component {
         dockStyle={{position: 'absolute', height: 'auto', top: '66px'}}
         dimStyle={{position: 'relative', height: '100%'}}
         >
-        <HelpContent closeHelp={this.hideHelp.bind(this)}/>
+        <HelpContent onCloseHelpClick={this.props.onCloseHelpClick}/>
       </Dock>
     </div>
   )
@@ -103,7 +105,7 @@ export default class PageLoader extends React.Component {
         <MediaQuery query='(min-width: 680px)'>
           {this.loadHelp()}
         </MediaQuery>
-        
+        {this.loadSideBar()}
         {this.loadRouter()}
       </div>
     )
